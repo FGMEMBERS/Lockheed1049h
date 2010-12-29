@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+
+<!-- Lockheed Constellation 1049h Overhead Hotspot panel -->
+<!-- Gary R. Neely 'Buckaroo', 2008                      -->
+
+
+<PropertyList>
+
+<name>Overhead Panel</name>
+<background>Aircraft/Lockheed1049h/Panels/transparent-bg.rgb</background>
+<w>512</w>
+<h>180</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>256</x>
+    <y>100</y>
+    <w>512</w>
+    <h>200</h>
+    <w-base>512</w-base>
+    <h-base>200</h-base>
+
+    <actions>
+
+<!-- Magneto 1 -->
+
+      <action>
+        <name>Rotate knob left</name>
+        <button>1</button>
+        <x>-122</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/magnetos</property>
+          <step>-1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Rotate knob right</name>
+        <button>0</button>
+        <x>-122</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/magnetos</property>
+          <step>1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+<!-- Magneto 2 -->
+
+      <action>
+        <name>Rotate knob left</name>
+        <button>1</button>
+        <x>-56</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/magnetos</property>
+          <step>-1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Rotate knob right</name>
+        <button>0</button>
+        <x>-56</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/magnetos</property>
+          <step>1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+<!-- Magneto 3 -->
+
+      <action>
+        <name>Rotate knob left</name>
+        <button>1</button>
+        <x>8</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[2]/magnetos</property>
+          <step>-1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Rotate knob right</name>
+        <button>0</button>
+        <x>8</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[2]/magnetos</property>
+          <step>1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+<!-- Magneto 4 -->
+
+      <action>
+        <name>Rotate knob left</name>
+        <button>1</button>
+        <x>74</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[3]/magnetos</property>
+          <step>-1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Rotate knob right</name>
+        <button>0</button>
+        <x>74</x>
+        <y>10</y>
+        <w>48</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[3]/magnetos</property>
+          <step>1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+<!-- Panel Dimmer -->
+
+      <action>
+        <name>Rotate knob left</name>
+        <button>1</button>
+        <x>157</x>
+        <y>10</y>
+        <w>60</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/lighting/panel-norm</property>
+          <step>-0.1</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Rotate knob right</name>
+        <button>0</button>
+        <x>157</x>
+        <y>10</y>
+        <w>60</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/lighting/panel-norm</property>
+          <step>0.1</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+<!-- Landing Lights -->
+
+      <action>
+        <name>LL retract L</name>
+        <button>0</button>
+        <x>-183</x>
+        <y>-65</y>
+        <w>20</w>
+        <h>20</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/lighting/landing-extend-left</property>
+        </binding>
+      </action>
+      <action>
+        <name>LL retract R</name>
+        <button>0</button>
+        <x>-163</x>
+        <y>-65</y>
+        <w>20</w>
+        <h>20</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/lighting/landing-extend-right</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>LL lamp off L</name>
+        <button>0</button>
+        <x>-136</x>
+        <y>-65</y>
+        <w>20</w>
+        <h>20</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/lighting/landing-left</property>
+        </binding>
+      </action>
+      <action>
+        <name>LL lamp off R</name>
+        <button>0</button>
+        <x>-116</x>
+        <y>-65</y>
+        <w>20</w>
+        <h>20</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/lighting/landing-right</property>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

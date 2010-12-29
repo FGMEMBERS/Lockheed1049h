@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+
+<!-- Lockheed Constellation 1049h Engineer Fuel Valves Hotspot panel -->
+<!-- Gary R. Neely 'Buckaroo'                                        -->
+
+
+<PropertyList>
+
+<name>Engineer FuelValves Panel</name>
+<background>Aircraft/Lockheed1049h/Panels/transparent-bg.rgb</background>
+<w>256</w>
+<h>312</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>128</x>
+    <y>156</y>
+    <w>256</w>
+    <h>312</h>
+    <w-base>256</w-base>
+    <h-base>312</h-base>
+
+    <actions>
+      <action>
+        <name>Tank1Valve1</name>
+        <button>0</button>
+        <x>-128</x>
+        <y>-52</y>
+        <w>64</w>
+        <h>208</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[0]/valve</property>
+          <value>1</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank1Valve0</name>
+        <button>0</button>
+        <x>-128</x>
+        <y>-156</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[0]/valve</property>
+          <value>0</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank2Valve2</name>
+        <button>0</button>
+        <x>-64</x>
+        <y>52</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[1]/valve</property>
+          <value>2</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank2Valve1</name>
+        <button>0</button>
+        <x>-64</x>
+        <y>-52</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[1]/valve</property>
+          <value>1</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank2Valve0</name>
+        <button>0</button>
+        <x>-64</x>
+        <y>-156</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[1]/valve</property>
+          <value>0</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank3Valve2</name>
+        <button>0</button>
+        <x>0</x>
+        <y>52</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[2]/valve</property>
+          <value>2</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank3Valve1</name>
+        <button>0</button>
+        <x>0</x>
+        <y>-52</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[2]/valve</property>
+          <value>1</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank3Valve0</name>
+        <button>0</button>
+        <x>0</x>
+        <y>-156</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[2]/valve</property>
+          <value>0</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank4Valve1</name>
+        <button>0</button>
+        <x>64</x>
+        <y>-52</y>
+        <w>64</w>
+        <h>208</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[3]/valve</property>
+          <value>1</value>
+        </binding>
+      </action>
+      <action>
+        <name>Tank4Valve0</name>
+        <button>0</button>
+        <x>64</x>
+        <y>-156</y>
+        <w>64</w>
+        <h>104</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/fuel/tankvalves[3]/valve</property>
+          <value>0</value>
+        </binding>
+      </action>
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

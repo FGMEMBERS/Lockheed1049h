@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <key n="2">
+    <name>Ctrl-B</name>
+    <desc>Engage Propeller reverse.</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_prop_reverse()</script>
+    </binding>
+  </key>
+
+  <key n="5">
+    <name>Ctrl-E</name>
+    <desc>Toggle engineer view</desc>
+    <binding>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>101</value>
+    </binding>
+  </key>
+
+  <key n="9">
+    <name>Ctrl-I</name>
+    <desc>Menu</desc>
+    <binding>
+      <command>dialog-show</command>
+      <dialog-name>Lockheed1049h-menu</dialog-name>
+    </binding>
+  </key>
+
+  <key n="10">
+    <name>Ctrl-J</name>
+    <desc>Toggle jumpseat view.</desc>
+    <binding>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>104</value>
+    </binding>
+  </key>
+
+  <key n="11">
+    <name>Ctrl-K</name>
+    <desc>Toggle observer view.</desc>
+    <binding>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>103</value>
+    </binding>
+  </key>
+
+  <key n="12">
+    <name>Ctrl-L</name>
+    <desc>Propeller reverse lock</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_reverse_lockout()</script>
+    </binding>
+  </key>
+
+  <key n="14">
+    <name>Ctrl-N</name>
+    <desc>Toggle copilot view.</desc>
+    <binding>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>102</value>
+    </binding>
+  </key>
+
+  <key n="15">
+    <name>Ctrl-O</name>
+    <desc>Toggle overhead panel view.</desc>
+    <binding>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>100</value>
+    </binding>
+  </key>
+
+  <key n="18">
+    <name>Ctrl-R</name>
+    <desc>Radio dialog.</desc>
+    <binding>
+      <command>dialog-show</command>
+      <dialog-name>Lockheed1049h-radios</dialog-name>
+    </binding>
+  </key>
+
+  <key n="115">
+    <name>s</name>
+    <desc>Selected Engine Starter</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.engine_starter();</script>
+    </binding>
+  </key>
+
+</PropertyList>
