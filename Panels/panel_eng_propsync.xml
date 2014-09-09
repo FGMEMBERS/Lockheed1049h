@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+
+<!-- Lockheed Constellation 1049h Engineer Prop Sync panel -->
+<!-- Gary R. Neely 'Buckaroo'                              -->
+
+
+<PropertyList>
+
+<name>Engineer MJB Panel</name>
+<background>Aircraft/Lockheed1049h/Panels/transparent-bg.rgb</background>
+<w>256</w>
+<h>64</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>128</x>
+    <y>32</y>
+    <w>256</w>
+    <h>64</h>
+    <w-base>256</w-base>
+    <h-base>64</h-base>
+
+    <actions>
+
+<!-- Cowl Flaps -->
+
+      <action>
+        <name>CF1inc</name>
+        <button>0</button>
+        <x>-120</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+          <step>0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(0,1);</script>
+        </binding>
+      </action>
+      <action>
+        <name>CF1dec</name>
+        <button>1</button>
+        <x>-120</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+          <step>-0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(0,-1);</script>
+        </binding>
+      </action>
+
+      <action>
+        <name>CF2inc</name>
+        <button>0</button>
+        <x>-110</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+          <step>0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(1,1);</script>
+        </binding>
+      </action>
+      <action>
+        <name>CF2dec</name>
+        <button>1</button>
+        <x>-110</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+          <step>-0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(1,-1);</script>
+        </binding>
+      </action>
+
+      <action>
+        <name>CF3inc</name>
+        <button>0</button>
+        <x>-100</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+          <step>0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(2,1);</script>
+        </binding>
+      </action>
+      <action>
+        <name>CF3dec</name>
+        <button>1</button>
+        <x>-100</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+          <step>-0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(2,-1);</script>
+        </binding>
+      </action>
+
+      <action>
+        <name>CF4inc</name>
+        <button>0</button>
+        <x>-90</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+          <step>0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(3,1);</script>
+        </binding>
+      </action>
+      <action>
+        <name>CF4dec</name>
+        <button>1</button>
+        <x>-90</x>
+        <y>-25</y>
+        <w>10</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+          <step>-0.2</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.switch_ani(3,-1);</script>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

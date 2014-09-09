@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+
+<!-- Lockheed Constellation 1049h Engineer MJB Hotspot panel -->
+<!-- Gary R. Neely 'Buckaroo', 2009                          -->
+
+
+<PropertyList>
+
+<name>Engineer MJB Panel</name>
+<background>Aircraft/Lockheed1049h/Panels/transparent-bg.rgb</background>
+<w>256</w>
+<h>512</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>128</x>
+    <y>256</y>
+    <w>256</w>
+    <h>512</h>
+    <w-base>256</w-base>
+    <h-base>512</h-base>
+
+    <actions>
+
+<!-- Panel Dimmer -->
+
+      <action>
+        <name>EngDeskDim left</name>
+        <button>1</button>
+        <x>20</x>
+        <y>-91</y>
+        <w>60</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/lighting/panel-norm</property>
+          <step>-0.1</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>EngDeskDim right</name>
+        <button>0</button>
+        <x>20</x>
+        <y>-91</y>
+        <w>60</w>
+        <h>50</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/lighting/panel-norm</property>
+          <step>0.1</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+<!-- Engine Starter Selector -->
+
+      <action>
+        <name>EngStartSel</name>
+        <button>0</button>
+        <x>44</x>
+        <y>-249</y>
+        <w>60</w>
+        <h>50</h>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.engine_starter_sel();</script>
+        </binding>
+      </action>
+
+<!-- Engine Primer -->
+
+      <action>
+        <name>EngPrime</name>
+        <button>0</button>
+        <x>-10</x>
+        <y>-239</y>
+        <w>16</w>
+        <h>30</h>
+      </action>
+
+<!-- Engine Starter -->
+
+      <action>
+        <name>EngStart</name>
+        <button>0</button>
+        <x>23</x>
+        <y>-239</y>
+        <w>16</w>
+        <h>30</h>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.engine_starter();</script>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>nasal</command>
+            <script>props.setAll("/controls/engines/engine", "starter", 0)</script>
+          </binding>
+        </mod-up>
+      </action>
+
+<!-- Volts Select AC -->
+
+      <action>
+        <name>VoltsSelectAC</name>
+        <button>0</button>
+        <x>-49</x>
+        <y>203</y>
+        <w>32</w>
+        <h>32</h>
+      </action>
+
+<!-- Volts Select DC -->
+
+      <action>
+        <name>VoltsSelectDC</name>
+        <button>0</button>
+        <x>10</x>
+        <y>203</y>
+        <w>32</w>
+        <h>32</h>
+        <binding>
+          <command>nasal</command>
+          <script>Lockheed1049h.elec_volts_sel_dc_inc();</script>
+        </binding>
+      </action>
+
+<!-- Generator Switches -->
+
+      <action>
+        <name>Gen1</name>
+        <button>0</button>
+        <x>-96</x>
+        <y>72</y>
+        <w>16</w>
+        <h>16</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/generator[0]/position</property>
+        </binding>
+      </action>
+      <action>
+        <name>Gen2</name>
+        <button>0</button>
+        <x>-57</x>
+        <y>72</y>
+        <w>16</w>
+        <h>16</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/generator[1]/position</property>
+        </binding>
+      </action>
+      <action>
+        <name>Gen3</name>
+        <button>0</button>
+        <x>-18</x>
+        <y>72</y>
+        <w>16</w>
+        <h>16</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/generator[2]/position</property>
+        </binding>
+      </action>
+      <action>
+        <name>Gen4</name>
+        <button>0</button>
+        <x>22</x>
+        <y>72</y>
+        <w>16</w>
+        <h>16</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/generator[3]/position</property>
+        </binding>
+      </action>
+      <action>
+        <name>GenAPU</name>
+        <button>0</button>
+        <x>72</x>
+        <y>72</y>
+        <w>16</w>
+        <h>16</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/gen-apu</property>
+        </binding>
+      </action>
+
+<!-- Battery/Cart Power Switches -->
+
+      <action>
+        <name>PwrBatt</name>
+        <button>0</button>
+        <x>-109</x>
+        <y>-16</y>
+        <w>16</w>
+        <h>16</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/battery-ship</property>
+        </binding>
+      </action>
+      <action>
+        <name>PwrCart</name>
+        <button>0</button>
+        <x>-90</x>
+        <y>-16</y>
+        <w>16</w>
+        <h>16</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/battery-cart</property>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+
