@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<!-- Lockheed Constellation 1049h Engineer Cross-Feed Valves Hotspot panel -->
+<!-- Gary R. Neely 'Buckaroo'                                              -->
+
+<!-- Cross-Feed and Tank 5 cut-off valves -->
+
+
+<PropertyList>
+
+<name>Engineer CrossFeed Panel</name>
+<background>Aircraft/Lockheed1049h/Panels/transparent-bg.rgb</background>
+<w>512</w>
+<h>296</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>256</x>
+    <y>148</y>
+    <w>512</w>
+    <h>296</h>
+    <w-base>512</w-base>
+    <h-base>296</h-base>
+
+    <actions>
+      <action>
+        <name>Tank5Valve</name>
+        <button>0</button>
+        <x>-256</x>
+        <y>-148</y>
+        <w>94</w>
+        <h>296</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/fuel/tankvalves[4]/valve</property>
+        </binding>
+      </action>
+      <action>
+        <name>Eng1CF</name>
+        <button>0</button>
+        <x>-162</x>
+        <y>-148</y>
+        <w>94</w>
+        <h>296</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/fuel/crossfeedvalves[0]/valve</property>
+        </binding>
+      </action>
+      <action>
+        <name>Eng2CF</name>
+        <button>0</button>
+        <x>-68</x>
+        <y>-148</y>
+        <w>94</w>
+        <h>296</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/fuel/crossfeedvalves[1]/valve</property>
+        </binding>
+      </action>
+      <action>
+        <name>Eng3CF</name>
+        <button>0</button>
+        <x>68</x>
+        <y>-148</y>
+        <w>94</w>
+        <h>296</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/fuel/crossfeedvalves[2]/valve</property>
+        </binding>
+      </action>
+      <action>
+        <name>Eng4CF</name>
+        <button>0</button>
+        <x>162</x>
+        <y>-148</y>
+        <w>94</w>
+        <h>296</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/fuel/crossfeedvalves[3]/valve</property>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+
