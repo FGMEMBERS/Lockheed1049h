@@ -100,7 +100,7 @@
 
 <model>
   <name>asi</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/asi.xml</path>
+  <path>Models/Instruments/asi.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.526</y-m>
@@ -110,8 +110,8 @@
 
 <model>
   <name>ai</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/ai_j8.xml</path> <!-- Bendix J-8 AI -->
-  <!--<path>Aircraft/Lockheed1049h/Models/Instruments/ai.xml</path>--> <!-- Alternate modern AI -->
+  <path>Models/Instruments/ai_j8.xml</path> <!-- Bendix J-8 AI -->
+  <!--<path>Models/Instruments/ai.xml</path>--> <!-- Alternate modern AI -->
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.434</y-m>
@@ -121,7 +121,7 @@
 
 <model>
   <name>vsi</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/vsi.xml</path>
+  <path>Models/Instruments/vsi.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.343</y-m>
@@ -131,7 +131,7 @@
 
 <model>
   <name>alt</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/alt.xml</path>
+  <path>Models/Instruments/alt.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.343</y-m>
@@ -141,7 +141,7 @@
 
 <model>
   <name>mdi</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/compass_mdi_with_hdg.xml</path>
+  <path>Models/Instruments/compass_mdi_with_hdg.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.434</y-m>
@@ -151,7 +151,7 @@
 
 <model>
   <name>turn_bank</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/turn_bank.xml</path>
+  <path>Models/Instruments/turn_bank.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.526</y-m>
@@ -161,7 +161,7 @@
 
 <model>
   <name>autopilot_warn</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/autopilot_warn.xml</path>
+  <path>Models/Instruments/autopilot_warn.xml</path>
   <offsets>
     <x-m>-15.648</x-m>
     <y-m>-0.370</y-m>
@@ -171,7 +171,7 @@
 
 <model>
   <name>ctl_pos</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/control_positions_sm.xml</path>
+  <path>Models/Instruments/control_positions_sm.xml</path>
   <offsets>
     <x-m>-15.648</x-m>
     <y-m>-0.304</y-m>
@@ -181,7 +181,7 @@
 
 <model>
   <name>clock</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/clock_adjustable.xml</path>
+  <path>Models/Instruments/clock_adjustable.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.239</y-m>
@@ -191,7 +191,7 @@
 
 <model>
   <name>zero_reader</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/zero_reader.xml</path>
+  <path>Models/Instruments/zero_reader.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.252</y-m>
@@ -201,7 +201,7 @@
 
 <model>
   <name>rmi</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/rmi.xml</path>
+  <path>Models/Instruments/rmi.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.252</y-m>
@@ -211,7 +211,7 @@
 
 <model>
   <name>marker_beacons</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/marker_beacons.xml</path>
+  <path>Models/Instruments/marker_beacons.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.610</y-m>
@@ -221,7 +221,7 @@
 
 <model>
   <name>terrain_warn</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/terrain_warning.xml</path>
+  <path>Models/Instruments/terrain_warning.xml</path>
   <offsets>
     <x-m>-15.65</x-m>
     <y-m>-0.640</y-m>
@@ -231,7 +231,7 @@
 
 <model>
   <name>pbrake_p</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/parking_brake_p.xml</path>
+  <path>Models/Instruments/parking_brake_p.xml</path>
   <offsets>
     <x-m>-15.65</x-m>
     <y-m>-0.212</y-m>
@@ -241,7 +241,7 @@
 
 <model>
   <name>fueling_notice</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fueling_notice.xml</path>
+  <path>Models/Instruments/fueling_notice.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.458</y-m>
@@ -254,7 +254,7 @@
 
 <model>
   <name>flaps</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/flaps.xml</path>
+  <path>Models/Instruments/flaps.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.132</y-m>
@@ -264,7 +264,7 @@
 
 <model>
   <name>trim</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/trim.xml</path>
+  <path>Models/Instruments/trim.xml</path>
   <offsets>
     <x-m>-15.648</x-m>
     <y-m>-0.044</y-m>
@@ -274,7 +274,7 @@
 
 <model>
   <name>air_temp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/airtemp.xml</path>
+  <path>Models/Instruments/airtemp.xml</path>
   <offsets>
     <x-m>-15.648</x-m>
     <y-m>0.044</y-m>
@@ -284,7 +284,7 @@
 
 <model>
   <name>landing_gear</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/landing_gear.xml</path>
+  <path>Models/Instruments/landing_gear.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.132</y-m>
@@ -294,7 +294,7 @@
 
 <model>
   <name>manpress_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/manpress_L.xml</path>
+  <path>Models/Instruments/manpress_L.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.132</y-m>
@@ -304,7 +304,7 @@
 
 <model>
   <name>manpress_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/manpress_R.xml</path>
+  <path>Models/Instruments/manpress_R.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.044</y-m>
@@ -314,7 +314,7 @@
 
 <model>
   <name>rpm_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/rpm_L.xml</path>
+  <path>Models/Instruments/rpm_L.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.044</y-m>
@@ -324,7 +324,7 @@
 
 <model>
   <name>rpm_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/rpm_R.xml</path>
+  <path>Models/Instruments/rpm_R.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.132</y-m>
@@ -334,7 +334,7 @@
 
 <model>
   <name>prop_rev</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/prop_reversing.xml</path>
+  <path>Models/Instruments/prop_reversing.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>-0.122</y-m>
@@ -344,7 +344,7 @@
 
 <model>
   <name>master_fire</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/master_fire.xml</path>
+  <path>Models/Instruments/master_fire.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0</y-m>
@@ -357,7 +357,7 @@
 
 <model>
   <name>swplate_voradf</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/swplate_voradf.xml</path>
+  <path>Models/Instruments/swplate_voradf.xml</path>
   <offsets>
     <x-m>-15.465</x-m>
     <y-m>-0.084</y-m>
@@ -367,7 +367,7 @@
 
 <model>
   <name>plug1</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/plug_3.xml</path>
+  <path>Models/Instruments/plug_3.xml</path>
   <offsets>
     <x-m>-15.464</x-m>
     <y-m>0</y-m>
@@ -380,7 +380,7 @@
 
 <model>
   <name>compass</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/compass_magnetic.xml</path>
+  <path>Models/Instruments/compass_magnetic.xml</path>
   <offsets>
     <x-m>-15.466</x-m>
     <y-m>0</y-m>
@@ -390,7 +390,7 @@
 
 <model>
   <name>fuzzy dice</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuzzy_dice.xml</path>
+  <path>Models/Instruments/fuzzy_dice.xml</path>
   <offsets>
     <x-m>-15.4</x-m>
     <y-m>0</y-m>
@@ -403,7 +403,7 @@
 
 <model>
   <name>asi_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/asi.xml</path>
+  <path>Models/Instruments/asi.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.252</y-m>
@@ -413,7 +413,7 @@
 
 <model>
   <name>ai_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/ai.xml</path>
+  <path>Models/Instruments/ai.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.343</y-m>
@@ -423,7 +423,7 @@
 
 <model>
   <name>alt_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/alt.xml</path>
+  <path>Models/Instruments/alt.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.434</y-m>
@@ -433,7 +433,7 @@
 
 <model>
   <name>vsi_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/vsi.xml</path>
+  <path>Models/Instruments/vsi.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.434</y-m>
@@ -443,7 +443,7 @@
 
 <model>
   <name>rmi_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/rmi.xml</path>
+  <path>Models/Instruments/rmi.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.526</y-m>
@@ -453,7 +453,7 @@
 
 <model>
   <name>mdi_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/compass_mdi_with_hdg.xml</path>
+  <path>Models/Instruments/compass_mdi_with_hdg.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.343</y-m>
@@ -463,7 +463,7 @@
 
 <model>
   <name>turn_bank_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/turn_bank.xml</path>
+  <path>Models/Instruments/turn_bank.xml</path>
   <offsets>
     <x-m>-15.649</x-m>
     <y-m>0.252</y-m>
@@ -473,7 +473,7 @@
 
 <model>
   <name>pbrake_cp</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/parking_brake_cp.xml</path>
+  <path>Models/Instruments/parking_brake_cp.xml</path>
   <offsets>
     <x-m>-15.65</x-m>
     <y-m>0.212</y-m>
@@ -488,7 +488,7 @@
 
 <model>
   <name>fuelLo</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_L_outboard.xml</path>
+  <path>Models/Instruments/fuel_L_outboard.xml</path>
   <offsets>
     <x-m>-14.498</x-m>
     <y-m>0.553</y-m>
@@ -498,7 +498,7 @@
 
 <model>
   <name>fuelLm</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_L_middle.xml</path>
+  <path>Models/Instruments/fuel_L_middle.xml</path>
   <offsets>
     <x-m>-14.406</x-m>
     <y-m>0.553</y-m>
@@ -508,7 +508,7 @@
 
 <model>
   <name>fuelLi</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_L_inboard.xml</path>
+  <path>Models/Instruments/fuel_L_inboard.xml</path>
   <offsets>
     <x-m>-14.314</x-m>
     <y-m>0.553</y-m>
@@ -518,7 +518,7 @@
 
 <model>
   <name>fuelC</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_C.xml</path>
+  <path>Models/Instruments/fuel_C.xml</path>
   <offsets>
     <x-m>-14.222</x-m>
     <y-m>0.553</y-m>
@@ -528,7 +528,7 @@
 
 <model>
   <name>fuelRi</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_R_inboard.xml</path>
+  <path>Models/Instruments/fuel_R_inboard.xml</path>
   <offsets>
     <x-m>-14.130</x-m>
     <y-m>0.553</y-m>
@@ -538,7 +538,7 @@
 
 <model>
   <name>fuelRm</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_R_middle.xml</path>
+  <path>Models/Instruments/fuel_R_middle.xml</path>
   <offsets>
     <x-m>-14.038</x-m>
     <y-m>0.553</y-m>
@@ -548,7 +548,7 @@
 
 <model>
   <name>fuelRo</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_R_outboard.xml</path>
+  <path>Models/Instruments/fuel_R_outboard.xml</path>
   <offsets>
     <x-m>-13.946</x-m>
     <y-m>0.553</y-m>
@@ -559,7 +559,7 @@
 
 <model>
   <name>asi_eng</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/asi_engineer.xml</path>
+  <path>Models/Instruments/asi_engineer.xml</path>
   <offsets>
     <x-m>-14.498</x-m>
     <y-m>0.626</y-m>
@@ -569,7 +569,7 @@
 
 <model>
   <name>alt_eng</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/alt_engineer.xml</path>
+  <path>Models/Instruments/alt_engineer.xml</path>
   <offsets>
     <x-m>-14.406</x-m>
     <y-m>0.626</y-m>
@@ -579,7 +579,7 @@
 
 <model>
   <name>clock_eng</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/clock_engineer.xml</path>
+  <path>Models/Instruments/clock_engineer.xml</path>
   <offsets>
     <x-m>-14.314</x-m>
     <y-m>0.626</y-m>
@@ -589,7 +589,7 @@
 
 <model>
   <name>fuelTotal</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_total.xml</path>
+  <path>Models/Instruments/fuel_total.xml</path>
   <offsets>
     <x-m>-14.222</x-m>
     <y-m>0.626</y-m>
@@ -599,7 +599,7 @@
 
 <model>
   <name>air_temp_eng</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/airtemp_engineer.xml</path>
+  <path>Models/Instruments/airtemp_engineer.xml</path>
   <offsets>
     <x-m>-14.314</x-m>
     <y-m>0.7</y-m>
@@ -609,7 +609,7 @@
 
 <model>
   <name>cowlflaps_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/cowlflaps_L.xml</path>
+  <path>Models/Instruments/cowlflaps_L.xml</path>
   <offsets>
     <x-m>-14.498</x-m>
     <y-m>0.701</y-m>
@@ -619,7 +619,7 @@
 
 <model>
   <name>cowlflaps_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/cowlflaps_R.xml</path>
+  <path>Models/Instruments/cowlflaps_R.xml</path>
   <offsets>
     <x-m>-14.406</x-m>
     <y-m>0.701</y-m>
@@ -629,7 +629,7 @@
 
 <model>
   <name>fuelflow_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuelflow_L.xml</path>
+  <path>Models/Instruments/fuelflow_L.xml</path>
   <offsets>
     <x-m>-14.493</x-m>
     <y-m>0.777</y-m>
@@ -639,7 +639,7 @@
 
 <model>
   <name>fuelflow_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuelflow_R.xml</path>
+  <path>Models/Instruments/fuelflow_R.xml</path>
   <offsets>
     <x-m>-14.406</x-m>
     <y-m>0.777</y-m>
@@ -649,7 +649,7 @@
 
 <model>
   <name>cyltemp_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/cyltemp_L.xml</path>
+  <path>Models/Instruments/cyltemp_L.xml</path>
   <offsets>
     <x-m>-14.493</x-m>
     <y-m>0.777</y-m>
@@ -659,7 +659,7 @@
 
 <model>
   <name>cyltemp_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/cyltemp_R.xml</path>
+  <path>Models/Instruments/cyltemp_R.xml</path>
   <offsets>
     <x-m>-14.406</x-m>
     <y-m>0.777</y-m>
@@ -669,7 +669,7 @@
 
 <model>
   <name>egttemp_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/egttemp_L.xml</path>
+  <path>Models/Instruments/egttemp_L.xml</path>
   <offsets>
     <x-m>-14.493</x-m>
     <y-m>0.777</y-m>
@@ -679,7 +679,7 @@
 
 <model>
   <name>egttemp_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/egttemp_R.xml</path>
+  <path>Models/Instruments/egttemp_R.xml</path>
   <offsets>
     <x-m>-14.406</x-m>
     <y-m>0.777</y-m>
@@ -699,7 +699,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>bmep_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/bmep_L.xml</path>
+  <path>Models/Instruments/bmep_L.xml</path>
   <offsets>
     <x-m>-14.317</x-m>
     <y-m>0.777</y-m>
@@ -708,7 +708,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>bmep_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/bmep_R.xml</path>
+  <path>Models/Instruments/bmep_R.xml</path>
   <offsets>
     <x-m>-14.227</x-m>
     <y-m>0.777</y-m>
@@ -717,7 +717,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>manpress_eng_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/manpress_engineer_L.xml</path>
+  <path>Models/Instruments/manpress_engineer_L.xml</path>
   <offsets>
     <x-m>-14.317</x-m>
     <y-m>0.777</y-m>
@@ -726,7 +726,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>manpress_eng_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/manpress_engineer_R.xml</path>
+  <path>Models/Instruments/manpress_engineer_R.xml</path>
   <offsets>
     <x-m>-14.227</x-m>
     <y-m>0.777</y-m>
@@ -735,7 +735,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>rpm_eng_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/rpm_engineer_L.xml</path>
+  <path>Models/Instruments/rpm_engineer_L.xml</path>
   <offsets>
     <x-m>-14.317</x-m>
     <y-m>0.777</y-m>
@@ -744,7 +744,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>rpm_eng_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/rpm_engineer_R.xml</path>
+  <path>Models/Instruments/rpm_engineer_R.xml</path>
   <offsets>
     <x-m>-14.227</x-m>
     <y-m>0.777</y-m>
@@ -754,7 +754,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>oiltemp_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/oiltemp_L.xml</path>
+  <path>Models/Instruments/oiltemp_L.xml</path>
   <offsets>
     <x-m>-14.038</x-m>
     <y-m>0.777</y-m>
@@ -764,7 +764,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>oiltemp_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/oiltemp_R.xml</path>
+  <path>Models/Instruments/oiltemp_R.xml</path>
   <offsets>
     <x-m>-13.946</x-m>
     <y-m>0.777</y-m>
@@ -774,7 +774,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>oilpress_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/oilpress_L.xml</path>
+  <path>Models/Instruments/oilpress_L.xml</path>
   <offsets>
     <x-m>-14.038</x-m>
     <y-m>0.777</y-m>
@@ -784,7 +784,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>oilpress_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/oilpress_R.xml</path>
+  <path>Models/Instruments/oilpress_R.xml</path>
   <offsets>
     <x-m>-13.946</x-m>
     <y-m>0.777</y-m>
@@ -794,7 +794,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>fuelpress_L</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_pressure_L.xml</path>
+  <path>Models/Instruments/fuel_pressure_L.xml</path>
   <offsets>
     <x-m>-14.038</x-m>
     <y-m>0.777</y-m>
@@ -804,7 +804,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>fuelpress_R</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/fuel_pressure_R.xml</path>
+  <path>Models/Instruments/fuel_pressure_R.xml</path>
   <offsets>
     <x-m>-13.946</x-m>
     <y-m>0.777</y-m>
@@ -815,7 +815,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>prop_gov</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/prop_gov.xml</path>
+  <path>Models/Instruments/prop_gov.xml</path>
   <offsets>
     <x-m>-14.272</x-m>
     <y-m>0.778</y-m>
@@ -825,7 +825,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>master_fire_eng</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/master_fire.xml</path>
+  <path>Models/Instruments/master_fire.xml</path>
   <offsets>
     <x-m>-14.272</x-m>
     <y-m>0.777</y-m>
@@ -836,13 +836,13 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>door_warn</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/door_warn.xml</path>
+  <path>Models/Instruments/door_warn.xml</path>
 </model>
 
 <!--
 <model>
   <name>egt_eng_1</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/egtemp_engineer_1.xml</path>
+  <path>Models/Instruments/egtemp_engineer_1.xml</path>
   <offsets>
     <x-m>-14.100</x-m>
     <y-m>0.777</y-m>
@@ -851,7 +851,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>egt_eng_2</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/egtemp_engineer_2.xml</path>
+  <path>Models/Instruments/egtemp_engineer_2.xml</path>
   <offsets>
     <x-m>-14.040</x-m>
     <y-m>0.777</y-m>
@@ -860,7 +860,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>egt_eng_3</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/egtemp_engineer_3.xml</path>
+  <path>Models/Instruments/egtemp_engineer_3.xml</path>
   <offsets>
     <x-m>-13.980</x-m>
     <y-m>0.777</y-m>
@@ -869,7 +869,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>egt_eng_4</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/egtemp_engineer_4.xml</path>
+  <path>Models/Instruments/egtemp_engineer_4.xml</path>
   <offsets>
     <x-m>-13.920</x-m>
     <y-m>0.777</y-m>
@@ -881,7 +881,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>press_warn</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/press_warn.xml</path>
+  <path>Models/Instruments/press_warn.xml</path>
   <offsets>
     <x-m>-13.992</x-m>
     <y-m>0.778</y-m>
@@ -894,12 +894,12 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>engine_select_warn</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/engine_select_warn.xml</path>
+  <path>Models/Instruments/engine_select_warn.xml</path>
 </model>
 
 <model>
   <name>volts_dc</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/volts_dc.xml</path>
+  <path>Models/Instruments/volts_dc.xml</path>
   <offsets>
     <x-m>-14.786</x-m>
     <y-m>0.782</y-m>
@@ -908,7 +908,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>volts_ac</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/volts_ac.xml</path>
+  <path>Models/Instruments/volts_ac.xml</path>
   <offsets>
     <x-m>-14.598</x-m>
     <y-m>0.782</y-m>
@@ -917,7 +917,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>amps_dc1</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/amps_dc.xml</path>
+  <path>Models/Instruments/amps_dc.xml</path>
   <offsets>
     <x-m>-14.765</x-m>
     <y-m>0.782</y-m>
@@ -926,7 +926,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>amps_dc2</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/amps_dc2.xml</path>
+  <path>Models/Instruments/amps_dc2.xml</path>
   <offsets>
     <x-m>-14.681</x-m>
     <y-m>0.782</y-m>
@@ -935,7 +935,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 <model>
   <name>amps_dc_apu</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/amps_dc_apu.xml</path>
+  <path>Models/Instruments/amps_dc_apu.xml</path>
   <offsets>
     <x-m>-14.603</x-m>
     <y-m>0.782</y-m>
@@ -947,7 +947,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>comm1</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/comm1.xml</path>
+  <path>Models/Instruments/comm1.xml</path>
   <offsets>
     <x-m>-14.969</x-m>
     <y-m>-0.148</y-m>
@@ -958,7 +958,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>comm2</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/comm2.xml</path>
+  <path>Models/Instruments/comm2.xml</path>
   <offsets>
     <x-m>-14.969</x-m>
     <y-m>0.148</y-m>
@@ -969,7 +969,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>nav1</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/nav1.xml</path>
+  <path>Models/Instruments/nav1.xml</path>
   <offsets>
     <x-m>-15.032</x-m>
     <y-m>-0.148</y-m>
@@ -980,7 +980,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>nav2</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/nav2.xml</path>
+  <path>Models/Instruments/nav2.xml</path>
   <offsets>
     <x-m>-15.032</x-m>
     <y-m>0.148</y-m>
@@ -991,7 +991,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>adf1</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/adf1.xml</path>
+  <path>Models/Instruments/adf1.xml</path>
   <offsets>
     <x-m>-15.095</x-m>
     <y-m>-0.148</y-m>
@@ -1002,7 +1002,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>adf2</name>
-  <path>Aircraft/Lockheed1049h/Models/Instruments/adf2.xml</path>
+  <path>Models/Instruments/adf2.xml</path>
   <offsets>
     <x-m>-15.095</x-m>
     <y-m>0.148</y-m>

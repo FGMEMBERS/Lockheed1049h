@@ -7,7 +7,7 @@
 <PropertyList>
 
 <name>Engineer Lever Panel</name>
-<background>Aircraft/Lockheed1049h/Panels/transparent-bg.rgb</background>
+<background>Panels/transparent-bg.rgb</background>
 <w>256</w>
 <h>8</h>
 
@@ -399,7 +399,8 @@
 
       <action>
         <name>M1dec</name>
-        <button>0</button>
+        <button>1</button>
+        <button>4</button>
         <x>72</x>
         <y>-4</y>
         <w>10</w>
@@ -415,7 +416,8 @@
       </action>
       <action>
         <name>M2dec</name>
-        <button>0</button>
+        <button>1</button>
+        <button>4</button>
         <x>82</x>
         <y>-4</y>
         <w>10</w>
@@ -431,7 +433,8 @@
       </action>
       <action>
         <name>M3dec</name>
-        <button>0</button>
+        <button>1</button>
+        <button>4</button>
         <x>101</x>
         <y>-4</y>
         <w>10</w>
@@ -447,7 +450,8 @@
       </action>
       <action>
         <name>M4dec</name>
-        <button>0</button>
+        <button>1</button>
+        <button>4</button>
         <x>111</x>
         <y>-4</y>
         <w>10</w>
@@ -463,7 +467,8 @@
       </action>
       <action>
         <name>M1inc</name>
-        <button>1</button>
+        <button>0</button>
+        <button>3</button>
         <x>72</x>
         <y>-4</y>
         <w>10</w>
@@ -479,7 +484,8 @@
       </action>
       <action>
         <name>M2inc</name>
-        <button>1</button>
+        <button>0</button>
+        <button>3</button>
         <x>82</x>
         <y>-4</y>
         <w>10</w>
@@ -495,7 +501,8 @@
       </action>
       <action>
         <name>M3inc</name>
-        <button>1</button>
+        <button>0</button>
+        <button>3</button>
         <x>101</x>
         <y>-4</y>
         <w>10</w>
@@ -511,7 +518,8 @@
       </action>
       <action>
         <name>M4inc</name>
-        <button>1</button>
+        <button>0</button>
+        <button>3</button>
         <x>111</x>
         <y>-4</y>
         <w>10</w>
@@ -528,7 +536,8 @@
 
       <action>
         <name>Mdec</name>
-        <button>0</button>
+        <button>1</button>
+        <button>4</button>
         <x>92</x>
         <y>-4</y>
         <w>9</w>
@@ -568,7 +577,8 @@
       </action>
       <action>
         <name>Minc</name>
-        <button>1</button>
+        <button>0</button>
+        <button>3</button>
         <x>92</x>
         <y>-4</y>
         <w>9</w>

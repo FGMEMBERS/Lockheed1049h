@@ -5,42 +5,57 @@
 <!-- Specific keys -->
 
    <key>
-    <name>Ctrl-L</name>
-    <desc>Unlock/Lock Prop Reversing</desc>
-   </key>
-   <key>
-    <name>Ctrl-B</name>
-    <desc>Engage/Disengage Prop Reverse</desc>
-   </key>
-   <key>
-    <name>Ctrl-V</name>
-    <desc>Pilot view</desc>
-   </key>
-   <key>
-    <name>Ctrl-N</name>
-    <desc>Copilot view</desc>
-   </key>
-   <key>
-    <name>Ctrl-E</name>
-    <desc>Engineer view</desc>
-   </key>
-   <key>
-    <name>Ctrl-K</name>
-    <desc>Cockpit observer view</desc>
-   </key>
-   <key>
-    <name>Ctrl-O</name>
-    <desc>Overhead panel view</desc>
-   </key>
-   <key>
-    <name>Ctrl-J</name>
-    <desc>Cockpit jumpseat view</desc>
-   </key>
-   <key>
     <name>=</name>
     <desc>Options menu</desc>
    </key>
-
+   <key>
+     <name>Shift+C</name>
+     <desc>Toggle auto-coordination</desc>
+   </key>
+   <key>
+     <name>D</name>
+     <desc>Crew door view</desc>
+   </key>
+   <key>
+     <name>Ctrl+D</name>
+     <desc>Open/Close crew door</desc>
+   </key>
+   <key>
+    <name>E</name>
+    <desc>Engineer view</desc>
+   </key>
+   <key>
+     <name>F, Shift+F</name>
+     <desc>Open, close cowl flaps one step</desc>
+   </key>
+   <key>
+     <name>J</name>
+     <desc>Jump seat view</desc>
+   </key>
+   <key>
+    <name>K</name>
+    <desc>Cockpit observer view</desc>
+   </key>
+   <key>
+    <name>L</name>
+    <desc>Copilot view</desc>
+   </key>
+   <key>
+    <name>Ctrl+L</name>
+    <desc>Unlock/Lock Prop Reversing</desc>
+   </key>
+   <key>
+    <name>O</name>
+    <desc>Overhead panel view</desc>
+   </key>
+   <key>
+    <name>Ctrl+V</name>
+    <desc>Pilot view</desc>
+   </key>
+   <key>
+    <name>Delete</name>
+    <desc>Engage/Disengage Prop Reverse</desc>
+   </key>
 
 <!-- FDM ops -->
 

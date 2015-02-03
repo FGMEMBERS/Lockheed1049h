@@ -12,7 +12,7 @@
 <!-- Start livery machine -->
 <nasal>
   <load>
-    var livery_update = aircraft.livery_update.new("Aircraft/Lockheed1049h/Models/Liveries");
+    var livery_update = aircraft.livery_update.new("Models/Liveries");
   </load>
   <unload>
     livery_update.stop();
@@ -31,23 +31,23 @@
 
 <model>
   <name>Cockpit</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Cockpit.xml</path>
+  <path>Models/Lockheed1049h_Cockpit.xml</path>
 </model>
 <model>
   <name>Antennas</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Antennas.xml</path>
+  <path>Models/Lockheed1049h_Antennas.xml</path>
 </model>
 <model>
   <name>External Lights</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Lights.xml</path>
+  <path>Models/Lockheed1049h_Lights.xml</path>
 </model>
 <model>
   <name>Propellers</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Props.xml</path>
+  <path>Models/Lockheed1049h_Props.xml</path>
 </model>
 <model>
   <name>Particle Effects</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_ParticleEffects.xml</path>
+  <path>Models/Lockheed1049h_ParticleEffects.xml</path>
 </model>
 
 
@@ -139,7 +139,7 @@
 <animation>
   <type>shader</type>
   <shader>chrome</shader>
-  <texture>Aircraft/Lockheed1049h/Models/txt_glass.rgb</texture>
+  <texture>Models/txt_glass.rgb</texture>
   <object-name>GlassCockpit</object-name>
   <object-name>GlassCabin</object-name>
   <object-name>DoorCrewWin</object-name>
