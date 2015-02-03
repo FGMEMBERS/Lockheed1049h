@@ -60,19 +60,6 @@ var bus_dc_MP	= props.globals.getNode("/sim/multiplay/generic/float[3]");
 # The 1049's had a built-in voltmeter for sampling the various source voltages. This system
 # does the same thing, allows various feed volts to be tested.
 #
-									# DC volts selector sequence: Used
-									# to determine the next setting upon
-									# clicking the voltmeter selector knob
-var seq_volts_sel_dc	= {	0 : 1,					# off -> bus
-				1 : 2,					# bus -> batt
-				2 : 3,					# batt -> gen 1
-				3 : 4,					# gen 1 -> gen 2
-				4 : 5,					# gen 2 -> gen 3
-				5 : 6,					# gen 3 -> gen 4
-				6 : 7,					# gen 4 -> apu
-				7 : 8,					# apu -> bus
-				8 : 0					# bus -> off
-		  	  };
 									# DC selector to source mappings
 var sel_source		= {	0 : -2,					# off
 				1 : -1,					# bus
@@ -89,12 +76,6 @@ var sw_volts_sel_dc	= props.globals.getNode("/controls/switches/volts-select-dc"
 
 									# Advance dc volts selector knob
 									# to next setting using sequence map:
-var elec_volts_sel_dc_inc = func {
-  sw_volts_sel_dc.setValue(seq_volts_sel_dc[sw_volts_sel_dc.getValue()]);
-}
-
-
-
 #
 # Primary electrical system support:
 #

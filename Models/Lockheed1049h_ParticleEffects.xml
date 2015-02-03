@@ -10,7 +10,7 @@
 
 <!-- Smoke (starting engine, #1) -->
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[0]/cranking</property>
@@ -25,7 +25,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[0]/cranking</property>
@@ -40,7 +40,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[0]/cranking</property>
@@ -58,7 +58,7 @@
 
 <!-- Smoke (starting engine, #2) -->
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[1]/cranking</property>
@@ -73,7 +73,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[1]/cranking</property>
@@ -88,7 +88,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[1]/cranking</property>
@@ -105,7 +105,7 @@
 
 <!-- Smoke (starting engine, #3) -->
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[2]/cranking</property>
@@ -120,7 +120,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[2]/cranking</property>
@@ -135,7 +135,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[2]/cranking</property>
@@ -152,7 +152,7 @@
 
 <!-- Smoke (starting engine, #4) -->
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[3]/cranking</property>
@@ -167,7 +167,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[3]/cranking</property>
@@ -182,7 +182,7 @@
   </offsets>
 </model>
 <model>
-  <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
+  <path>Models/Effects/smoke.xml</path>
   <condition>
     <and>
       <property>/engines/engine[3]/cranking</property>

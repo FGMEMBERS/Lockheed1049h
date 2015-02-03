@@ -16,18 +16,6 @@
     <empty><stretch>true</stretch></empty>
 
     <button>
-      <legend>Radio</legend>
-      <key>r</key>
-      <binding>
-       <command>dialog-show</command>
-       <dialog-name>Lockheed1049h-radios</dialog-name>
-      </binding>
-      <binding>
-        <command>dialog-close</command>
-      </binding>
-    </button>
-
-    <button>
       <legend>Help</legend>
       <key>h</key>
       <binding>
