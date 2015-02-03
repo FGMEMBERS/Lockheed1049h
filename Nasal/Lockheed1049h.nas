@@ -43,7 +43,7 @@ LockheedMain.instantiate = func {
 
 LockheedMain.init = func {
    me.instantiate();
-   aircraft.livery.init("Aircraft/Lockheed1049h/Models/Liveries");
+   aircraft.livery.init("Models/Liveries");
    InstrumentationInit();					# See Lockheed1049h_instrumentation_drivers.nas
    me.savedata();  						# Initiate save on exit, restore on launch stuff
 }

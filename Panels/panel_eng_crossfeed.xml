@@ -9,7 +9,7 @@
 <PropertyList>
 
 <name>Engineer CrossFeed Panel</name>
-<background>Aircraft/Lockheed1049h/Panels/transparent-bg.rgb</background>
+<background>Panels/transparent-bg.rgb</background>
 <w>512</w>
 <h>296</h>
 

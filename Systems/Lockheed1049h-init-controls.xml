@@ -9,6 +9,10 @@
   </autopilot>
 </autoflight>
 
+<flight>
+  <auto-coordination-factor type="double">0.02</auto-coordination-factor>
+</flight>
+
 <engines>
   <engine n="0">
     <magnetos archive="y">0</magnetos>

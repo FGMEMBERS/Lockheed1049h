@@ -11,12 +11,12 @@
 
 <model>
   <name>Instruments</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Instruments.xml</path>
+  <path>Models/Lockheed1049h_Instruments.xml</path>
 </model>
 
 <model>
   <name>Pedestal</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Pedestal.xml</path>
+  <path>Models/Lockheed1049h_Pedestal.xml</path>
 </model>
 
 
@@ -24,7 +24,7 @@
 
 <model>
   <name>2Dhotspots</name>
-  <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Panels.xml</path>
+  <path>Models/Lockheed1049h_Panels.xml</path>
 </model>
 
 
@@ -403,7 +403,8 @@
   <object-name>KnobOHPanelLights</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/panel-norm</property>
@@ -415,7 +416,8 @@
   </action>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/panel-norm</property>
@@ -602,7 +604,8 @@
   <object-name>KnobPPPanelLight</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/panel-norm</property>
@@ -614,7 +617,8 @@
   </action>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/panel-norm</property>
@@ -648,7 +652,8 @@
   <object-name>KnobPPCabinLights</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/cabin</property>
@@ -660,7 +665,8 @@
   </action>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/cabin</property>
@@ -979,7 +985,8 @@
   <object-name>EngPitch</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/propeller-pitch</property>
@@ -1019,7 +1026,8 @@
   <object-name>EngPitch</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/propeller-pitch</property>
@@ -1137,7 +1145,8 @@
   <object-name>EngThrottle1</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/throttle</property>
@@ -1153,7 +1162,8 @@
   <object-name>EngThrottle1</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/throttle</property>
@@ -1169,7 +1179,8 @@
   <object-name>EngThrottle2</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[1]/throttle</property>
@@ -1185,7 +1196,8 @@
   <object-name>EngThrottle2</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[1]/throttle</property>
@@ -1201,7 +1213,8 @@
   <object-name>EngThrottle3</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[2]/throttle</property>
@@ -1217,7 +1230,8 @@
   <object-name>EngThrottle3</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[2]/throttle</property>
@@ -1233,7 +1247,8 @@
   <object-name>EngThrottle4</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[3]/throttle</property>
@@ -1249,7 +1264,8 @@
   <object-name>EngThrottle4</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[3]/throttle</property>
@@ -1468,8 +1484,9 @@
   <type>pick</type>
   <object-name>EngMixture1</object-name>
   <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
+    <button>1</button>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/mixture</property>
@@ -1484,8 +1501,9 @@
   <type>pick</type>
   <object-name>EngMixture1</object-name>
   <action>
-    <button>1</button>
-    <repeatable>false</repeatable>
+    <button>0</button>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/mixture</property>
@@ -1500,8 +1518,9 @@
   <type>pick</type>
   <object-name>EngMixture2</object-name>
   <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
+    <button>1</button>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[1]/mixture</property>
@@ -1516,8 +1535,9 @@
   <type>pick</type>
   <object-name>EngMixture2</object-name>
   <action>
-    <button>1</button>
-    <repeatable>false</repeatable>
+    <button>0</button>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[1]/mixture</property>
@@ -1532,8 +1552,9 @@
   <type>pick</type>
   <object-name>EngMixture3</object-name>
   <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
+    <button>1</button>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[2]/mixture</property>
@@ -1548,8 +1569,9 @@
   <type>pick</type>
   <object-name>EngMixture3</object-name>
   <action>
-    <button>1</button>
-    <repeatable>false</repeatable>
+    <button>0</button>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[2]/mixture</property>
@@ -1564,8 +1586,9 @@
   <type>pick</type>
   <object-name>EngMixture4</object-name>
   <action>
-    <button>0</button>
-    <repeatable>false</repeatable>
+    <button>1</button>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[3]/mixture</property>
@@ -1580,8 +1603,9 @@
   <type>pick</type>
   <object-name>EngMixture4</object-name>
   <action>
-    <button>1</button>
-    <repeatable>false</repeatable>
+    <button>0</button>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[3]/mixture</property>
@@ -2159,7 +2183,8 @@
   <object-name>KnobEngDeskDim</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/panel-norm</property>
@@ -2171,7 +2196,8 @@
   </action>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/lighting/panel-norm</property>
@@ -2247,10 +2273,28 @@
   <object-name>KnobFEVoltsDC</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>Lockheed1049h.elec_volts_sel_dc_inc();</script>
+      <command>property-adjust</command>
+      <property>/controls/switches/volts-select-dc</property>
+      <step>1</step>
+      <min>0</min>
+      <max>9</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/switches/volts-select-dc</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>9</max>
+      <wrap>1</wrap>
     </binding>
   </action>
 </animation>
@@ -2522,7 +2566,8 @@
   <object-name>SwEngStaCF1</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
@@ -2542,7 +2587,8 @@
   <object-name>SwEngStaCF1</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
@@ -2583,7 +2629,8 @@
   <object-name>SwEngStaCF2</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
@@ -2603,7 +2650,8 @@
   <object-name>SwEngStaCF2</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
@@ -2644,7 +2692,8 @@
   <object-name>SwEngStaCF3</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
@@ -2664,7 +2713,8 @@
   <object-name>SwEngStaCF3</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
@@ -2705,7 +2755,8 @@
   <object-name>SwEngStaCF4</object-name>
   <action>
     <button>0</button>
-    <repeatable>false</repeatable>
+    <button>3</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
@@ -2725,7 +2776,8 @@
   <object-name>SwEngStaCF4</object-name>
   <action>
     <button>1</button>
-    <repeatable>false</repeatable>
+    <button>4</button>
+    <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
       <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
