@@ -12,9 +12,15 @@ View the README file for information about this model
 <sim include="Systems/Lockheed1049h-views.xml">
 
   <description>Lockheed 1049H Super Constellation</description>
-  <author>Gary Neely</author>
-  <aircraft-version>1.0</aircraft-version>
+  <author>Gary Neely, Ludovic Brenta</author>
+  <aircraft-version>1.1</aircraft-version>
   <status>production</status>
+  <rating>
+    <FDM type="int">5</FDM>
+    <systems type="int">2</systems>
+    <cockpit type="int">4</cockpit>
+    <model type="int">4</model>
+  </rating>
 
   <flight-model>jsb</flight-model>
   <aero>Lockheed1049h</aero>
