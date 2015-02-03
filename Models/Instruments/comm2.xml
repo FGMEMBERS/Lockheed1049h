@@ -45,7 +45,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>ActDigit1</object-name>
-  <property alias="../../params/display-sel-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-mhz</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -57,7 +57,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>ActDigit2</object-name>
-  <property alias="../../params/display-sel-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-mhz</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -69,7 +69,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>ActDigit3</object-name>
-  <property alias="../../params/display-sel-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-mhz</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -81,7 +81,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>ActDigit4</object-name>
-  <property alias="../../params/display-sel-khz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-khz</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -93,7 +93,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>ActDigit5</object-name>
-  <property alias="../../params/display-sel-khz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-khz</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -108,7 +108,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ActKnob1</object-name>
-  <property alias="../../params/display-sel-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-mhz</property>
   <interpolation>
     <entry><ind>118</ind><dep>  0</dep></entry>
     <entry><ind>136</ind><dep>720</dep></entry>
@@ -129,24 +129,26 @@
   <object-name>ActKnob1</object-name>
   <action>
     <button>0</button>
-    <button>3</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/selected-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
       <step>1</step>
       <min>118</min>
       <max>136</max>
       <wrap>true</wrap>
     </binding>
   </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ActKnob1</object-name>
   <action>
     <button>1</button>
-    <button>4</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/selected-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
       <step>-1</step>
       <min>118</min>
       <max>136</max>
@@ -157,7 +159,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ActKnob2</object-name>
-  <property alias="../../params/display-sel-khz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sel-khz</property>
   <interpolation>
     <entry><ind> 0</ind><dep>  0</dep></entry>
     <entry><ind>95</ind><dep>720</dep></entry>
@@ -178,24 +180,26 @@
   <object-name>ActKnob2</object-name>
   <action>
     <button>0</button>
-    <button>3</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/selected-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
       <step>0.01</step>
       <min>118</min>
       <max>136</max>
       <wrap>true</wrap>
     </binding>
   </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ActKnob2</object-name>
   <action>
     <button>1</button>
-    <button>4</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/selected-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
       <step>-0.01</step>
       <min>118</min>
       <max>136</max>
@@ -209,7 +213,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>StdbyDigit1</object-name>
-  <property alias="../../params/display-sby-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-mhz</property>
   <factor>0.001</factor>
   <step>100</step>
   <axis>
@@ -221,7 +225,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>StdbyDigit2</object-name>
-  <property alias="../../params/display-sby-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-mhz</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -233,7 +237,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>StdbyDigit3</object-name>
-  <property alias="../../params/display-sby-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-mhz</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -245,7 +249,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>StdbyDigit4</object-name>
-  <property alias="../../params/display-sby-khz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-khz</property>
   <factor>0.01</factor>
   <step>10</step>
   <axis>
@@ -257,7 +261,7 @@
 <animation>
   <type>textranslate</type>
   <object-name>StdbyDigit5</object-name>
-  <property alias="../../params/display-sby-khz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-khz</property>
   <factor>0.1</factor>
   <step>1</step>
   <axis>
@@ -272,7 +276,7 @@
 <animation>
   <type>rotate</type>
   <object-name>StdbyKnob1</object-name>
-  <property alias="../../params/display-sby-mhz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-mhz</property>
   <interpolation>
     <entry><ind>118</ind><dep>  0</dep></entry>
     <entry><ind>136</ind><dep>720</dep></entry>
@@ -293,24 +297,26 @@
   <object-name>StdbyKnob1</object-name>
   <action>
     <button>0</button>
-    <button>3</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/standby-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
       <step>1</step>
       <min>118</min>
       <max>136</max>
       <wrap>true</wrap>
     </binding>
   </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>StdbyKnob1</object-name>
   <action>
     <button>1</button>
-    <button>4</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/standby-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
       <step>-1</step>
       <min>118</min>
       <max>136</max>
@@ -321,7 +327,7 @@
 <animation>
   <type>rotate</type>
   <object-name>StdbyKnob2</object-name>
-  <property alias="../../params/display-sby-khz"/>
+  <property>/instrumentation/comm[1]/frequencies/display-sby-khz</property>
   <interpolation>
     <entry><ind> 0</ind><dep>  0</dep></entry>
     <entry><ind>95</ind><dep>720</dep></entry>
@@ -342,24 +348,26 @@
   <object-name>StdbyKnob2</object-name>
   <action>
     <button>0</button>
-    <button>3</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/standby-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
       <step>0.01</step>
       <min>118</min>
       <max>136</max>
       <wrap>true</wrap>
     </binding>
   </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>StdbyKnob2</object-name>
   <action>
     <button>1</button>
-    <button>4</button>
-    <repeatable>true</repeatable>
+    <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property alias="../../../../params/standby-mhz"/>
+      <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
       <step>-0.01</step>
       <min>118</min>
       <max>136</max>
@@ -378,8 +386,8 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-swap</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
-      <property>/instrumentation/comm[0]/frequencies/standby-mhz</property>
+      <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+      <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
     </binding>
   </action>
 </animation>
