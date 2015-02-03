@@ -947,17 +947,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>comm1</name>
-  <path>Models/Instruments/comm.xml</path>
-  <overlay>
-    <params>
-      <display-sel-mhz>/instrumentation/comm[0]/frequencies/display-sel-mhz</display-sel-mhz>
-      <display-sel-khz>/instrumentation/comm[0]/frequencies/display-sel-khz</display-sel-khz>
-      <selected-mhz>/instrumentation/comm[0]/frequencies/selected-mhz</selected-mhz>
-      <display-sby-khz>/instrumentation/comm[0]/frequencies/display-sby-khz</display-sby-khz>
-      <display-sby-mhz>/instrumentation/comm[0]/frequencies/display-sby-mhz</display-sby-mhz>
-      <standby-mhz>/instrumentation/comm[0]/frequencies/standby-mhz</standby-mhz>
-    </params>
-  </overlay>
+  <path>Models/Instruments/comm1.xml</path>
   <offsets>
     <x-m>-14.969</x-m>
     <y-m>-0.148</y-m>
@@ -968,17 +958,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>comm2</name>
-  <path>Models/Instruments/comm.xml</path>
-  <overlay>
-    <params>
-      <display-sel-mhz>/instrumentation/comm[1]/frequencies/display-sel-mhz</display-sel-mhz>
-      <display-sel-khz>/instrumentation/comm[1]/frequencies/display-sel-khz</display-sel-khz>
-      <selected-mhz>/instrumentation/comm[1]/frequencies/selected-mhz</selected-mhz>
-      <display-sby-khz>/instrumentation/comm[1]/frequencies/display-sby-khz</display-sby-khz>
-      <display-sby-mhz>/instrumentation/comm[1]/frequencies/display-sby-mhz</display-sby-mhz>
-      <standby-mhz>/instrumentation/comm[1]/frequencies/standby-mhz</standby-mhz>
-    </params>
-  </overlay>
+  <path>Models/Instruments/comm2.xml</path>
   <offsets>
     <x-m>-14.969</x-m>
     <y-m>0.148</y-m>
@@ -989,17 +969,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>nav1</name>
-  <path>Models/Instruments/nav.xml</path>
-  <overlay>
-    <params>
-      <display-sel-mhz>/instrumentation/nav[0]/frequencies/display-sel-mhz</display-sel-mhz>
-      <display-sel-khz>/instrumentation/nav[0]/frequencies/display-sel-khz</display-sel-khz>
-      <selected-mhz>/instrumentation/nav[0]/frequencies/selected-mhz</selected-mhz>
-      <display-sby-khz>/instrumentation/nav[0]/frequencies/display-sby-khz</display-sby-khz>
-      <display-sby-mhz>/instrumentation/nav[0]/frequencies/display-sby-mhz</display-sby-mhz>
-      <standby-mhz>/instrumentation/nav[0]/frequencies/standby-mhz</standby-mhz>
-    </params>
-  </overlay>
+  <path>Models/Instruments/nav1.xml</path>
   <offsets>
     <x-m>-15.032</x-m>
     <y-m>-0.148</y-m>
@@ -1010,17 +980,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>nav2</name>
-  <path>Models/Instruments/nav.xml</path>
-  <overlay>
-    <params>
-      <display-sel-mhz>/instrumentation/nav[1]/frequencies/display-sel-mhz</display-sel-mhz>
-      <display-sel-khz>/instrumentation/nav[1]/frequencies/display-sel-khz</display-sel-khz>
-      <selected-mhz>/instrumentation/nav[1]/frequencies/selected-mhz</selected-mhz>
-      <display-sby-khz>/instrumentation/nav[1]/frequencies/display-sby-khz</display-sby-khz>
-      <display-sby-mhz>/instrumentation/nav[1]/frequencies/display-sby-mhz</display-sby-mhz>
-      <standby-mhz>/instrumentation/nav[1]/frequencies/standby-mhz</standby-mhz>
-    </params>
-  </overlay>
+  <path>Models/Instruments/nav2.xml</path>
   <offsets>
     <x-m>-15.032</x-m>
     <y-m>0.148</y-m>
@@ -1031,13 +991,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>adf1</name>
-  <path>Models/Instruments/adf.xml</path>
-  <overlay>
-    <params>
-      <selected-khz>/instrumentation/adf[0]/frequencies/selected-khz</selected-khz>
-      <standby-khz>/instrumentation/adf[0]/frequencies/standby-khz</standby-khz>
-    </params>
-  </overlay>
+  <path>Models/Instruments/adf1.xml</path>
   <offsets>
     <x-m>-15.095</x-m>
     <y-m>-0.148</y-m>
@@ -1048,13 +1002,7 @@ Return these instruments to these positions when temporary engine gauges are rep
 
 <model>
   <name>adf2</name>
-  <path>Models/Instruments/adf.xml</path>
-  <overlay>
-    <params>
-      <selected-khz>/instrumentation/adf[1]/frequencies/selected-khz</selected-khz>
-      <standby-khz>/instrumentation/adf[1]/frequencies/standby-khz</standby-khz>
-    </params>
-  </overlay>
+  <path>Models/Instruments/adf2.xml</path>
   <offsets>
     <x-m>-15.095</x-m>
     <y-m>0.148</y-m>
@@ -1064,3 +1012,5 @@ Return these instruments to these positions when temporary engine gauges are rep
 </model>
 
 </PropertyList>
+
+
