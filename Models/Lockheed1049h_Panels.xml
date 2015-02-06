@@ -5,259 +5,237 @@
 
 <PropertyList>
 
-<!-- Main -->
+  <!-- Arch Console -->
 
-<panel>
-  <path>Panels/panel_main.xml</path>
-  <bottom-left>
-    <x-m>-15.644</x-m>
-    <y-m>-0.785</y-m>
-    <z-m>0.645</z-m>
-  </bottom-left>
-  <bottom-right>
-    <x-m>-15.644</x-m>
-    <y-m>0.785</y-m>
-    <z-m>0.645</z-m>
-  </bottom-right>
-  <top-left>
-    <x-m>-15.644</x-m>
-    <y-m>-0.785</y-m>
-    <z-m>1.070</z-m>
-  </top-left>
-</panel>
+  <panel>
+    <path>Panels/panel_arch.xml</path>
+    <bottom-left>
+      <x-m>-15.463</x-m>
+      <y-m>-0.156</y-m>
+      <z-m>1.091</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-15.463</x-m>
+      <y-m>0.156</y-m>
+      <z-m>1.091</z-m>
+    </bottom-right>
+    <top-left>
+      <x-m>-15.463</x-m>
+      <y-m>-0.156</y-m>
+      <z-m>1.184</z-m>
+    </top-left>
+  </panel>
 
-<!-- Arch Console -->
+  <!-- Overhead Fuel Shut-Off Drum -->
+  <!-- Hotspots disabled due to bizarre interference with pilot light switch panel -->
+  <!-- Picks are still operable. -->
+  <!--
+      <panel>
+      <path>Panels/panel_overhead_fuel.xml</path>
+      <top-left>
+      <x-m>-14.697</x-m>
+      <y-m>-0.123</y-m>
+      <z-m>1.564</z-m>
+      </top-left>
+      <bottom-left>
+      <x-m>-14.725</x-m>
+      <y-m>-0.123</y-m>
+      <z-m>1.578</z-m>
+      </bottom-left>
+      <bottom-right>
+      <x-m>-14.725</x-m>
+      <y-m>0.123</y-m>
+      <z-m>1.578</z-m>
+      </bottom-right>
+      </panel>
+  -->
 
-<panel>
-  <path>Panels/panel_arch.xml</path>
-  <bottom-left>
-    <x-m>-15.463</x-m>
-    <y-m>-0.156</y-m>
-    <z-m>1.091</z-m>
-  </bottom-left>
-  <bottom-right>
-    <x-m>-15.463</x-m>
-    <y-m>0.156</y-m>
-    <z-m>1.091</z-m>
-  </bottom-right>
-  <top-left>
-    <x-m>-15.463</x-m>
-    <y-m>-0.156</y-m>
-    <z-m>1.184</z-m>
-  </top-left>
-</panel>
+  <!-- Pilot Side Upper -->
 
-<!-- Overhead Fuel Shut-Off Drum -->
-<!-- Hotspots disabled due to bizarre interference with pilot light switch panel -->
-<!-- Picks are still operable. -->
-<!--
-<panel>
-  <path>Panels/panel_overhead_fuel.xml</path>
-  <top-left>
-    <x-m>-14.697</x-m>
-    <y-m>-0.123</y-m>
-    <z-m>1.564</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.725</x-m>
-    <y-m>-0.123</y-m>
-    <z-m>1.578</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-14.725</x-m>
-    <y-m>0.123</y-m>
-    <z-m>1.578</z-m>
-  </bottom-right>
-</panel>
--->
+  <panel>
+    <path>Panels/panel_pilot_side_upper.xml</path>
+    <top-left>
+      <x-m>-14.966</x-m>
+      <y-m>-0.944</y-m>
+      <z-m>0.890</z-m>
+    </top-left>
+    <bottom-left>
+      <x-m>-14.959</x-m>
+      <y-m>-0.920</y-m>
+      <z-m>0.840</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-15.237</x-m>
+      <y-m>-0.844</y-m>
+      <z-m>0.838</z-m>
+    </bottom-right>
+  </panel>
 
-<!-- Pilot Side Upper -->
+  <!-- Pilot Side Lower -->
 
-<panel>
-  <path>Panels/panel_pilot_side_upper.xml</path>
-  <top-left>
-    <x-m>-14.966</x-m>
-    <y-m>-0.944</y-m>
-    <z-m>0.890</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.959</x-m>
-    <y-m>-0.920</y-m>
-    <z-m>0.840</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-15.237</x-m>
-    <y-m>-0.844</y-m>
-    <z-m>0.838</z-m>
-  </bottom-right>
-</panel>
+  <panel>
+    <path>Panels/panel_pilot_side_lower.xml</path>
+    <top-left>
+      <x-m>-14.968</x-m>
+      <y-m>-0.955</y-m>
+      <z-m>0.783</z-m>
+    </top-left>
+    <bottom-left>
+      <x-m>-14.963</x-m>
+      <y-m>-0.937</y-m>
+      <z-m>0.746</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-15.241</x-m>
+      <y-m>-0.861</y-m>
+      <z-m>0.744</z-m>
+    </bottom-right>
+  </panel>
 
-<!-- Pilot Side Lower -->
+  <!-- Engineer Levers -->
 
-<panel>
-  <path>Panels/panel_pilot_side_lower.xml</path>
-  <top-left>
-    <x-m>-14.968</x-m>
-    <y-m>-0.955</y-m>
-    <z-m>0.783</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.963</x-m>
-    <y-m>-0.937</y-m>
-    <z-m>0.746</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-15.241</x-m>
-    <y-m>-0.861</y-m>
-    <z-m>0.744</z-m>
-  </bottom-right>
-</panel>
+  <!--
+      <panel>
+      <path>Panels/panel_eng_levers.xml</path>
+      <bottom-left>
+      <x-m>-14.552</x-m>
+      <y-m>0.879</y-m>
+      <z-m>0.698</z-m>
+      </bottom-left>
+      <bottom-right>
+      <x-m>-13.892</x-m>
+      <y-m>0.879</y-m>
+      <z-m>0.698</z-m>
+      </bottom-right>
+      <top-left>
+      <x-m>-14.552</x-m>
+      <y-m>0.879</y-m>
+      <z-m>0.903</z-m>
+      </top-left>
+      </panel>
+  -->
+  <!-- Simpler version: -->
+  <panel>
+    <path>Panels/panel_eng_levers2.xml</path>
+    <top-left>
+      <x-m>-14.552</x-m>
+      <y-m>0.893</y-m>
+      <z-m>0.715</z-m>
+    </top-left>
+    <bottom-left>
+      <x-m>-14.552</x-m>
+      <y-m>0.878</y-m>
+      <z-m>0.702</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-14.043</x-m>
+      <y-m>0.878</y-m>
+      <z-m>0.702</z-m>
+    </bottom-right>
+  </panel>
 
-<!-- Engineer Levers -->
-
-<!--
-<panel>
-  <path>Panels/panel_eng_levers.xml</path>
-  <bottom-left>
-    <x-m>-14.552</x-m>
-    <y-m>0.879</y-m>
-    <z-m>0.698</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-13.892</x-m>
-    <y-m>0.879</y-m>
-    <z-m>0.698</z-m>
-  </bottom-right>
-  <top-left>
-    <x-m>-14.552</x-m>
-    <y-m>0.879</y-m>
-    <z-m>0.903</z-m>
-  </top-left>
-</panel>
--->
-<!-- Simpler version: -->
-<panel>
-  <path>Panels/panel_eng_levers2.xml</path>
-  <top-left>
-    <x-m>-14.552</x-m>
-    <y-m>0.893</y-m>
-    <z-m>0.715</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.552</x-m>
-    <y-m>0.878</y-m>
-    <z-m>0.702</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-14.043</x-m>
-    <y-m>0.878</y-m>
-    <z-m>0.702</z-m>
-  </bottom-right>
-</panel>
-
-<!--
-<panel>
-  <path>Panels/panel_eng_fuelvalves.xml</path>
-  <top-left>
-    <x-m>-14.043</x-m>
-    <y-m>1.033</y-m>
-    <z-m>0.730</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.043</x-m>
-    <y-m>0.879</y-m>
-    <z-m>0.730</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-13.917</x-m>
-    <y-m>0.879</y-m>
-    <z-m>0.730</z-m>
-  </bottom-right>
-</panel>
--->
-<!-- Simpler version: -->
-<panel>
-  <path>Panels/panel_eng_fuelvalves2.xml</path>
-  <top-left>
-    <x-m>-14.043</x-m>
-    <y-m>0.912</y-m>
-    <z-m>0.730</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.043</x-m>
-    <y-m>0.879</y-m>
-    <z-m>0.701</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-13.917</x-m>
-    <y-m>0.879</y-m>
-    <z-m>0.701</z-m>
-  </bottom-right>
-</panel>
+  <!--
+      <panel>
+      <path>Panels/panel_eng_fuelvalves.xml</path>
+      <top-left>
+      <x-m>-14.043</x-m>
+      <y-m>1.033</y-m>
+      <z-m>0.730</z-m>
+      </top-left>
+      <bottom-left>
+      <x-m>-14.043</x-m>
+      <y-m>0.879</y-m>
+      <z-m>0.730</z-m>
+      </bottom-left>
+      <bottom-right>
+      <x-m>-13.917</x-m>
+      <y-m>0.879</y-m>
+      <z-m>0.730</z-m>
+      </bottom-right>
+      </panel>
+  -->
+  <!-- Simpler version: -->
+  <panel>
+    <path>Panels/panel_eng_fuelvalves2.xml</path>
+    <top-left>
+      <x-m>-14.043</x-m>
+      <y-m>0.912</y-m>
+      <z-m>0.730</z-m>
+    </top-left>
+    <bottom-left>
+      <x-m>-14.043</x-m>
+      <y-m>0.879</y-m>
+      <z-m>0.701</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-13.917</x-m>
+      <y-m>0.879</y-m>
+      <z-m>0.701</z-m>
+    </bottom-right>
+  </panel>
 
 
-<!-- Engineer Fuel View -->
+  <!-- Engineer Fuel View -->
 
-<panel>
-  <path>Panels/panel_eng_fuelgauges.xml</path>
-  <top-left>
-    <x-m>-14.557</x-m>
-    <y-m>0.505</y-m>
-    <z-m>1.451</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.557</x-m>
-    <y-m>0.778</y-m>
-    <z-m>1.260</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-13.887</x-m>
-    <y-m>0.778</y-m>
-    <z-m>1.260</z-m>
-  </bottom-right>
-</panel>
+  <panel>
+    <path>Panels/panel_eng_fuelgauges.xml</path>
+    <top-left>
+      <x-m>-14.557</x-m>
+      <y-m>0.505</y-m>
+      <z-m>1.451</z-m>
+    </top-left>
+    <bottom-left>
+      <x-m>-14.557</x-m>
+      <y-m>0.778</y-m>
+      <z-m>1.260</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-13.887</x-m>
+      <y-m>0.778</y-m>
+      <z-m>1.260</z-m>
+    </bottom-right>
+  </panel>
 
-<!-- Engineer Cross-Feed View -->
+  <!-- Engineer Cross-Feed View -->
 
-<panel>
-  <path>Panels/panel_eng_crossfeed.xml</path>
-  <top-left>
-    <x-m>-14.691</x-m>
-    <y-m>0.606</y-m>
-    <z-m>0.181</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.615</x-m>
-    <y-m>0.606</y-m>
-    <z-m>0.181</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-14.615</x-m>
-    <y-m>0.737</y-m>
-    <z-m>0.181</z-m>
-  </bottom-right>
-</panel>
+  <panel>
+    <path>Panels/panel_eng_crossfeed.xml</path>
+    <top-left>
+      <x-m>-14.691</x-m>
+      <y-m>0.606</y-m>
+      <z-m>0.181</z-m>
+    </top-left>
+    <bottom-left>
+      <x-m>-14.615</x-m>
+      <y-m>0.606</y-m>
+      <z-m>0.181</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-14.615</x-m>
+      <y-m>0.737</y-m>
+      <z-m>0.181</z-m>
+    </bottom-right>
+  </panel>
 
-<!-- Engineer MJB, covers MJB 1+2 -->
+  <!-- Engineer MJB, covers MJB 1+2 -->
 
-<panel>
-  <path>Panels/panel_eng_mjb.xml</path>
-  <top-left>
-    <x-m>-14.827</x-m>
-    <y-m>0.782</y-m>
-    <z-m>1.208</z-m>
-  </top-left>
-  <bottom-left>
-    <x-m>-14.827</x-m>
-    <y-m>0.782</y-m>
-    <z-m>0.673</z-m>
-   </bottom-left>
-  <bottom-right>
-    <x-m>-14.55</x-m>
-    <y-m>0.782</y-m>
-    <z-m>0.673</z-m>
-  </bottom-right>
-</panel>
+  <panel>
+    <path>Panels/panel_eng_mjb.xml</path>
+    <top-left>
+      <x-m>-14.827</x-m>
+      <y-m>0.782</y-m>
+      <z-m>1.208</z-m>
+    </top-left>
+    <bottom-left>
+      <x-m>-14.827</x-m>
+      <y-m>0.782</y-m>
+      <z-m>0.673</z-m>
+    </bottom-left>
+    <bottom-right>
+      <x-m>-14.55</x-m>
+      <y-m>0.782</y-m>
+      <z-m>0.673</z-m>
+    </bottom-right>
+  </panel>
 
 </PropertyList>
-
