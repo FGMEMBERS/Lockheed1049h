@@ -2236,8 +2236,19 @@
     <button>0</button>
     <repeatable>false</repeatable>
     <binding>
-      <command>nasal</command>
-      <script>Lockheed1049h.engine_starter_sel();</script>
+      <command>property-cycle</command>
+      <property>/controls/switches/engine-start-select</property>
+      <!-- The starter selector sequence is based on the book
+           checklist sequence of 3-4-2-1.  This allows a man with a
+           fire extinguisher to stand near the engine to be started
+           then walk away from that engine (and the plane) to the next
+           one.  Zero means no engine selected; it is the initial
+           position. -->
+      <value>3</value>
+      <value>4</value>
+      <value>2</value>
+      <value>1</value>
+      <value>0</value>
     </binding>
   </action>
 </animation>
