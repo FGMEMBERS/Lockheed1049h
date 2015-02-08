@@ -72,7 +72,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>ALT.Knob</object-name>
     <property>/instrumentation/altimeter/setting-inhg</property>
     <factor>500</factor>
@@ -86,31 +86,11 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>ALT.Knob</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/altimeter/setting-inhg</property>
-        <step>0.01</step>
-        <min>26</min>
-        <max>32</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>/instrumentation/altimeter/setting-inhg</property>
-        <step>-0.01</step>
+        <factor>0.01</factor>
         <min>26</min>
         <max>32</max>
         <wrap>false</wrap>

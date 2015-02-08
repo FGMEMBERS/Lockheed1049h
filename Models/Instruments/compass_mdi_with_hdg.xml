@@ -41,7 +41,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>MDI.Knob</object-name>
     <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
     <factor>5</factor>
@@ -55,31 +55,10 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>MDI.Knob</object-name>
     <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/heading-indicator/offset-deg</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>359</max>
-        <wrap>true</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>/instrumentation/heading-indicator/offset-deg</property>
-        <step>1</step>
         <min>0</min>
         <max>359</max>
         <wrap>true</wrap>
@@ -88,7 +67,7 @@
   </animation>    
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>MDI.KnobHdg</object-name>
     <property>/autopilot/settings/heading-bug-deg</property>
     <factor>5</factor>
@@ -102,31 +81,10 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>MDI.KnobHdg</object-name>
     <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>/autopilot/settings/heading-bug-deg</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>359</max>
-        <wrap>true</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>/autopilot/settings/heading-bug-deg</property>
-        <step>1</step>
         <min>0</min>
         <max>359</max>
         <wrap>true</wrap>
