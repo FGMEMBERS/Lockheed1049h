@@ -86,7 +86,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>AI.Knob.Hor</object-name>
     <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
     <factor>25</factor>
@@ -100,31 +100,11 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>AI.Knob.Hor</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
-        <step>-0.1</step>
-        <min>-5</min>
-        <max>5</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
-        <step>0.1</step>
+        <factor>0.1</factor>
         <min>-5</min>
         <max>5</max>
         <wrap>false</wrap>
