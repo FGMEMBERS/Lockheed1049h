@@ -55,7 +55,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>Clock.Knob</object-name>
     <property>/instrumentation/clock/offset-sec</property>
     <factor>0.1667</factor>
@@ -69,31 +69,11 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>Clock.Knob</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>/instrumentation/clock/offset-sec</property>
-        <step>60</step>
-        <min>-43200</min>
-        <max>43200</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>/instrumentation/clock/offset-sec</property>
-        <step>-60</step>
+        <factor>60</factor>
         <min>-43200</min>
         <max>43200</max>
         <wrap>false</wrap>
