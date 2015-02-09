@@ -65,18 +65,12 @@ var update_apwarn = func {
 #
 # A little setup for simulating short switch throws:
 #
-
-var switch_reset_index = 0;
-var switch_reset = func {
-  setprop("/systems/switch-throw["~switch_reset_index~"]/value",0);
-}
 var switch_ani = func(i,j) {
   setprop("/systems/switch-throw["~i~"]/value",j);
-  switch_reset_index = i;
-  settimer(switch_reset,0.5);					# Switch resets after 0.5 secs
+  # Switch resets after 0.5 secs
+  settimer(func { setprop("/systems/switch-throw["~i~"]/value",0); },
+           0.5);
 }
-
-
 
 #
 # Support to calculate RMI needle deflections based on mode (VOR/ADF)
