@@ -6,81 +6,81 @@
 
 <PropertyList>
 
-<name>Pilot Side Upper Panel</name>
-<background>Panels/transparent-bg.rgb</background>
-<w>512</w>
-<h>100</h>
+  <name>Pilot Side Upper Panel</name>
+  <background>Panels/transparent-bg.rgb</background>
+  <w>512</w>
+  <h>100</h>
 
-<instruments>
+  <instruments>
 
-  <instrument>
-    <name>panel hotspots</name>
-    <x>256</x>
-    <y>50</y>
-    <w>512</w>
-    <h>100</h>
-    <w-base>512</w-base>
-    <h-base>100</h-base>
+    <instrument>
+      <name>panel hotspots</name>
+      <x>256</x>
+      <y>50</y>
+      <w>512</w>
+      <h>100</h>
+      <w-base>512</w-base>
+      <h-base>100</h-base>
 
-    <actions>
+      <actions>
 
-      <action>
-        <name>BeaconLts</name>
-        <button>0</button>
-        <x>42</x>
-        <y>-36</y>
-        <w>24</w>
-        <h>40</h>
-        <binding>
-          <command>property-toggle</command>
-          <property>/controls/lighting/beacon</property>
-        </binding>
-      </action>
+        <action>
+          <name>BeaconLts</name>
+          <button>0</button>
+          <x>42</x>
+          <y>-36</y>
+          <w>24</w>
+          <h>40</h>
+          <binding>
+            <command>property-toggle</command>
+            <property>/controls/lighting/beacon</property>
+          </binding>
+        </action>
 
-      <action>
-        <name>TailLts</name>
-        <button>0</button>
-        <x>98</x>
-        <y>-36</y>
-        <w>24</w>
-        <h>40</h>
-        <binding>
-          <command>property-toggle</command>
-          <property>/controls/lighting/tail</property>
-        </binding>
-      </action>
+        <action>
+          <name>TailLts</name>
+          <button>0</button>
+          <x>98</x>
+          <y>-36</y>
+          <w>24</w>
+          <h>40</h>
+          <binding>
+            <command>property-toggle</command>
+            <property>/controls/lighting/tail</property>
+          </binding>
+        </action>
 
-      <action>
-        <name>NavLts</name>
-        <button>0</button>
-        <x>140</x>
-        <y>-36</y>
-        <w>24</w>
-        <h>40</h>
-        <binding>
-          <command>property-toggle</command>
-          <property>/controls/lighting/nav</property>
-        </binding>
-      </action>
+        <action>
+          <name>NavLts</name>
+          <button>0</button>
+          <x>140</x>
+          <y>-36</y>
+          <w>24</w>
+          <h>40</h>
+          <binding>
+            <command>property-toggle</command>
+            <property>/controls/lighting/nav</property>
+          </binding>
+        </action>
 
-      <action>
-        <name>TaxiLts</name>
-        <button>0</button>
-        <x>168</x>
-        <y>-36</y>
-        <w>24</w>
-        <h>40</h>
-        <binding>
-          <command>property-toggle</command>
-          <property>/controls/lighting/taxi</property>
-        </binding>
-      </action>
+        <action>
+          <name>TaxiLts</name>
+          <button>0</button>
+          <x>168</x>
+          <y>-36</y>
+          <w>24</w>
+          <h>40</h>
+          <binding>
+            <command>property-toggle</command>
+            <property>/controls/lighting/taxi</property>
+          </binding>
+        </action>
 
-    </actions>
+      </actions>
 
-  </instrument>
+    </instrument>
 
-</instruments>
+  </instruments>
 
 </PropertyList>
 

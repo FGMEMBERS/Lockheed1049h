@@ -6,99 +6,99 @@
 
 <PropertyList>
 
-<name>Pilot Side Lower Panel</name>
-<background>Panels/transparent-bg.rgb</background>
-<w>512</w>
-<h>72</h>
+  <name>Pilot Side Lower Panel</name>
+  <background>Panels/transparent-bg.rgb</background>
+  <w>512</w>
+  <h>72</h>
 
-<instruments>
+  <instruments>
 
-  <instrument>
-    <name>panel hotspots</name>
-    <x>256</x>
-    <y>36</y>
-    <w>512</w>
-    <h>72</h>
-    <w-base>512</w-base>
-    <h-base>72</h-base>
+    <instrument>
+      <name>panel hotspots</name>
+      <x>256</x>
+      <y>36</y>
+      <w>512</w>
+      <h>72</h>
+      <w-base>512</w-base>
+      <h-base>72</h-base>
 
-    <actions>
+      <actions>
 
-<!-- Panel Dimmer -->
+        <!-- Panel Dimmer -->
 
-      <action>
-        <name>PD knob left</name>
-        <button>1</button>
-        <x>172</x>
-        <y>-25</y>
-        <w>60</w>
-        <h>50</h>
-        <binding>
-          <command>property-adjust</command>
-          <property>/controls/lighting/panel-norm</property>
-          <step>-0.1</step>
-          <min>0</min>
-          <max>1</max>
-          <wrap>0</wrap>
-        </binding>
-      </action>
-      <action>
-        <name>PD knob right</name>
-        <button>0</button>
-        <x>172</x>
-        <y>-25</y>
-        <w>60</w>
-        <h>50</h>
-        <binding>
-          <command>property-adjust</command>
-          <property>/controls/lighting/panel-norm</property>
-          <step>0.1</step>
-          <min>0</min>
-          <max>1</max>
-          <wrap>0</wrap>
-        </binding>
-      </action>
+        <action>
+          <name>PD knob left</name>
+          <button>1</button>
+          <x>172</x>
+          <y>-25</y>
+          <w>60</w>
+          <h>50</h>
+          <binding>
+            <command>property-adjust</command>
+            <property>/controls/lighting/panel-norm</property>
+            <step>-0.1</step>
+            <min>0</min>
+            <max>1</max>
+            <wrap>0</wrap>
+          </binding>
+        </action>
+        <action>
+          <name>PD knob right</name>
+          <button>0</button>
+          <x>172</x>
+          <y>-25</y>
+          <w>60</w>
+          <h>50</h>
+          <binding>
+            <command>property-adjust</command>
+            <property>/controls/lighting/panel-norm</property>
+            <step>0.1</step>
+            <min>0</min>
+            <max>1</max>
+            <wrap>0</wrap>
+          </binding>
+        </action>
 
-<!-- Cabin Lights Dimmer -->
+        <!-- Cabin Lights Dimmer -->
 
-      <action>
-        <name>CL knob left</name>
-        <button>1</button>
-        <x>-202</x>
-        <y>-25</y>
-        <w>60</w>
-        <h>50</h>
-        <binding>
-          <command>property-adjust</command>
-          <property>/controls/lighting/cabin</property>
-          <step>-0.1</step>
-          <min>0</min>
-          <max>1</max>
-          <wrap>0</wrap>
-        </binding>
-      </action>
-      <action>
-        <name>CL knob right</name>
-        <button>0</button>
-        <x>-202</x>
-        <y>-25</y>
-        <w>60</w>
-        <h>50</h>
-        <binding>
-          <command>property-adjust</command>
-          <property>/controls/lighting/cabin</property>
-          <step>0.1</step>
-          <min>0</min>
-          <max>1</max>
-          <wrap>0</wrap>
-        </binding>
-      </action>
+        <action>
+          <name>CL knob left</name>
+          <button>1</button>
+          <x>-202</x>
+          <y>-25</y>
+          <w>60</w>
+          <h>50</h>
+          <binding>
+            <command>property-adjust</command>
+            <property>/controls/lighting/cabin</property>
+            <step>-0.1</step>
+            <min>0</min>
+            <max>1</max>
+            <wrap>0</wrap>
+          </binding>
+        </action>
+        <action>
+          <name>CL knob right</name>
+          <button>0</button>
+          <x>-202</x>
+          <y>-25</y>
+          <w>60</w>
+          <h>50</h>
+          <binding>
+            <command>property-adjust</command>
+            <property>/controls/lighting/cabin</property>
+            <step>0.1</step>
+            <min>0</min>
+            <max>1</max>
+            <wrap>0</wrap>
+          </binding>
+        </action>
 
-    </actions>
+      </actions>
 
-  </instrument>
+    </instrument>
 
-</instruments>
+  </instruments>
 
 </PropertyList>
 

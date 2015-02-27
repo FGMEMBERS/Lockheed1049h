@@ -2,98 +2,98 @@
 
 <PropertyList>
 
-<path>press_warn.ac</path>
+  <path>press_warn.ac</path>
 
-<animation>
-  <type>select</type>
-  <object-name>LampPressFailOn1</object-name>
-  <condition>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFailOn1</object-name>
+    <condition>
       <less-than-equals>
         <property>/engines/engine[0]/est-oilpress</property>
         <value>10.0</value>
       </less-than-equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>LampPressFail1</object-name>
-  <condition>
-    <not>
-      <less-than-equals>
-        <property>/engines/engine[0]/est-oilpress</property>
-        <value>10.0</value>
-      </less-than-equals>
-    </not>
-  </condition>
-</animation>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFail1</object-name>
+    <condition>
+      <not>
+        <less-than-equals>
+          <property>/engines/engine[0]/est-oilpress</property>
+          <value>10.0</value>
+        </less-than-equals>
+      </not>
+    </condition>
+  </animation>
 
-<animation>
-  <type>select</type>
-  <object-name>LampPressFailOn2</object-name>
-  <condition>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFailOn2</object-name>
+    <condition>
       <less-than-equals>
         <property>/engines/engine[1]/est-oilpress</property>
         <value>10.0</value>
       </less-than-equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>LampPressFail2</object-name>
-  <condition>
-    <not>
-      <less-than-equals>
-        <property>/engines/engine[1]/est-oilpress</property>
-        <value>10.0</value>
-      </less-than-equals>
-    </not>
-  </condition>
-</animation>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFail2</object-name>
+    <condition>
+      <not>
+        <less-than-equals>
+          <property>/engines/engine[1]/est-oilpress</property>
+          <value>10.0</value>
+        </less-than-equals>
+      </not>
+    </condition>
+  </animation>
 
-<animation>
-  <type>select</type>
-  <object-name>LampPressFailOn3</object-name>
-  <condition>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFailOn3</object-name>
+    <condition>
       <less-than-equals>
         <property>/engines/engine[2]/est-oilpress</property>
         <value>10.0</value>
       </less-than-equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>LampPressFail3</object-name>
-  <condition>
-    <not>
-      <less-than-equals>
-        <property>/engines/engine[2]/est-oilpress</property>
-        <value>10.0</value>
-      </less-than-equals>
-    </not>
-  </condition>
-</animation>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFail3</object-name>
+    <condition>
+      <not>
+        <less-than-equals>
+          <property>/engines/engine[2]/est-oilpress</property>
+          <value>10.0</value>
+        </less-than-equals>
+      </not>
+    </condition>
+  </animation>
 
-<animation>
-  <type>select</type>
-  <object-name>LampPressFailOn4</object-name>
-  <condition>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFailOn4</object-name>
+    <condition>
       <less-than-equals>
         <property>/engines/engine[3]/rpm</property>
         <value>10.0</value>
       </less-than-equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>LampPressFail4</object-name>
-  <condition>
-    <not>
-      <less-than-equals>
-        <property>/engines/engine[3]/rpm</property>
-        <value>10.0</value>
-      </less-than-equals>
-    </not>
-  </condition>
-</animation>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampPressFail4</object-name>
+    <condition>
+      <not>
+        <less-than-equals>
+          <property>/engines/engine[3]/rpm</property>
+          <value>10.0</value>
+        </less-than-equals>
+      </not>
+    </condition>
+  </animation>
 
 </PropertyList>

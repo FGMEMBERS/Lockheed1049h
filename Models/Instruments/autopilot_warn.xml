@@ -2,22 +2,22 @@
 
 <PropertyList>
 
-<path>autopilot_warn.ac</path>
+  <path>autopilot_warn.ac</path>
 
-<animation>
-  <type>select</type>
-  <object-name>LampAPOn</object-name>
-  <condition>
-    <property>/systems/autopilot/ap-warn</property>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>LampAP</object-name>
-  <condition>
-    <not><property>/systems/autopilot/ap-warn</property></not>
-  </condition>
-</animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampAPOn</object-name>
+    <condition>
+      <property>/systems/autopilot/ap-warn</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampAP</object-name>
+    <condition>
+      <not><property>/systems/autopilot/ap-warn</property></not>
+    </condition>
+  </animation>
 
 </PropertyList>
 

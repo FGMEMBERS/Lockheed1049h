@@ -2,23 +2,23 @@
 
 <PropertyList>
 
-<path>parking_brake_cp.ac</path>
+  <path>parking_brake_cp.ac</path>
 
-<animation>
-  <type>select</type>
-  <object-name>LampParkingBrakeOn</object-name>
-  <condition>
-    <property>/controls/gear/brake-parking</property>
-  </condition>
-</animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampParkingBrakeOn</object-name>
+    <condition>
+      <property>/controls/gear/brake-parking</property>
+    </condition>
+  </animation>
 
-<animation>
-  <type>select</type>
-  <object-name>LampParkingBrake</object-name>
-  <condition>
-    <not><property>/controls/gear/brake-parking</property></not>
-  </condition>
-</animation>
+  <animation>
+    <type>select</type>
+    <object-name>LampParkingBrake</object-name>
+    <condition>
+      <not><property>/controls/gear/brake-parking</property></not>
+    </condition>
+  </animation>
 
 </PropertyList>
 
