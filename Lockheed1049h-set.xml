@@ -9,144 +9,144 @@ View the README file for information about this model
 
 <PropertyList>
 
-<sim include="Systems/Lockheed1049h-views.xml">
+  <sim include="Systems/Lockheed1049h-views.xml">
 
-  <description>Lockheed 1049H Super Constellation</description>
-  <author>Gary Neely, Ludovic Brenta</author>
-  <aircraft-version>1.1</aircraft-version>
-  <status>production</status>
-  <rating>
-    <FDM type="int">5</FDM>
-    <systems type="int">2</systems>
-    <cockpit type="int">4</cockpit>
-    <model type="int">4</model>
-  </rating>
+    <description>Lockheed 1049H Super Constellation</description>
+    <author>Gary Neely, Ludovic Brenta</author>
+    <aircraft-version>1.1</aircraft-version>
+    <status>production</status>
+    <rating>
+      <FDM type="int">5</FDM>
+      <systems type="int">2</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">4</model>
+    </rating>
 
-  <flight-model>jsb</flight-model>
-  <aero>Lockheed1049h</aero>
+    <flight-model>jsb</flight-model>
+    <aero>Lockheed1049h</aero>
 
-  <startup>
-    <splash-texture>splash.rgb</splash-texture>
-  </startup>
+    <startup>
+      <splash-texture>splash.rgb</splash-texture>
+    </startup>
 
-  <help include="Help/help.xml"/>
+    <help include="Help/help.xml"/>
 
-  <systems>
-    <electrical>
-      <path>Aircraft/Generic/generic-electrical.xml</path>
-    </electrical>
-  </systems> 
+    <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+    </systems> 
 
-  <!-- Hack to make dual ADF's work: -->
-  <instrumentation>
-    <path>Systems/Lockheed1049h-instrumentation.xml</path>
-  </instrumentation>
+    <!-- Hack to make dual ADF's work: -->
+    <instrumentation>
+      <path>Systems/Lockheed1049h-instrumentation.xml</path>
+    </instrumentation>
 
-  <sound>
-    <audible>true</audible>
-    <path>Sounds/Lockheed1049h-sound.xml</path>
-  </sound>
+    <sound>
+      <audible>true</audible>
+      <path>Sounds/Lockheed1049h-sound.xml</path>
+    </sound>
 
-  <model>
-    <path>Models/Lockheed1049h.xml</path>
-    <livery>
-      <file type="string">EasternGSF</file>
-    </livery>
-  </model> 
+    <model>
+      <path>Models/Lockheed1049h.xml</path>
+      <livery>
+        <file type="string">EasternGSF</file>
+      </livery>
+    </model> 
 
-  <menubar>
-    <default>
-      <menu n="100">
-        <label>Constellation</label>
-        <item>
-          <label>Select Livery</label>
-          <binding>
-            <command>nasal</command>
-            <script>aircraft.livery.dialog.toggle()</script>
-          </binding>
-        </item>
-        <item>
-          <label>Set Comm 1 to 122.75</label>
-          <binding>
-            <command>property-assign</command>
-            <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
-            <value type="double">122.75</value>
-          </binding>
-        </item>
-      </menu>
-    </default>
-  </menubar>
+    <menubar>
+      <default>
+        <menu n="100">
+          <label>Constellation</label>
+          <item>
+            <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+          </item>
+          <item>
+            <label>Set Comm 1 to 122.75</label>
+            <binding>
+              <command>property-assign</command>
+              <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
+              <value type="double">122.75</value>
+            </binding>
+          </item>
+        </menu>
+      </default>
+    </menubar>
 
-  <!-- Initialize props for passing lighting and door settings over multiplayer -->
-  <multiplay>
-    <generic>
-      <float n="0" type="double">0.0</float>
-      <float n="1" type="double">0.0</float>
-      <float n="2" type="double">0.0</float>
-      <float n="3" type="double">0.0</float>
-      <float n="4" type="double">0.0</float>
-      <int n="0" type="int">0</int>
-      <int n="1" type="int">0</int>
-      <int n="2" type="int">0</int>
-      <int n="3" type="int">0</int>
-      <int n="4" type="int">0</int>
-      <int n="5" type="int">0</int>
-      <int n="6" type="int">0</int>
-    </generic>
-  </multiplay>
+    <!-- Initialize props for passing lighting and door settings over multiplayer -->
+    <multiplay>
+      <generic>
+        <float n="0" type="double">0.0</float>
+        <float n="1" type="double">0.0</float>
+        <float n="2" type="double">0.0</float>
+        <float n="3" type="double">0.0</float>
+        <float n="4" type="double">0.0</float>
+        <int n="0" type="int">0</int>
+        <int n="1" type="int">0</int>
+        <int n="2" type="int">0</int>
+        <int n="3" type="int">0</int>
+        <int n="4" type="int">0</int>
+        <int n="5" type="int">0</int>
+        <int n="6" type="int">0</int>
+      </generic>
+    </multiplay>
 
-  <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
-  <allow-toggle-cockpit>true</allow-toggle-cockpit>
+    <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
-  <flaps>
-    <setting>0.0</setting>
-    <setting>0.25</setting>	<!-- 60% takeoff -->
-    <setting>0.5</setting>	<!-- 66% approach -->
-    <setting>0.75</setting>	<!-- 80% -->
-    <setting>1.0</setting>	<!-- 100% landing -->
-  </flaps>
+    <flaps>
+      <setting>0.0</setting>
+      <setting>0.25</setting>	<!-- 60% takeoff -->
+      <setting>0.5</setting>	<!-- 66% approach -->
+      <setting>0.75</setting>	<!-- 80% -->
+      <setting>1.0</setting>	<!-- 100% landing -->
+    </flaps>
 
-  <presets>
-    <fuel type="int">0</fuel>
-  </presets>
+    <presets>
+      <fuel type="int">0</fuel>
+    </presets>
 
-</sim>
+  </sim>
 
-<input>
-  <keyboard include="Systems/Lockheed1049h-keyboard.xml"/>
-</input>
+  <input>
+    <keyboard include="Systems/Lockheed1049h-keyboard.xml"/>
+  </input>
 
-<autopilot>
-  <settings>
-    <target-speed-kt>250</target-speed-kt>
-  </settings>
-</autopilot>
+  <autopilot>
+    <settings>
+      <target-speed-kt>250</target-speed-kt>
+    </settings>
+  </autopilot>
 
-<consumables>
-  <fuel include="Systems/Lockheed1049h-init-fuel.xml"/>
-</consumables>
+  <consumables>
+    <fuel include="Systems/Lockheed1049h-init-fuel.xml"/>
+  </consumables>
 
-<systems include="Systems/Lockheed1049h-init-systems.xml"/>
-<instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
-<controls include="Systems/Lockheed1049h-init-controls.xml"/>
-<engines include="Systems/Lockheed1049h-init-engines.xml"/>
+  <systems include="Systems/Lockheed1049h-init-systems.xml"/>
+  <instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
+  <controls include="Systems/Lockheed1049h-init-controls.xml"/>
+  <engines include="Systems/Lockheed1049h-init-engines.xml"/>
 
-<nasal>
-  <Lockheed1049h>
-    <file>Nasal/Lockheed1049h-menu.nas</file>
-    <file>Nasal/Lockheed1049h-lights.nas</file>
-    <file>Nasal/Lockheed1049h-doors.nas</file>
-    <!--<file>Nasal/Lockheed1049h-rmi_driver.nas</file>-->
-    <!--<file>Nasal/Lockheed1049h-misc_instr.nas</file>-->
-    <file>Nasal/Lockheed1049h-prop_reverse.nas</file>
-    <file>Nasal/Lockheed1049h-engine_gauges.nas</file>
-    <file>Nasal/Lockheed1049h.nas</file>
-    <file>Nasal/Lockheed1049h-fuel.nas</file>
-    <file>Nasal/Lockheed1049h-engines.nas</file>
-    <file>Nasal/Lockheed1049h-electrical.nas</file>
-    <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
-    <file>Nasal/Lockheed1049h-seats.nas</file>
-  </Lockheed1049h>
-</nasal>
+  <nasal>
+    <Lockheed1049h>
+      <file>Nasal/Lockheed1049h-menu.nas</file>
+      <file>Nasal/Lockheed1049h-lights.nas</file>
+      <file>Nasal/Lockheed1049h-doors.nas</file>
+      <!--<file>Nasal/Lockheed1049h-rmi_driver.nas</file>-->
+      <!--<file>Nasal/Lockheed1049h-misc_instr.nas</file>-->
+      <file>Nasal/Lockheed1049h-prop_reverse.nas</file>
+      <file>Nasal/Lockheed1049h-engine_gauges.nas</file>
+      <file>Nasal/Lockheed1049h.nas</file>
+      <file>Nasal/Lockheed1049h-fuel.nas</file>
+      <file>Nasal/Lockheed1049h-engines.nas</file>
+      <file>Nasal/Lockheed1049h-electrical.nas</file>
+      <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
+      <file>Nasal/Lockheed1049h-seats.nas</file>
+    </Lockheed1049h>
+  </nasal>
 
 </PropertyList>

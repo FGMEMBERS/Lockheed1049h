@@ -6,196 +6,195 @@
 
 <PropertyList>
 
-<!-- Start up Smoke -->
+  <!-- Start up Smoke -->
 
-<!-- Smoke (starting engine, #1) -->
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[0]/cranking</property>
-      <property>/engines/engine[0]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>-9.75</y-m>
-    <z-m>0.9</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[0]/cranking</property>
-      <property>/engines/engine[0]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>-9.75</y-m>
-    <z-m>-0.6</z-m>
-    <pitch-deg>35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[0]/cranking</property>
-      <property>/engines/engine[0]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>-8.38</y-m>
-    <z-m>-0.6</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
+  <!-- Smoke (starting engine, #1) -->
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[0]/cranking</property>
+        <property>/engines/engine[0]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>-9.75</y-m>
+      <z-m>0.9</z-m>
+      <pitch-deg>-35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[0]/cranking</property>
+        <property>/engines/engine[0]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>-9.75</y-m>
+      <z-m>-0.6</z-m>
+      <pitch-deg>35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[0]/cranking</property>
+        <property>/engines/engine[0]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>-8.38</y-m>
+      <z-m>-0.6</z-m>
+      <pitch-deg>145</pitch-deg>
+    </offsets>
+  </model>
 
 
-<!-- Smoke (starting engine, #2) -->
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[1]/cranking</property>
-      <property>/engines/engine[1]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>-4.75</y-m>
-    <z-m>0.6</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[1]/cranking</property>
-      <property>/engines/engine[1]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>-4.75</y-m>
-    <z-m>-0.9</z-m>
-    <pitch-deg>35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[1]/cranking</property>
-      <property>/engines/engine[1]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>-3.56</y-m>
-    <z-m>-0.9</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
+  <!-- Smoke (starting engine, #2) -->
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[1]/cranking</property>
+        <property>/engines/engine[1]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>-4.75</y-m>
+      <z-m>0.6</z-m>
+      <pitch-deg>-35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[1]/cranking</property>
+        <property>/engines/engine[1]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>-4.75</y-m>
+      <z-m>-0.9</z-m>
+      <pitch-deg>35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[1]/cranking</property>
+        <property>/engines/engine[1]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>-3.56</y-m>
+      <z-m>-0.9</z-m>
+      <pitch-deg>145</pitch-deg>
+    </offsets>
+  </model>
 
-<!-- Smoke (starting engine, #3) -->
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[2]/cranking</property>
-      <property>/engines/engine[2]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4</x-m>
-    <y-m>4.0</y-m>
-    <z-m>0.6</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[2]/cranking</property>
-      <property>/engines/engine[2]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4</x-m>
-    <y-m>4.0</y-m>
-    <z-m>-0.9</z-m>
-    <pitch-deg>35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[2]/cranking</property>
-      <property>/engines/engine[2]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4</x-m>
-    <y-m>5.0</y-m>
-    <z-m>-0.9</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
+  <!-- Smoke (starting engine, #3) -->
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[2]/cranking</property>
+        <property>/engines/engine[2]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4</x-m>
+      <y-m>4.0</y-m>
+      <z-m>0.6</z-m>
+      <pitch-deg>-35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[2]/cranking</property>
+        <property>/engines/engine[2]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4</x-m>
+      <y-m>4.0</y-m>
+      <z-m>-0.9</z-m>
+      <pitch-deg>35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[2]/cranking</property>
+        <property>/engines/engine[2]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4</x-m>
+      <y-m>5.0</y-m>
+      <z-m>-0.9</z-m>
+      <pitch-deg>145</pitch-deg>
+    </offsets>
+  </model>
 
-<!-- Smoke (starting engine, #4) -->
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[3]/cranking</property>
-      <property>/engines/engine[3]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>8.25</y-m>
-    <z-m>0.9</z-m>
-    <pitch-deg>-35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[3]/cranking</property>
-      <property>/engines/engine[3]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>8.25</y-m>
-    <z-m>-0.6</z-m>
-    <pitch-deg>35</pitch-deg>
-  </offsets>
-</model>
-<model>
-  <path>Models/Effects/smoke.xml</path>
-  <condition>
-    <and>
-      <property>/engines/engine[3]/cranking</property>
-      <property>/engines/engine[3]/running</property>
-    </and>
-  </condition>
-  <offsets>
-    <x-m>-4.25</x-m>
-    <y-m>9.81</y-m>
-    <z-m>-0.6</z-m>
-    <pitch-deg>145</pitch-deg>
-  </offsets>
-</model>
+  <!-- Smoke (starting engine, #4) -->
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[3]/cranking</property>
+        <property>/engines/engine[3]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>8.25</y-m>
+      <z-m>0.9</z-m>
+      <pitch-deg>-35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[3]/cranking</property>
+        <property>/engines/engine[3]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>8.25</y-m>
+      <z-m>-0.6</z-m>
+      <pitch-deg>35</pitch-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Models/Effects/smoke.xml</path>
+    <condition>
+      <and>
+        <property>/engines/engine[3]/cranking</property>
+        <property>/engines/engine[3]/running</property>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-4.25</x-m>
+      <y-m>9.81</y-m>
+      <z-m>-0.6</z-m>
+      <pitch-deg>145</pitch-deg>
+    </offsets>
+  </model>
 
 </PropertyList>
-
