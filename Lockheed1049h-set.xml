@@ -35,6 +35,9 @@ View the README file for information about this model
       <electrical>
         <path>Aircraft/Generic/generic-electrical.xml</path>
       </electrical>
+      <property-rule n="100">
+        <path>Systems/engine-filters.xml</path>
+      </property-rule>
     </systems> 
 
     <!-- Hack to make dual ADF's work: -->
@@ -129,7 +132,6 @@ View the README file for information about this model
   <systems include="Systems/Lockheed1049h-init-systems.xml"/>
   <instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
   <controls include="Systems/Lockheed1049h-init-controls.xml"/>
-  <engines include="Systems/Lockheed1049h-init-engines.xml"/>
 
   <nasal>
     <Lockheed1049h>
@@ -139,7 +141,6 @@ View the README file for information about this model
       <!--<file>Nasal/Lockheed1049h-rmi_driver.nas</file>-->
       <!--<file>Nasal/Lockheed1049h-misc_instr.nas</file>-->
       <file>Nasal/Lockheed1049h-prop_reverse.nas</file>
-      <file>Nasal/Lockheed1049h-engine_gauges.nas</file>
       <file>Nasal/Lockheed1049h.nas</file>
       <file>Nasal/Lockheed1049h-fuel.nas</file>
       <file>Nasal/Lockheed1049h-engines.nas</file>
