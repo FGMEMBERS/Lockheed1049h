@@ -30,7 +30,7 @@ degC	degF
   <animation>
     <type>rotate</type>
     <object-name>OilTemp.Needle1</object-name>
-    <property>/engines/engine[0]/est-oiltemp</property>
+    <property>/engines/engine[0]/oil-temperature-degf</property>
     <interpolation>
       <entry><ind>-58</ind><dep>  45</dep></entry>
       <entry><ind> 32</ind><dep>22.5</dep></entry>
@@ -52,7 +52,7 @@ degC	degF
   <animation>
     <type>rotate</type>
     <object-name>OilTemp.Needle2</object-name>
-    <property>/engines/engine[1]/est-oiltemp</property>
+    <property>/engines/engine[1]/oil-temperature-degf</property>
     <interpolation>
       <entry><ind>-58</ind><dep>  45</dep></entry>
       <entry><ind> 32</ind><dep>22.5</dep></entry>
