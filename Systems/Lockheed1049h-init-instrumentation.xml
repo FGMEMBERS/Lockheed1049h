@@ -2,84 +2,84 @@
 
 <PropertyList>
 
-<!-- specific ADF -->
+  <!-- specific ADF -->
 
-<adf n="1">
-  <mode>adf</mode>
-  <serviceable type="bool">true</serviceable>
-  <frequencies>
-    <selected-khz type="int">353</selected-khz>  <!-- Pacoima near KBUR -->
-    <standby-khz type="int">373</standby-khz>    <!-- Conda near KJFK -->
-  </frequencies>
-</adf>
+  <adf n="1">
+    <mode>adf</mode>
+    <serviceable type="bool">true</serviceable>
+    <frequencies>
+      <selected-khz type="int">353</selected-khz>  <!-- Pacoima near KBUR -->
+      <standby-khz type="int">373</standby-khz>    <!-- Conda near KJFK -->
+    </frequencies>
+  </adf>
 
-<terrain-warning>
-  <selector-ft>2000.0</selector-ft>
-</terrain-warning>
+  <terrain-warning>
+    <selector-ft>2000.0</selector-ft>
+  </terrain-warning>
 
-<onmi-bearing-selector n="0">
-  <needles-pivot type="bool">false</needles-pivot>
-</onmi-bearing-selector>
+  <onmi-bearing-selector n="0">
+    <needles-pivot type="bool">false</needles-pivot>
+  </onmi-bearing-selector>
 
-<onmi-bearing-selector n="1">
-  <needles-pivot type="bool">false</needles-pivot>
-</onmi-bearing-selector>
+  <onmi-bearing-selector n="1">
+    <needles-pivot type="bool">false</needles-pivot>
+  </onmi-bearing-selector>
 
-<rmi-needle n="0">
-  <mode type="int">0</mode>
-</rmi-needle>
-<rmi-needle n="1">
-  <mode type="int">0</mode>
-</rmi-needle>
+  <rmi-needle n="0">
+    <mode type="int">0</mode>
+  </rmi-needle>
+  <rmi-needle n="1">
+    <mode type="int">0</mode>
+  </rmi-needle>
 
-<deviation-indicator>
-  <frequency type="int">0</frequency>
-</deviation-indicator>
+  <deviation-indicator>
+    <frequency type="int">0</frequency>
+  </deviation-indicator>
 
-<marker-beacon>
-  <test type="int">0</test>
-</marker-beacon>
+  <marker-beacon>
+    <test type="int">0</test>
+  </marker-beacon>
 
-<nav n="0">
-  <frequencies>
-    <display-sel-khz type="int">0</display-sel-khz>
-    <display-sel-mhz type="int">0</display-sel-mhz>
-    <selected-mhz-fmt type="string">116.30</selected-mhz-fmt>
-    <display-sby-khz type="int">0</display-sby-khz>
-    <display-sby-mhz type="int">0</display-sby-mhz>
-    <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
-</frequencies>
-</nav>
-<nav n="1">
-  <frequencies>
-    <display-sel-khz type="int">0</display-sel-khz>
-    <display-sel-mhz type="int">0</display-sel-mhz>
-    <selected-mhz-fmt type="string">116.30</selected-mhz-fmt>
-    <display-sby-khz type="int">0</display-sby-khz>
-    <display-sby-mhz type="int">0</display-sby-mhz>
-    <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
-  </frequencies>
-</nav>
+  <nav n="0">
+    <frequencies>
+      <display-sel-khz type="int">0</display-sel-khz>
+      <display-sel-mhz type="int">0</display-sel-mhz>
+      <selected-mhz-fmt type="string">116.30</selected-mhz-fmt>
+      <display-sby-khz type="int">0</display-sby-khz>
+      <display-sby-mhz type="int">0</display-sby-mhz>
+      <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
+    </frequencies>
+  </nav>
+  <nav n="1">
+    <frequencies>
+      <display-sel-khz type="int">0</display-sel-khz>
+      <display-sel-mhz type="int">0</display-sel-mhz>
+      <selected-mhz-fmt type="string">116.30</selected-mhz-fmt>
+      <display-sby-khz type="int">0</display-sby-khz>
+      <display-sby-mhz type="int">0</display-sby-mhz>
+      <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
+    </frequencies>
+  </nav>
 
-<comm n="0">
-  <frequencies>
-    <display-sel-khz type="int">0</display-sel-khz>
-    <display-sel-mhz type="int">0</display-sel-mhz>
-    <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
-    <display-sby-khz type="int">0</display-sby-khz>
-    <display-sby-mhz type="int">0</display-sby-mhz>
-    <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
-</frequencies>
-</comm>
-<comm n="1">
-  <frequencies>
-    <display-sel-khz type="int">0</display-sel-khz>
-    <display-sel-mhz type="int">0</display-sel-mhz>
-    <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
-    <display-sby-khz type="int">0</display-sby-khz>
-    <display-sby-mhz type="int">0</display-sby-mhz>
-    <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
-  </frequencies>
-</comm>
+  <comm n="0">
+    <frequencies>
+      <display-sel-khz type="int">0</display-sel-khz>
+      <display-sel-mhz type="int">0</display-sel-mhz>
+      <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
+      <display-sby-khz type="int">0</display-sby-khz>
+      <display-sby-mhz type="int">0</display-sby-mhz>
+      <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
+    </frequencies>
+  </comm>
+  <comm n="1">
+    <frequencies>
+      <display-sel-khz type="int">0</display-sel-khz>
+      <display-sel-mhz type="int">0</display-sel-mhz>
+      <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
+      <display-sby-khz type="int">0</display-sby-khz>
+      <display-sby-mhz type="int">0</display-sby-mhz>
+      <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
+    </frequencies>
+  </comm>
 
 </PropertyList>

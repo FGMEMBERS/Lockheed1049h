@@ -5,409 +5,409 @@
 
 <PropertyList>
 
-<path>mesh_props.ac</path>
+  <path>mesh_props.ac</path>
 
 
-<!-- Special Shaders -->
+  <!-- Special Shaders -->
 
-<animation>
-  <type>noshadow</type>
-  <object-name>Prop1</object-name>
-  <object-name>Prop2</object-name>
-  <object-name>Prop3</object-name>
-  <object-name>Prop4</object-name>
-  <object-name>PropBlurSlow1</object-name>
-  <object-name>PropBlurSlow2</object-name>
-  <object-name>PropBlurSlow3</object-name>
-  <object-name>PropBlurSlow4</object-name>
-  <object-name>PropBlurFast1</object-name>
-  <object-name>PropBlurFast2</object-name>
-  <object-name>PropBlurFast3</object-name>
-  <object-name>PropBlurFast4</object-name>
-</animation>
-
-
-<!-- Livery machine texture assignments -->
-
-<animation>
-  <type>material</type>
-  <object-name>Prop1</object-name>
-  <object-name>Prop2</object-name>
-  <object-name>Prop3</object-name>
-  <object-name>Prop4</object-name>
-  <property-base>sim/model/propellers</property-base>
-  <texture-prop>texture</texture-prop>
-  <texture>txt_livery_prop1.rgb</texture>
-</animation>
-<animation>
-  <type>material</type>
-  <object-name>PropBlurSlow1</object-name>
-  <object-name>PropBlurSlow2</object-name>
-  <object-name>PropBlurSlow3</object-name>
-  <object-name>PropBlurSlow4</object-name>
-  <object-name>PropBlurFast1</object-name>
-  <object-name>PropBlurFast2</object-name>
-  <object-name>PropBlurFast3</object-name>
-  <object-name>PropBlurFast4</object-name>
-  <property-base>sim/model/propellerdisks</property-base>
-  <texture-prop>texture</texture-prop>
-  <texture>txt_propblur.rgb</texture>
-</animation>
+  <animation>
+    <type>noshadow</type>
+    <object-name>Prop1</object-name>
+    <object-name>Prop2</object-name>
+    <object-name>Prop3</object-name>
+    <object-name>Prop4</object-name>
+    <object-name>PropBlurSlow1</object-name>
+    <object-name>PropBlurSlow2</object-name>
+    <object-name>PropBlurSlow3</object-name>
+    <object-name>PropBlurSlow4</object-name>
+    <object-name>PropBlurFast1</object-name>
+    <object-name>PropBlurFast2</object-name>
+    <object-name>PropBlurFast3</object-name>
+    <object-name>PropBlurFast4</object-name>
+  </animation>
 
 
-<!-- Animations  -->
+  <!-- Livery machine texture assignments -->
 
-<!-- Selects: Prop Models -->
-
-<animation>
-  <type>select</type>
-  <object-name>Prop1</object-name>
-  <condition>
-    <less-than>
-      <property>engines/engine[0]/rpm</property>
-      <value>500</value>
-    </less-than>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>Prop2</object-name>
-  <condition>
-    <less-than>
-      <property>engines/engine[1]/rpm</property>
-      <value>500</value>
-    </less-than>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>Prop3</object-name>
-  <condition>
-    <less-than>
-      <property>engines/engine[2]/rpm</property>
-      <value>500</value>
-    </less-than>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>Prop4</object-name>
-  <condition>
-    <less-than>
-      <property>engines/engine[3]/rpm</property>
-      <value>500</value>
-    </less-than>
-  </condition>
-</animation>
+  <animation>
+    <type>material</type>
+    <object-name>Prop1</object-name>
+    <object-name>Prop2</object-name>
+    <object-name>Prop3</object-name>
+    <object-name>Prop4</object-name>
+    <property-base>sim/model/propellers</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>txt_livery_prop1.rgb</texture>
+  </animation>
+  <animation>
+    <type>material</type>
+    <object-name>PropBlurSlow1</object-name>
+    <object-name>PropBlurSlow2</object-name>
+    <object-name>PropBlurSlow3</object-name>
+    <object-name>PropBlurSlow4</object-name>
+    <object-name>PropBlurFast1</object-name>
+    <object-name>PropBlurFast2</object-name>
+    <object-name>PropBlurFast3</object-name>
+    <object-name>PropBlurFast4</object-name>
+    <property-base>sim/model/propellerdisks</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>txt_propblur.rgb</texture>
+  </animation>
 
 
-<!-- Selects: Prop Blur Slow -->
+  <!-- Animations  -->
 
-<animation>
-  <type>select</type>
-  <object-name>PropBlurSlow1</object-name>
-  <condition>
-    <and>
-      <greater-than-equals>
-        <property>engines/engine[0]/rpm</property>
-        <value>500</value>
-      </greater-than-equals>
+  <!-- Selects: Prop Models -->
+
+  <animation>
+    <type>select</type>
+    <object-name>Prop1</object-name>
+    <condition>
       <less-than>
         <property>engines/engine[0]/rpm</property>
-        <value>1350</value>
-      </less-than>
-    </and>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>PropBlurSlow2</object-name>
-  <condition>
-    <and>
-      <greater-than-equals>
-        <property>engines/engine[1]/rpm</property>
         <value>500</value>
-      </greater-than-equals>
+      </less-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Prop2</object-name>
+    <condition>
       <less-than>
         <property>engines/engine[1]/rpm</property>
-        <value>1350</value>
-      </less-than>
-    </and>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>PropBlurSlow3</object-name>
-  <condition>
-    <and>
-      <greater-than-equals>
-        <property>engines/engine[2]/rpm</property>
         <value>500</value>
-      </greater-than-equals>
+      </less-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Prop3</object-name>
+    <condition>
       <less-than>
         <property>engines/engine[2]/rpm</property>
-        <value>1350</value>
-      </less-than>
-    </and>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>PropBlurSlow4</object-name>
-  <condition>
-    <and>
-      <greater-than-equals>
-        <property>engines/engine[3]/rpm</property>
         <value>500</value>
-      </greater-than-equals>
+      </less-than>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Prop4</object-name>
+    <condition>
       <less-than>
         <property>engines/engine[3]/rpm</property>
-        <value>1350</value>
+        <value>500</value>
       </less-than>
-    </and>
-  </condition>
-</animation>
+    </condition>
+  </animation>
 
-<!-- Selects: Prop Blur Fast -->
 
-<animation>
-  <type>select</type>
-  <object-name>PropBlurFast1</object-name>
-  <condition>
-    <greater-than-equals>
-      <property>engines/engine[0]/rpm</property>
-      <value>1350</value>
-    </greater-than-equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>PropBlurFast2</object-name>
-  <condition>
-    <greater-than-equals>
-      <property>engines/engine[1]/rpm</property>
-      <value>1350</value>
-    </greater-than-equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>PropBlurFast3</object-name>
-  <condition>
-    <greater-than-equals>
-      <property>engines/engine[2]/rpm</property>
-      <value>1350</value>
-    </greater-than-equals>
-  </condition>
-</animation>
-<animation>
-  <type>select</type>
-  <object-name>PropBlurFast4</object-name>
-  <condition>
-    <greater-than-equals>
-      <property>engines/engine[3]/rpm</property>
-      <value>1350</value>
-    </greater-than-equals>
-  </condition>
-</animation>
+  <!-- Selects: Prop Blur Slow -->
 
-<!-- Spins (geared 16:7) -->
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurSlow1</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>engines/engine[0]/rpm</property>
+          <value>500</value>
+        </greater-than-equals>
+        <less-than>
+          <property>engines/engine[0]/rpm</property>
+          <value>1350</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurSlow2</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>engines/engine[1]/rpm</property>
+          <value>500</value>
+        </greater-than-equals>
+        <less-than>
+          <property>engines/engine[1]/rpm</property>
+          <value>1350</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurSlow3</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>engines/engine[2]/rpm</property>
+          <value>500</value>
+        </greater-than-equals>
+        <less-than>
+          <property>engines/engine[2]/rpm</property>
+          <value>1350</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurSlow4</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>engines/engine[3]/rpm</property>
+          <value>500</value>
+        </greater-than-equals>
+        <less-than>
+          <property>engines/engine[3]/rpm</property>
+          <value>1350</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
 
-<animation>
-  <type>spin</type>
-  <object-name>Prop1</object-name>
-  <property>engines/engine[0]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-6.654</x-m>
-    <y-m>-9.093</y-m>
-    <z-m>0.115</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurSlow1</object-name>
-  <property>engines/engine[0]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-6.654</x-m>
-    <y-m>-9.093</y-m>
-    <z-m>0.115</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurFast1</object-name>
-  <property>engines/engine[0]/rpm</property>
-  <factor>0.004375</factor>
-  <center>
-    <x-m>-6.654</x-m>
-    <y-m>-9.093</y-m>
-    <z-m>0.115</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
+  <!-- Selects: Prop Blur Fast -->
 
-<animation>
-  <type>spin</type>
-  <object-name>Prop2</object-name>
-  <property>engines/engine[1]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-7.095</x-m>
-    <y-m>-4.267</y-m>
-    <z-m>-0.450</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurSlow2</object-name>
-  <property>engines/engine[1]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-7.095</x-m>
-    <y-m>-4.267</y-m>
-    <z-m>-0.450</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurFast2</object-name>
-  <property>engines/engine[1]/rpm</property>
-  <factor>0.004375</factor>
-  <center>
-    <x-m>-7.095</x-m>
-    <y-m>-4.267</y-m>
-    <z-m>-0.450</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurFast1</object-name>
+    <condition>
+      <greater-than-equals>
+        <property>engines/engine[0]/rpm</property>
+        <value>1350</value>
+      </greater-than-equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurFast2</object-name>
+    <condition>
+      <greater-than-equals>
+        <property>engines/engine[1]/rpm</property>
+        <value>1350</value>
+      </greater-than-equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurFast3</object-name>
+    <condition>
+      <greater-than-equals>
+        <property>engines/engine[2]/rpm</property>
+        <value>1350</value>
+      </greater-than-equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>PropBlurFast4</object-name>
+    <condition>
+      <greater-than-equals>
+        <property>engines/engine[3]/rpm</property>
+        <value>1350</value>
+      </greater-than-equals>
+    </condition>
+  </animation>
 
-<animation>
-  <type>spin</type>
-  <object-name>Prop3</object-name>
-  <property>engines/engine[2]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-7.095</x-m>
-    <y-m>4.267</y-m>
-    <z-m>-0.450</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurSlow3</object-name>
-  <property>engines/engine[2]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-7.095</x-m>
-    <y-m>4.267</y-m>
-    <z-m>-0.450</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurFast3</object-name>
-  <property>engines/engine[2]/rpm</property>
-  <factor>0.004375</factor>
-  <center>
-    <x-m>-7.095</x-m>
-    <y-m>4.267</y-m>
-    <z-m>-0.450</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
+  <!-- Spins (geared 16:7) -->
 
-<animation>
-  <type>spin</type>
-  <object-name>Prop4</object-name>
-  <property>engines/engine[3]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-6.654</x-m>
-    <y-m>9.093</y-m>
-    <z-m>0.115</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurSlow4</object-name>
-  <property>engines/engine[3]/rpm</property>
-  <factor>0.4375</factor>
-  <center>
-    <x-m>-6.654</x-m>
-    <y-m>9.093</y-m>
-    <z-m>0.115</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
-<animation>
-  <type>spin</type>
-  <object-name>PropBlurFast4</object-name>
-  <property>engines/engine[3]/rpm</property>
-  <factor>0.004375</factor>
-  <center>
-    <x-m>-6.654</x-m>
-    <y-m>9.093</y-m>
-    <z-m>0.115</z-m>
-  </center>
-  <axis>
-    <x>1</x>
-    <y>0</y>
-    <z>0</z>
-  </axis>
-</animation>
+  <animation>
+    <type>spin</type>
+    <object-name>Prop1</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-6.654</x-m>
+      <y-m>-9.093</y-m>
+      <z-m>0.115</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurSlow1</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-6.654</x-m>
+      <y-m>-9.093</y-m>
+      <z-m>0.115</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurFast1</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor>0.004375</factor>
+    <center>
+      <x-m>-6.654</x-m>
+      <y-m>-9.093</y-m>
+      <z-m>0.115</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>Prop2</object-name>
+    <property>engines/engine[1]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-7.095</x-m>
+      <y-m>-4.267</y-m>
+      <z-m>-0.450</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurSlow2</object-name>
+    <property>engines/engine[1]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-7.095</x-m>
+      <y-m>-4.267</y-m>
+      <z-m>-0.450</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurFast2</object-name>
+    <property>engines/engine[1]/rpm</property>
+    <factor>0.004375</factor>
+    <center>
+      <x-m>-7.095</x-m>
+      <y-m>-4.267</y-m>
+      <z-m>-0.450</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>Prop3</object-name>
+    <property>engines/engine[2]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-7.095</x-m>
+      <y-m>4.267</y-m>
+      <z-m>-0.450</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurSlow3</object-name>
+    <property>engines/engine[2]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-7.095</x-m>
+      <y-m>4.267</y-m>
+      <z-m>-0.450</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurFast3</object-name>
+    <property>engines/engine[2]/rpm</property>
+    <factor>0.004375</factor>
+    <center>
+      <x-m>-7.095</x-m>
+      <y-m>4.267</y-m>
+      <z-m>-0.450</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>Prop4</object-name>
+    <property>engines/engine[3]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-6.654</x-m>
+      <y-m>9.093</y-m>
+      <z-m>0.115</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurSlow4</object-name>
+    <property>engines/engine[3]/rpm</property>
+    <factor>0.4375</factor>
+    <center>
+      <x-m>-6.654</x-m>
+      <y-m>9.093</y-m>
+      <z-m>0.115</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>spin</type>
+    <object-name>PropBlurFast4</object-name>
+    <property>engines/engine[3]/rpm</property>
+    <factor>0.004375</factor>
+    <center>
+      <x-m>-6.654</x-m>
+      <y-m>9.093</y-m>
+      <z-m>0.115</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
 
 </PropertyList>
 

@@ -81,38 +81,37 @@ For Flightgear 2.0 or later. Do not use for earlier versions.
 --> 
 <piston_engine name="Wright Cyclone 972TC18DA3">
 
-<!-- 
-     - estimation of the 1049 range : 3580 NM = 4760 * 1890 / 2510.
-     Which matches VH-EAG and N73544 with both the same content in US gal.
+  <!-- 
+- estimate of the 1049 range : 3580 NM = 4760 * 1890 / 2510.
+  Which matches VH-EAG and N73544 with both the same content in US gal.
 
-     - max speed is 220 kt at 20000 ft (cruise), 197 kt at 25000 ft (ceiling) : that is an average of 209 kt.
-Ron:  These are apparently Indicated Air Speeds, the average is meaningless?
-     Let's take 319 kt as average ground speed (tail wind 20 kt) : range is 3580 NM / 319 kt = 11 hours.
+- max speed is 220 kt at 20000 ft (cruise), 197 kt at 25000 ft (ceiling).
+Let's take 319 kt as average ground speed (tail wind 20 kt) : range is 3580 NM / 319 kt = 11 hours.
 
-     For our model 1049-54, with 6550 US gallons, the consumption must be 6550 / 11 hours = 595 US gallons / hour,
-     or 149 US gallons / hour per engine.
+For our model 1049-54, with 6550 US gallons, the consumption must be 6550 / 11 hours = 595 US gallons / hour,
+or 149 US gallons / hour per engine.
 Ron: Model is set to give 2000 hp at 149 gph.
-     For westerly front wind 10 kt (optimistic), average ground speed is 289 kt (optimistic), or 3580 / 289 = 12 h.
-     And it can cross the Atlantic from the east (KJFK-EHAM 3156 NM direct), only with refueling at Gander or Shannon.
--->
+For westerly front wind 10 kt (optimistic), average ground speed is 289 kt (optimistic), or 3580 / 289 = 12 h.
+And it can cross the Atlantic from the east (KJFK-EHAM 3156 NM direct), only with refueling at Gander or Shannon.
+  -->
 
-   <minmp unit="INHG">  6.0 </minmp>
-   <maxmp unit="INHG"> 56.5 </maxmp>
-   <displacement unit="IN3"> 3350.00 </displacement>
-   <bsfc> 0.305 </bsfc>
-   <volumetric-efficiency> 0.5 </volumetric-efficiency>
-   <maxhp>    3250.00 </maxhp>
-   <cycles>      4.0 </cycles>
-   <bore unit="IN"> 6.125  </bore>
-   <stroke unit="IN"> 6.312 </stroke>
-   <cylinders> 18 </cylinders>
-   <cylinder-head-mass> 25.0 </cylinder-head-mass>
-   <compression-ratio> 6.7 </compression-ratio>
-   <sparkfaildrop> 0.9 </sparkfaildrop>
-   <idlerpm>   500.0 </idlerpm>
-   <maxrpm>       2900.0 </maxrpm>
-   <maxthrottle> 1.0 </maxthrottle>
-   <minthrottle> 0.1 </minthrottle>
+  <minmp unit="INHG">  6.0 </minmp>
+  <maxmp unit="INHG"> 56.5 </maxmp>
+  <displacement unit="IN3"> 3350.00 </displacement>
+  <bsfc> 0.305 </bsfc>
+  <volumetric-efficiency> 0.5 </volumetric-efficiency>
+  <maxhp>    3250.00 </maxhp>
+  <cycles>      4.0 </cycles>
+  <bore unit="IN"> 6.125  </bore>
+  <stroke unit="IN"> 6.312 </stroke>
+  <cylinders> 18 </cylinders>
+  <cylinder-head-mass> 25.0 </cylinder-head-mass>
+  <compression-ratio> 6.7 </compression-ratio>
+  <sparkfaildrop> 0.9 </sparkfaildrop>
+  <idlerpm>   500.0 </idlerpm>
+  <maxrpm>       2900.0 </maxrpm>
+  <maxthrottle> 1.0 </maxthrottle>
+  <minthrottle> 0.1 </minthrottle>
   <boostmanual>      1 </boostmanual>
   <numboostspeeds>   2 </numboostspeeds>
   <boostoverride>    0 </boostoverride>
