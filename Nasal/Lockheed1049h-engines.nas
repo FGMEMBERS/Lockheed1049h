@@ -25,14 +25,25 @@ var engine_starter = func {
   engine_controls[engine].getNode("starter").setBoolValue(1);		# Engage engine starter
 }
 
-									# Monitor for engine functions
-#var engine_monit = func {
-#  for(var i=0; i<size(engines); i+=1) {					# if an engine is on, make sure starter is off
-#    if (engines[i].getNode("running").getValue()) {
-#      engine_controls[i].getNode("starter").setBoolValue(0);
-#    }
-#  }
-#  settimer(engine_monit,5);
-#}
+# Adjust the cooling factor of each engine as cowl flaps are opened or closed.
 
+var adjust_cooling_factor = func (cowl_flaps_node) {
+   var engine_number = cowl_flaps_node.getParent ().getIndex ();
+   setprop ("/fdm/jsbsim/propulsion/engine[" ~ engine_number ~ "]/cooling-factor",
+            0.6 + 0.3 * cowl_flaps_node.getValue ());
+}
 
+var cowl_flaps_listeners = [ 0, 0, 0, 0 ]; # prevents re-registering listeners on Shift+Esc
+
+setlistener ("/sim/signals/fdm-initialized", func {
+   for (var engine = 0; engine < 4; engine = engine + 1) {
+      if (cowl_flaps_listeners [engine] == 0) {
+         cowl_flaps_listeners [engine] =
+           setlistener ("/controls/engines/engine[" ~ engine ~ "]/cowl-flaps-norm",
+                        adjust_cooling_factor, 1, 0);
+      }
+      else {
+         print ("FDM reinitialized; not re-registering cowl flap listeners.");
+      }
+   }
+}, 0, 0);
