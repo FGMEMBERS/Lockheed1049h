@@ -6,6 +6,40 @@
 
   <!-- 2000' warning -->
 
+
+  <animation>
+    <type>material</type>
+    <object-name>LampGndRdr05RedOn</object-name>
+    <emission>
+      <red>1</red>
+      <green>0</green>
+      <blue>0</blue>
+      <factor-prop>/systems/electrical/bus-dc/volts</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>LampGndRdr10YellowOn</object-name>
+    <emission>
+      <red>1</red>
+      <green>1</green>
+      <blue>0</blue>
+      <factor-prop>/systems/electrical/bus-dc/volts</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>LampGndRdr20AmberOn</object-name>
+    <emission>
+      <red>1</red>
+      <green>0.4</green>
+      <blue>0.05</blue>
+      <factor-prop>/systems/electrical/bus-dc/volts</factor-prop>
+    </emission>
+  </animation>
+
   <animation>
     <type>select</type>
     <object-name>LampGndRdr20AmberOn</object-name>
@@ -161,6 +195,10 @@
               <property>/position/altitude-agl-ft</property>
               <property n="1">/instrumentation/terrain-warning/selector-ft</property>
             </less-than-equals>
+            <greater-than>
+              <property>/systems/electrical/bus-dc/volts</property>
+              <value>9</value>
+            </greater-than>
           </and>
         </or>
       </not>

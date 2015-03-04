@@ -11,7 +11,13 @@
     <object-name>LampPropRevOn3</object-name>
     <object-name>LampPropRevOn4</object-name>
     <condition>
-      <property>controls/engines/engine[0]/reverser</property>
+      <and>
+        <property>/controls/engines/engine[0]/reverser</property>
+        <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </greater-than>
+      </and>
     </condition>
   </animation>
 
@@ -22,7 +28,13 @@
     <object-name>LampPropRev3</object-name>
     <object-name>LampPropRev4</object-name>
     <condition>
-      <not><property>controls/engines/engine[0]/reverser</property></not>
+      <or>
+        <not><property>/controls/engines/engine[0]/reverser</property></not>
+        <less-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </less-than>
+      </or>
     </condition>
   </animation>
 
