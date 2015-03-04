@@ -66,7 +66,7 @@ GNU General Public License for more details.
   </filter>
 
   <filter>
-    <name>BMEP #3: compute BMEP from engine power and RPM</name>
+    <name>BMEP #4: compute BMEP from engine power and RPM</name>
     <debug>false</debug>
     <type>gain</type>
     <input>
@@ -145,5 +145,134 @@ GNU General Public License for more details.
     <input>0</input>
     <output>/engines/engine[3]/est-fuelpress</output>
   </filter>
-  
+
+  <!-- the BSFC value that JSBSim computes is good only at sea level;
+       as altitude increases the power output of the engines does not
+       decrease enough.  This filter increases BSFC to correct that.
+       See Engines/WrightCyclone-972TC18DA3.xml for details. -->
+
+  <filter>
+    <name>BSFC #1: Basic Specific Fuel Consumption as a function of altitude</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.0000010516</scale>
+      <offset>0.198</offset>
+    </input>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.000001416</scale>
+      <offset>0.228</offset>
+    </input>
+    <output>/fdm/jsbsim/propulsion/engine[0]/bsfc-lbs_hphr</output>
+  </filter>
+
+  <filter>
+    <name>BSFC #2: Basic Specific Fuel Consumption as a function of altitude</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.0000010516</scale>
+      <offset>0.198</offset>
+    </input>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.000001416</scale>
+      <offset>0.228</offset>
+    </input>
+    <output>/fdm/jsbsim/propulsion/engine[1]/bsfc-lbs_hphr</output>
+  </filter>
+
+  <filter>
+    <name>BSFC #3: Basic Specific Fuel Consumption as a function of altitude</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.0000010516</scale>
+      <offset>0.198</offset>
+    </input>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.000001416</scale>
+      <offset>0.228</offset>
+    </input>
+    <output>/fdm/jsbsim/propulsion/engine[2]/bsfc-lbs_hphr</output>
+  </filter>
+
+  <filter>
+    <name>BSFC #4: Basic Specific Fuel Consumption as a function of altitude</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+          <value>0</value>
+        </equals>
+      </condition>
+      <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.0000010516</scale>
+      <offset>0.198</offset>
+    </input>
+    <input>
+      <condition>
+        <equals>
+          <property>/fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+          <value>1</value>
+        </equals>
+      </condition>
+      <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
+      <property>/position/altitude-ft</property>
+      <scale>0.000001416</scale>
+      <offset>0.228</offset>
+    </input>
+    <output>/fdm/jsbsim/propulsion/engine[3]/bsfc-lbs_hphr</output>
+  </filter>
+
 </PropertyList>
