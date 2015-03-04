@@ -147,7 +147,32 @@ View the README file for information about this model
       <file>Nasal/Lockheed1049h-electrical.nas</file>
       <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
       <file>Nasal/Lockheed1049h-seats.nas</file>
+      <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>
   </nasal>
+
+  <limits>
+    <mass-and-balance>
+      <maximum-takeoff-mass-lbs type="double">137500</maximum-takeoff-mass-lbs>
+      <maximum-landing-mass-lbs type="double">113000</maximum-landing-mass-lbs>
+    </mass-and-balance>
+    <max-flap-extension-speed>
+      <flaps type="double">0.25</flaps>
+      <speed type="double">195</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps type="double">0.50</flaps>
+      <speed type="double">174</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps type="double">0.75</flaps>
+      <speed type="double">174</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps type="double">1.0</flaps>
+      <speed type="double">165</speed>
+    </max-flap-extension-speed>
+    <max-gear-extension-speed type="double">165</max-gear-extension-speed>
+  </limits>
 
 </PropertyList>
