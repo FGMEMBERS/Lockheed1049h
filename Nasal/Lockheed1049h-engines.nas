@@ -2,27 +2,29 @@
 #
 # Custom 1049H routines for engine support
 #
-# Gary Neely aka 'Buckaroo'
-#
-# Note that the starter selector sequence is based on the book checklist sequence of 3-4-2-1.
+# Copyright (c) 2011 Gary Neely aka 'Buckaroo'
+# Copyright (c) 2015 Ludovic Brenta
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 
-									# These vars declared in electrical.nas:
+# These vars declared in electrical.nas:
 # MIN_VOLTS, bus_dc
-									# Map selector numbers to engines:
-									# If starter selector is 0, next is 3
-									# If starter selector is 3, next is 4, etc.
-var engine_start_select	= props.globals.getNode("/controls/switches/engine-start-select");
-var engine_controls	= props.globals.getNode("/controls/engines").getChildren("engine");
-var engines		= props.globals.getNode("/engines").getChildren("engine");
 
-
-									# Starter button pressed:
+# Starter button pressed:
 var engine_starter = func {
-  if (bus_dc.getNode("volts").getValue() <= MIN_VOLTS) { return 0 }	# Insufficient volts on bus
-  var engine = engine_start_select.getValue();				# Get selected engine
-  if (engine == 0) { return 0 }						# No engine selected
-  engine -= 1;								# Translate 1-4 to 0-3
-  engine_controls[engine].getNode("starter").setBoolValue(1);		# Engage engine starter
+   if (bus_dc.getNode("volts").getValue() <= MIN_VOLTS) { # Insufficient volts on bus
+      return 0;
+   }
+   var engine = getprop ("/controls/switches/engine-start-select");
+   if (engine == 0) { return 0; } # No engine selected
+   setprop ("/controls/engines/engine[" ~ (engine - 1) ~ "]/starter", 1);
 }
 
 # Adjust the cooling factor of each engine as cowl flaps are opened or closed.
@@ -30,7 +32,7 @@ var engine_starter = func {
 var adjust_cooling_factor = func (cowl_flaps_node) {
    var engine_number = cowl_flaps_node.getParent ().getIndex ();
    setprop ("/fdm/jsbsim/propulsion/engine[" ~ engine_number ~ "]/cooling-factor",
-            0.6 + 0.3 * cowl_flaps_node.getValue ());
+            0.25 + 0.15 * cowl_flaps_node.getValue ());
 }
 
 var cowl_flaps_listeners = [ 0, 0, 0, 0 ]; # prevents re-registering listeners on Shift+Esc
