@@ -810,7 +810,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalPL</object-name>
-    <property>controls/flight/rudder</property>
+    <property>/controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>1</x>
@@ -822,7 +822,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalPR</object-name>
-    <property>controls/flight/rudder</property>
+    <property>/controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>-1</x>
@@ -834,7 +834,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalCPL</object-name>
-    <property>controls/flight/rudder</property>
+    <property>/controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>1</x>
@@ -846,7 +846,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalCPR</object-name>
-    <property>controls/flight/rudder</property>
+    <property>/controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>-1</x>
@@ -862,7 +862,7 @@
     <type>rotate</type>
     <object-name>YokeColumnP</object-name>
     <object-name>YokeP</object-name>
-    <property>controls/flight/elevator</property>
+    <property>/controls/flight/elevator</property>
     <factor>-5</factor>
     <center>
       <x-m>-15.353</x-m>
@@ -879,7 +879,7 @@
   <animation>
     <type>rotate</type>
     <object-name>YokeP</object-name>
-    <property>controls/flight/aileron</property>
+    <property>/controls/flight/aileron</property>
     <factor>-90</factor>
     <center>
       <x-m>0.0</x-m>
@@ -897,7 +897,7 @@
     <type>rotate</type>
     <object-name>YokeColumnCP</object-name>
     <object-name>YokeCP</object-name>
-    <property>controls/flight/elevator</property>
+    <property>/controls/flight/elevator</property>
     <factor>-5</factor>
     <center>
       <x-m>-15.353</x-m>
@@ -914,7 +914,7 @@
   <animation>
     <type>rotate</type>
     <object-name>YokeCP</object-name>
-    <property>controls/flight/aileron</property>
+    <property>/controls/flight/aileron</property>
     <factor>-90</factor>
     <center>
       <x-m>0.0</x-m>
@@ -953,7 +953,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngPitch</object-name>
-    <property>controls/engines/engine[0]/propeller-pitch</property>
+    <property>/controls/engines/engine[0]/propeller-pitch</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1056,7 +1056,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle1</object-name>
-    <property>controls/engines/engine[0]/throttle</property>
+    <property>/controls/engines/engine[0]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1075,7 +1075,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle2</object-name>
-    <property>controls/engines/engine[1]/throttle</property>
+    <property>/controls/engines/engine[1]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1094,7 +1094,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle3</object-name>
-    <property>controls/engines/engine[2]/throttle</property>
+    <property>/controls/engines/engine[2]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1113,7 +1113,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle4</object-name>
-    <property>controls/engines/engine[3]/throttle</property>
+    <property>/controls/engines/engine[3]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1270,7 +1270,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger1</object-name>
-    <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+    <property>/fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1289,7 +1289,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger2</object-name>
-    <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+    <property>/fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1308,7 +1308,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger3</object-name>
-    <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+    <property>/fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1327,7 +1327,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger4</object-name>
-    <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+    <property>/fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1396,7 +1396,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture1</object-name>
-    <property>controls/engines/engine[0]/mixture</property>
+    <property>/controls/engines/engine[0]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1415,7 +1415,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture2</object-name>
-    <property>controls/engines/engine[1]/mixture</property>
+    <property>/controls/engines/engine[1]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1434,7 +1434,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture3</object-name>
-    <property>controls/engines/engine[2]/mixture</property>
+    <property>/controls/engines/engine[2]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1453,7 +1453,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture4</object-name>
-    <property>controls/engines/engine[3]/mixture</property>
+    <property>/controls/engines/engine[3]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1610,7 +1610,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect1</object-name>
-    <property>controls/fuel/tankvalves[0]/valve</property>
+    <property>/controls/fuel/tankvalves[0]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1629,7 +1629,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect2</object-name>
-    <property>controls/fuel/tankvalves[1]/valve</property>
+    <property>/controls/fuel/tankvalves[1]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>45</dep></entry>
@@ -1649,7 +1649,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect3</object-name>
-    <property>controls/fuel/tankvalves[2]/valve</property>
+    <property>/controls/fuel/tankvalves[2]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>45</dep></entry>
@@ -1669,7 +1669,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect4</object-name>
-    <property>controls/fuel/tankvalves[3]/valve</property>
+    <property>/controls/fuel/tankvalves[3]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1824,7 +1824,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrTankC</object-name>
-    <property>controls/fuel/tankvalves[4]/valve</property>
+    <property>/controls/fuel/tankvalves[4]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1856,7 +1856,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed1</object-name>
-    <property>controls/fuel/crossfeedvalves[0]/valve</property>
+    <property>/controls/fuel/crossfeedvalves[0]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1888,7 +1888,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed2</object-name>
-    <property>controls/fuel/crossfeedvalves[1]/valve</property>
+    <property>/controls/fuel/crossfeedvalves[1]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1920,7 +1920,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed3</object-name>
-    <property>controls/fuel/crossfeedvalves[2]/valve</property>
+    <property>/controls/fuel/crossfeedvalves[2]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1952,7 +1952,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed4</object-name>
-    <property>controls/fuel/crossfeedvalves[3]/valve</property>
+    <property>/controls/fuel/crossfeedvalves[3]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1987,7 +1987,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff1</object-name>
-    <property>controls/fuel/enginevalves[0]/valve</property>
+    <property>/controls/fuel/enginevalves[0]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2013,7 +2013,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[0]/valve</property>
+        <property>/controls/fuel/enginevalves[0]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
@@ -2025,7 +2025,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff2</object-name>
-    <property>controls/fuel/enginevalves[1]/valve</property>
+    <property>/controls/fuel/enginevalves[1]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2051,7 +2051,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[1]/valve</property>
+        <property>/controls/fuel/enginevalves[1]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
@@ -2063,7 +2063,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff3</object-name>
-    <property>controls/fuel/enginevalves[2]/valve</property>
+    <property>/controls/fuel/enginevalves[2]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2089,7 +2089,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[2]/valve</property>
+        <property>/controls/fuel/enginevalves[2]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
@@ -2101,7 +2101,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff4</object-name>
-    <property>controls/fuel/enginevalves[3]/valve</property>
+    <property>/controls/fuel/enginevalves[3]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2127,7 +2127,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[3]/valve</property>
+        <property>/controls/fuel/enginevalves[3]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
