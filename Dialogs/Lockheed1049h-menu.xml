@@ -124,7 +124,7 @@
       <binding>
         <condition>
           <equals>
-            <property>sim/current-view/view-number</property>
+            <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -133,7 +133,7 @@
       <binding>
         <condition>
           <equals>
-            <property>sim/current-view/view-number</property>
+            <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -164,7 +164,7 @@
       <binding>
         <condition>
           <equals>
-            <property>sim/current-view/view-number</property>
+            <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -173,7 +173,7 @@
       <binding>
         <condition>
           <equals>
-            <property>sim/current-view/view-number</property>
+            <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -205,7 +205,7 @@
       <binding>
         <condition>
           <equals>
-            <property>sim/current-view/view-number</property>
+            <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -214,7 +214,7 @@
       <binding>
         <condition>
           <equals>
-            <property>sim/current-view/view-number</property>
+            <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -236,7 +236,7 @@
       <binding>
         <condition>
           <equals>
-            <property>sim/current-view/view-number</property>
+            <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
