@@ -725,8 +725,8 @@ K:             0.039
       <function name="aero/coefficient/CDo">
         <description>Drag_at_zero_lift</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
           <value>0.0211</value>
         </product>
       </function>
@@ -737,8 +737,8 @@ K:             0.039
       <function name="aero/coefficient/CDalpha">
         <description>Drag_due_to_alpha</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
           <table>
             <independentVar>aero/alpha-rad</independentVar>
             <tableData>
@@ -754,17 +754,17 @@ K:             0.039
       <function name="aero/coefficient/CDi">
         <description>Induced_drag</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/aero/cl-squared</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>aero/cl-squared</property>
           <value>0.0390</value>
         </product>
       </function>
       <function name="aero/coefficient/CDmach">
         <description>Drag_due_to_mach</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
           <table>
             <independentVar>velocities/mach</independentVar>
             <tableData>
@@ -779,18 +779,18 @@ K:             0.039
       <function name="aero/coefficient/CDflap">
         <description>Drag_due_to_flaps</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/fcs/flap-cmd-norm</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>fcs/flap-cmd-norm</property>
           <value>0.0350</value>
         </product>
       </function>
       <function name="aero/coefficient/CDgear">
         <description>Drag_due_to_gear</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/gear/gear-pos-norm</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>gear/gear-pos-norm</property>
           <value>0.0230</value>
         </product>
       </function>
@@ -800,17 +800,17 @@ K:             0.039
       <function name="aero/coefficient/CDsb">
         <description>Drag_due_to_speedbrakes</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/fcs/speedbrake-pos-norm</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>fcs/speedbrake-pos-norm</property>
           <value>0.0</value>
         </product>
       </function>
       <function name="aero/coefficient/CDbeta">
         <description>Drag_due_to_sideslip</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
           <table>
             <independentVar>aero/beta-rad</independentVar>
             <tableData>
@@ -826,9 +826,9 @@ K:             0.039
       <function name="aero/coefficient/CDde">
         <description>Drag_due_to_Elevator_Deflection</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <abs><property>/fcs/elevator-pos-norm</property></abs>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <abs><property>fcs/elevator-pos-norm</property></abs>
           <value>0.0350</value>
         </product>
       </function>
@@ -838,9 +838,9 @@ K:             0.039
       <function name="aero/coefficient/CYb">
         <description>Side_force_due_to_beta</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/aero/beta-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>aero/beta-rad</property>
           <value>-1.0000</value>
         </product>
       </function>
@@ -853,9 +853,9 @@ K:             0.039
       <function name="aero/coefficient/CLo">
         <description>Lift_at_zero_alpha</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/aero/function/kCLge</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>aero/function/kCLge</property>
           <value>0.2400</value>
         </product>
       </function>
@@ -865,9 +865,9 @@ K:             0.039
       <function name="aero/coefficient/CLalpha">
         <description>Lift_due_to_alpha</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/aero/function/kCLge</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>aero/function/kCLge</property>
           <table>
             <independentVar>aero/alpha-rad</independentVar>
             <tableData>
@@ -888,9 +888,9 @@ K:             0.039
       <function name="aero/coefficient/dCLflap">
         <description>Delta_Lift_due_to_flaps</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/aero/function/kCLge</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>aero/function/kCLge</property>
           <table>
             <independentVar>fcs/flap-pos-deg</independentVar>
             <tableData>
@@ -906,18 +906,18 @@ K:             0.039
       <function name="aero/coefficient/dCLsb">
         <description>Delta_Lift_due_to_speedbrake</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/fcs/speedbrake-pos-norm</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>fcs/speedbrake-pos-norm</property>
           <value>0.0000</value>
         </product>
       </function>
       <function name="aero/coefficient/CLde">
         <description>Lift_due_to_Elevator_Deflection</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/fcs/elevator-pos-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>fcs/elevator-pos-rad</property>
           <value>0.2000</value>
         </product>
       </function>
@@ -927,42 +927,42 @@ K:             0.039
       <function name="aero/coefficient/Clb">
         <description>Roll_moment_due_to_beta</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/aero/beta-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/beta-rad</property>
           <value>-0.1000</value>
         </product>
       </function>
       <function name="aero/coefficient/Clp">
         <description>Roll_moment_due_to_roll_rate</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/aero/bi2vel</property>
-          <property>/velocities/p-aero-rad_sec</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/bi2vel</property>
+          <property>velocities/p-aero-rad_sec</property>
           <value>-0.4000</value>
         </product>
       </function>
       <function name="aero/coefficient/Clr">
         <description>Roll_moment_due_to_yaw_rate</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/aero/bi2vel</property>
-          <property>/velocities/r-aero-rad_sec</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/bi2vel</property>
+          <property>velocities/r-aero-rad_sec</property>
           <value>0.1500</value>
         </product>
       </function>
       <function name="aero/coefficient/Clda">
         <description>Roll_moment_due_to_aileron</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/fcs/left-aileron-pos-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>fcs/left-aileron-pos-rad</property>
           <table>
             <independentVar>velocities/mach</independentVar>
             <tableData>
@@ -975,10 +975,10 @@ K:             0.039
       <function name="aero/coefficient/Cldr">
         <description>Roll_moment_due_to_rudder</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/fcs/rudder-pos-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>fcs/rudder-pos-rad</property>
           <value>0.0100</value>
         </product>
       </function>
@@ -988,20 +988,20 @@ K:             0.039
       <function name="aero/coefficient/Cmalpha">
         <description>Pitch_moment_due_to_alpha</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/cbarw-ft</property>
-          <property>/aero/alpha-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/cbarw-ft</property>
+          <property>aero/alpha-rad</property>
           <value>-0.4000</value>
         </product>
       </function>
       <function name="aero/coefficient/Cmde">
         <description>Pitch_moment_due_to_elevator</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/cbarw-ft</property>
-          <property>/fcs/elevator-pos-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/cbarw-ft</property>
+          <property>fcs/elevator-pos-rad</property>
           <table>
             <independentVar>velocities/mach</independentVar>
             <tableData>
@@ -1014,22 +1014,22 @@ K:             0.039
       <function name="aero/coefficient/Cmq">
         <description>Pitch_moment_due_to_pitch_rate</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/cbarw-ft</property>
-          <property>/aero/ci2vel</property>
-          <property>/velocities/q-aero-rad_sec</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/cbarw-ft</property>
+          <property>aero/ci2vel</property>
+          <property>velocities/q-aero-rad_sec</property>
           <value>-22.0000</value>
         </product>
       </function>
       <function name="aero/coefficient/Cmadot">
         <description>Pitch_moment_due_to_alpha_rate</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/cbarw-ft</property>
-          <property>/aero/ci2vel</property>
-          <property>/aero/alphadot-rad_sec</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/cbarw-ft</property>
+          <property>aero/ci2vel</property>
+          <property>aero/alphadot-rad_sec</property>
           <value>-8.0000</value>
         </product>
       </function>
@@ -1039,41 +1039,41 @@ K:             0.039
       <function name="aero/coefficient/Cnb">
         <description>Yaw_moment_due_to_beta</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/aero/beta-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/beta-rad</property>
           <value>0.1200</value>
         </product>
       </function>
       <function name="aero/coefficient/Cnr">
         <description>Yaw_moment_due_to_yaw_rate</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/aero/bi2vel</property>
-          <property>/velocities/r-aero-rad_sec</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>aero/bi2vel</property>
+          <property>velocities/r-aero-rad_sec</property>
           <value>-0.1500</value>
         </product>
       </function>
       <function name="aero/coefficient/Cndr">
         <description>Yaw_moment_due_to_rudder</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/fcs/rudder-pos-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>fcs/rudder-pos-rad</property>
           <value>-0.1000</value>
         </product>
       </function>
       <function name="aero/coefficient/Cnda">
         <description>Adverse_yaw</description>
         <product>
-          <property>/aero/qbar-psf</property>
-          <property>/metrics/Sw-sqft</property>
-          <property>/metrics/bw-ft</property>
-          <property>/fcs/left-aileron-pos-rad</property>
+          <property>aero/qbar-psf</property>
+          <property>metrics/Sw-sqft</property>
+          <property>metrics/bw-ft</property>
+          <property>fcs/left-aileron-pos-rad</property>
           <value>-0.0080</value>
         </product>
       </function>
