@@ -11,13 +11,17 @@
     <condition>
       <and>
         <greater-than>
-          <property>gear/gear[0]/position-norm</property>
+          <property>/gear/gear[0]/position-norm</property>
           <value>0</value>
         </greater-than>
         <less-than>
-          <property>gear/gear[0]/position-norm</property>
+          <property>/gear/gear[0]/position-norm</property>
           <value>1</value>
         </less-than>
+        <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </greater-than>
       </and>
     </condition>
   </animation>
@@ -27,11 +31,11 @@
     <condition>
       <or>
         <equals>
-          <property>gear/gear[0]/position-norm</property>
+          <property>/gear/gear[0]/position-norm</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>gear/gear[0]/position-norm</property>
+          <property>/gear/gear[0]/position-norm</property>
           <value>1</value>
         </equals>
       </or>
@@ -43,20 +47,33 @@
     <type>select</type>
     <object-name>LampNoseOn</object-name>
     <condition>
-      <equals>
-        <property>gear/gear[0]/position-norm</property>
-        <value>1</value>
-      </equals>
+      <and>
+        <equals>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </equals>
+        <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </greater-than>
+      </and>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>LampNose</object-name>
     <condition>
-      <less-than>
-        <property>gear/gear[0]/position-norm</property>
-        <value>1</value>
-      </less-than>
+      <or>
+        <less-than>
+          <property>/gear/gear[0]/position-norm</property>
+          <value>1</value>
+        </less-than>
+        <less-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </less-than>
+        <not><property>/systems/electrical/bus-dc/volts</property></not>
+      </or>
     </condition>
   </animation>
 
@@ -65,20 +82,33 @@
     <type>select</type>
     <object-name>LampLeftOn</object-name>
     <condition>
-      <equals>
-        <property>gear/gear[1]/position-norm</property>
-        <value>1</value>
-      </equals>
+      <and>
+        <equals>
+          <property>/gear/gear[1]/position-norm</property>
+          <value>1</value>
+        </equals>
+        <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </greater-than>
+      </and>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>LampLeft</object-name>
     <condition>
-      <less-than>
-        <property>gear/gear[1]/position-norm</property>
-        <value>1</value>
-      </less-than>
+      <or>
+        <less-than>
+          <property>/gear/gear[1]/position-norm</property>
+          <value>1</value>
+        </less-than>
+        <less-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </less-than>
+        <not><property>/systems/electrical/bus-dc/volts</property></not>
+      </or>
     </condition>
   </animation>
 
@@ -87,20 +117,33 @@
     <type>select</type>
     <object-name>LampRightOn</object-name>
     <condition>
-      <equals>
-        <property>gear/gear[2]/position-norm</property>
-        <value>1</value>
-      </equals>
+      <and>
+        <equals>
+          <property>/gear/gear[2]/position-norm</property>
+          <value>1</value>
+        </equals>
+        <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </greater-than>
+      </and>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>LampRight</object-name>
     <condition>
-      <less-than>
-        <property>gear/gear[2]/position-norm</property>
-        <value>1</value>
-      </less-than>
+      <or>
+        <less-than>
+          <property>/gear/gear[2]/position-norm</property>
+          <value>1</value>
+        </less-than>
+        <less-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+        </less-than>
+        <not><property>/systems/electrical/bus-dc/volts</property></not>
+      </or>
     </condition>
   </animation>
 

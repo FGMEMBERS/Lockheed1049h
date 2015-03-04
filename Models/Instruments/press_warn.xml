@@ -78,7 +78,7 @@
     <object-name>LampPressFailOn4</object-name>
     <condition>
       <less-than-equals>
-        <property>/engines/engine[3]/rpm</property>
+        <property>/engines/engine[3]/oil-pressure-psi</property>
         <value>10.0</value>
       </less-than-equals>
     </condition>
@@ -89,7 +89,7 @@
     <condition>
       <not>
         <less-than-equals>
-          <property>/engines/engine[3]/rpm</property>
+          <property>/engines/engine[3]/oil-pressure-psi</property>
           <value>10.0</value>
         </less-than-equals>
       </not>

@@ -33,4 +33,35 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>pick</type>
+    <object-name>Fuel100.Face</object-name>
+    <action>
+      <name>FuelRmDec</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/tank[7]/level-gal_us</property>
+        <step>100</step>
+        <min>0</min>
+        <max>1555.0</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>FuelRmInc</name>
+      <button>1</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/consumables/fuel/tank[7]/level-gal_us</property>
+        <step>-100</step>
+        <min>0</min>
+        <max>1555.0</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
 </PropertyList>
