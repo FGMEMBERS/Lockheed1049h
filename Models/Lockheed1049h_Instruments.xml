@@ -99,6 +99,17 @@
   <!-- Translations from old model: x+ 0.1, z+ 0.165 -->
 
   <model>
+    <name>marker_beacons</name>
+    <path>Models/Instruments/marker_beacons.xml</path>
+    <offsets>
+      <x-m>-15.649</x-m>
+      <y-m>-0.384</y-m>
+      <z-m>1.010</z-m>
+      <roll-deg>90</roll-deg>
+    </offsets>
+  </model>
+
+  <model>
     <name>asi</name>
     <path>Models/Instruments/asi.xml</path>
     <offsets>
@@ -160,16 +171,6 @@
   </model>
 
   <model>
-    <name>autopilot_warn</name>
-    <path>Models/Instruments/autopilot_warn.xml</path>
-    <offsets>
-      <x-m>-15.648</x-m>
-      <y-m>-0.370</y-m>
-      <z-m>1.017</z-m>
-    </offsets>
-  </model>
-
-  <model>
     <name>ctl_pos</name>
     <path>Models/Instruments/control_positions_sm.xml</path>
     <offsets>
@@ -210,16 +211,6 @@
   </model>
 
   <model>
-    <name>marker_beacons</name>
-    <path>Models/Instruments/marker_beacons.xml</path>
-    <offsets>
-      <x-m>-15.649</x-m>
-      <y-m>-0.610</y-m>
-      <z-m>0.846</z-m>
-    </offsets>
-  </model>
-
-  <model>
     <name>terrain_warn</name>
     <path>Models/Instruments/terrain_warning.xml</path>
     <offsets>
@@ -238,17 +229,6 @@
       <z-m>0.696</z-m>
     </offsets>
   </model>
-
-  <model>
-    <name>fueling_notice</name>
-    <path>Models/Instruments/fueling_notice.xml</path>
-    <offsets>
-      <x-m>-15.649</x-m>
-      <y-m>-0.458</y-m>
-      <z-m>0.999</z-m>
-    </offsets>
-  </model>
-
 
   <!-- Center Panel -->
 
@@ -362,6 +342,26 @@
       <x-m>-15.465</x-m>
       <y-m>-0.084</y-m>
       <z-m>1.137</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>fueling_notice</name>
+    <path>Models/Instruments/fueling_notice.xml</path>
+    <offsets>
+      <x-m>-15.463</x-m>
+      <y-m>0</y-m>
+      <z-m>1.150</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>autopilot_warn</name>
+    <path>Models/Instruments/autopilot_warn.xml</path>
+    <offsets>
+      <x-m>-15.464</x-m>
+      <y-m>0</y-m>
+      <z-m>1.120</z-m>
     </offsets>
   </model>
 
