@@ -10,9 +10,9 @@
     <object-name>LampSSWarnOn</object-name>
     <condition>
       <and>
-        <property>/controls/switches/engine-start-select</property>
+        <property>controls/switches/engine-start-select</property>
         <greater-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>23.5</value>
         </greater-than>
       </and>
@@ -23,9 +23,9 @@
     <object-name>LampSSWarn</object-name>
     <condition>
       <or>
-        <not><property>/controls/switches/engine-start-select</property></not>
+        <not><property>controls/switches/engine-start-select</property></not>
         <less-than-equals>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>23.5</value>
         </less-than-equals>
       </or>

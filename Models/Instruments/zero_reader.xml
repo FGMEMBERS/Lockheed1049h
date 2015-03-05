@@ -25,11 +25,11 @@
     <condition>
       <and>
         <equals>
-          <property>/instrumentation/deviation-indicator/frequency</property>
+          <property>instrumentation/deviation-indicator/frequency</property>
           <value>0</value>
         </equals>
-        <property>/instrumentation/nav[0]/nav-loc</property>
-        <property>/instrumentation/nav[0]/in-range</property>
+        <property>instrumentation/nav[0]/nav-loc</property>
+        <property>instrumentation/nav[0]/in-range</property>
       </and>
     </condition>
   </animation>
@@ -37,7 +37,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ZR.Alt</object-name>
-    <property>/instrumentation/nav[0]/gs-needle-deflection</property>
+    <property>instrumentation/nav[0]/gs-needle-deflection</property>
     <interpolation>
       <entry><ind>-400</ind><dep>-30</dep></entry>
       <entry><ind> -10</ind><dep>-30</dep></entry>
@@ -63,11 +63,11 @@
     <condition>
       <and>
         <equals>
-          <property>/instrumentation/deviation-indicator/frequency</property>
+          <property>instrumentation/deviation-indicator/frequency</property>
           <value>0</value>
         </equals>
-        <property>/instrumentation/nav[0]/nav-loc</property>
-        <property>/instrumentation/nav[0]/in-range</property>
+        <property>instrumentation/nav[0]/nav-loc</property>
+        <property>instrumentation/nav[0]/in-range</property>
       </and>
     </condition>
   </animation>
@@ -75,7 +75,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ZR.Azi</object-name>
-    <property>/instrumentation/nav[0]/heading-needle-deflection</property>
+    <property>instrumentation/nav[0]/heading-needle-deflection</property>
     <interpolation>
       <entry><ind>-10</ind><dep>-30</dep></entry>
       <entry><ind>  0</ind><dep>  0</dep></entry>
@@ -100,11 +100,11 @@
     <condition>
       <and>
         <equals>
-          <property>/instrumentation/deviation-indicator/frequency</property>
+          <property>instrumentation/deviation-indicator/frequency</property>
           <value>1</value>
         </equals>
-        <property>/instrumentation/nav[1]/nav-loc</property>
-        <property>/instrumentation/nav[1]/in-range</property>
+        <property>instrumentation/nav[1]/nav-loc</property>
+        <property>instrumentation/nav[1]/in-range</property>
       </and>
     </condition>
   </animation>
@@ -112,7 +112,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ZR.Alt2</object-name>
-    <property>/instrumentation/nav[1]/gs-needle-deflection</property>
+    <property>instrumentation/nav[1]/gs-needle-deflection</property>
     <interpolation>
       <entry><ind>-400</ind><dep>-30</dep></entry>
       <entry><ind> -10</ind><dep>-30</dep></entry>
@@ -138,11 +138,11 @@
     <condition>
       <and>
         <equals>
-          <property>/instrumentation/deviation-indicator/frequency</property>
+          <property>instrumentation/deviation-indicator/frequency</property>
           <value>1</value>
         </equals>
-        <property>/instrumentation/nav[1]/nav-loc</property>
-        <property>/instrumentation/nav[1]/in-range</property>
+        <property>instrumentation/nav[1]/nav-loc</property>
+        <property>instrumentation/nav[1]/in-range</property>
       </and>
     </condition>
   </animation>
@@ -150,7 +150,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ZR.Azi2</object-name>
-    <property>/instrumentation/nav[1]/heading-needle-deflection</property>
+    <property>instrumentation/nav[1]/heading-needle-deflection</property>
     <interpolation>
       <entry><ind>-10</ind><dep>-30</dep></entry>
       <entry><ind>  0</ind><dep>  0</dep></entry>

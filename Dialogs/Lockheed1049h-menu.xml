@@ -41,7 +41,7 @@
       <label>  Crew Door, check to open:</label>
     </text>
     <checkbox>
-      <property>/controls/door-crew/position-norm</property>
+      <property>controls/door-crew/position-norm</property>
       <binding>
         <command>nasal</command>
         <script>Lockheed1049h.door_crew.toggle()</script>
@@ -61,7 +61,7 @@
     </text>
     <combo>
       <pref-width>200</pref-width>
-      <property>/systems/fuel/tanks/dialog-preset</property>
+      <property>systems/fuel/tanks/dialog-preset</property>
       <value>casual flying</value>
       <value>max landing</value>
       <value>max takeoff</value>
@@ -120,11 +120,11 @@
     <slider>
       <row>0</row>
       <col>2</col>
-      <property>/sim/current-view/y-offset-m</property>
+      <property>sim/current-view/y-offset-m</property>
       <binding>
         <condition>
           <equals>
-            <property>/sim/current-view/view-number</property>
+            <property>sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -133,7 +133,7 @@
       <binding>
         <condition>
           <equals>
-            <property>/sim/current-view/view-number</property>
+            <property>sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -160,11 +160,11 @@
     <slider>
       <row>1</row>
       <col>2</col>
-      <property>/sim/current-view/z-offset-m</property>
+      <property>sim/current-view/z-offset-m</property>
       <binding>
         <condition>
           <equals>
-            <property>/sim/current-view/view-number</property>
+            <property>sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -173,7 +173,7 @@
       <binding>
         <condition>
           <equals>
-            <property>/sim/current-view/view-number</property>
+            <property>sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -201,11 +201,11 @@
     <slider>
       <row>2</row>
       <col>2</col>
-      <property>/sim/current-view/pitch-offset-deg</property>
+      <property>sim/current-view/pitch-offset-deg</property>
       <binding>
         <condition>
           <equals>
-            <property>/sim/current-view/view-number</property>
+            <property>sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -214,7 +214,7 @@
       <binding>
         <condition>
           <equals>
-            <property>/sim/current-view/view-number</property>
+            <property>sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>
@@ -236,7 +236,7 @@
       <binding>
         <condition>
           <equals>
-            <property>/sim/current-view/view-number</property>
+            <property>sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </condition>

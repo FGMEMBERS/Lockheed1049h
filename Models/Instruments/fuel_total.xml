@@ -21,7 +21,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Fuel400.Needle</object-name>
-    <property>/consumables/fuel/total-fuel-lbs</property>
+    <property>consumables/fuel/total-fuel-lbs</property>
     <interpolation>
       <entry><ind>    0</ind><dep>    0</dep></entry>
       <entry><ind>44000</ind><dep>316.8</dep></entry>

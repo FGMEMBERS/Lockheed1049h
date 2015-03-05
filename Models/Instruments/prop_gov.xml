@@ -10,11 +10,11 @@
     <condition>
       <or>
         <greater-than-equals>
-          <property>/engines/engine[0]/rpm</property>
+          <property>engines/engine[0]/rpm</property>
           <value>2900.0</value>
         </greater-than-equals>
         <less-than>
-          <property>/engines/engine[0]/rpm</property>
+          <property>engines/engine[0]/rpm</property>
           <value>1350.0</value>
         </less-than>
       </or>
@@ -27,11 +27,11 @@
       <not>
         <or>
           <greater-than-equals>
-            <property>/engines/engine[0]/rpm</property>
+            <property>engines/engine[0]/rpm</property>
             <value>2900.0</value>
           </greater-than-equals>
           <less-than>
-            <property>/engines/engine[0]/rpm</property>
+            <property>engines/engine[0]/rpm</property>
             <value>1350.0</value>
           </less-than>
         </or>
@@ -45,11 +45,11 @@
     <condition>
       <or>
         <greater-than-equals>
-          <property>/engines/engine[1]/rpm</property>
+          <property>engines/engine[1]/rpm</property>
           <value>2900.0</value>
         </greater-than-equals>
         <less-than>
-          <property>/engines/engine[1]/rpm</property>
+          <property>engines/engine[1]/rpm</property>
           <value>1350.0</value>
         </less-than>
       </or>
@@ -62,11 +62,11 @@
       <not>
         <or>
           <greater-than-equals>
-            <property>/engines/engine[1]/rpm</property>
+            <property>engines/engine[1]/rpm</property>
             <value>2900.0</value>
           </greater-than-equals>
           <less-than>
-            <property>/engines/engine[1]/rpm</property>
+            <property>engines/engine[1]/rpm</property>
             <value>1350.0</value>
           </less-than>
         </or>
@@ -80,11 +80,11 @@
     <condition>
       <or>
         <greater-than-equals>
-          <property>/engines/engine[2]/rpm</property>
+          <property>engines/engine[2]/rpm</property>
           <value>2900.0</value>
         </greater-than-equals>
         <less-than>
-          <property>/engines/engine[2]/rpm</property>
+          <property>engines/engine[2]/rpm</property>
           <value>1350.0</value>
         </less-than>
       </or>
@@ -97,11 +97,11 @@
       <not>
         <or>
           <greater-than-equals>
-            <property>/engines/engine[2]/rpm</property>
+            <property>engines/engine[2]/rpm</property>
             <value>2900.0</value>
           </greater-than-equals>
           <less-than>
-            <property>/engines/engine[2]/rpm</property>
+            <property>engines/engine[2]/rpm</property>
             <value>1350.0</value>
           </less-than>
         </or>
@@ -115,11 +115,11 @@
     <condition>
       <or>
         <greater-than-equals>
-          <property>/engines/engine[3]/rpm</property>
+          <property>engines/engine[3]/rpm</property>
           <value>2900.0</value>
         </greater-than-equals>
         <less-than>
-          <property>/engines/engine[3]/rpm</property>
+          <property>engines/engine[3]/rpm</property>
           <value>1350.0</value>
         </less-than>
       </or>
@@ -132,11 +132,11 @@
       <not>
         <or>
           <greater-than-equals>
-            <property>/engines/engine[3]/rpm</property>
+            <property>engines/engine[3]/rpm</property>
             <value>2900.0</value>
           </greater-than-equals>
           <less-than>
-            <property>/engines/engine[3]/rpm</property>
+            <property>engines/engine[3]/rpm</property>
             <value>1350.0</value>
           </less-than>
         </or>

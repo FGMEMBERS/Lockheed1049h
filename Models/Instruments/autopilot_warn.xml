@@ -8,14 +8,14 @@
     <type>select</type>
     <object-name>LampAPOn</object-name>
     <condition>
-      <property>/systems/autopilot/ap-warn</property>
+      <property>systems/autopilot/ap-warn</property>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>LampAP</object-name>
     <condition>
-      <not><property>/systems/autopilot/ap-warn</property></not>
+      <not><property>systems/autopilot/ap-warn</property></not>
     </condition>
   </animation>
 

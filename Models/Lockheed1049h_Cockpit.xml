@@ -180,7 +180,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Switch.Magneto1</object-name>
-    <property>/controls/engines/engine[0]/magnetos</property>
+    <property>controls/engines/engine[0]/magnetos</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -204,7 +204,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/magnetos</property>
+        <property>controls/engines/engine[0]/magnetos</property>
         <step>1</step>
         <min>0</min>
         <max>3</max>
@@ -216,7 +216,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/magnetos</property>
+        <property>controls/engines/engine[0]/magnetos</property>
         <step>-1</step>
         <min>0</min>
         <max>3</max>
@@ -228,7 +228,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Switch.Magneto2</object-name>
-    <property>/controls/engines/engine[1]/magnetos</property>
+    <property>controls/engines/engine[1]/magnetos</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -252,7 +252,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/magnetos</property>
+        <property>controls/engines/engine[1]/magnetos</property>
         <step>1</step>
         <min>0</min>
         <max>3</max>
@@ -264,7 +264,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/magnetos</property>
+        <property>controls/engines/engine[1]/magnetos</property>
         <step>-1</step>
         <min>0</min>
         <max>3</max>
@@ -276,7 +276,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Switch.Magneto3</object-name>
-    <property>/controls/engines/engine[2]/magnetos</property>
+    <property>controls/engines/engine[2]/magnetos</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -300,7 +300,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/magnetos</property>
+        <property>controls/engines/engine[2]/magnetos</property>
         <step>1</step>
         <min>0</min>
         <max>3</max>
@@ -312,7 +312,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/magnetos</property>
+        <property>controls/engines/engine[2]/magnetos</property>
         <step>-1</step>
         <min>0</min>
         <max>3</max>
@@ -324,7 +324,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Switch.Magneto4</object-name>
-    <property>/controls/engines/engine[3]/magnetos</property>
+    <property>controls/engines/engine[3]/magnetos</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -348,7 +348,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/magnetos</property>
+        <property>controls/engines/engine[3]/magnetos</property>
         <step>1</step>
         <min>0</min>
         <max>3</max>
@@ -360,7 +360,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/magnetos</property>
+        <property>controls/engines/engine[3]/magnetos</property>
         <step>-1</step>
         <min>0</min>
         <max>3</max>
@@ -374,7 +374,7 @@
   <animation>
     <type>rotate</type>
     <object-name>KnobOHPanelLights</object-name>
-    <property>/controls/lighting/panel-norm</property>
+    <property>controls/lighting/panel-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep>270</dep></entry>
@@ -397,7 +397,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>0.1</step>
         <min>0</min>
         <max>1</max>
@@ -410,7 +410,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>-0.1</step>
         <min>0</min>
         <max>1</max>
@@ -424,7 +424,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwLLExtendL</object-name>
-    <property>/controls/lighting/landing-extend-left</property>
+    <property>controls/lighting/landing-extend-left</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -448,7 +448,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-extend-left</property>
+        <property>controls/lighting/landing-extend-left</property>
       </binding>
     </action>
   </animation>
@@ -456,7 +456,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwLLExtendR</object-name>
-    <property>/controls/lighting/landing-extend-right</property>
+    <property>controls/lighting/landing-extend-right</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -480,7 +480,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-extend-right</property>
+        <property>controls/lighting/landing-extend-right</property>
       </binding>
     </action>
   </animation>
@@ -488,7 +488,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwLLLampL</object-name>
-    <property>/controls/lighting/landing-left</property>
+    <property>controls/lighting/landing-left</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -512,7 +512,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-left</property>
+        <property>controls/lighting/landing-left</property>
       </binding>
     </action>
   </animation>
@@ -520,7 +520,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwLLLampR</object-name>
-    <property>/controls/lighting/landing-right</property>
+    <property>controls/lighting/landing-right</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -544,7 +544,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/landing-right</property>
+        <property>controls/lighting/landing-right</property>
       </binding>
     </action>
   </animation>
@@ -558,12 +558,12 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/command-bell</property>
+        <property>controls/switches/command-bell</property>
       </binding>
       <mod-up>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/switches/command-bell</property>
+          <property>controls/switches/command-bell</property>
         </binding>
       </mod-up>
     </action>
@@ -575,7 +575,7 @@
   <animation>
     <type>rotate</type>
     <object-name>KnobPPPanelLight</object-name>
-    <property>/controls/lighting/panel-norm</property>
+    <property>controls/lighting/panel-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep>270</dep></entry>
@@ -598,7 +598,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>0.1</step>
         <min>0</min>
         <max>1</max>
@@ -611,7 +611,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>-0.1</step>
         <min>0</min>
         <max>1</max>
@@ -623,7 +623,7 @@
   <animation>
     <type>rotate</type>
     <object-name>KnobPPCabinLights</object-name>
-    <property>/controls/lighting/cabin</property>
+    <property>controls/lighting/cabin</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep>270</dep></entry>
@@ -646,7 +646,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/cabin</property>
+        <property>controls/lighting/cabin</property>
         <step>0.1</step>
         <min>0</min>
         <max>1</max>
@@ -659,7 +659,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/cabin</property>
+        <property>controls/lighting/cabin</property>
         <step>-0.1</step>
         <min>0</min>
         <max>1</max>
@@ -671,7 +671,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwPPAC</object-name>
-    <property>/controls/lighting/beacon</property>
+    <property>controls/lighting/beacon</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -693,7 +693,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/beacon</property>
+        <property>controls/lighting/beacon</property>
       </binding>
     </action>
   </animation>
@@ -702,7 +702,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwPPTail</object-name>
-    <property>/controls/lighting/tail</property>
+    <property>controls/lighting/tail</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -724,7 +724,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/tail</property>
+        <property>controls/lighting/tail</property>
       </binding>
     </action>
   </animation>
@@ -732,7 +732,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwPPWT</object-name>
-    <property>/controls/lighting/nav</property>
+    <property>controls/lighting/nav</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -754,7 +754,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/nav</property>
+        <property>controls/lighting/nav</property>
       </binding>
     </action>
   </animation>
@@ -762,7 +762,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwPPTaxi</object-name>
-    <property>/controls/lighting/taxi</property>
+    <property>controls/lighting/taxi</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -784,7 +784,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/lighting/taxi</property>
+        <property>controls/lighting/taxi</property>
       </binding>
     </action>
   </animation>
@@ -795,7 +795,7 @@
   <animation>
     <type>translate</type>
     <object-name>SeatP</object-name>
-    <property>/systems/seat/pilot-z-offset-m</property>
+    <property>systems/seat/pilot-z-offset-m</property>
     <factor>1</factor>
     <axis>
       <x>1</x>
@@ -810,7 +810,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalPL</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>1</x>
@@ -822,7 +822,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalPR</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>-1</x>
@@ -834,7 +834,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalCPL</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>1</x>
@@ -846,7 +846,7 @@
   <animation>
     <type>translate</type>
     <object-name>PedalCPR</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <factor>0.15</factor>
     <axis>
       <x>-1</x>
@@ -862,7 +862,7 @@
     <type>rotate</type>
     <object-name>YokeColumnP</object-name>
     <object-name>YokeP</object-name>
-    <property>/controls/flight/elevator</property>
+    <property>controls/flight/elevator</property>
     <factor>-5</factor>
     <center>
       <x-m>-15.353</x-m>
@@ -879,7 +879,7 @@
   <animation>
     <type>rotate</type>
     <object-name>YokeP</object-name>
-    <property>/controls/flight/aileron</property>
+    <property>controls/flight/aileron</property>
     <factor>-90</factor>
     <center>
       <x-m>0.0</x-m>
@@ -897,7 +897,7 @@
     <type>rotate</type>
     <object-name>YokeColumnCP</object-name>
     <object-name>YokeCP</object-name>
-    <property>/controls/flight/elevator</property>
+    <property>controls/flight/elevator</property>
     <factor>-5</factor>
     <center>
       <x-m>-15.353</x-m>
@@ -914,7 +914,7 @@
   <animation>
     <type>rotate</type>
     <object-name>YokeCP</object-name>
-    <property>/controls/flight/aileron</property>
+    <property>controls/flight/aileron</property>
     <factor>-90</factor>
     <center>
       <x-m>0.0</x-m>
@@ -936,12 +936,12 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/horn</property>
+        <property>controls/switches/horn</property>
       </binding>
       <mod-up>
         <binding>
           <command>property-toggle</command>
-          <property>/controls/switches/horn</property>
+          <property>controls/switches/horn</property>
         </binding>
       </mod-up>
     </action>
@@ -953,7 +953,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngPitch</object-name>
-    <property>/controls/engines/engine[0]/propeller-pitch</property>
+    <property>controls/engines/engine[0]/propeller-pitch</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -979,7 +979,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/propeller-pitch</property>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -987,7 +987,7 @@
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/propeller-pitch</property>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -995,7 +995,7 @@
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/propeller-pitch</property>
+        <property>controls/engines/engine[2]/propeller-pitch</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1003,7 +1003,7 @@
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/propeller-pitch</property>
+        <property>controls/engines/engine[3]/propeller-pitch</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1020,7 +1020,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/propeller-pitch</property>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1028,7 +1028,7 @@
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/propeller-pitch</property>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1036,7 +1036,7 @@
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/propeller-pitch</property>
+        <property>controls/engines/engine[2]/propeller-pitch</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1044,7 +1044,7 @@
       </binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/propeller-pitch</property>
+        <property>controls/engines/engine[3]/propeller-pitch</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1056,7 +1056,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle1</object-name>
-    <property>/controls/engines/engine[0]/throttle</property>
+    <property>controls/engines/engine[0]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1075,7 +1075,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle2</object-name>
-    <property>/controls/engines/engine[1]/throttle</property>
+    <property>controls/engines/engine[1]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1094,7 +1094,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle3</object-name>
-    <property>/controls/engines/engine[2]/throttle</property>
+    <property>controls/engines/engine[2]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1113,7 +1113,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngThrottle4</object-name>
-    <property>/controls/engines/engine[3]/throttle</property>
+    <property>controls/engines/engine[3]/throttle</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1139,7 +1139,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/throttle</property>
+        <property>controls/engines/engine[0]/throttle</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1156,7 +1156,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/throttle</property>
+        <property>controls/engines/engine[0]/throttle</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1173,7 +1173,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/throttle</property>
+        <property>controls/engines/engine[1]/throttle</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1190,7 +1190,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/throttle</property>
+        <property>controls/engines/engine[1]/throttle</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1207,7 +1207,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/throttle</property>
+        <property>controls/engines/engine[2]/throttle</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1224,7 +1224,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/throttle</property>
+        <property>controls/engines/engine[2]/throttle</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1241,7 +1241,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/throttle</property>
+        <property>controls/engines/engine[3]/throttle</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1258,7 +1258,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/throttle</property>
+        <property>controls/engines/engine[3]/throttle</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1270,7 +1270,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger1</object-name>
-    <property>/fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+    <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1289,7 +1289,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger2</object-name>
-    <property>/fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+    <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1308,7 +1308,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger3</object-name>
-    <property>/fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+    <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1327,7 +1327,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngSupercharger4</object-name>
-    <property>/fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+    <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1352,7 +1352,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+        <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
       </binding>
     </action>
   </animation>
@@ -1364,7 +1364,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+        <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
       </binding>
     </action>
   </animation>
@@ -1376,7 +1376,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+        <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
       </binding>
     </action>
   </animation>
@@ -1388,7 +1388,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+        <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
       </binding>
     </action>
   </animation>
@@ -1396,7 +1396,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture1</object-name>
-    <property>/controls/engines/engine[0]/mixture</property>
+    <property>controls/engines/engine[0]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1415,7 +1415,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture2</object-name>
-    <property>/controls/engines/engine[1]/mixture</property>
+    <property>controls/engines/engine[1]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1434,7 +1434,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture3</object-name>
-    <property>/controls/engines/engine[2]/mixture</property>
+    <property>controls/engines/engine[2]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1453,7 +1453,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngMixture4</object-name>
-    <property>/controls/engines/engine[3]/mixture</property>
+    <property>controls/engines/engine[3]/mixture</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>80</dep></entry>
@@ -1479,7 +1479,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/mixture</property>
+        <property>controls/engines/engine[0]/mixture</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1496,7 +1496,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/mixture</property>
+        <property>controls/engines/engine[0]/mixture</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1513,7 +1513,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/mixture</property>
+        <property>controls/engines/engine[1]/mixture</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1530,7 +1530,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/mixture</property>
+        <property>controls/engines/engine[1]/mixture</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1547,7 +1547,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/mixture</property>
+        <property>controls/engines/engine[2]/mixture</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1564,7 +1564,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/mixture</property>
+        <property>controls/engines/engine[2]/mixture</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1581,7 +1581,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/mixture</property>
+        <property>controls/engines/engine[3]/mixture</property>
         <step>-0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1598,7 +1598,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/mixture</property>
+        <property>controls/engines/engine[3]/mixture</property>
         <step>0.02</step>
         <min>0</min>
         <max>1</max>
@@ -1610,7 +1610,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect1</object-name>
-    <property>/controls/fuel/tankvalves[0]/valve</property>
+    <property>controls/fuel/tankvalves[0]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1629,7 +1629,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect2</object-name>
-    <property>/controls/fuel/tankvalves[1]/valve</property>
+    <property>controls/fuel/tankvalves[1]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>45</dep></entry>
@@ -1649,7 +1649,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect3</object-name>
-    <property>/controls/fuel/tankvalves[2]/valve</property>
+    <property>controls/fuel/tankvalves[2]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>45</dep></entry>
@@ -1669,7 +1669,7 @@
   <animation>
     <type>rotate</type>
     <object-name>EngFuelSelect4</object-name>
-    <property>/controls/fuel/tankvalves[3]/valve</property>
+    <property>controls/fuel/tankvalves[3]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1694,7 +1694,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[0]/valve</property>
+        <property>controls/fuel/tankvalves[0]/valve</property>
         <step>-1</step>
         <min>0</min>
         <max>1</max>
@@ -1710,7 +1710,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[0]/valve</property>
+        <property>controls/fuel/tankvalves[0]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>1</max>
@@ -1727,7 +1727,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[1]/valve</property>
+        <property>controls/fuel/tankvalves[1]/valve</property>
         <step>-1</step>
         <min>0</min>
         <max>2</max>
@@ -1743,7 +1743,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[1]/valve</property>
+        <property>controls/fuel/tankvalves[1]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>2</max>
@@ -1760,7 +1760,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[2]/valve</property>
+        <property>controls/fuel/tankvalves[2]/valve</property>
         <step>-1</step>
         <min>0</min>
         <max>2</max>
@@ -1776,7 +1776,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[2]/valve</property>
+        <property>controls/fuel/tankvalves[2]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>2</max>
@@ -1793,7 +1793,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[3]/valve</property>
+        <property>controls/fuel/tankvalves[3]/valve</property>
         <step>-1</step>
         <min>0</min>
         <max>1</max>
@@ -1809,7 +1809,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/tankvalves[3]/valve</property>
+        <property>controls/fuel/tankvalves[3]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>1</max>
@@ -1824,7 +1824,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrTankC</object-name>
-    <property>/controls/fuel/tankvalves[4]/valve</property>
+    <property>controls/fuel/tankvalves[4]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1848,7 +1848,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/tankvalves[4]/valve</property>
+        <property>controls/fuel/tankvalves[4]/valve</property>
       </binding>
     </action>
   </animation>
@@ -1856,7 +1856,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed1</object-name>
-    <property>/controls/fuel/crossfeedvalves[0]/valve</property>
+    <property>controls/fuel/crossfeedvalves[0]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1880,7 +1880,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/crossfeedvalves[0]/valve</property>
+        <property>controls/fuel/crossfeedvalves[0]/valve</property>
       </binding>
     </action>
   </animation>
@@ -1888,7 +1888,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed2</object-name>
-    <property>/controls/fuel/crossfeedvalves[1]/valve</property>
+    <property>controls/fuel/crossfeedvalves[1]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1912,7 +1912,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/crossfeedvalves[1]/valve</property>
+        <property>controls/fuel/crossfeedvalves[1]/valve</property>
       </binding>
     </action>
   </animation>
@@ -1920,7 +1920,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed3</object-name>
-    <property>/controls/fuel/crossfeedvalves[2]/valve</property>
+    <property>controls/fuel/crossfeedvalves[2]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1944,7 +1944,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/crossfeedvalves[2]/valve</property>
+        <property>controls/fuel/crossfeedvalves[2]/valve</property>
       </binding>
     </action>
   </animation>
@@ -1952,7 +1952,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LvrCrossFeed4</object-name>
-    <property>/controls/fuel/crossfeedvalves[3]/valve</property>
+    <property>controls/fuel/crossfeedvalves[3]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1976,7 +1976,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/fuel/crossfeedvalves[3]/valve</property>
+        <property>controls/fuel/crossfeedvalves[3]/valve</property>
       </binding>
     </action>
   </animation>
@@ -1987,7 +1987,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff1</object-name>
-    <property>/controls/fuel/enginevalves[0]/valve</property>
+    <property>controls/fuel/enginevalves[0]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2013,7 +2013,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/enginevalves[0]/valve</property>
+        <property>controls/fuel/enginevalves[0]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
@@ -2025,7 +2025,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff2</object-name>
-    <property>/controls/fuel/enginevalves[1]/valve</property>
+    <property>controls/fuel/enginevalves[1]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2051,7 +2051,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/enginevalves[1]/valve</property>
+        <property>controls/fuel/enginevalves[1]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
@@ -2063,7 +2063,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff3</object-name>
-    <property>/controls/fuel/enginevalves[2]/valve</property>
+    <property>controls/fuel/enginevalves[2]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2089,7 +2089,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/enginevalves[2]/valve</property>
+        <property>controls/fuel/enginevalves[2]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
@@ -2101,7 +2101,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FuelCutoff4</object-name>
-    <property>/controls/fuel/enginevalves[3]/valve</property>
+    <property>controls/fuel/enginevalves[3]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -2127,7 +2127,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/fuel/enginevalves[3]/valve</property>
+        <property>controls/fuel/enginevalves[3]/valve</property>
         <step>1</step>
         <min>0</min>
         <max>4</max>
@@ -2154,7 +2154,7 @@
   <animation>
     <type>rotate</type>
     <object-name>KnobEngDeskDim</object-name>
-    <property>/controls/lighting/panel-norm</property>
+    <property>controls/lighting/panel-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep>270</dep></entry>
@@ -2177,7 +2177,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>0.1</step>
         <min>0</min>
         <max>1</max>
@@ -2190,7 +2190,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm</property>
+        <property>controls/lighting/panel-norm</property>
         <step>-0.1</step>
         <min>0</min>
         <max>1</max>
@@ -2202,7 +2202,7 @@
   <animation>
     <type>rotate</type>
     <object-name>KnobEngStartSel</object-name>
-    <property>/controls/switches/engine-start-select</property>
+    <property>controls/switches/engine-start-select</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep>-90</dep></entry>
@@ -2227,7 +2227,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-cycle</command>
-        <property>/controls/switches/engine-start-select</property>
+        <property>controls/switches/engine-start-select</property>
         <!-- The starter selector sequence is based on the book
              checklist sequence of 3-4-2-1.  This allows a man with a
              fire extinguisher to stand near the engine to be started
@@ -2246,7 +2246,7 @@
   <animation>
     <type>rotate</type>
     <object-name>KnobFEVoltsDC</object-name>
-    <property>/controls/switches/volts-select-dc</property>
+    <property>controls/switches/volts-select-dc</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 35</dep></entry>
@@ -2278,7 +2278,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/volts-select-dc</property>
+        <property>controls/switches/volts-select-dc</property>
         <step>1</step>
         <min>0</min>
         <max>9</max>
@@ -2291,7 +2291,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/switches/volts-select-dc</property>
+        <property>controls/switches/volts-select-dc</property>
         <step>-1</step>
         <min>0</min>
         <max>9</max>
@@ -2303,7 +2303,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwBattShip</object-name>
-    <property>/controls/switches/battery-ship</property>
+    <property>controls/switches/battery-ship</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -2327,7 +2327,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/battery-ship</property>
+        <property>controls/switches/battery-ship</property>
       </binding>
     </action>
   </animation>
@@ -2335,7 +2335,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwBattCart</object-name>
-    <property>/controls/switches/battery-cart</property>
+    <property>controls/switches/battery-cart</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>50</dep></entry>
@@ -2359,7 +2359,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/battery-cart</property>
+        <property>controls/switches/battery-cart</property>
       </binding>
     </action>
   </animation>
@@ -2367,7 +2367,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwGen1</object-name>
-    <property>/controls/switches/generator[0]/position</property>
+    <property>controls/switches/generator[0]/position</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -2391,7 +2391,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/generator[0]/position</property>
+        <property>controls/switches/generator[0]/position</property>
       </binding>
     </action>
   </animation>
@@ -2399,7 +2399,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwGen2</object-name>
-    <property>/controls/switches/generator[1]/position</property>
+    <property>controls/switches/generator[1]/position</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -2423,7 +2423,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/generator[1]/position</property>
+        <property>controls/switches/generator[1]/position</property>
       </binding>
     </action>
   </animation>
@@ -2431,7 +2431,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwGen3</object-name>
-    <property>/controls/switches/generator[2]/position</property>
+    <property>controls/switches/generator[2]/position</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -2455,7 +2455,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/generator[2]/position</property>
+        <property>controls/switches/generator[2]/position</property>
       </binding>
     </action>
   </animation>
@@ -2463,7 +2463,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwGen4</object-name>
-    <property>/controls/switches/generator[3]/position</property>
+    <property>controls/switches/generator[3]/position</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -2487,7 +2487,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/generator[3]/position</property>
+        <property>controls/switches/generator[3]/position</property>
       </binding>
     </action>
   </animation>
@@ -2495,7 +2495,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwAPU</object-name>
-    <property>/controls/switches/gen-apu</property>
+    <property>controls/switches/gen-apu</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -2519,7 +2519,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/switches/gen-apu</property>
+        <property>controls/switches/gen-apu</property>
       </binding>
     </action>
   </animation>
@@ -2528,14 +2528,14 @@
     <type>select</type>
     <object-name>LampGrndPwrOn</object-name>
     <condition>
-      <property>/systems/electrical/battery-cart-lamp</property>
+      <property>systems/electrical/battery-cart-lamp</property>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>LampGrndPwr</object-name>
     <condition>
-      <not><property>/systems/electrical/battery-cart-lamp</property></not>
+      <not><property>systems/electrical/battery-cart-lamp</property></not>
     </condition>
   </animation>
 
@@ -2545,7 +2545,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwEngStaCF1</object-name>
-    <property>/systems/switch-throw[0]/value</property>
+    <property>systems/switch-throw[0]/value</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -2571,7 +2571,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[0]/cowl-flaps-norm</property>
         <step>0.2</step>
         <min>0</min>
         <max>1</max>
@@ -2592,7 +2592,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[0]/cowl-flaps-norm</property>
         <step>-0.2</step>
         <min>0</min>
         <max>1</max>
@@ -2608,7 +2608,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwEngStaCF2</object-name>
-    <property>/systems/switch-throw[1]/value</property>
+    <property>systems/switch-throw[1]/value</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -2634,7 +2634,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[1]/cowl-flaps-norm</property>
         <step>0.2</step>
         <min>0</min>
         <max>1</max>
@@ -2655,7 +2655,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[1]/cowl-flaps-norm</property>
         <step>-0.2</step>
         <min>0</min>
         <max>1</max>
@@ -2671,7 +2671,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwEngStaCF3</object-name>
-    <property>/systems/switch-throw[2]/value</property>
+    <property>systems/switch-throw[2]/value</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -2697,7 +2697,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[2]/cowl-flaps-norm</property>
         <step>0.2</step>
         <min>0</min>
         <max>1</max>
@@ -2718,7 +2718,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[2]/cowl-flaps-norm</property>
         <step>-0.2</step>
         <min>0</min>
         <max>1</max>
@@ -2734,7 +2734,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwEngStaCF4</object-name>
-    <property>/systems/switch-throw[3]/value</property>
+    <property>systems/switch-throw[3]/value</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -2760,7 +2760,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[3]/cowl-flaps-norm</property>
         <step>0.2</step>
         <min>0</min>
         <max>1</max>
@@ -2781,7 +2781,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+        <property>controls/engines/engine[3]/cowl-flaps-norm</property>
         <step>-0.2</step>
         <min>0</min>
         <max>1</max>

@@ -33,7 +33,7 @@
   <animation>
     <type>translate</type>
     <object-name>Trim.NeedleEl</object-name>
-    <property>/controls/flight/elevator-trim</property>
+    <property>controls/flight/elevator-trim</property>
     <factor>0.0085</factor>
     <axis>
       <x>0</x>
@@ -45,7 +45,7 @@
   <animation>
     <type>translate</type>
     <object-name>Trim.NeedleRud</object-name>
-    <property>/controls/flight/rudder-trim</property>
+    <property>controls/flight/rudder-trim</property>
     <factor>0.0085</factor>
     <axis>
       <x>0</x>
@@ -57,7 +57,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Trim.NeedleAil</object-name>
-    <property>/controls/flight/aileron-trim</property>
+    <property>controls/flight/aileron-trim</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-30</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>

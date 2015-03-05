@@ -21,7 +21,7 @@
   <animation>
     <type>rotate</type>
     <object-name>TB.Needle</object-name>
-    <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+    <property>instrumentation/turn-indicator/indicated-turn-rate</property>
     <!--<factor>20</factor>-->
     <interpolation>
       <entry><ind>  -5</ind><dep>-30</dep></entry>
@@ -44,7 +44,7 @@
   <animation>
     <type>rotate</type>
     <object-name>TB.Ball</object-name>
-    <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
     <min>-2.5</min>
     <max> 2.5</max>
     <interpolation>

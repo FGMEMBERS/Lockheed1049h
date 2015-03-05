@@ -72,7 +72,7 @@ View the README file for information about this model
             <label>Set Comm 1 to 122.75</label>
             <binding>
               <command>property-assign</command>
-              <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+              <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
               <value type="double">122.75</value>
             </binding>
           </item>
