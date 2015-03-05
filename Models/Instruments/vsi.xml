@@ -19,7 +19,7 @@
   <animation>
     <type>rotate</type>
     <object-name>VSI.Needle</object-name>
-    <property>/instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
     <min>-6000.0</min>
     <max>6000.0</max>
     <scale>1.0</scale>

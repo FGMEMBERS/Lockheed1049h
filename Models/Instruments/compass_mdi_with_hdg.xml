@@ -31,7 +31,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MDI.Card</object-name>
-    <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
     <factor>-1</factor>
     <axis>
       <x>-1</x>
@@ -43,7 +43,7 @@
   <animation>
     <type>knob</type>
     <object-name>MDI.Knob</object-name>
-    <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
     <factor>5</factor>
     <center>
       <x-m>0</x-m>
@@ -58,7 +58,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <property>instrumentation/heading-indicator/offset-deg</property>
         <min>0</min>
         <max>359</max>
         <wrap>true</wrap>
@@ -69,7 +69,7 @@
   <animation>
     <type>knob</type>
     <object-name>MDI.KnobHdg</object-name>
-    <property>/autopilot/settings/heading-bug-deg</property>
+    <property>autopilot/settings/heading-bug-deg</property>
     <factor>5</factor>
     <center>
       <x-m>0</x-m>
@@ -84,7 +84,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/autopilot/settings/heading-bug-deg</property>
+        <property>autopilot/settings/heading-bug-deg</property>
         <min>0</min>
         <max>359</max>
         <wrap>true</wrap>
@@ -95,7 +95,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MDI.HdgBug</object-name>
-    <property>/autopilot/settings/heading-bug-deg</property>
+    <property>autopilot/settings/heading-bug-deg</property>
     <axis>
       <x>-1</x>
       <y>0</y>
@@ -106,7 +106,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MDI.HdgBug</object-name>
-    <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
     <factor>-1</factor>
     <axis>
       <x>-1</x>

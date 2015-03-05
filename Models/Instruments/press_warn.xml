@@ -9,7 +9,7 @@
     <object-name>LampPressFailOn1</object-name>
     <condition>
       <less-than-equals>
-        <property>/engines/engine[0]/oil-pressure-psi</property>
+        <property>engines/engine[0]/oil-pressure-psi</property>
         <value>10.0</value>
       </less-than-equals>
     </condition>
@@ -20,7 +20,7 @@
     <condition>
       <not>
         <less-than-equals>
-          <property>/engines/engine[0]/oil-pressure-psi</property>
+          <property>engines/engine[0]/oil-pressure-psi</property>
           <value>10.0</value>
         </less-than-equals>
       </not>
@@ -32,7 +32,7 @@
     <object-name>LampPressFailOn2</object-name>
     <condition>
       <less-than-equals>
-        <property>/engines/engine[1]/oil-pressure-psi</property>
+        <property>engines/engine[1]/oil-pressure-psi</property>
         <value>10.0</value>
       </less-than-equals>
     </condition>
@@ -43,7 +43,7 @@
     <condition>
       <not>
         <less-than-equals>
-          <property>/engines/engine[1]/oil-pressure-psi</property>
+          <property>engines/engine[1]/oil-pressure-psi</property>
           <value>10.0</value>
         </less-than-equals>
       </not>
@@ -55,7 +55,7 @@
     <object-name>LampPressFailOn3</object-name>
     <condition>
       <less-than-equals>
-        <property>/engines/engine[2]/oil-pressure-psi</property>
+        <property>engines/engine[2]/oil-pressure-psi</property>
         <value>10.0</value>
       </less-than-equals>
     </condition>
@@ -66,7 +66,7 @@
     <condition>
       <not>
         <less-than-equals>
-          <property>/engines/engine[2]/oil-pressure-psi</property>
+          <property>engines/engine[2]/oil-pressure-psi</property>
           <value>10.0</value>
         </less-than-equals>
       </not>
@@ -78,7 +78,7 @@
     <object-name>LampPressFailOn4</object-name>
     <condition>
       <less-than-equals>
-        <property>/engines/engine[3]/oil-pressure-psi</property>
+        <property>engines/engine[3]/oil-pressure-psi</property>
         <value>10.0</value>
       </less-than-equals>
     </condition>
@@ -89,7 +89,7 @@
     <condition>
       <not>
         <less-than-equals>
-          <property>/engines/engine[3]/oil-pressure-psi</property>
+          <property>engines/engine[3]/oil-pressure-psi</property>
           <value>10.0</value>
         </less-than-equals>
       </not>

@@ -280,8 +280,8 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-swap</command>
-        <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
-        <property>/instrumentation/comm[0]/frequencies/standby-mhz</property>
+        <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
+        <property>instrumentation/comm[0]/frequencies/standby-mhz</property>
       </binding>
     </action>
   </animation>

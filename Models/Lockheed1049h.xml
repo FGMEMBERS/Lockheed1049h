@@ -164,7 +164,7 @@
     <type>rotate</type>
     <object-name>Elevator</object-name>
     <object-name>ElevatorTrim</object-name>
-    <property>/controls/flight/elevator</property>
+    <property>controls/flight/elevator</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-16</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -183,7 +183,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ElevatorTrim</object-name>
-    <property>/controls/flight/elevator-trim</property>
+    <property>controls/flight/elevator-trim</property>
     <interpolation>
       <entry><ind>-1</ind><dep> 22</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -205,7 +205,7 @@
     <type>rotate</type>
     <object-name>RudderL</object-name>
     <object-name>RudderTrimL</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-30</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -224,7 +224,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderTrimL</object-name>
-    <property>/controls/flight/rudder-trim</property>
+    <property>controls/flight/rudder-trim</property>
     <interpolation>
       <entry><ind>-1</ind><dep> 25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -243,7 +243,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderC</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-30</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -263,7 +263,7 @@
     <type>rotate</type>
     <object-name>RudderR</object-name>
     <object-name>RudderTrimR</object-name>
-    <property>/controls/flight/rudder</property>
+    <property>controls/flight/rudder</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-30</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -282,7 +282,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderTrimR</object-name>
-    <property>/controls/flight/rudder-trim</property>
+    <property>controls/flight/rudder-trim</property>
     <interpolation>
       <entry><ind>-1</ind><dep> 25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -304,7 +304,7 @@
     <type>rotate</type>
     <object-name>AileronL</object-name>
     <object-name>AileronTrimL</object-name>
-    <property>/controls/flight/aileron</property>
+    <property>controls/flight/aileron</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -323,7 +323,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AileronTrimL</object-name>
-    <property>/controls/flight/aileron-trim</property>
+    <property>controls/flight/aileron-trim</property>
     <interpolation>
       <entry><ind>-1</ind><dep> 12</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -343,7 +343,7 @@
     <type>rotate</type>
     <object-name>AileronR</object-name>
     <object-name>AileronTrimR</object-name>
-    <property>/controls/flight/aileron</property>
+    <property>controls/flight/aileron</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-10</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -362,7 +362,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AileronTrimR</object-name>
-    <property>/controls/flight/aileron-trim</property>
+    <property>controls/flight/aileron-trim</property>
     <interpolation>
       <entry><ind>-1</ind><dep> 12</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -384,7 +384,7 @@
   <animation>
     <type>translate</type>
     <object-name>FlapsOuterL</object-name>
-    <property>/surface-positions/flap-pos-norm</property>
+    <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0 </ind><dep>0  </dep></entry>
       <entry><ind>0.25</ind><dep>0.7</dep></entry>
@@ -402,7 +402,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapsOuterL</object-name>
-    <property>/surface-positions/flap-pos-norm</property>
+    <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0 </ind><dep>0   </dep></entry>
       <entry><ind>0.25</ind><dep>10.0</dep></entry>
@@ -423,7 +423,7 @@
   <animation>
     <type>translate</type>
     <object-name>FlapsOuterR</object-name>
-    <property>/surface-positions/flap-pos-norm</property>
+    <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0 </ind><dep>0  </dep></entry>
       <entry><ind>0.25</ind><dep>0.7</dep></entry>
@@ -441,7 +441,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapsOuterR</object-name>
-    <property>/surface-positions/flap-pos-norm</property>
+    <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0 </ind><dep>0   </dep></entry>
       <entry><ind>0.25</ind><dep>10.0</dep></entry>
@@ -462,7 +462,7 @@
   <animation>
     <type>translate</type>
     <object-name>FlapsInner</object-name>
-    <property>/surface-positions/flap-pos-norm</property>
+    <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0 </ind><dep>0  </dep></entry>
       <entry><ind>0.25</ind><dep>0.7</dep></entry>
@@ -480,7 +480,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapsInner</object-name>
-    <property>/surface-positions/flap-pos-norm</property>
+    <property>surface-positions/flap-pos-norm</property>
     <interpolation>
       <entry><ind>0.0 </ind><dep>0   </dep></entry>
       <entry><ind>0.25</ind><dep>10.0</dep></entry>
@@ -504,7 +504,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap1L</object-name>
-    <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[0]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>30</dep></entry>
@@ -521,7 +521,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap1R</object-name>
-    <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[0]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -539,7 +539,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap2L</object-name>
-    <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[1]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>30</dep></entry>
@@ -556,7 +556,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap2R</object-name>
-    <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[1]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -574,7 +574,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap3R</object-name>
-    <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[2]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -591,7 +591,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap3L</object-name>
-    <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[2]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>30</dep></entry>
@@ -609,7 +609,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap4R</object-name>
-    <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[3]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>-30</dep></entry>
@@ -626,7 +626,7 @@
   <animation>
     <type>rotate</type>
     <object-name>CowlFlap4L</object-name>
-    <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+    <property>controls/engines/engine[3]/cowl-flaps-norm</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>30</dep></entry>
@@ -650,7 +650,7 @@
     <type>rotate</type>
     <object-name>LGNDoorFA</object-name>
     <object-name>LGNDoorFF</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0</dep></entry>
       <entry><ind>0.3</ind><dep> 0</dep></entry>
@@ -670,7 +670,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LightTaxi</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0</dep></entry>
       <entry><ind>0.3</ind><dep> 0</dep></entry>
@@ -691,7 +691,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGNDoorFF</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>  0</dep></entry>
       <entry><ind>0.3</ind><dep>  0</dep></entry>
@@ -713,7 +713,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGNDoorL</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>  0.0</dep></entry>
       <entry><ind>0.2</ind><dep>-80.0</dep></entry>
@@ -732,7 +732,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGNDoorR</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0.0</dep></entry>
       <entry><ind>0.2</ind><dep>80.0</dep></entry>
@@ -753,7 +753,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainLDoorFL</object-name>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>  0.0</dep></entry>
       <entry><ind>0.4</ind><dep>-64.0</dep></entry>
@@ -772,7 +772,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainLDoorAL</object-name>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>  0.0</dep></entry>
       <entry><ind>1.0</ind><dep>-64.0</dep></entry>
@@ -790,7 +790,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainLDoorFR</object-name>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0.0</dep></entry>
       <entry><ind>0.4</ind><dep>64.0</dep></entry>
@@ -809,7 +809,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainLDoorAR</object-name>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0.0</dep></entry>
       <entry><ind>1.0</ind><dep>64.0</dep></entry>
@@ -829,7 +829,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainRDoorFL</object-name>
-    <property>/gear/gear[2]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>  0.0</dep></entry>
       <entry><ind>0.4</ind><dep>-64.0</dep></entry>
@@ -848,7 +848,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainRDoorAL</object-name>
-    <property>/gear/gear[2]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>  0.0</dep></entry>
       <entry><ind>1.0</ind><dep>-64.0</dep></entry>
@@ -866,7 +866,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainRDoorFR</object-name>
-    <property>/gear/gear[2]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0.0</dep></entry>
       <entry><ind>0.4</ind><dep>64.0</dep></entry>
@@ -885,7 +885,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainRDoorAR</object-name>
-    <property>/gear/gear[2]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0.0</dep></entry>
       <entry><ind>1.0</ind><dep>64.0</dep></entry>
@@ -915,7 +915,7 @@
     <object-name>LGmainTorqueBarLL</object-name>
     <condition>
       <greater-than>
-        <property>/gear/gear[1]/position-norm</property>
+        <property>gear/gear[1]/position-norm</property>
         <value>0.0</value>
       </greater-than>
     </condition>
@@ -930,7 +930,7 @@
     <object-name>LGmainRimL</object-name>
     <object-name>LGmainTorqueBarUL</object-name>
     <object-name>LGmainTorqueBarLL</object-name>
-    <property>/gear/gear[1]/position-norm</property>
+    <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-97.0</dep></entry>
       <entry><ind>0.3</ind><dep>-97.0</dep></entry>
@@ -954,7 +954,7 @@
     <object-name>LGmainTiresL</object-name>
     <object-name>LGmainRimL</object-name>
     <object-name>LGmainTorqueBarLL</object-name>
-    <property>/gear/gear[1]/compression-norm</property>
+    <property>gear/gear[1]/compression-norm</property>
     <factor>0.483</factor>
     <axis>
       <x>0.065</x>
@@ -966,7 +966,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainTorqueBarUL</object-name>
-    <property>/gear/gear[1]/compression-norm</property>
+    <property>gear/gear[1]/compression-norm</property>
     <interpolation>
       <entry><ind>0.000</ind><dep>0.000</dep></entry>
       <entry><ind>0.100</ind><dep>8.876</dep></entry>
@@ -995,7 +995,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainTorqueBarLL</object-name>
-    <property>/gear/gear[1]/compression-norm</property>
+    <property>gear/gear[1]/compression-norm</property>
     <interpolation>
       <entry><ind>0.000</ind><dep>0.000</dep></entry>
       <entry><ind>0.100</ind><dep>8.876</dep></entry>
@@ -1027,13 +1027,13 @@
     <condition>
       <and>
         <less-than>
-          <property>/position/altitude-agl-ft</property>
+          <property>position/altitude-agl-ft</property>
           <value>50.0</value>
         </less-than>
-        <property>/gear/gear[1]/wow</property>
+        <property>gear/gear[1]/wow</property>
       </and>
     </condition>
-    <property>/velocities/uBody-fps</property>
+    <property>velocities/uBody-fps</property>
     <factor>-2.0</factor>
     <center>
       <x-m>-1.308</x-m> <!-- -1.268 -->
@@ -1060,7 +1060,7 @@
     <object-name>LGmainTorqueBarLR</object-name>
     <condition>
       <greater-than>
-        <property>/gear/gear[2]/position-norm</property>
+        <property>gear/gear[2]/position-norm</property>
         <value>0.0</value>
       </greater-than>
     </condition>
@@ -1075,7 +1075,7 @@
     <object-name>LGmainRimR</object-name>
     <object-name>LGmainTorqueBarUR</object-name>
     <object-name>LGmainTorqueBarLR</object-name>
-    <property>/gear/gear[2]/position-norm</property>
+    <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-97.0</dep></entry>
       <entry><ind>0.3</ind><dep>-97.0</dep></entry>
@@ -1099,7 +1099,7 @@
     <object-name>LGmainTiresR</object-name>
     <object-name>LGmainRimR</object-name>
     <object-name>LGmainTorqueBarLR</object-name>
-    <property>/gear/gear[2]/compression-norm</property>
+    <property>gear/gear[2]/compression-norm</property>
     <factor>0.483</factor>
     <axis>
       <x>0.065</x>
@@ -1111,7 +1111,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainTorqueBarUR</object-name>
-    <property>/gear/gear[2]/compression-norm</property>
+    <property>gear/gear[2]/compression-norm</property>
     <interpolation>
       <entry><ind>0.000</ind><dep>0.000</dep></entry>
       <entry><ind>0.100</ind><dep>8.876</dep></entry>
@@ -1140,7 +1140,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGmainTorqueBarLR</object-name>
-    <property>/gear/gear[2]/compression-norm</property>
+    <property>gear/gear[2]/compression-norm</property>
     <interpolation>
       <entry><ind>0.000</ind><dep>0.000</dep></entry>
       <entry><ind>0.100</ind><dep>8.876</dep></entry>
@@ -1172,13 +1172,13 @@
     <condition>
       <and>
         <less-than>
-          <property>/position/altitude-agl-ft</property>
+          <property>position/altitude-agl-ft</property>
           <value>50.0</value>
         </less-than>
-        <property>/gear/gear[2]/wow</property>
+        <property>gear/gear[2]/wow</property>
       </and>
     </condition>
-    <property>/velocities/uBody-fps</property>
+    <property>velocities/uBody-fps</property>
     <factor>-2.0</factor>
     <center>
       <x-m>-1.308</x-m> <!-- -1.268 -->
@@ -1208,10 +1208,10 @@
     <condition>
       <or>
         <greater-than>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>0.0</value>
         </greater-than>
-        <property>/systems/seat/gear-well</property>
+        <property>systems/seat/gear-well</property>
       </or>
     </condition>
   </animation>
@@ -1227,7 +1227,7 @@
     <object-name>LGnoseHubR</object-name>
     <object-name>LGnoseTorqueBarU</object-name>
     <object-name>LGnoseTorqueBarL</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>106.0</dep></entry>
       <entry><ind>0.3</ind><dep>106.0</dep></entry>
@@ -1249,7 +1249,7 @@
     <type>rotate</type>
     <object-name>LGnoseDragStrutL</object-name>
     <object-name>LGnoseDragStrutU</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>135.0</dep></entry>
       <entry><ind>0.3</ind><dep>135.0</dep></entry>
@@ -1270,7 +1270,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGnoseDragStrutU</object-name>
-    <property>/gear/gear[0]/position-norm</property>
+    <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>161.0</dep></entry>
       <entry><ind>0.3</ind><dep>161.0</dep></entry>
@@ -1298,11 +1298,11 @@
     <object-name>LGnoseTorqueBarL</object-name>
     <condition>
       <less-than>
-        <property>/position/altitude-agl-ft</property>
+        <property>position/altitude-agl-ft</property>
         <value>50.0</value>
       </less-than>
     </condition>
-    <property>/gear/gear[0]/steering-norm</property>
+    <property>gear/gear[0]/steering-norm</property>
     <factor>30</factor>
     <axis>
       <x1-m>-14.771</x1-m>
@@ -1321,7 +1321,7 @@
     <object-name>LGnoseHubL</object-name>
     <object-name>LGnoseHubR</object-name>
     <object-name>LGnoseTorqueBarL</object-name>
-    <property>/gear/gear[0]/compression-norm</property>
+    <property>gear/gear[0]/compression-norm</property>
     <factor>0.432</factor>
     <axis>
       <x>0.519</x>
@@ -1333,7 +1333,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGnoseTorqueBarU</object-name>
-    <property>/gear/gear[0]/compression-norm</property>
+    <property>gear/gear[0]/compression-norm</property>
     <interpolation>
       <entry><ind>0.000</ind><dep>0.000</dep></entry>
       <entry><ind>0.100</ind><dep>5.029</dep></entry>
@@ -1362,7 +1362,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LGnoseTorqueBarL</object-name>
-    <property>/gear/gear[0]/compression-norm</property>
+    <property>gear/gear[0]/compression-norm</property>
     <interpolation>
       <entry><ind>0.000</ind><dep>0.000</dep></entry>
       <entry><ind>0.100</ind><dep>5.029</dep></entry>
@@ -1394,13 +1394,13 @@
     <condition>
       <and>
         <less-than>
-          <property>/position/altitude-agl-ft</property>
+          <property>position/altitude-agl-ft</property>
           <value>50.0</value>
         </less-than>
-        <property>/gear/gear[0]/wow</property>
+        <property>gear/gear[0]/wow</property>
       </and>
     </condition>
-    <property>/velocities/uBody-fps</property>
+    <property>velocities/uBody-fps</property>
     <factor>-2.0</factor>
     <axis>
       <x1-m>-15.349</x1-m>
@@ -1418,13 +1418,13 @@
     <condition>
       <and>
         <less-than>
-          <property>/position/altitude-agl-ft</property>
+          <property>position/altitude-agl-ft</property>
           <value>50.0</value>
         </less-than>
-        <property>/gear/gear[0]/wow</property>
+        <property>gear/gear[0]/wow</property>
       </and>
     </condition>
-    <property>/velocities/uBody-fps</property>
+    <property>velocities/uBody-fps</property>
     <factor>2.0</factor>
     <axis>
       <x1-m>-15.349</x1-m>
@@ -1445,7 +1445,7 @@
     <type>rotate</type>
     <object-name>LightLandingL</object-name>
     <!-- Uses MP transmitted lighting control: -->
-    <!-- <property>/controls/lighting/landing-extend-left</property> -->
+    <!-- <property>controls/lighting/landing-extend-left</property> -->
     <property>sim/multiplay/generic/int[5]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
@@ -1466,7 +1466,7 @@
     <type>rotate</type>
     <object-name>LightLandingR</object-name>
     <!-- Uses MP transmitted lighting control: -->
-    <!-- <property>/controls/lighting/landing-extend-right</property> -->
+    <!-- <property>controls/lighting/landing-extend-right</property> -->
     <property>sim/multiplay/generic/int[6]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>

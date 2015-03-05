@@ -46,20 +46,20 @@
     <condition>
       <or>
         <equals>
-          <property>/instrumentation/terrain-warning/test-2000</property>
+          <property>instrumentation/terrain-warning/test-2000</property>
           <value>on</value>
         </equals>
         <and>
           <less-than-equals>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <value>2000</value>
           </less-than-equals>
           <greater-than>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <value>1000</value>
           </greater-than>
           <less-than-equals>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <property n="1">/instrumentation/terrain-warning/selector-ft</property>
           </less-than-equals>
         </and>
@@ -73,20 +73,20 @@
       <not>
         <or>
           <equals>
-            <property>/instrumentation/terrain-warning/test-2000</property>
+            <property>instrumentation/terrain-warning/test-2000</property>
             <value>on</value>
           </equals>
           <and>
             <less-than-equals>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <value>2000</value>
             </less-than-equals>
             <greater-than>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <value>1000</value>
             </greater-than>
             <less-than-equals>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <property n="1">/instrumentation/terrain-warning/selector-ft</property>
             </less-than-equals>
           </and>
@@ -103,20 +103,20 @@
     <condition>
       <or>
         <equals>
-          <property>/instrumentation/terrain-warning/test-2000</property>
+          <property>instrumentation/terrain-warning/test-2000</property>
           <value>on</value>
         </equals>
         <and>
           <less-than-equals>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <value>1000</value>
           </less-than-equals>
           <greater-than>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <value>500</value>
           </greater-than>
           <less-than-equals>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <property n="1">/instrumentation/terrain-warning/selector-ft</property>
           </less-than-equals>
         </and>
@@ -130,20 +130,20 @@
       <not>
         <or>
           <equals>
-            <property>/instrumentation/terrain-warning/test-1000</property>
+            <property>instrumentation/terrain-warning/test-1000</property>
             <value>on</value>
           </equals>
           <and>
             <less-than-equals>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <value>1000</value>
             </less-than-equals>
             <greater-than>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <value>500</value>
             </greater-than>
             <less-than-equals>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <property n="1">/instrumentation/terrain-warning/selector-ft</property>
             </less-than-equals>
           </and>
@@ -160,16 +160,16 @@
     <condition>
       <or>
         <equals>
-          <property>/instrumentation/terrain-warning/test-2000</property>
+          <property>instrumentation/terrain-warning/test-2000</property>
           <value>on</value>
         </equals>
         <and>
           <less-than-equals>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <value>500</value>
           </less-than-equals>
           <less-than-equals>
-            <property>/position/altitude-agl-ft</property>
+            <property>position/altitude-agl-ft</property>
             <property n="1">/instrumentation/terrain-warning/selector-ft</property>
           </less-than-equals>
         </and>
@@ -183,20 +183,20 @@
       <not>
         <or>
           <equals>
-            <property>/instrumentation/terrain-warning/test-2000</property>
+            <property>instrumentation/terrain-warning/test-2000</property>
             <value>on</value>
           </equals>
           <and>
             <less-than-equals>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <value>500</value>
             </less-than-equals>
             <less-than-equals>
-              <property>/position/altitude-agl-ft</property>
+              <property>position/altitude-agl-ft</property>
               <property n="1">/instrumentation/terrain-warning/selector-ft</property>
             </less-than-equals>
             <greater-than>
-              <property>/systems/electrical/bus-dc/volts</property>
+              <property>systems/electrical/bus-dc/volts</property>
               <value>9</value>
             </greater-than>
           </and>

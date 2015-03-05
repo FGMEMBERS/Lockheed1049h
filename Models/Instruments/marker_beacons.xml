@@ -7,7 +7,7 @@
   <animation>
     <type>rotate</type>
     <object-name>SwMBTest</object-name>
-    <property>/instrumentation/marker-beacon/test</property>
+    <property>instrumentation/marker-beacon/test</property>
     <interpolation>
       <entry><ind>0</ind><dep>-25</dep></entry>
       <entry><ind>1</ind><dep> 25</dep></entry>
@@ -31,7 +31,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
-        <property>/instrumentation/marker-beacon/test</property>
+        <property>instrumentation/marker-beacon/test</property>
       </binding>
     </action>
   </animation>
@@ -41,8 +41,8 @@
     <object-name>LampOuterBlueOn</object-name>
     <condition>
       <or>
-        <property>/instrumentation/marker-beacon/outer</property>
-        <property>/instrumentation/marker-beacon/test</property>
+        <property>instrumentation/marker-beacon/outer</property>
+        <property>instrumentation/marker-beacon/test</property>
       </or>
     </condition>
   </animation>
@@ -51,8 +51,8 @@
     <object-name>LampOuterBlue</object-name>
     <condition>
       <and>
-        <not><property>/instrumentation/marker-beacon/outer</property></not>
-        <not><property>/instrumentation/marker-beacon/test</property></not>
+        <not><property>instrumentation/marker-beacon/outer</property></not>
+        <not><property>instrumentation/marker-beacon/test</property></not>
       </and>
     </condition>
   </animation>
@@ -62,8 +62,8 @@
     <object-name>LampMiddleAmberOn</object-name>
     <condition>
       <or>
-        <property>/instrumentation/marker-beacon/middle</property>
-        <property>/instrumentation/marker-beacon/test</property>
+        <property>instrumentation/marker-beacon/middle</property>
+        <property>instrumentation/marker-beacon/test</property>
       </or>
     </condition>
   </animation>
@@ -72,8 +72,8 @@
     <object-name>LampMiddleAmber</object-name>
     <condition>
       <and>
-        <not><property>/instrumentation/marker-beacon/middle</property></not>
-        <not><property>/instrumentation/marker-beacon/test</property></not>
+        <not><property>instrumentation/marker-beacon/middle</property></not>
+        <not><property>instrumentation/marker-beacon/test</property></not>
       </and>
     </condition>
   </animation>
@@ -83,8 +83,8 @@
     <object-name>LampInnerWhiteOn</object-name>
     <condition>
       <or>
-        <property>/instrumentation/marker-beacon/inner</property>
-        <property>/instrumentation/marker-beacon/test</property>
+        <property>instrumentation/marker-beacon/inner</property>
+        <property>instrumentation/marker-beacon/test</property>
       </or>
     </condition>
   </animation>
@@ -93,8 +93,8 @@
     <object-name>LampInnerWhite</object-name>
     <condition>
       <and>
-        <not><property>/instrumentation/marker-beacon/inner</property></not>
-        <not><property>/instrumentation/marker-beacon/test</property></not>
+        <not><property>instrumentation/marker-beacon/inner</property></not>
+        <not><property>instrumentation/marker-beacon/test</property></not>
       </and>
     </condition>
   </animation>

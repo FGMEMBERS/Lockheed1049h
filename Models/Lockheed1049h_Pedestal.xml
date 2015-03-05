@@ -84,7 +84,7 @@
   <animation>
     <type>translate</type>
     <object-name>ParkingBrakeLeverL</object-name>
-    <property>/controls/gear/brake-parking</property>
+    <property>controls/gear/brake-parking</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-0.07</dep></entry>
       <entry><ind>1.0</ind><dep>    0</dep></entry>
@@ -99,7 +99,7 @@
   <animation>
     <type>translate</type>
     <object-name>ParkingBrakeLeverR</object-name>
-    <property>/controls/gear/brake-parking</property>
+    <property>controls/gear/brake-parking</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-0.07</dep></entry>
       <entry><ind>1.0</ind><dep>    0</dep></entry>
@@ -114,7 +114,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderTabNeedle</object-name>
-    <property>/controls/flight/rudder-trim</property>
+    <property>controls/flight/rudder-trim</property>
     <factor>60</factor>
     <center>
       <x-m>-15.263</x-m>
@@ -131,7 +131,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AileronTabNeedle</object-name>
-    <property>/controls/flight/aileron-trim</property>
+    <property>controls/flight/aileron-trim</property>
     <factor>60</factor>
     <center>
       <x-m>0.0</x-m>
@@ -148,7 +148,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderTab</object-name>
-    <property>/controls/flight/rudder-trim</property>
+    <property>controls/flight/rudder-trim</property>
     <factor>-4680</factor>
     <center>
       <x-m>-15.228</x-m>
@@ -169,7 +169,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/flight/rudder-trim</property>
+        <property>controls/flight/rudder-trim</property>
         <step>-0.01</step>
         <min>-1</min>
         <max>1</max>
@@ -185,7 +185,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/flight/rudder-trim</property>
+        <property>controls/flight/rudder-trim</property>
         <step>0.01</step>
         <min>-1</min>
         <max>1</max>
@@ -197,7 +197,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AileronTab</object-name>
-    <property>/controls/flight/aileron-trim</property>
+    <property>controls/flight/aileron-trim</property>
     <factor>-4680</factor>
     <center>
       <x-m>0.0</x-m>
@@ -218,7 +218,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/flight/aileron-trim</property>
+        <property>controls/flight/aileron-trim</property>
         <step>-0.01</step>
         <min>-1</min>
         <max>1</max>
@@ -234,7 +234,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/flight/aileron-trim</property>
+        <property>controls/flight/aileron-trim</property>
         <step>0.01</step>
         <min>-1</min>
         <max>1</max>
@@ -246,7 +246,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ElevatorTab</object-name>
-    <property>/controls/flight/elevator-trim</property>
+    <property>controls/flight/elevator-trim</property>
     <factor>-1080</factor>
     <center>
       <x-m>-15.496</x-m>
@@ -267,7 +267,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/flight/elevator-trim</property>
+        <property>controls/flight/elevator-trim</property>
         <step>-0.01</step>
         <min>-1</min>
         <max>1</max>
@@ -283,7 +283,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/flight/elevator-trim</property>
+        <property>controls/flight/elevator-trim</property>
         <step>0.01</step>
         <min>-1</min>
         <max>1</max>
@@ -295,7 +295,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LandingGearLever</object-name>
-    <property>/controls/gear/gear-down</property>
+    <property>controls/gear/gear-down</property>
     <interpolation>
       <entry><ind>0.0</ind><dep>-67</dep></entry>
       <entry><ind>1.0</ind><dep>  0</dep></entry>
@@ -315,7 +315,7 @@
   <animation>
     <type>rotate</type>
     <object-name>PropPitch</object-name>
-    <property>/controls/engines/engine[0]/propeller-pitch</property>
+    <property>controls/engines/engine[0]/propeller-pitch</property>
     <factor>-75</factor>
     <offset-deg>75</offset-deg>   
     <center>
@@ -333,7 +333,7 @@
   <animation>
     <type>rotate</type>
     <object-name>FlapLever</object-name>
-    <property>/controls/flight/flaps</property>
+    <property>controls/flight/flaps</property>
     <interpolation>
       <entry><ind>   0</ind><dep> 0</dep></entry>
       <entry><ind>0.25</ind><dep>65</dep></entry>
@@ -392,7 +392,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ReverseLock</object-name>
-    <property>/controls/engines/reverser_allow</property>
+    <property>controls/engines/reverser_allow</property>
     <factor>90</factor>
     <center>
       <x-m>-15.496</x-m>
@@ -410,7 +410,7 @@
     <type>rotate</type>
     <object-name>MainThrottle1</object-name>
     <object-name>ReverseThrottle1</object-name>
-    <property>/controls/engines/engine[0]/throttle</property>
+    <property>controls/engines/engine[0]/throttle</property>
     <factor>-50</factor>
     <center>
       <x-m>-15.496</x-m>
@@ -428,7 +428,7 @@
     <type>rotate</type>
     <object-name>MainThrottle2</object-name>
     <object-name>ReverseThrottle2</object-name>
-    <property>/controls/engines/engine[1]/throttle</property>
+    <property>controls/engines/engine[1]/throttle</property>
     <factor>-50</factor>
     <center>
       <x-m>-15.496</x-m>
@@ -446,7 +446,7 @@
     <type>rotate</type>
     <object-name>MainThrottle3</object-name>
     <object-name>ReverseThrottle3</object-name>
-    <property>/controls/engines/engine[2]/throttle</property>
+    <property>controls/engines/engine[2]/throttle</property>
     <factor>-50</factor>
     <center>
       <x-m>-15.496</x-m>
@@ -464,7 +464,7 @@
     <type>rotate</type>
     <object-name>MainThrottle4</object-name>
     <object-name>ReverseThrottle4</object-name>
-    <property>/controls/engines/engine[3]/throttle</property>
+    <property>controls/engines/engine[3]/throttle</property>
     <factor>-50</factor>
     <center>
       <x-m>-15.496</x-m>
@@ -481,7 +481,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ReverseThrottle1</object-name>
-    <property>/controls/engines/engine[0]/reverser</property>
+    <property>controls/engines/engine[0]/reverser</property>
     <factor>92</factor>
     <center>
       <x-m>-15.37</x-m>
@@ -498,7 +498,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ReverseThrottle2</object-name>
-    <property>/controls/engines/engine[1]/reverser</property>
+    <property>controls/engines/engine[1]/reverser</property>
     <factor>92</factor>
     <center>
       <x-m>-15.37</x-m>
@@ -515,7 +515,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ReverseThrottle3</object-name>
-    <property>/controls/engines/engine[2]/reverser</property>
+    <property>controls/engines/engine[2]/reverser</property>
     <factor>92</factor>
     <center>
       <x-m>-15.37</x-m>
@@ -532,7 +532,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ReverseThrottle4</object-name>
-    <property>/controls/engines/engine[3]/reverser</property>
+    <property>controls/engines/engine[3]/reverser</property>
     <factor>92</factor>
     <center>
       <x-m>-15.37</x-m>

@@ -34,7 +34,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MANPRESSeng.Needle3</object-name>
-    <property>/engines/engine[2]/mp-osi</property>
+    <property>engines/engine[2]/mp-osi</property>
     <interpolation>
       <entry><ind> 0</ind><dep>   -8</dep></entry>
       <entry><ind> 2</ind><dep>   -6</dep></entry>
@@ -52,7 +52,7 @@
   <animation>
     <type>rotate</type>
     <object-name>MANPRESSeng.Needle4</object-name>
-    <property>/engines/engine[3]/mp-osi</property>
+    <property>engines/engine[3]/mp-osi</property>
     <interpolation>
       <entry><ind> 0</ind><dep>   -8</dep></entry>
       <entry><ind> 2</ind><dep>   -6</dep></entry>
