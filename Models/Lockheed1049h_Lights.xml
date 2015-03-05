@@ -69,8 +69,8 @@ the ability to take the properties relative to their root.
     <object-name>LightBeaconGlow</object-name>
     <condition>
       <and>
-        <property>/sim/multiplay/generic/float[1]</property>
-        <property>/sim/multiplay/generic/float[2]</property>
+        <property>sim/multiplay/generic/float[1]</property>
+        <property>sim/multiplay/generic/float[2]</property>
         <!--
             <greater-than>
               <property>/systems/electrical/bus-dc/volts</property>
@@ -85,7 +85,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>TailLampLOn</object-name>
     <condition>
-      <property>/sim/multiplay/generic/int[1]</property>
+      <property>sim/multiplay/generic/int[1]</property>
     </condition>
   </animation>
 
@@ -93,7 +93,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>TailLampL</object-name>
     <condition>
-      <not><property>/sim/multiplay/generic/int[1]</property></not>
+      <not><property>sim/multiplay/generic/int[1]</property></not>
     </condition>
   </animation>
 
@@ -102,7 +102,7 @@ the ability to take the properties relative to their root.
     <object-name>WingtipLampLOn</object-name>
     <object-name>WingtipLampROn</object-name>
     <condition>
-      <property>/sim/multiplay/generic/int[0]</property>
+      <property>sim/multiplay/generic/int[0]</property>
     </condition>
   </animation>
 
@@ -111,7 +111,7 @@ the ability to take the properties relative to their root.
     <object-name>WingtipLampL</object-name>
     <object-name>WingtipLampR</object-name>
     <condition>
-      <not><property>/sim/multiplay/generic/int[0]</property></not>
+      <not><property>sim/multiplay/generic/int[0]</property></not>
     </condition>
   </animation>
 
@@ -122,7 +122,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>LightNavGlowL</object-name>
     <condition>
-      <property>/sim/multiplay/generic/int[0]</property>
+      <property>sim/multiplay/generic/int[0]</property>
     </condition>
   </animation>
 
@@ -154,7 +154,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>LightNavGlowR</object-name>
     <condition>
-      <property>/sim/multiplay/generic/int[0]</property>
+      <property>sim/multiplay/generic/int[0]</property>
     </condition>
   </animation>
 
@@ -186,7 +186,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>LightTailGlow</object-name>
     <condition>
-      <property>/sim/multiplay/generic/int[1]</property>
+      <property>sim/multiplay/generic/int[1]</property>
     </condition>
   </animation>
 
@@ -221,7 +221,7 @@ the ability to take the properties relative to their root.
     <object-name>LightTaxiGlow</object-name>
     <condition>
       <and>
-        <property>/sim/multiplay/generic/int[2]</property>
+        <property>sim/multiplay/generic/int[2]</property>
         <not><property>/gear/gear[0]/position-norm</property></not>
       </and>
     </condition>
@@ -232,7 +232,7 @@ the ability to take the properties relative to their root.
     <object-name>LightLandingGlowL</object-name>
     <condition>
       <and>
-        <property>/sim/multiplay/generic/int[3]</property>
+        <property>sim/multiplay/generic/int[3]</property>
         <not><property>/controls/lighting/landing-extend-left</property></not>
       </and>
     </condition>
@@ -243,7 +243,7 @@ the ability to take the properties relative to their root.
     <object-name>LightLandingGlowR</object-name>
     <condition>
       <and>
-        <property>/sim/multiplay/generic/int[4]</property>
+        <property>sim/multiplay/generic/int[4]</property>
         <not><property>/controls/lighting/landing-extend-right</property></not>
       </and>
     </condition>
@@ -256,7 +256,7 @@ the ability to take the properties relative to their root.
     <object-name>LightTaxiGlowH</object-name>
     <condition>
       <and>
-        <property>/sim/multiplay/generic/int[2]</property>
+        <property>sim/multiplay/generic/int[2]</property>
         <property>/gear/gear[0]/position-norm</property>
       </and>
     </condition>
@@ -267,8 +267,8 @@ the ability to take the properties relative to their root.
     <object-name>LightLandingGlowLH</object-name>
     <condition>
       <and>
-        <property>/sim/multiplay/generic/int[3]</property>
-        <property>/sim/multiplay/generic/int[5]</property>
+        <property>sim/multiplay/generic/int[3]</property>
+        <property>sim/multiplay/generic/int[5]</property>
       </and>
     </condition>
   </animation>
@@ -278,8 +278,8 @@ the ability to take the properties relative to their root.
     <object-name>LightLandingGlowRH</object-name>
     <condition>
       <and>
-        <property>/sim/multiplay/generic/int[4]</property>
-        <property>/sim/multiplay/generic/int[6]</property>
+        <property>sim/multiplay/generic/int[4]</property>
+        <property>sim/multiplay/generic/int[6]</property>
       </and>
     </condition>
   </animation>

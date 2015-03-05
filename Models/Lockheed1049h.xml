@@ -1446,7 +1446,7 @@
     <object-name>LightLandingL</object-name>
     <!-- Uses MP transmitted lighting control: -->
     <!-- <property>/controls/lighting/landing-extend-left</property> -->
-    <property>/sim/multiplay/generic/int[5]</property>
+    <property>sim/multiplay/generic/int[5]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1467,7 +1467,7 @@
     <object-name>LightLandingR</object-name>
     <!-- Uses MP transmitted lighting control: -->
     <!-- <property>/controls/lighting/landing-extend-right</property> -->
-    <property>/sim/multiplay/generic/int[6]</property>
+    <property>sim/multiplay/generic/int[6]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1510,7 +1510,7 @@
     <object-name>DoorCrewFrame</object-name>
     <object-name>DoorCrewExt</object-name>
     <object-name>DoorCrewInt</object-name>
-    <property>/sim/multiplay/generic/float[4]</property>
+    <property>sim/multiplay/generic/float[4]</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.05</dep></entry>
@@ -1530,7 +1530,7 @@
     <object-name>DoorCrewFrame</object-name>
     <object-name>DoorCrewExt</object-name>
     <object-name>DoorCrewInt</object-name>
-    <property>/sim/multiplay/generic/float[4]</property>
+    <property>sim/multiplay/generic/float[4]</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0</dep></entry>
       <entry><ind>0.2</ind><dep> 0</dep></entry>
