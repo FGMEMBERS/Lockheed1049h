@@ -22,7 +22,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALTeng.Needle1</object-name>
-    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
     <factor>0.36</factor>
     <axis>
       <x>0</x>
@@ -34,7 +34,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALTeng.Needle2</object-name>
-    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
     <factor>0.036</factor>
     <axis>
       <x>0</x>
@@ -46,7 +46,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALTeng.Needle3</object-name>
-    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
     <factor>0.0036</factor>
     <axis>
       <x>0</x>
@@ -58,7 +58,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALTeng.FacePressure</object-name>
-    <property>/instrumentation/altimeter/setting-inhg</property>
+    <property>instrumentation/altimeter/setting-inhg</property>
     <interpolation>
       <entry><ind>  28</ind><dep>-200</dep></entry>
       <entry><ind>  30</ind><dep>   0</dep></entry>

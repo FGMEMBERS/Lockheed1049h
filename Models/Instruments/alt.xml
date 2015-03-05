@@ -22,7 +22,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALT.Needle1</object-name>
-    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
     <factor>0.36</factor>
     <axis>
       <x>-1</x>
@@ -34,7 +34,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALT.Needle2</object-name>
-    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
     <factor>0.036</factor>
     <axis>
       <x>-1</x>
@@ -46,7 +46,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALT.Needle3</object-name>
-    <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
     <factor>0.0036</factor>
     <axis>
       <x>-1</x>
@@ -58,7 +58,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ALT.FacePressure</object-name>
-    <property>/instrumentation/altimeter/setting-inhg</property>
+    <property>instrumentation/altimeter/setting-inhg</property>
     <interpolation>
       <entry><ind>  28</ind><dep>-200</dep></entry>
       <entry><ind>  30</ind><dep>   0</dep></entry>
@@ -74,7 +74,7 @@
   <animation>
     <type>knob</type>
     <object-name>ALT.Knob</object-name>
-    <property>/instrumentation/altimeter/setting-inhg</property>
+    <property>instrumentation/altimeter/setting-inhg</property>
     <factor>500</factor>
     <center>
       <x-m>0</x-m>
@@ -89,7 +89,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/altimeter/setting-inhg</property>
+        <property>instrumentation/altimeter/setting-inhg</property>
         <factor>0.01</factor>
         <min>26</min>
         <max>32</max>

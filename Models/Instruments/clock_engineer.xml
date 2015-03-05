@@ -21,7 +21,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ClockEng.Hour</object-name>
-    <property>/instrumentation/clock/indicated-sec</property>
+    <property>instrumentation/clock/indicated-sec</property>
     <factor>0.00833333333333333</factor>
     <axis>
       <x>0</x>
@@ -33,7 +33,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ClockEng.Minute</object-name>
-    <property>/instrumentation/clock/indicated-sec</property>
+    <property>instrumentation/clock/indicated-sec</property>
     <factor>0.1</factor>
     <axis>
       <x>0</x>
@@ -45,7 +45,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ClockEng.Second</object-name>
-    <property>/instrumentation/clock/indicated-sec</property>
+    <property>instrumentation/clock/indicated-sec</property>
     <factor>6</factor>
     <axis>
       <x>0</x>

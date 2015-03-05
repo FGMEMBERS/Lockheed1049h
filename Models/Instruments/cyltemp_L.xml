@@ -30,7 +30,7 @@ degC	degF
   <animation>
     <type>rotate</type>
     <object-name>CylTemp.Needle1</object-name>
-    <property>/engines/engine[0]/cht-degf</property>
+    <property>engines/engine[0]/cht-degf</property>
     <interpolation>
       <entry><ind>-58</ind><dep> 52.5</dep></entry>
       <entry><ind>572</ind><dep>-52.5</dep></entry>
@@ -50,7 +50,7 @@ degC	degF
   <animation>
     <type>rotate</type>
     <object-name>CylTemp.Needle2</object-name>
-    <property>/engines/engine[1]/cht-degf</property>
+    <property>engines/engine[1]/cht-degf</property>
     <interpolation>
       <entry><ind>-58</ind><dep> 52.5</dep></entry>
       <entry><ind>572</ind><dep>-52.5</dep></entry>

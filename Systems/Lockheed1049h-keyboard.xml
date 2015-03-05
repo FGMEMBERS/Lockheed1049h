@@ -32,7 +32,7 @@
     <name>C</name>
     <binding>
       <command>property-toggle</command>
-      <property>/controls/flight/auto-coordination</property>
+      <property>controls/flight/auto-coordination</property>
     </binding>
   </key>
 
@@ -41,7 +41,7 @@
     <desc>Close cowl flaps</desc>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[0]/cowl-flaps-norm</property>
       <step>-0.2</step>
       <min>0</min>
       <max>1</max>
@@ -49,7 +49,7 @@
     </binding>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[1]/cowl-flaps-norm</property>
       <step>-0.2</step>
       <min>0</min>
       <max>1</max>
@@ -57,7 +57,7 @@
     </binding>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[2]/cowl-flaps-norm</property>
       <step>-0.2</step>
       <min>0</min>
       <max>1</max>
@@ -65,7 +65,7 @@
     </binding>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[3]/cowl-flaps-norm</property>
       <step>-0.2</step>
       <min>0</min>
       <max>1</max>
@@ -87,7 +87,7 @@
     <desc>Crew door view</desc>
     <binding>
       <command>property-assign</command>
-      <property>/sim/current-view/view-number</property>
+      <property>sim/current-view/view-number</property>
       <value>13</value>
     </binding>
   </key>
@@ -97,7 +97,7 @@
     <desc>Engineer view</desc>
     <binding>
       <command>property-assign</command>
-      <property>/sim/current-view/view-number</property>
+      <property>sim/current-view/view-number</property>
       <value>9</value>
     </binding>
   </key>
@@ -107,7 +107,7 @@
     <desc>Open cowl flaps</desc>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[0]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[0]/cowl-flaps-norm</property>
       <step>0.2</step>
       <min>0</min>
       <max>1</max>
@@ -115,7 +115,7 @@
     </binding>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[1]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[1]/cowl-flaps-norm</property>
       <step>0.2</step>
       <min>0</min>
       <max>1</max>
@@ -123,7 +123,7 @@
     </binding>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[2]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[2]/cowl-flaps-norm</property>
       <step>0.2</step>
       <min>0</min>
       <max>1</max>
@@ -131,7 +131,7 @@
     </binding>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine[3]/cowl-flaps-norm</property>
+      <property>controls/engines/engine[3]/cowl-flaps-norm</property>
       <step>0.2</step>
       <min>0</min>
       <max>1</max>
@@ -153,7 +153,7 @@
     <desc>Jumpseat view</desc>
     <binding>
       <command>property-assign</command>
-      <property>/sim/current-view/view-number</property>
+      <property>sim/current-view/view-number</property>
       <value>12</value>
     </binding>
   </key>
@@ -163,7 +163,7 @@
     <desc>Observer view</desc>
     <binding>
       <command>property-assign</command>
-      <property>/sim/current-view/view-number</property>
+      <property>sim/current-view/view-number</property>
       <value>11</value>
     </binding>
   </key>
@@ -173,7 +173,7 @@
     <desc>Copilot view</desc>
     <binding>
       <command>property-assign</command>
-      <property>/sim/current-view/view-number</property>
+      <property>sim/current-view/view-number</property>
       <value>10</value>
     </binding>
   </key>
@@ -183,7 +183,7 @@
     <desc>Overhead panel view</desc>
     <binding>
       <command>property-assign</command>
-      <property>/sim/current-view/view-number</property>
+      <property>sim/current-view/view-number</property>
       <value>8</value>
     </binding>
   </key>

@@ -20,7 +20,7 @@
   <animation>
     <type>rotate</type>
     <object-name>OilPress.Needle1</object-name>
-    <property>/engines/engine[2]/oil-pressure-psi</property>
+    <property>engines/engine[2]/oil-pressure-psi</property>
     <interpolation>
       <entry><ind>  0</ind><dep>  45</dep></entry>
       <entry><ind>100</ind><dep>   0</dep></entry>
@@ -41,7 +41,7 @@
   <animation>
     <type>rotate</type>
     <object-name>OilPress.Needle2</object-name>
-    <property>/engines/engine[3]/oil-pressure-psi</property>
+    <property>engines/engine[3]/oil-pressure-psi</property>
     <interpolation>
       <entry><ind>  0</ind><dep>  45</dep></entry>
       <entry><ind>100</ind><dep>   0</dep></entry>

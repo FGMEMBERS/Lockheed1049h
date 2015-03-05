@@ -21,7 +21,7 @@
   <animation>
     <type>rotate</type>
     <object-name>Fuel30.Needle</object-name>
-    <property>/consumables/fuel/tank[11]/level-lbs</property>
+    <property>consumables/fuel/tank[11]/level-lbs</property>
     <interpolation>
       <entry><ind>   0</ind><dep>  0</dep></entry>
       <entry><ind>3800</ind><dep>304</dep></entry>
@@ -42,7 +42,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/consumables/fuel/tank[11]/level-gal_us</property>
+        <property>consumables/fuel/tank[11]/level-gal_us</property>
         <step>40</step>
         <min>0</min>
         <max>565.0</max>
@@ -55,7 +55,7 @@
       <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/consumables/fuel/tank[11]/level-gal_us</property>
+        <property>consumables/fuel/tank[11]/level-gal_us</property>
         <step>-40</step>
         <min>0</min>
         <max>565.0</max>

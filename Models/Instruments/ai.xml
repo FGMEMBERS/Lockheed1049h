@@ -21,7 +21,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AI.BankIndex</object-name>
-    <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+    <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
     <interpolation>
       <entry><ind>-90.0</ind><dep>-90.0</dep></entry>
       <entry><ind> 90.0</ind><dep> 90.0</dep></entry>
@@ -36,7 +36,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AI.Ball</object-name>
-    <property>/instrumentation/attitude-indicator/indicated-roll-deg</property>
+    <property>instrumentation/attitude-indicator/indicated-roll-deg</property>
     <interpolation>
       <entry><ind>-90.0</ind><dep>-90.0</dep></entry>
       <entry><ind> 90.0</ind><dep> 90.0</dep></entry>
@@ -56,7 +56,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AI.Ball</object-name>
-    <property>/instrumentation/attitude-indicator/indicated-pitch-deg</property>
+    <property>instrumentation/attitude-indicator/indicated-pitch-deg</property>
     <interpolation>
       <entry><ind>-90.0</ind><dep>-90.0</dep></entry>
       <entry><ind> 90.0</ind><dep> 90.0</dep></entry>
@@ -76,7 +76,7 @@
   <animation>
     <type>translate</type>
     <object-name>AI.Bar.Aircraft</object-name>
-    <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
     <factor>0.001</factor>
     <axis>
       <x>0</x>
@@ -88,7 +88,7 @@
   <animation>
     <type>knob</type>
     <object-name>AI.Knob.Hor</object-name>
-    <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
     <factor>25</factor>
     <center>
       <x-m>0</x-m>
@@ -103,7 +103,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+        <property>instrumentation/attitude-indicator/horizon-offset-deg</property>
         <factor>0.1</factor>
         <min>-5</min>
         <max>5</max>

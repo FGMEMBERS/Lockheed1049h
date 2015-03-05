@@ -22,8 +22,8 @@ GNU General Public License for more details.
     <input>
       <expression>
         <div>
-          <property>/fdm/jsbsim/propulsion/engine[0]/power-hp</property>
-          <property>/engines/engine[0]/rpm</property>
+          <property>fdm/jsbsim/propulsion/engine[0]/power-hp</property>
+          <property>engines/engine[0]/rpm</property>
         </div>
       </expression>
     </input>
@@ -38,8 +38,8 @@ GNU General Public License for more details.
     <input>
       <expression>
         <div>
-          <property>/fdm/jsbsim/propulsion/engine[1]/power-hp</property>
-          <property>/engines/engine[1]/rpm</property>
+          <property>fdm/jsbsim/propulsion/engine[1]/power-hp</property>
+          <property>engines/engine[1]/rpm</property>
         </div>
       </expression>
     </input>
@@ -55,8 +55,8 @@ GNU General Public License for more details.
     <input>
       <expression>
         <div>
-          <property>/fdm/jsbsim/propulsion/engine[2]/power-hp</property>
-          <property>/engines/engine[2]/rpm</property>
+          <property>fdm/jsbsim/propulsion/engine[2]/power-hp</property>
+          <property>engines/engine[2]/rpm</property>
         </div>
       </expression>
     </input>
@@ -72,8 +72,8 @@ GNU General Public License for more details.
     <input>
       <expression>
         <div>
-          <property>/fdm/jsbsim/propulsion/engine[3]/power-hp</property>
-          <property>/engines/engine[3]/rpm</property>
+          <property>fdm/jsbsim/propulsion/engine[3]/power-hp</property>
+          <property>engines/engine[3]/rpm</property>
         </div>
       </expression>
     </input>
@@ -88,9 +88,9 @@ GNU General Public License for more details.
     <type>gain</type>
     <input>
       <condition>
-        <property>/engines/engine[0]/running</property>
+        <property>engines/engine[0]/running</property>
       </condition>
-      <property>/engines/engine[0]/fuel-flow-gph</property>
+      <property>engines/engine[0]/fuel-flow-gph</property>
       <scale>-0.057</scale>
       <offset>27</offset>
     </input>
@@ -104,9 +104,9 @@ GNU General Public License for more details.
     <type>gain</type>
     <input>
       <condition>
-        <property>/engines/engine[1]/running</property>
+        <property>engines/engine[1]/running</property>
       </condition>
-      <property>/engines/engine[1]/fuel-flow-gph</property>
+      <property>engines/engine[1]/fuel-flow-gph</property>
       <scale>-0.057</scale>
       <offset>27</offset>
     </input>
@@ -120,9 +120,9 @@ GNU General Public License for more details.
     <type>gain</type>
     <input>
       <condition>
-        <property>/engines/engine[2]/running</property>
+        <property>engines/engine[2]/running</property>
       </condition>
-      <property>/engines/engine[2]/fuel-flow-gph</property>
+      <property>engines/engine[2]/fuel-flow-gph</property>
       <scale>-0.057</scale>
       <offset>27</offset>
     </input>
@@ -136,9 +136,9 @@ GNU General Public License for more details.
     <type>gain</type>
     <input>
       <condition>
-        <property>/engines/engine[3]/running</property>
+        <property>engines/engine[3]/running</property>
       </condition>
-      <property>/engines/engine[3]/fuel-flow-gph</property>
+      <property>engines/engine[3]/fuel-flow-gph</property>
       <scale>-0.057</scale>
       <offset>27</offset>
     </input>
@@ -158,24 +158,24 @@ GNU General Public License for more details.
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
           <value>0</value>
         </equals>
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.0000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
           <value>1</value>
         </equals>
       </condition>
       <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>
@@ -189,24 +189,24 @@ GNU General Public License for more details.
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
           <value>0</value>
         </equals>
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.0000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
           <value>1</value>
         </equals>
       </condition>
       <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>
@@ -220,24 +220,24 @@ GNU General Public License for more details.
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
           <value>0</value>
         </equals>
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.0000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
           <value>1</value>
         </equals>
       </condition>
       <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>
@@ -251,24 +251,24 @@ GNU General Public License for more details.
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
           <value>0</value>
         </equals>
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.0000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
       <condition>
         <equals>
-          <property>/fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+          <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
           <value>1</value>
         </equals>
       </condition>
       <!-- linear interpolation: 10050 .. 16400 ft -> 0.242 .. 0.251 -->
-      <property>/position/altitude-ft</property>
+      <property>position/altitude-ft</property>
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>

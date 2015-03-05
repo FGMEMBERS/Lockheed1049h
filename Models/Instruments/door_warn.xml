@@ -10,9 +10,9 @@
     <object-name>LampDoorWarnOn</object-name>
     <condition>
       <and>
-        <property>/controls/door-crew/position-norm</property>
+        <property>controls/door-crew/position-norm</property>
         <greater-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>23.5</value>
         </greater-than>
       </and>
@@ -23,9 +23,9 @@
     <object-name>LampDoorWarn</object-name>
     <condition>
       <or>
-        <not><property>/controls/door-crew/position-norm</property></not>
+        <not><property>controls/door-crew/position-norm</property></not>
         <less-than-equals>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>23.5</value>
         </less-than-equals>
       </or>

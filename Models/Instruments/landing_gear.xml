@@ -11,15 +11,15 @@
     <condition>
       <and>
         <greater-than>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>0</value>
         </greater-than>
         <less-than>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>1</value>
         </less-than>
         <greater-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </greater-than>
       </and>
@@ -31,11 +31,11 @@
     <condition>
       <or>
         <equals>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>1</value>
         </equals>
       </or>
@@ -49,11 +49,11 @@
     <condition>
       <and>
         <equals>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>1</value>
         </equals>
         <greater-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </greater-than>
       </and>
@@ -65,14 +65,14 @@
     <condition>
       <or>
         <less-than>
-          <property>/gear/gear[0]/position-norm</property>
+          <property>gear/gear[0]/position-norm</property>
           <value>1</value>
         </less-than>
         <less-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </less-than>
-        <not><property>/systems/electrical/bus-dc/volts</property></not>
+        <not><property>systems/electrical/bus-dc/volts</property></not>
       </or>
     </condition>
   </animation>
@@ -84,11 +84,11 @@
     <condition>
       <and>
         <equals>
-          <property>/gear/gear[1]/position-norm</property>
+          <property>gear/gear[1]/position-norm</property>
           <value>1</value>
         </equals>
         <greater-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </greater-than>
       </and>
@@ -100,14 +100,14 @@
     <condition>
       <or>
         <less-than>
-          <property>/gear/gear[1]/position-norm</property>
+          <property>gear/gear[1]/position-norm</property>
           <value>1</value>
         </less-than>
         <less-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </less-than>
-        <not><property>/systems/electrical/bus-dc/volts</property></not>
+        <not><property>systems/electrical/bus-dc/volts</property></not>
       </or>
     </condition>
   </animation>
@@ -119,11 +119,11 @@
     <condition>
       <and>
         <equals>
-          <property>/gear/gear[2]/position-norm</property>
+          <property>gear/gear[2]/position-norm</property>
           <value>1</value>
         </equals>
         <greater-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </greater-than>
       </and>
@@ -135,14 +135,14 @@
     <condition>
       <or>
         <less-than>
-          <property>/gear/gear[2]/position-norm</property>
+          <property>gear/gear[2]/position-norm</property>
           <value>1</value>
         </less-than>
         <less-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </less-than>
-        <not><property>/systems/electrical/bus-dc/volts</property></not>
+        <not><property>systems/electrical/bus-dc/volts</property></not>
       </or>
     </condition>
   </animation>

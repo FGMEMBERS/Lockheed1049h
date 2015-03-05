@@ -9,9 +9,9 @@
     <object-name>LampParkingBrakeOn</object-name>
     <condition>
       <and>
-        <property>/controls/gear/brake-parking</property>
+        <property>controls/gear/brake-parking</property>
         <greater-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </greater-than>
       </and>
@@ -23,9 +23,9 @@
     <object-name>LampParkingBrake</object-name>
     <condition>
       <or>
-        <not><property>/controls/gear/brake-parking</property></not>
+        <not><property>controls/gear/brake-parking</property></not>
         <less-than>
-          <property>/systems/electrical/bus-dc/volts</property>
+          <property>systems/electrical/bus-dc/volts</property>
           <value>9</value>
         </less-than>
       </or>

@@ -73,7 +73,7 @@ the ability to take the properties relative to their root.
         <property>sim/multiplay/generic/float[2]</property>
         <!--
             <greater-than>
-              <property>/systems/electrical/bus-dc/volts</property>
+              <property>systems/electrical/bus-dc/volts</property>
               <value>23.5</value>
             </greater-than>
             -->
@@ -222,7 +222,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
         <property>sim/multiplay/generic/int[2]</property>
-        <not><property>/gear/gear[0]/position-norm</property></not>
+        <not><property>gear/gear[0]/position-norm</property></not>
       </and>
     </condition>
   </animation>
@@ -233,7 +233,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
         <property>sim/multiplay/generic/int[3]</property>
-        <not><property>/controls/lighting/landing-extend-left</property></not>
+        <not><property>controls/lighting/landing-extend-left</property></not>
       </and>
     </condition>
   </animation>
@@ -244,7 +244,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
         <property>sim/multiplay/generic/int[4]</property>
-        <not><property>/controls/lighting/landing-extend-right</property></not>
+        <not><property>controls/lighting/landing-extend-right</property></not>
       </and>
     </condition>
   </animation>
@@ -257,7 +257,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
         <property>sim/multiplay/generic/int[2]</property>
-        <property>/gear/gear[0]/position-norm</property>
+        <property>gear/gear[0]/position-norm</property>
       </and>
     </condition>
   </animation>
