@@ -60,7 +60,7 @@
 # to the given engine.
 
 
-var MAX_LBS		= 12;						# Fuel line buffer max level in 6.0/gallon pounds
+var MAX_LBS				= 10;   #12 original			# Fuel line buffer max level in 6.0/gallon pounds
 var GALUSTOLBS		= 6.6;						# JSBsim fixed lbs/gallon value
 
 									# Set up tank and valve vars:
@@ -188,6 +188,7 @@ var set_xfeed_valve = func(xfeed_index,setting) {
 									# buffer tank[engine_index]. Note that this system was devised
 									# to return fuel amounts not delivered due to too little fuel in
 									# tank, but this feature is not used due to simplified cross-feeding.
+									
 var transfer_fuel = func(engine_index, tank_index, request_lbs) {
   if (request_lbs == 0) { return 0 }
   request_gals = request_lbs / GALUSTOLBS;				# Have to work in gallons-- can't set lbs

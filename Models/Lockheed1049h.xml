@@ -8,7 +8,6 @@
 
   <path>mesh_airframe.ac</path>
 
-
   <!-- Start livery machine -->
   <nasal>
     <load>

@@ -20,6 +20,17 @@
   </animation>
 
   <animation>
+    <type>material</type>
+    <object-name>ALT.Knob</object-name>
+    <emission>
+      <red>0.25</red>
+      <green>0.25</green>
+      <blue>0.25</blue>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>ALT.Needle1</object-name>
     <property>instrumentation/altimeter/indicated-altitude-ft</property>
