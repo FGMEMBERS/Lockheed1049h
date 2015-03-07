@@ -78,7 +78,6 @@
 
 
   <!-- Panel Glows And Simulated Ambient Switch & Panel Night Lighting -->
-
   <animation>
     <type>material</type>
     <object-name>ConsolePilotGlow</object-name>

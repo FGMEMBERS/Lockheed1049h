@@ -205,8 +205,8 @@
     <path>Models/Instruments/rmi.xml</path>
     <offsets>
       <x-m>-15.649</x-m>
-      <y-m>-0.252</y-m>
-      <z-m>0.844</z-m>
+      <y-m>-0.343</y-m>
+      <z-m>0.752</z-m>
     </offsets>
   </model>
 
@@ -230,6 +230,48 @@
     </offsets>
   </model>
 
+  <model>
+    <name>Pic Deviation / Radial Finder</name>
+    <path>Models/Instruments/pic-dev/pic-dev.xml</path>
+    <overlay>
+      <gs-in-range>/instrumentation/nav[0]/gs-in-range</gs-in-range>
+      <dme-in-range>/instrumentation/dme[0]/in-range</dme-in-range>
+      <dme-indicated-distance-nmi>/instrumentation/dme[0]/indicated-distance-nm</dme-indicated-distance-nmi>
+      <nav-data-is-valid>/instrumentation/nav[0]/data-is-valid</nav-data-is-valid>
+      <to-flag>/instrumentation/nav[0]/to-flag</to-flag>
+      <from-flag>/instrumentation/nav[0]/from-flag</from-flag>
+      <selected-deg>/instrumentation/nav[0]/radials/selected-deg</selected-deg>
+      <heading-needle-deflection>/instrumentation/nav[0]/heading-needle-deflection</heading-needle-deflection>
+      <gs-needle-deflection>/instrumentation/nav[0]/gs-needle-deflection</gs-needle-deflection>
+    </overlay>
+    <offsets>
+      <x-m>-15.649</x-m>
+      <y-m>-0.252</y-m>
+      <z-m>0.844</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Pic Deviation / Radial Finder</name>
+    <path>Models/Instruments/pic-dev/pic-dev.xml</path>
+    <overlay>
+      <gs-in-range>/instrumentation/nav[1]/gs-in-range</gs-in-range>
+      <dme-in-range>/instrumentation/dme[1]/in-range</dme-in-range>
+      <dme-indicated-distance-nmi>/instrumentation/dme[1]/indicated-distance-nm</dme-indicated-distance-nmi>
+      <nav-data-is-valid>/instrumentation/nav[1]/data-is-valid</nav-data-is-valid>
+      <to-flag>/instrumentation/nav[1]/to-flag</to-flag>
+      <from-flag>/instrumentation/nav[1]/from-flag</from-flag>
+      <selected-deg>/instrumentation/nav[1]/radials/selected-deg</selected-deg>
+      <heading-needle-deflection>/instrumentation/nav[1]/heading-needle-deflection</heading-needle-deflection>
+      <gs-needle-deflection>/instrumentation/nav[1]/gs-needle-deflection</gs-needle-deflection>
+    </overlay>
+    <offsets>
+      <x-m>-15.649</x-m>
+      <y-m>-0.252</y-m>
+      <z-m>0.752</z-m>
+    </offsets>
+  </model>
+  
   <!-- Center Panel -->
 
   <model>
@@ -446,11 +488,53 @@
     <path>Models/Instruments/rmi.xml</path>
     <offsets>
       <x-m>-15.649</x-m>
+      <y-m>0.434</y-m>
+      <z-m>0.752</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Pic Deviation / Radial Finder</name>
+    <path>Models/Instruments/pic-dev/pic-dev.xml</path>
+    <overlay>
+      <gs-in-range>/instrumentation/nav[0]/gs-in-range</gs-in-range>
+      <dme-in-range>/instrumentation/dme[0]/in-range</dme-in-range>
+      <dme-indicated-distance-nmi>/instrumentation/dme[0]/indicated-distance-nm</dme-indicated-distance-nmi>
+      <nav-data-is-valid>/instrumentation/nav[0]/data-is-valid</nav-data-is-valid>
+      <to-flag>/instrumentation/nav[0]/to-flag</to-flag>
+      <from-flag>/instrumentation/nav[0]/from-flag</from-flag>
+      <selected-deg>/instrumentation/nav[0]/radials/selected-deg</selected-deg>
+      <heading-needle-deflection>/instrumentation/nav[0]/heading-needle-deflection</heading-needle-deflection>
+      <gs-needle-deflection>/instrumentation/nav[0]/gs-needle-deflection</gs-needle-deflection>
+    </overlay>
+    <offsets>
+      <x-m>-15.649</x-m>
       <y-m>0.526</y-m>
       <z-m>0.844</z-m>
     </offsets>
   </model>
 
+  <model>
+    <name>Pic Deviation / Radial Finder</name>
+    <path>Models/Instruments/pic-dev/pic-dev.xml</path>
+    <overlay>
+      <gs-in-range>/instrumentation/nav[1]/gs-in-range</gs-in-range>
+      <dme-in-range>/instrumentation/dme[1]/in-range</dme-in-range>
+      <dme-indicated-distance-nmi>/instrumentation/dme[1]/indicated-distance-nm</dme-indicated-distance-nmi>
+      <nav-data-is-valid>/instrumentation/nav[1]/data-is-valid</nav-data-is-valid>
+      <to-flag>/instrumentation/nav[1]/to-flag</to-flag>
+      <from-flag>/instrumentation/nav[1]/from-flag</from-flag>
+      <selected-deg>/instrumentation/nav[1]/radials/selected-deg</selected-deg>
+      <heading-needle-deflection>/instrumentation/nav[1]/heading-needle-deflection</heading-needle-deflection>
+      <gs-needle-deflection>/instrumentation/nav[1]/gs-needle-deflection</gs-needle-deflection>
+    </overlay>
+    <offsets>
+      <x-m>-15.649</x-m>
+      <y-m>0.526</y-m>
+      <z-m>0.752</z-m>
+    </offsets>
+  </model>
+  
   <model>
     <name>mdi_cp</name>
     <path>Models/Instruments/compass_mdi_with_hdg.xml</path>
@@ -472,6 +556,16 @@
   </model>
 
   <model>
+    <name>clock_cp</name>
+    <path>Models/Instruments/clock_adjustable.xml</path>
+    <offsets>
+      <x-m>-15.649</x-m>
+      <y-m>0.239</y-m>
+      <z-m>1.017</z-m>
+    </offsets>
+  </model>
+
+  <model>
     <name>pbrake_cp</name>
     <path>Models/Instruments/parking_brake_cp.xml</path>
     <offsets>
@@ -480,7 +574,6 @@
       <z-m>0.696</z-m>
     </offsets>
   </model>
-
 
   <!-- Engineer Panel -->
   <!-- Translations from old model: x- 0.013, y- 0.234, z+ 0.089 -->
