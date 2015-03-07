@@ -164,7 +164,7 @@ GNU General Public License for more details.
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
       <property>position/altitude-ft</property>
-      <scale>0.0000010516</scale>
+      <scale>0.000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
@@ -195,7 +195,7 @@ GNU General Public License for more details.
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
       <property>position/altitude-ft</property>
-      <scale>0.0000010516</scale>
+      <scale>0.000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
@@ -226,7 +226,7 @@ GNU General Public License for more details.
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
       <property>position/altitude-ft</property>
-      <scale>0.0000010516</scale>
+      <scale>0.000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
@@ -257,7 +257,7 @@ GNU General Public License for more details.
       </condition>
       <!-- Linear interpolation: 0 .. 5800 ft -> 0.198 .. 0.259 -->
       <property>position/altitude-ft</property>
-      <scale>0.0000010516</scale>
+      <scale>0.000010516</scale>
       <offset>0.198</offset>
     </input>
     <input>
