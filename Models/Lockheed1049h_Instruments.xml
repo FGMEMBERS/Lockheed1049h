@@ -762,22 +762,30 @@
 
   <model>
     <name>egttemp_L</name>
-    <path>Models/Instruments/egttemp_L.xml</path>
+    <path>Models/Instruments/egttemp.xml</path>
     <offsets>
       <x-m>-14.493</x-m>
       <y-m>0.777</y-m>
       <z-m>0.963</z-m>
     </offsets>
+    <overlay>
+      <egt1-degf>engines/engine[0]/egt-degf</egt1-degf>
+      <egt2-degf>engines/engine[1]/egt-degf</egt2-degf>
+    </overlay>
   </model>
 
   <model>
     <name>egttemp_R</name>
-    <path>Models/Instruments/egttemp_R.xml</path>
+    <path>Models/Instruments/egttemp.xml</path>
     <offsets>
       <x-m>-14.406</x-m>
       <y-m>0.777</y-m>
       <z-m>0.963</z-m>
     </offsets>
+    <overlay>
+      <egt1-degf>engines/engine[2]/egt-degf</egt1-degf>
+      <egt2-degf>engines/engine[3]/egt-degf</egt2-degf>
+    </overlay>
   </model>
 
   <!--
