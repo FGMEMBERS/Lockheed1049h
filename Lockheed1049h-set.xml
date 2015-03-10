@@ -121,8 +121,20 @@ View the README file for information about this model
 
   <autopilot>
     <settings>
-      <target-speed-kt>250</target-speed-kt>
+      <target-speed-kt type="double">223</target-speed-kt>
+      <target-pitch-deg type="double">0</target-pitch-deg>
+      <target-altitude-ft type="double">0</target-altitude-ft>
+      <vertical-speed-fpm type="double">0</vertical-speed-fpm>
+      <heading-bug-deg type="double">0</heading-bug-deg>
     </settings>
+    <switches>
+      <ap type="bool">0</ap>
+      <alt type="bool">0</alt>
+      <selected-nav type="bool">1</selected-nav>
+    </switches> 
+    <trim>
+      <elevator-trim-turn type="double">0</elevator-trim-turn>
+    </trim>    
   </autopilot>
 
   <consumables>
@@ -147,6 +159,7 @@ View the README file for information about this model
       <file>Nasal/Lockheed1049h-electrical.nas</file>
       <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
       <file>Nasal/Lockheed1049h-seats.nas</file>
+      <file>Nasal/mk-ap-helper.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>
   </nasal>
