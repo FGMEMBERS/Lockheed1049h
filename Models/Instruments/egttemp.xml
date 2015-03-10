@@ -1,13 +1,10 @@
 <?xml version="1.0"?>
 
 <!--
-Instrument display degC, so these conversions are used:
+Instrument displays degC, so these conversions are used:
 degC	degF
--50	-58
-0	32
-50	122
-125	257
-600     1112
+200     392
+900     1652
 -->
 
 <PropertyList>
@@ -23,17 +20,17 @@ degC	degF
       <red>0.8</red>
       <green>0.4</green>
       <blue>0.2</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <property>controls/lighting/panel-norm</property>
     </emission>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>EGTTemp.Needle1</object-name>
-    <property>engines/engine[0]/egt-degf</property>
+    <property alias="../../egt1-degf"/>
     <interpolation>
-      <entry><ind> -58</ind><dep> 52.5</dep></entry>
-      <entry><ind>1112</ind><dep>-52.5</dep></entry>
+      <entry><ind> 392</ind><dep> 52.5</dep></entry>
+      <entry><ind>1652</ind><dep>-52.5</dep></entry>
     </interpolation>
     <center>
       <x-m>-0.0251</x-m>
@@ -50,10 +47,10 @@ degC	degF
   <animation>
     <type>rotate</type>
     <object-name>EGTTemp.Needle2</object-name>
-    <property>engines/engine[1]/egt-degf</property>
+    <property alias="../../egt2-degf"/>
     <interpolation>
-      <entry><ind> -58</ind><dep> 52.5</dep></entry>
-      <entry><ind>1112</ind><dep>-52.5</dep></entry>
+      <entry><ind> 392</ind><dep> 52.5</dep></entry>
+      <entry><ind>1652</ind><dep>-52.5</dep></entry>
     </interpolation>
     <center>
       <x-m>0.0251</x-m>
