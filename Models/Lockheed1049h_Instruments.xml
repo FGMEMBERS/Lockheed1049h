@@ -16,6 +16,7 @@
     <object-name>turn_bank</object-name>
     <object-name>ctl_pos</object-name>
     <object-name>clock</object-name>
+    <object-name>clock_cp</object-name>
     <object-name>zero_reader</object-name>
     <object-name>rmi</object-name>
     <object-name>autopilot_warn</object-name>
@@ -93,7 +94,6 @@
     <object-name>adf1</object-name>
     <object-name>adf2</object-name>
   </animation>
-
 
   <!-- Captain Panel -->
   <!-- Translations from old model: x+ 0.1, z+ 0.165 -->
@@ -439,7 +439,6 @@
       <z-m>1.49</z-m>
     </offsets>
   </model>
-
 
   <!-- Copilot Panel -->
 
