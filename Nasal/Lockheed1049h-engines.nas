@@ -32,7 +32,7 @@ var engine_starter = func {
 var adjust_cooling_factor = func (cowl_flaps_node) {
    var engine_number = cowl_flaps_node.getParent ().getIndex ();
    setprop ("/fdm/jsbsim/propulsion/engine[" ~ engine_number ~ "]/cooling-factor",
-            0.5 + 0.15 * cowl_flaps_node.getValue ());
+            0.4 + 0.15 * cowl_flaps_node.getValue ());
 }
 
 var cowl_flaps_listeners = [ 0, 0, 0, 0 ]; # prevents re-registering listeners on Shift+Esc
