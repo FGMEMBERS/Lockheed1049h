@@ -854,42 +854,58 @@
 
   <model>
     <name>oiltemp_L</name>
-    <path>Models/Instruments/oiltemp_L.xml</path>
+    <path>Models/Instruments/oiltemp.xml</path>
     <offsets>
       <x-m>-14.038</x-m>
       <y-m>0.777</y-m>
       <z-m>1.205</z-m>
     </offsets>
+    <overlay>
+      <oil-temperature1-degf>engines/engine[0]/oil-temperature-degf</oil-temperature1-degf>
+      <oil-temperature2-degf>engines/engine[1]/oil-temperature-degf</oil-temperature2-degf>
+    </overlay>
   </model>
 
   <model>
     <name>oiltemp_R</name>
-    <path>Models/Instruments/oiltemp_R.xml</path>
+    <path>Models/Instruments/oiltemp.xml</path>
     <offsets>
       <x-m>-13.946</x-m>
       <y-m>0.777</y-m>
       <z-m>1.205</z-m>
     </offsets>
+    <overlay>
+      <oil-temperature1-degf>engines/engine[2]/oil-temperature-degf</oil-temperature1-degf>
+      <oil-temperature2-degf>engines/engine[3]/oil-temperature-degf</oil-temperature2-degf>
+    </overlay>
   </model>
 
   <model>
     <name>oilpress_L</name>
-    <path>Models/Instruments/oilpress_L.xml</path>
+    <path>Models/Instruments/oilpress.xml</path>
     <offsets>
       <x-m>-14.038</x-m>
       <y-m>0.777</y-m>
       <z-m>1.113</z-m>
     </offsets>
+    <overlay>
+      <oil-pressure1-psi>engines/engine[0]/oil-pressure-psi</oil-pressure1-psi>
+      <oil-pressure2-psi>engines/engine[1]/oil-pressure-psi</oil-pressure2-psi>
+    </overlay>
   </model>
 
   <model>
     <name>oilpress_R</name>
-    <path>Models/Instruments/oilpress_R.xml</path>
+    <path>Models/Instruments/oilpress.xml</path>
     <offsets>
       <x-m>-13.946</x-m>
       <y-m>0.777</y-m>
       <z-m>1.113</z-m>
     </offsets>
+    <overlay>
+      <oil-pressure1-psi>engines/engine[2]/oil-pressure-psi</oil-pressure1-psi>
+      <oil-pressure2-psi>engines/engine[3]/oil-pressure-psi</oil-pressure2-psi>
+    </overlay>
   </model>
 
   <model>
@@ -900,6 +916,10 @@
       <y-m>0.777</y-m>
       <z-m>0.984</z-m>
     </offsets>
+    <overlay>
+      <fuel-pressure1>engines/engine[0]/est-fuelpress</fuel-pressure1>
+      <fuel-pressure2>engines/engine[1]/est-fuelpress</fuel-pressure2>
+    </overlay>
   </model>
 
   <model>
@@ -910,6 +930,10 @@
       <y-m>0.777</y-m>
       <z-m>0.984</z-m>
     </offsets>
+    <overlay>
+      <fuel-pressure1>engines/engine[2]/est-fuelpress</fuel-pressure1>
+      <fuel-pressure2>engines/engine[3]/est-fuelpress</fuel-pressure2>
+    </overlay>
   </model>
 
 
@@ -939,46 +963,6 @@
     <path>Models/Instruments/door_warn.xml</path>
   </model>
 
-  <!--
-      <model>
-      <name>egt_eng_1</name>
-      <path>Models/Instruments/egtemp_engineer_1.xml</path>
-      <offsets>
-      <x-m>-14.100</x-m>
-      <y-m>0.777</y-m>
-      <z-m>0.985</z-m>
-      </offsets>
-      </model>
-      <model>
-      <name>egt_eng_2</name>
-      <path>Models/Instruments/egtemp_engineer_2.xml</path>
-      <offsets>
-      <x-m>-14.040</x-m>
-      <y-m>0.777</y-m>
-      <z-m>0.985</z-m>
-      </offsets>
-      </model>
-      <model>
-      <name>egt_eng_3</name>
-      <path>Models/Instruments/egtemp_engineer_3.xml</path>
-      <offsets>
-      <x-m>-13.980</x-m>
-      <y-m>0.777</y-m>
-      <z-m>0.985</z-m>
-      </offsets>
-      </model>
-      <model>
-      <name>egt_eng_4</name>
-      <path>Models/Instruments/egtemp_engineer_4.xml</path>
-      <offsets>
-      <x-m>-13.920</x-m>
-      <y-m>0.777</y-m>
-      <z-m>0.985</z-m>
-      </offsets>
-      </model>
-  -->
-
-
   <model>
     <name>press_warn</name>
     <path>Models/Instruments/press_warn.xml</path>
@@ -988,7 +972,6 @@
       <z-m>1.044</z-m>
     </offsets>
   </model>
-
 
   <!-- MJB Panel -->
 
