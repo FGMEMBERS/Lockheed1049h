@@ -11,6 +11,7 @@
     <object-name>StdbyKnob2</object-name>
     <object-name>ActKnob1</object-name>
     <object-name>ActKnob2</object-name>
+    <object-name>VolumeKnob</object-name>
     <emission>
       <red>0.2</red>
       <green>0.1</green>
@@ -282,6 +283,35 @@
         <command>property-swap</command>
         <property alias="../../../../params/selected-mhz"/>
         <property alias="../../../../params/standby-mhz"/>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- Volume Knob -->
+
+  <animation>
+    <type>knob</type>
+    <object-name>VolumeKnob</object-name>
+    <property alias="../../params/volume"/>
+    <factor>90</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.000053</y-m>
+      <z-m>-0.01040</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/volume"/>
+        <factor>0.1</factor>
+        <min>0.0</min>
+        <max>1.0</max>
+        <wrap>false</wrap>
       </binding>
     </action>
   </animation>

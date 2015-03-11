@@ -1039,6 +1039,7 @@
         <display-sby-khz>/instrumentation/comm[0]/frequencies/display-sby-khz</display-sby-khz>
         <display-sby-mhz>/instrumentation/comm[0]/frequencies/display-sby-mhz</display-sby-mhz>
         <standby-mhz>/instrumentation/comm[0]/frequencies/standby-mhz</standby-mhz>
+        <volume>/instrumentation/comm[0]/volume</volume>
       </params>
     </overlay>
     <offsets>
@@ -1060,6 +1061,7 @@
         <display-sby-khz>/instrumentation/comm[1]/frequencies/display-sby-khz</display-sby-khz>
         <display-sby-mhz>/instrumentation/comm[1]/frequencies/display-sby-mhz</display-sby-mhz>
         <standby-mhz>/instrumentation/comm[1]/frequencies/standby-mhz</standby-mhz>
+        <volume>/instrumentation/comm[1]/volume</volume>
       </params>
     </overlay>
     <offsets>
