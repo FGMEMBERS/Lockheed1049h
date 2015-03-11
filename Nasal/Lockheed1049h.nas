@@ -43,7 +43,7 @@ LockheedMain.instantiate = func {
 
 LockheedMain.init = func {
    me.instantiate();
-   aircraft.livery.init("Models/Liveries");
+   aircraft.livery.init("Aircraft/Lockheed1049h/Models/Liveries");
    InstrumentationInit();					# See Lockheed1049h_instrumentation_drivers.nas
    me.savedata();  						# Initiate save on exit, restore on launch stuff
 }
@@ -54,3 +54,37 @@ L1049hL = setlistener("/sim/signals/fdm-initialized", func {
   removelistener(L1049hL);
   }
 );
+
+
+############################## view helper ###############################
+var changeView = func (n){
+  var actualView = props.globals.getNode("/sim/current-view/view-number", 1);
+  if (actualView.getValue() == n){
+    actualView.setValue(0);
+  }else{
+    actualView.setValue(n);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

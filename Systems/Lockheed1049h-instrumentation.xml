@@ -7,80 +7,136 @@ The only reason it's here is to specify a second ADF.
 
 <PropertyList>
 
-  <adf>
-    <name>adf</name>
-    <number>0</number>
-  </adf>
+<adf>
+  <name>adf</name>
+  <number>0</number>
+</adf>
 
-  <adf>
-    <name>adf</name>
-    <number>1</number>
-  </adf>
+<adf>
+  <name>adf</name>
+  <number>1</number>
+</adf>
 
-  <airspeed-indicator>
-    <name>airspeed-indicator</name>
-    <number>0</number>
-    <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </airspeed-indicator>
+<!-- 
+     Avril 2012, m.kraus
+     It is really not the best, but my next try to make a "real" selection
+     for the NAV frequencies to autopilot. Flightgear only use nav[0] for autopilot
+     but I do not want swap between copilot and pilot nav. Next problem is, that 
+     in the litte Menu-Map we can see only nav[0] and nav[1] radials. 
+     So the instruments show now the nav[2] and nav[3]. The real parameter in flightgear
+     will be set dependent from the NAV Switch in the Cockpit nav[3] to nav[1] and nav[2] to nav[0]
+     or nav[2] to nav[1] and nav[3] to nav[0] in the /Nasal/mk-swap-nav.nas
+-->
+<nav-radio>
+  <name>nav</name>
+  <number>0</number>
+</nav-radio>
 
-  <altimeter>
-    <name>altimeter</name>
-    <number>0</number>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </altimeter>
+<nav-radio>
+  <name>nav</name>
+  <number>1</number>
+</nav-radio>
 
-  <attitude-indicator>
-    <name>attitude-indicator</name>
-    <number>0</number>
-    <suction>/systems/vacuum/suction-inhg</suction>
-  </attitude-indicator>
+<nav-radio>
+  <name>nav</name>
+  <number>2</number>
+</nav-radio>
 
-  <clock>
-    <name>clock</name>
-    <number>0</number>
-  </clock>
+<nav-radio>
+  <name>nav</name>
+  <number>3</number>
+</nav-radio>
 
-  <marker-beacon>
-    <name>marker-beacon</name>
-    <number>0</number>
-  </marker-beacon>
+<dme>
+  <name>dme</name>
+  <number>0</number>
+</dme>
 
-  <heading-indicator>
-    <name>heading-indicator</name>
-    <number>0</number>
-    <suction>/systems/vacuum/suction-inhg</suction>
-  </heading-indicator>
+<dme>
+  <name>dme</name>
+  <number>1</number>
+</dme>
 
-  <magnetic-compass>
-    <name>magnetic-compass</name>
-    <number>0</number>
-  </magnetic-compass>
+<dme>
+  <name>dme</name>
+  <number>2</number>
+</dme>
 
-  <nav-radio>
-    <name>nav</name>
-    <number>0</number>
-  </nav-radio>
+<dme>
+  <name>dme</name>
+  <number>3</number>
+</dme>
 
-  <nav-radio>
-    <name>nav</name>
-    <number>1</number>
-  </nav-radio>
+<heading-indicator>
+  <name>heading-indicator</name>
+  <number>0</number>
+  <suction>/systems/vacuum/suction-inhg</suction>
+</heading-indicator>
 
-  <slip-skid-ball>
-    <name>slip-skid-ball</name>
-    <number>0</number>
-  </slip-skid-ball>
+<airspeed-indicator>
+  <name>airspeed-indicator</name>
+  <number>0</number>
+  <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+  <static-pressure>/systems/static/pressure-inhg</static-pressure>
+</airspeed-indicator>
 
-  <turn-indicator>
-    <name>turn-indicator</name>
-    <number>0</number>
-  </turn-indicator>
+<vertical-speed-indicator>
+  <name>vertical-speed-indicator</name>
+  <number>0</number>
+  <static-pressure>/systems/static/pressure-inhg</static-pressure>
+</vertical-speed-indicator>
 
-  <vertical-speed-indicator>
-    <name>vertical-speed-indicator</name>
-    <number>0</number>
-    <static-pressure>/systems/static/pressure-inhg</static-pressure>
-  </vertical-speed-indicator>
+<altimeter>
+  <name>altimeter</name>
+  <number>0</number>
+  <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  <quantum>0</quantum>
+  <tau>0</tau>
+</altimeter>
+
+<attitude-indicator>
+  <name>attitude-indicator</name>
+  <number>0</number>
+  <suction>/systems/vacuum/suction-inhg</suction>
+</attitude-indicator>
+
+<clock>
+  <name>clock</name>
+  <number>0</number>
+</clock>
+
+<altimeter>
+  <name>encoder</name>
+  <number>0</number>
+  <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  <quantum>10</quantum>
+  <tau>0.1</tau>
+</altimeter>
+
+<marker-beacon>
+  <name>marker-beacon</name>
+  <number>0</number>
+</marker-beacon>
+
+<magnetic-compass>
+  <name>magnetic-compass</name>
+  <number>0</number>
+</magnetic-compass>
+
+
+<slip-skid-ball>
+  <name>slip-skid-ball</name>
+  <number>0</number>
+</slip-skid-ball>
+
+<turn-indicator>
+  <name>turn-indicator</name>
+  <number>0</number>
+</turn-indicator>
+
+<radar> 
+	<name>wxradar</name>
+	<number>0</number>
+</radar>
 
 </PropertyList>

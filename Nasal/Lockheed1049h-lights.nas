@@ -4,6 +4,9 @@
 #
 # Gary Neely aka 'Buckaroo'
 
+# Init beacon false at startup
+
+setprop ("/controls/lighting/beacon", 0);
 
 # Initialize timed beacon (anti-collision) lighting
 # Uses an MP prop for the timed beacon functionality, though control is maintained
@@ -83,3 +86,16 @@ setlistener(L1049H_BeaconState, func {
   if (L1049H_BeaconState.getValue() > 0)	{ L1049H_MPBeaconState.setValue(1) }
   else						{ L1049H_MPBeaconState.setValue(0) }
 });
+
+# the fire-warning blink
+var fire_prop = func(){
+  var fw = props.globals.getNode("/controls/special/fire-warning", 1);
+  if(fw.getValue() == 1){
+  		fw.setValue(0);
+  }else{
+  		fw.setValue(1);
+  }
+  settimer(fire_prop, 0.5);
+}
+
+fire_prop();

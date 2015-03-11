@@ -2,119 +2,345 @@
 
 <PropertyList>
 
+<path>compass_mdi_with_hdg.ac</path>
 
-  <path>compass_mdi_with_hdg.ac</path>
+<animation>
+  <type>material</type>
+  <object-name>MDI.KnobHdg</object-name>
+  <emission>
+    <red>0.25</red>
+    <green>0.25</green>
+    <blue>0.25</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>MDI.KnobHdg</object-name>
-    <emission>
-      <red>0.25</red>
-      <green>0.25</green>
-      <blue>0.25</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
-    </emission>
-  </animation>
+<animation>
+  <type>material</type>
+  <object-name>MDI.Card</object-name>
+  <object-name>MDI.Face</object-name>
+  <object-name>MDI.HdgBug</object-name>
+  <object-name>MDI.Needle</object-name>
+  <emission>
+    <red>0.8</red>
+    <green>0.4</green>
+    <blue>0.2</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
 
-  <animation>
-    <type>material</type>
-    <object-name>MDI.Card</object-name>
-    <object-name>MDI.Face</object-name>
-    <object-name>MDI.HdgBug</object-name>
-    <object-name>MDI.Needle</object-name>
-    <emission>
-      <red>0.8</red>
-      <green>0.4</green>
-      <blue>0.2</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
-    </emission>
-  </animation>
+<animation>
+  <type>rotate</type>
+  <object-name>MDI.Card</object-name>
+  <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+  <factor>-1</factor>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
 
-  <animation>
+<animation>
+  <type>rotate</type>
+  <object-name>MDI.Knob</object-name>
+  <property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+  <factor>5</factor>
+  <center>
+    <x-m>0</x-m>
+    <y-m>-0.03</y-m>
+    <z-m>-0.03</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>MDI.KnobHdg</object-name>
+  <property>/autopilot/settings/heading-bug-deg</property>
+  <factor>5</factor>
+  <center>
+    <x-m>0</x-m>
+    <y-m>0.03</y-m>
+    <z-m>-0.03</z-m>
+  </center>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+
+<animation>
     <type>rotate</type>
-    <object-name>MDI.Card</object-name>
-    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
-    <factor>-1</factor>
+    <object-name>MDI.HdgBug</object-name>
+    <property>/autopilot/internal/heading-bug-error-deg</property>
     <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
+        <x>-1.0</x>
+        <y>0</y>
+        <z>0.0</z>
     </axis>
-  </animation>
+</animation>
 
-  <animation>
-    <type>knob</type>
-    <object-name>MDI.Knob</object-name>
-    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
-    <factor>5</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>-0.03</y-m>
-      <z-m>-0.03</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
+<animation>
+  <type>pick</type>
+  <object-name>HdgOffsetPlane</object-name>
+  <visible>false</visible>
     <action>
+      <name>calibrate  dec</name>
+      <button>1</button>
+      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>instrumentation/heading-indicator/offset-deg</property>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>-10</step>
         <min>0</min>
-        <max>359</max>
+        <max>360</max>
         <wrap>true</wrap>
       </binding>
     </action>
-  </animation>    
-
-  <animation>
-    <type>knob</type>
-    <object-name>MDI.KnobHdg</object-name>
-    <property>autopilot/settings/heading-bug-deg</property>
-    <factor>5</factor>
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.03</y-m>
-      <z-m>-0.03</z-m>
-    </center>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
     <action>
+      <name>calibrate inc</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>autopilot/settings/heading-bug-deg</property>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>10</step>
         <min>0</min>
-        <max>359</max>
+        <max>360</max>
         <wrap>true</wrap>
       </binding>
     </action>
-  </animation>    
+    <action>
+      <name>calibrate  dec</name>
+      <button>3</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+    <action>
+      <name>calibrate inc</name>
+      <button>4</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>/instrumentation/heading-indicator/offset-deg</property>
+        <step>1</step>
+        <min>0</min>
+        <max>360</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+</animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>MDI.HdgBug</object-name>
-    <property>autopilot/settings/heading-bug-deg</property>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>MDI.HdgBug</object-name>
-    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
-    <factor>-1</factor>
-    <axis>
-      <x>-1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
+<animation>
+  <type>pick</type>
+  <object-name>HdgPlane</object-name>
+  <visible>false</visible>
+    <action>
+        <name>hdg dec</name>
+        <button>0</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <condition>
+            	<not><property>devices/status/keyboard/shift</property></not>
+            	<not><property>devices/status/keyboard/super</property></not>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+						     <or>
+						      <property>devices/status/keyboard/shift</property>
+						      <property>devices/status/keyboard/super</property>
+						     </or>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+               <property>devices/status/keyboard/ctrl</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/heading-indicator/offset-deg</property>
+            <step>1</step>
+            <min>-45</min>
+            <max>45</max>
+            <wrap>false</wrap>
+        </binding>
+    </action>
+    <action>
+        <name>hdg inc</name>
+        <button>1</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <condition>
+            	<not><property>devices/status/keyboard/shift</property></not>
+            	<not><property>devices/status/keyboard/super</property></not>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+						     <or>
+						      <property>devices/status/keyboard/shift</property>
+						      <property>devices/status/keyboard/super</property>
+						     </or>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>        
+        <binding>
+            <condition>
+               <property>devices/status/keyboard/ctrl</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/heading-indicator/offset-deg</property>
+            <step>-1</step>
+            <min>-45</min>
+            <max>45</max>
+            <wrap>false</wrap>
+        </binding>
+    </action>
+    <action>
+        <name>hdg dec</name>
+        <button>3</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <condition>
+            	<not><property>devices/status/keyboard/shift</property></not>
+            	<not><property>devices/status/keyboard/super</property></not>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+						     <or>
+						      <property>devices/status/keyboard/shift</property>
+						      <property>devices/status/keyboard/super</property>
+						     </or>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+               <property>devices/status/keyboard/ctrl</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/heading-indicator/offset-deg</property>
+            <step>1</step>
+            <min>-45</min>
+            <max>45</max>
+            <wrap>false</wrap>
+        </binding>
+    </action>
+    <action>
+        <name>hdg inc</name>
+        <button>4</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <condition>
+            	<not><property>devices/status/keyboard/shift</property></not>
+            	<not><property>devices/status/keyboard/super</property></not>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+						     <or>
+						      <property>devices/status/keyboard/shift</property>
+						      <property>devices/status/keyboard/super</property>
+						     </or>
+                <not>
+                    <property>devices/status/keyboard/ctrl</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+               <property>devices/status/keyboard/ctrl</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>instrumentation/heading-indicator/offset-deg</property>
+            <step>-1</step>
+            <min>-45</min>
+            <max>45</max>
+            <wrap>false</wrap>
+        </binding>
+    </action>
+	</animation>
 
 </PropertyList>
+

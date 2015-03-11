@@ -113,17 +113,17 @@ Acknowledgements
 
 I would like to thank the builders of the Flightgear 1049G Constellation, for their work pointed the way. I would also like to thank the other Flightgear aircraft developers, particularly the work of Syd Adams, Lee Elliott, Detlef Faber, Heiko Schulz, Gerard Robin and Melchior Franz for study of their work and the work of other fine developers taught me much and set my standards, even if I can't yet meet them.
 
-Christian Müller graciously provided me with countless photos and other information from his excellent and very real 1049 cockpit. Christian has actually flown in the Breitling Connie. I can definitely say that without him this project would not have gotten far off the ground.
+Christian Mueller graciously provided me with countless photos and other information from his excellent and very real 1049 cockpit. Christian has actually flown in the Breitling Connie. I can definitely say that without him this project would not have gotten far off the ground.
 
 The Airline History Museum in Kansas City Missouri has graciously allowed Wolfram Gottfried to photograph the cockpit of their Connie "Star of America", and has offered to answer specific questions, all of which will result in improved fidelity for the model. Please visit their site at http://www.ahmhangar.com
 
 Wolfram Gottfried "Yakko" has provided unflagging and tireless support in helping me resolve issues with the project, research the aircraft, test the model, tweak the Wright Cyclone FDM, help perfect navigation and engine instruments, tweaked the engine sounds, and kept my morale up when it was wavering. I do believe that without Yakko this project would have floundered.
 
-Alvaro Castañeda Mendoza "Tuxo" provided hours of help and encouragement on this project and helped me get through quite a few problems. I am very grateful.
+Alvaro Castaeda Mendoza "Tuxo" provided hours of help and encouragement on this project and helped me get through quite a few problems. I am very grateful.
 
 Peter Brown "Farmboy" very kindly provided his help in flight-testing and debugging problems, updates to the sound system, and constructed the engine smoke effects.
  
-Frank M. Göldner contributed the Lufthansa livery.
+Frank M. Goeldner contributed the Lufthansa livery.
 
 Brett "Gooneybird" Harrison and Durk Talsma contributed the KLM livery.
 

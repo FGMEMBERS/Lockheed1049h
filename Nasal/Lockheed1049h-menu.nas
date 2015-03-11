@@ -20,5 +20,7 @@ Menu.new = func {
 
 Menu.init = func {
   me.menu = gui.Dialog.new("/sim/gui/dialogs/Lockheed1049/menu/dialog",
-                           "Dialogs/Lockheed1049h-menu.xml");
+                           "Aircraft/Lockheed1049h/Dialogs/Lockheed1049h-menu.xml");
+  me.radios = gui.Dialog.new("/sim/gui/dialogs/Lockheed1049/radios/dialog",
+                           "Aircraft/Lockheed1049h/Dialogs/Lockheed1049h-radios.xml");
 }

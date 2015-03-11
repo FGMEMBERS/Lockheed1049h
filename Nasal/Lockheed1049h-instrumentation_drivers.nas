@@ -65,12 +65,18 @@ var update_apwarn = func {
 #
 # A little setup for simulating short switch throws:
 #
+
+var switch_reset_index = 0;
+var switch_reset = func {
+  setprop("/systems/switch-throw["~switch_reset_index~"]/value",0);
+}
 var switch_ani = func(i,j) {
   setprop("/systems/switch-throw["~i~"]/value",j);
-  # Switch resets after 0.5 secs
-  settimer(func { setprop("/systems/switch-throw["~i~"]/value",0); },
-           0.5);
+  switch_reset_index = i;
+  settimer(switch_reset,0.5);					# Switch resets after 0.5 secs
 }
+
+
 
 #
 # Support to calculate RMI needle deflections based on mode (VOR/ADF)
@@ -91,14 +97,14 @@ var switch_ani = func(i,j) {
 # This code is based in part on code originally suggested by Wolfram Gottfried aka 'Yakko'.
 #
 
-var UPDATE_PERIOD	= 0.125;				# How often to update main loop in seconds (0 = framerate)
+var UPDATE_PERIOD	= 2;				# How often to update main loop in seconds (0 = framerate)
 
 var rmi1	= props.globals.getNode("/instrumentation/rmi-needle[0]");
 var rmi2	= props.globals.getNode("/instrumentation/rmi-needle[1]");
 var adf1	= props.globals.getNode("/instrumentation/adf[0]");
 var adf2	= props.globals.getNode("/instrumentation/adf[1]");
-var nav1	= props.globals.getNode("/instrumentation/nav[0]");
-var nav2	= props.globals.getNode("/instrumentation/nav[1]");
+var nav1	= props.globals.getNode("/instrumentation/nav[1]");
+var nav2	= props.globals.getNode("/instrumentation/nav[2]");
 var heading	= props.globals.getNode("/orientation/heading-magnetic-deg");
 var magdev      = props.globals.getNode("/environment/magnetic-variation-deg");
 
@@ -106,31 +112,46 @@ var update_rmi = func {
 
   var needle1 = 90;						# Needle default off or out-of-range positions
   var needle2 = 270;
+
+  if(adf1.getNode("in-range").getValue()) {
+    needle1 = adf1.getNode("indicated-bearing-deg").getValue();
+  }
+
+  if(adf2.getNode("in-range").getValue()) {
+    needle2 = adf2.getNode("indicated-bearing-deg").getValue();
+  }
+
 						
-  if (rmi1.getNode("mode").getValue()) {			# Mode 1 = ADF
-    if(adf1.getNode("in-range").getValue()) {
-      needle1 = adf1.getNode("indicated-bearing-deg").getValue();
-    }
-  }
-  else {							# Mode 0 = VOR
-    if (nav1.getNode("in-range").getValue() and !nav1.getNode("has-gs").getValue()) {
-      needle1 = nav1.getNode("heading-deg").getValue() - magdev.getValue() - heading.getValue(); 
-    }
-  }
+#  if (rmi1.getNode("mode").getValue()) {			# Mode 1 = ADF
+#    if(adf1.getNode("in-range").getValue()) {
+#      needle1 = adf1.getNode("indicated-bearing-deg").getValue();
+#    }
+#  }
+#  else {							# Mode 0 = VOR
+#    if (nav1.getNode("in-range").getValue() and !nav1.getNode("has-gs").getValue()) {
+#      needle1 = nav1.getNode("heading-deg").getValue() - magdev.getValue() - #heading.getValue(); 
+#    }
+#  }
 
-  if (rmi2.getNode("mode").getValue()) {			# Mode 1 = ADF
-    if(adf2.getNode("in-range").getValue()) {
-      needle2 = adf2.getNode("indicated-bearing-deg").getValue();
-    }
-  }
-  else {							# Mode 0 = VOR
-    if (nav2.getNode("in-range").getValue() and !nav2.getNode("has-gs").getValue()) {
-      needle2 = nav2.getNode("heading-deg").getValue() - magdev.getValue() - heading.getValue(); 
-    }
-  }
+########################## uncommand by Marc Kraus - problem with nav and dme #####
 
-  rmi1.getNode("value").setValue(needle1);
-  rmi2.getNode("value").setValue(needle2);
+#  if (rmi2.getNode("mode").getValue()) {			# Mode 1 = ADF
+#    #if(adf2.getNode("in-range").getValue()) {
+#     #needle2 = adf2.getNode("indicated-bearing-deg").getValue();
+#     # do nothing
+#    #}
+#  }
+#  else {							# Mode 0 = VOR
+#    if (nav2.getNode("in-range").getValue() and !nav2.getNode("has-gs").getValue()) {
+#      needle2 = nav2.getNode("heading-deg").getValue() - magdev.getValue() - heading.getValue(); 
+#    }
+#  }
+
+  #rmi1.getNode("value").setValue(needle1);
+  #rmi2.getNode("value").setValue(needle2);
+
+  interpolate("/instrumentation/rmi-needle[0]/value", needle1, 2.75);
+  interpolate("/instrumentation/rmi-needle[1]/value", needle2, 2.5);
 
   settimer(update_rmi, UPDATE_PERIOD);
 }
@@ -164,18 +185,18 @@ var adf_false_tick = func {
 # that are used by the animations.
 #
 
-var nav1selstr	= props.globals.getNode("/instrumentation/nav[0]/frequencies/selected-mhz-fmt");
-var nav1selmhz	= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sel-mhz");
-var nav1selkhz	= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sel-khz");
-var nav2selstr	= props.globals.getNode("/instrumentation/nav[1]/frequencies/selected-mhz-fmt");
-var nav2selmhz	= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sel-mhz");
-var nav2selkhz	= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sel-khz");
-var nav1sbystr	= props.globals.getNode("/instrumentation/nav[0]/frequencies/standby-mhz-fmt");
-var nav1sbymhz	= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sby-mhz");
-var nav1sbykhz	= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sby-khz");
-var nav2sbystr	= props.globals.getNode("/instrumentation/nav[1]/frequencies/standby-mhz-fmt");
-var nav2sbymhz	= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sby-mhz");
-var nav2sbykhz	= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sby-khz");
+var nav1selstr	= props.globals.getNode("/instrumentation/nav[2]/frequencies/selected-mhz-fmt");
+var nav1selmhz	= props.globals.getNode("/instrumentation/nav[2]/frequencies/display-sel-mhz");
+var nav1selkhz	= props.globals.getNode("/instrumentation/nav[2]/frequencies/display-sel-khz");
+var nav2selstr	= props.globals.getNode("/instrumentation/nav[3]/frequencies/selected-mhz-fmt");
+var nav2selmhz	= props.globals.getNode("/instrumentation/nav[3]/frequencies/display-sel-mhz");
+var nav2selkhz	= props.globals.getNode("/instrumentation/nav[3]/frequencies/display-sel-khz");
+var nav1sbystr	= props.globals.getNode("/instrumentation/nav[2]/frequencies/standby-mhz-fmt");
+var nav1sbymhz	= props.globals.getNode("/instrumentation/nav[2]/frequencies/display-sby-mhz");
+var nav1sbykhz	= props.globals.getNode("/instrumentation/nav[2]/frequencies/display-sby-khz");
+var nav2sbystr	= props.globals.getNode("/instrumentation/nav[3]/frequencies/standby-mhz-fmt");
+var nav2sbymhz	= props.globals.getNode("/instrumentation/nav[3]/frequencies/display-sby-mhz");
+var nav2sbykhz	= props.globals.getNode("/instrumentation/nav[3]/frequencies/display-sby-khz");
 
 							# This initializes the values
 var navtemp = split(".",nav1selstr.getValue());

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>ap-warning.ac</path>
+
+<animation>
+  <type>material</type>
+  <object-name>Placard</object-name>
+  <emission>
+    <red>0.256</red>
+    <green>0.128</green>
+    <blue>0.064</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>LampAPOn</object-name>  
+  <emission>
+    <red>1</red>
+    <green>0</green>
+    <blue>0</blue>
+    <factor-prop>/systems/electrical/bus-dc/volts</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampAP</object-name>
+  <condition>
+    <or>
+      <not><property>/autopilot/switches/ap</property></not>
+	    <less-than>
+	        <property>/systems/electrical/bus-dc/volts</property>
+	        <value>9</value>
+	    </less-than>
+    </or>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampAPOn</object-name>
+  <condition>
+  	<and>
+      <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+      </greater-than>
+      <property>/autopilot/switches/ap</property>
+    </and>
+  </condition>
+</animation>
+
+<!-- rembrand light  -->
+<animation>
+	<type>select</type>
+	<object-name>lightVolume1</object-name>
+  <condition>
+    <and>
+			<property>/sim/rendering/rembrandt/enabled</property>
+      <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+      </greater-than>
+      <property>/autopilot/switches/ap</property>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+	<type>light</type>
+	<light-type>point</light-type>
+	<name>APWarningLight</name>
+	<object-name>lightVolume1</object-name>
+	<position>
+		<x>1.2</x>
+		<y>0</y>
+		<z>0</z>
+	</position>
+	<direction>
+		<x> 0</x>
+		<y> 0</y>
+		<z> 0</z>
+	</direction>
+	<ambient>
+		<r>1</r>
+		<g>0.5</g>
+		<b>0.0</b>
+		<a>1.0</a>
+	</ambient>
+	<diffuse>
+		<r>0.99</r>
+		<g>0.0</g>
+		<b>0.0</b>
+		<a>1.0</a>
+	</diffuse>
+	<specular>
+		<r>0.99</r>
+		<g>0.0</g>
+		<b>0.0</b>
+		<a>1.0</a>
+	</specular>
+	<attenuation>
+		<c>1.0</c>
+		<l>0.7</l>
+		<q>8</q>
+	</attenuation>
+	<exponent>40</exponent>
+	<near-m>0.05</near-m>
+	<far-m>10</far-m>
+	<cutoff>40</cutoff>
+</animation>
+
+</PropertyList>
+

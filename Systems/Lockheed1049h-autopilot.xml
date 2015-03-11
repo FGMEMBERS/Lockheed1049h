@@ -2,12 +2,12 @@
 
 <!-- Lockheed 1049 autopilot :
 
-Autothrottle and true heading hold are test modes (speed-up).
+     Autothrottle and true heading hold are test modes (speed-up).
 
 
-Known problems:
-- roll on heading hold near max speed (260 kt) : might be the FDM (?).
-Solved by a rudder trim, which unlocks the roll.
+     Known problems:
+     - roll on heading hold near max speed (260 kt) : might be the FDM (?).
+     Solved by a rudder trim, which unlocks the roll.
 -->
 
 <!-- Each component is evaluated in the order specified.  You can make up -->
@@ -22,10 +22,10 @@ Solved by a rudder trim, which unlocks the roll.
   <!-- =============================================================== -->
 
   <predict-simple>
-    <input>/autopilot/internal/nav1-track-error-deg</input>
-    <output>/autopilot/internal/nav1-track-error-lookahead-deg</output>
-    <seconds>8.0</seconds>
-    <filter-gain>0.0</filter-gain>
+     <input>/autopilot/internal/nav1-track-error-deg</input>
+     <output>/autopilot/internal/nav1-track-error-lookahead-deg</output>
+     <seconds>8.0</seconds>
+     <filter-gain>0.0</filter-gain>
   </predict-simple>
 
   <!-- =============================================================== -->
@@ -59,7 +59,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                           <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.00001</Td>     <!-- derivator time -->
       <u_min>-20.0</u_min> <!-- minimum output clamp -->
@@ -89,7 +89,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                          <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-1.0</u_min> <!-- minimum output clamp -->
@@ -119,7 +119,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                          <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-0.0025</u_min> <!-- minimum output clamp -->
@@ -154,7 +154,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                           <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.00001</Td>     <!-- derivator time -->
       <u_min>-20.0</u_min> <!-- minimum output clamp -->
@@ -184,7 +184,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                          <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-1.0</u_min> <!-- minimum output clamp -->
@@ -214,7 +214,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                          <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-0.0025</u_min> <!-- minimum output clamp -->
@@ -223,9 +223,9 @@ Solved by a rudder trim, which unlocks the roll.
   </pid-controller>
 
 
-  <!-- =============================================================== -->
-  <!-- Pitch Axis Modes                                                -->
-  <!-- =============================================================== -->
+ <!-- =============================================================== -->
+ <!-- Pitch Axis Modes                                                -->
+ <!-- =============================================================== -->
 
   <!-- ................. -->
   <!-- Simple pitch hold --> 
@@ -251,7 +251,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                          <!-- unfiltered derivative error -->
       <Ti>1.0</Ti>        <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-1.0</u_min> <!-- minimum output clamp -->
@@ -311,7 +311,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                          <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>-1.0</u_min> <!-- minimum output clamp -->
@@ -320,14 +320,14 @@ Solved by a rudder trim, which unlocks the roll.
   </pid-controller>
 
 
-  <!-- =============================================================== -->
-  <!-- Velocity Modes                                                  -->
-  <!-- =============================================================== -->
+ <!-- =============================================================== -->
+ <!-- Velocity Modes                                                  -->
+ <!-- =============================================================== -->
 
-  <!-- ............. -->
-  <!-- Auto throttle --> 
-  <!-- ............. -->
-  <pid-controller>
+ <!-- ............. -->
+ <!-- Auto throttle --> 
+ <!-- ............. -->
+ <pid-controller>
     <name>Auto Throttle (5 sec lookahead)</name>
     <debug>false</debug>
     <enable>
@@ -351,7 +351,7 @@ Solved by a rudder trim, which unlocks the roll.
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
+                          <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>       <!-- integrator time -->
       <Td>0.00001</Td>    <!-- derivator time -->
       <u_min>0.0</u_min>  <!-- minimum output clamp -->

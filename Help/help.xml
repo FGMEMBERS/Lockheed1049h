@@ -2,64 +2,63 @@
 
 <PropertyList>
 
-  <!-- Specific keys -->
+<!-- Specific keys -->
 
-  <key>
+   <key>
+    <name>Ctrl-L</name>
+    <desc>Unlock/Lock Prop Reversing</desc>
+   </key>
+   <key>
+    <name>Ctrl-B</name>
+    <desc>Engage/Disengage Prop Reverse</desc>
+   </key>
+   <key>
+    <name>Ctrl-V</name>
+    <desc>Pilot view</desc>
+   </key>
+   <!-- not any more since FG 2.6
+   <key>
+    <name>Ctrl-N</name>
+    <desc>Copilot view</desc>
+   </key>
+   <key>
+    <name>Ctrl-E</name>
+    <desc>Engineer view</desc>
+   </key>
+   <key>
+    <name>Ctrl-K</name>
+    <desc>Cockpit observer view</desc>
+   </key>
+   <key>
+    <name>Ctrl-O</name>
+    <desc>Overhead panel view</desc>
+   </key>
+   <key>
+    <name>Ctrl-J</name>
+    <desc>Cockpit jumpseat view</desc>
+   </key>
+   -->
+   <key>
     <name>=</name>
     <desc>Options menu</desc>
-  </key>
-  <key>
-    <name>Shift+C</name>
-    <desc>Toggle auto-coordination</desc>
-  </key>
-  <key>
-    <name>D</name>
-    <desc>Crew door view</desc>
-  </key>
-  <key>
-    <name>Ctrl+D</name>
-    <desc>Open/Close crew door</desc>
-  </key>
-  <key>
-    <name>E</name>
-    <desc>Engineer view</desc>
-  </key>
-  <key>
-    <name>F, Shift+F</name>
-    <desc>Open, close cowl flaps one step</desc>
-  </key>
-  <key>
-    <name>J</name>
-    <desc>Jump seat view</desc>
-  </key>
-  <key>
-    <name>K</name>
-    <desc>Cockpit observer view</desc>
-  </key>
-  <key>
-    <name>L</name>
-    <desc>Copilot view</desc>
-  </key>
-  <key>
-    <name>Ctrl+L</name>
-    <desc>Unlock/Lock Prop Reversing</desc>
-  </key>
-  <key>
-    <name>O</name>
-    <desc>Overhead panel view</desc>
-  </key>
-  <key>
-    <name>Ctrl+V</name>
-    <desc>Pilot view</desc>
-  </key>
-  <key>
-    <name>Delete</name>
-    <desc>Engage/Disengage Prop Reverse</desc>
-  </key>
+   </key>
+	<key>
+	  <name>F7</name>
+	  <desc>open Map</desc>
+	</key>
+	<key>
+	  <name>F8</name>
+	  <desc>open Route-manager</desc>
+	</key>
+	<key>
+	  <name>F9</name>
+	  <desc>open Fuel &amp; Weight Menu</desc>
+	</key>
 
-  <!-- FDM ops -->
 
-  <text>
+<!-- FDM ops -->
+
+<text>
 Starting the Constellation's engines:
 
 Engage the magnetos for the engines you wish to start by setting the
@@ -70,78 +69,69 @@ that panel, find the "MJB No. 2" panel. Turn the "Engine Starter Select"
 switch to the engine you want to start. Press "Start" and watch your
 gauges for the engine to catch. Repeat for all 4 engines.
 
-________________________Procedures_________________________
-Takeoff :
-Open cowl flaps 100%.
-flaps 60%.
-Full throttle, 2900 RPM.
-120 KIAS (light load) or 130 KIAS (full load): rotate
-165 KIAS: gear up
-184 KIAS: flaps up
-
-Climb :
-48.0 inhg, 2600 RPM.
-Cowl flaps 60%
-2000 fpm until 10000 ft.
-Engage supercharger high speed above 8500 ft.
-1500 fpm until 13000 ft,
-1000 fpm above 13000 ft.
-Gradually lean mixture to keep BMEP as high as possible.
-Watch cylinder head temperature; open cowl flaps if necessary.
-
-Cruise :
-223 KIAS at 20000 ft, 218 KIAS at 21000 ft
-Close cowl flaps.
-
-Descent :
-max pitch, 48.0 inHg or less as necessary.
-Gradually enrich mixture to keep BMEP maximized.
-Engage supercharger low speed below 9000 ft.
-
-Approach :
-184 KIAS: flaps 60%
-165 KIAS: gear down
-161 KIAS: flaps 66%
-154 KIAS: flaps 80%
-148 KIAS: flaps 100%
-
-Landing :
-maintain 120 kt (landing load);
-touch down 110 kt (landing load), 100 kt (empty load).
-
+ ________________________Procedures_________________________
+ Takeoff :
+            flaps 1/4 2900 RPM,
+            rotation at 130 kt (full load), 120 kt (landing load);
+            retract gear below 165 k,
+            retract flaps below 184 kt.
+ Climb :
+            48.0 inhg, 2600 RPM.
+ Cruise :
+            220 kt at 20000 ft, 197 kt at 25000 ft.
+ Descent :
+            max pitch.
+ Approach :
+            flaps 1/4 below 184 kt;
+            gear below 165 kt, flaps 1/2 below 161 kt,
+            flaps 3/4 below 154 kt, full flaps below 148 kt. 
+ Landing :
+            maintain 120 kt (landing load);
+            touch down 110 kt (landing load), 100 kt (empty load).
+            
+ ________________________Emergency_________________________
+ Put out fire :
+            At Engineer View:
+            
+            Mixture  lever for this engine down
+            Throttle lever for this engine down
+            
+ Restart after fire :
+            Magnetos for this engine to both
+            Mixture max. (or same as others)
+            Throttle max. (or same as others)
+            Starter switch to the engine no....
+            and restart with S or starter button
+ 						          
 <!-- Real data -->
-________________________ Performance _______________________
-Ceiling : 23500 ft
-Normal cruise : 280 KTAS (223 KIAS) @ 20000 ft
-Range : 3800 nmi
+ ________________________Limitations________________________
+ Vne (never exceed) : 293 kt until 11000 ft; then - 11 kt / 2000 ft
+ Vno (normal operation): 260 kt until 11000 ft, then - 9 kt / 2000 ft
+ Vne at 20000 ft : 244 kt
+ Vno at 20000 ft : 220 kt
+ Vne at 25000 ft : 216 kt
+ Vno at 25000 ft : 197 kt
+ Vf (takeoff flaps 60%) : 184 kt
+ Va (maneuvring) : 180 kt
+ Vlo (landing gear operation) : 165 kt
+ Vle (landing gear extension) : 165 kt
+ Vf (approach flaps 66%) : 161 kt
+ Vf (80%) : 153 kt
+ Vf (landing flaps 100%) : 148 kt
+   
+ ceiling : 25000 ft
+ cruise : 20000 ft
+ range : 3600 NM
 
-_______________________ Speed limits _______________________
-Vne (never exceed) : 294 KIAS until 12500 ft; then - 10 KIAS / 2000 ft
-Vno (normal operation): 261 KIAS until 12500 ft, then - 10 KIAS / 2000 ft
-Va (maneuvering) : 193 KIAS
-Vlo (landing gear operation) : 165 KIAS
-Vle (landing gear extension) : 165 KIAS
-Vf (flaps):
- take-off   60%: 195 KIAS
- approach   66%: 174 KIAS
- final      80%: 174 KIAS
- landing   100%: 165 KIAS
+ take-off (2.75 minutes) at sea level : 54.5 inhg 2900 rpm
+ take-off (2.75 minutes) at 4500 ft : 52.5 inhg 2900 rpm
+ maximum at sea level : 48.0 inhg 2600 rpm
+ maximum at 5300 ft : 46.0 inhg 2600 rpm
+ maximum at 10800 ft : 47.5 inhg 2600 rpm
+ maximum at 16000 ft : 46.0 inhg 2600 rpm
 
-________________________ Engine limits _____________________
-Maximum take-off power: 2900 rpm, 3250 hp
-2 minutes at sea level : 56.5 inHg
-5 minutes at 7500 ft   : 53.5 inHg
-
-Maximum continuous power: 2600 rpm
-sea level: 49.0 inHg, 2700 hp
- 5800 ft:  47.0 inHg, 2750 hp
-10050 ft:  48.5 inHg, 2400 hp
-16400 ft:  47.0 inHg, 2450 hp
-
-Maximum cylinder head temperature: 270 degC, 550 degF
-
-________________________ Weight limits _____________________
-See Equipment > Fuel and payload.
-  </text>
+ max take-off : 137000 lb
+ max landing : 98500 lb
+</text>
 
 </PropertyList>

@@ -2,20 +2,22 @@
 
 <PropertyList>
 
-  <key n="4">
-    <name>Ctrl+D</name>
+  <key n="2">
+    <name>Ctrl-B</name>
+    <desc>Engage Propeller reverse.</desc>
     <binding>
       <command>nasal</command>
-      <script>Lockheed1049h.door_crew.toggle()</script>
+      <script>Lockheed1049h.toggle_prop_reverse()</script>
     </binding>
   </key>
 
-  <key n="12">
-    <name>Ctrl-L</name>
-    <desc>Propeller reverse lock</desc>
+  <key n="5">
+    <name>Ctrl-E</name>
+    <desc>Toggle engineer view</desc>
     <binding>
-      <command>nasal</command>
-      <script>Lockheed1049h.toggle_reverse_lockout()</script>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>101</value>
     </binding>
   </key>
 
@@ -28,163 +30,68 @@
     </binding>
   </key>
 
-  <key n="67">
-    <name>C</name>
+  <key n="10">
+    <name>Ctrl-J</name>
+    <desc>Toggle jumpseat view.</desc>
     <binding>
-      <command>property-toggle</command>
-      <property>controls/flight/auto-coordination</property>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>104</value>
     </binding>
   </key>
 
-  <key n="70">
-    <name>F</name>
-    <desc>Close cowl flaps</desc>
+  <key n="11">
+    <name>Ctrl-K</name>
+    <desc>Toggle observer view.</desc>
     <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[0]/cowl-flaps-norm</property>
-      <step>-0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
+      <command>property-assign</command>
+      <property>/sim/current-view/view-number</property>
+      <value>103</value>
     </binding>
-    <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[1]/cowl-flaps-norm</property>
-      <step>-0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
-    </binding>
-    <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[2]/cowl-flaps-norm</property>
-      <step>-0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
-    </binding>
-    <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[3]/cowl-flaps-norm</property>
-      <step>-0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
-    </binding>
+  </key>
+
+  <key n="12">
+    <name>Ctrl-L</name>
+    <desc>Propeller reverse lock</desc>
     <binding>
       <command>nasal</command>
-      <script>
-        Lockheed1049h.switch_ani(0,-1);
-        Lockheed1049h.switch_ani(1,-1);
-        Lockheed1049h.switch_ani(2,-1);
-        Lockheed1049h.switch_ani(3,-1);
-      </script>
+      <script>Lockheed1049h.toggle_reverse_lockout()</script>
     </binding>
   </key>
-
-  <key n="100">
-    <name>d</name>
-    <desc>Crew door view</desc>
+	<key n="60">
+		<name> > </name>
+		<desc>toggle pilot engineer view</desc>
+		<binding>
+				<command>nasal</command>
+				<script>Lockheed1049h.changeView(9);</script>
+		</binding>
+	</key>
+  <key n="14">
+    <name>Ctrl-N</name>
+    <desc>Toggle copilot view.</desc>
     <binding>
       <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>13</value>
+      <property>/sim/current-view/view-number</property>
+      <value>102</value>
     </binding>
   </key>
 
-  <key n="101">
-    <name>e</name>
-    <desc>Engineer view</desc>
+  <key n="15">
+    <name>Ctrl-O</name>
+    <desc>Toggle overhead panel view.</desc>
     <binding>
       <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>9</value>
+      <property>/sim/current-view/view-number</property>
+      <value>100</value>
     </binding>
   </key>
 
-  <key n="102">
-    <name>f</name>
-    <desc>Open cowl flaps</desc>
+  <key n="18">
+    <name>Ctrl-R</name>
+    <desc>Radio dialog.</desc>
     <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[0]/cowl-flaps-norm</property>
-      <step>0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
-    </binding>
-    <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[1]/cowl-flaps-norm</property>
-      <step>0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
-    </binding>
-    <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[2]/cowl-flaps-norm</property>
-      <step>0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
-    </binding>
-    <binding>
-      <command>property-adjust</command>
-      <property>controls/engines/engine[3]/cowl-flaps-norm</property>
-      <step>0.2</step>
-      <min>0</min>
-      <max>1</max>
-      <wrap>0</wrap>
-    </binding>
-    <binding>
-      <command>nasal</command>
-      <script>
-        Lockheed1049h.switch_ani(0,1);
-        Lockheed1049h.switch_ani(1,1);
-        Lockheed1049h.switch_ani(2,1);
-        Lockheed1049h.switch_ani(3,1);
-      </script>
-    </binding>
-  </key>
-
-  <key n="106">
-    <name>j</name>
-    <desc>Jumpseat view</desc>
-    <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>12</value>
-    </binding>
-  </key>
-
-  <key n="107">
-    <name>k</name>
-    <desc>Observer view</desc>
-    <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>11</value>
-    </binding>
-  </key>
-
-  <key n="108">
-    <name>l</name>
-    <desc>Copilot view</desc>
-    <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>10</value>
-    </binding>
-  </key>
-
-  <key n="111">
-    <name>o</name>
-    <desc>Overhead panel view</desc>
-    <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>8</value>
+      <command>dialog-show</command>
+      <dialog-name>Lockheed1049h-radios</dialog-name>
     </binding>
   </key>
 
@@ -197,13 +104,32 @@
     </binding>
   </key>
 
-  <key n="127">
-    <name>Delete</name>
-    <desc>Engage Propeller reverse</desc>
-    <binding>
-      <command>nasal</command>
-      <script>Lockheed1049h.toggle_prop_reverse()</script>
-    </binding>
+  <key n="263">
+  	<name>F7</name>
+  	<desc>Show map</desc>
+  	<binding>
+  	<command>dialog-show</command>
+  	<dialog-name>map</dialog-name>
+  	</binding>
+  </key>
+
+  <key n="264">
+  	<name>F8</name>
+  	<desc>Show map</desc>
+  	<binding>
+  	<command>dialog-show</command>
+  	<dialog-name>route-manager</dialog-name>
+  	</binding>
+  </key>
+
+  <key n="265">
+    <name>F9</name>
+    <desc>Pop up Fuel and Weight dialog</desc>
+  	<command>dialog-show</command>
+  	<binding>
+  		<command>nasal</command>
+  		<script>gui.showWeightDialog()</script>
+  	</binding>
   </key>
 
 </PropertyList>
