@@ -41,16 +41,6 @@ The only reason it's here is to specify a second ADF.
     <number>0</number>
   </clock>
 
-  <comm-radio>
-    <name>comm</name>
-    <number>0</number>
-  </comm-radio>
-
-  <comm-radio>
-    <name>comm</name>
-    <number>1</number>
-  </comm-radio>
-
   <marker-beacon>
     <name>marker-beacon</name>
     <number>0</number>
@@ -93,4 +83,18 @@ The only reason it's here is to specify a second ADF.
     <static-pressure>/systems/static/pressure-inhg</static-pressure>
   </vertical-speed-indicator>
 
+  <!-- The following requires FlightGear >= 3.2.  On earlier versions of
+       FlightGear it causes an error in the log window and prevents all
+       instruments *following* from working.  Placing these instruments last in
+       the file makes the error harmless on FlightGear >= 3.0. -->
+  <comm-radio>
+    <name>comm</name>
+    <number>0</number>
+  </comm-radio>
+
+  <comm-radio>
+    <name>comm</name>
+    <number>1</number>
+  </comm-radio>
+  
 </PropertyList>
