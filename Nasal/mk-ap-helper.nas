@@ -11,8 +11,21 @@ setlistener("/sim/signals/fdm-initialized", func {
       setprop("autopilot/switches/alt", 0);
 }, 0, 0);
 
+var inhibit_autopilot_listeners = 0;
+# We have listeners on both /autopilot/switches/* (controlled by the pilot in
+# the cockpit) and /autopilot/locks/* (controlled by the F11 generic dialog).
+# When a listener for /autopilot/switches/* alters the value of /autopilot/locks/*,
+# we do not want this action to trigger the listener of the altered property
+# because that, in turn, might change /autopilot/switches/* creating a loop.
+# This global variable prevents the loop.  Whenever a listener needs to change
+# a property, it sets this variable to true, alters the property, and resets it
+# to false.  Also, a listener should do nothing if it is inhibited by this
+# variable.
+
 setlistener("/autopilot/switches/ap", func (ap) {
+    if (inhibit_autopilot_listeners) return;
     set_flightpath (props.globals.getNode ("/controls/special/flightpath-switch"));
+    inhibit_autopilot_listeners = 1;
     var ap = ap.getBoolValue();
     if (ap == 1) {
       if (getprop("autopilot/switches/alt")) {
@@ -27,19 +40,25 @@ setlistener("/autopilot/switches/ap", func (ap) {
     } else {
       setprop("autopilot/locks/altitude", "");
     }
+    inhibit_autopilot_listeners = 0;
 }, 0, 0);
 
 setlistener("autopilot/switches/alt", func (alt){
+    if (inhibit_autopilot_listeners) return;
+    inhibit_autopilot_listeners = 1;
     var alt = alt.getBoolValue();
     if (alt == 1){
       setprop("autopilot/locks/altitude", "altitude-hold");
+      setprop("autopilot/settings/target-altitude-ft",
+              getprop ("position/altitude-ft"));
     } else if (getprop ("autopilot/switches/ap")) {
-        setprop("autopilot/locks/altitude", "pitch-hold");
-        setprop("autopilot/settings/target-pitch-deg", 
-                      getprop("orientation/pitch-deg"));
+      setprop("autopilot/locks/altitude", "pitch-hold");
+      setprop("autopilot/settings/target-pitch-deg", 
+              getprop("orientation/pitch-deg"));
     } else {    
       setprop("autopilot/locks/altitude", "");
     }
+    inhibit_autopilot_listeners = 0;
 }, 0, 0);
 
 # If trim wheels are not on 0 and you click the center of this wheel
@@ -53,21 +72,43 @@ var applyTrimWheels = func(v, which = 0) {
 # if somebody sets the property not in cockpit but in the menu, switch must also follow
 # this action
 setlistener("autopilot/locks/heading", func (h){
-		var h = h.getValue();
-		var s = getprop("autopilot/switches/ap", 1);
-		if (h and !s) setprop("autopilot/switches/ap", 1);
-});
+   if (inhibit_autopilot_listeners) return;
+   inhibit_autopilot_listeners = 1;
+   var mode = h.getValue();
+   setprop("autopilot/switches/ap", mode != "");
+   inhibit_autopilot_listeners = 0;
+}, 0, 0);
+
+setlistener("autopilot/locks/altitude", func (node) {
+   if (inhibit_autopilot_listeners) return;
+   inhibit_autopilot_listeners = 1;
+   var mode = node.getValue();
+   if (mode == "altitude-hold") {
+      setprop ("autopilot/switches/alt", 1);
+   }
+   else {
+      setprop ("autopilot/switches/alt", 0);
+   }
+   inhibit_autopilot_listeners = 0;
+}, 0, 0);
+
 
 # if somebody set the property at the original Autopilot between Pilot and Copilot,
 # switch must also follow this action
 var heading_lock = [ "wing-leveler", "nav1-hold", "nav1-hold" ];
 var set_flightpath = func (flightpath_switch_node) {
+   if (inhibit_autopilot_listeners) return;
+   inhibit_autopilot_listeners = 1;
    if (getprop("autopilot/switches/ap")) {
-      setprop ("autopilot/locks/heading",
-               heading_lock [ flightpath_switch_node.getValue() ]);
+      var mode = flightpath_switch_node.getValue();
+      setprop ("autopilot/locks/heading", heading_lock [mode]);
+      if (mode == 2) {
+         setprop ("autopilot/locks/altitude", "gs1-hold");
+      }
    } else {
       setprop("autopilot/locks/heading", "");
    }
+   inhibit_autopilot_listeners = 0;
 }
 setlistener("controls/special/flightpath-switch", set_flightpath, 0, 0);
 
@@ -156,4 +197,3 @@ var trim_loop = func{
 }
 
 trim_loop();  # fire it up
-
