@@ -124,7 +124,7 @@
         <command>property-adjust</command>
         <property alias="../../../../params/selected-mhz"/>
         <min>118</min>
-        <max>136</max>
+        <max>136.98</max>
         <wrap>true</wrap>
       </binding>
     </action>
@@ -149,7 +149,7 @@
         <property alias="../../../../params/selected-mhz"/>
         <factor>0.01</factor>
         <min>118</min>
-        <max>136</max>
+        <max>136.98</max>
         <wrap>true</wrap>
       </binding>
     </action>
@@ -239,7 +239,7 @@
         <command>property-adjust</command>
         <property alias="../../../../params/standby-mhz"/>
         <min>118</min>
-        <max>136</max>
+        <max>136.98</max>
         <wrap>true</wrap>
       </binding>
     </action>
@@ -264,7 +264,7 @@
         <property alias="../../../../params/standby-mhz"/>
         <factor>0.01</factor>
         <min>118</min>
-        <max>136</max>
+        <max>136.98</max>
         <wrap>true</wrap>
       </binding>
     </action>
@@ -280,8 +280,8 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-swap</command>
-        <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
-        <property>instrumentation/comm[0]/frequencies/standby-mhz</property>
+        <property alias="../../../../params/selected-mhz"/>
+        <property alias="../../../../params/standby-mhz"/>
       </binding>
     </action>
   </animation>
