@@ -910,7 +910,7 @@
 
   <model>
     <name>fuelpress_L</name>
-    <path>Models/Instruments/fuel_pressure_L.xml</path>
+    <path>Models/Instruments/fuel_pressure.xml</path>
     <offsets>
       <x-m>-14.038</x-m>
       <y-m>0.777</y-m>
@@ -924,7 +924,7 @@
 
   <model>
     <name>fuelpress_R</name>
-    <path>Models/Instruments/fuel_pressure_R.xml</path>
+    <path>Models/Instruments/fuel_pressure.xml</path>
     <offsets>
       <x-m>-13.946</x-m>
       <y-m>0.777</y-m>
@@ -935,7 +935,6 @@
       <fuel-pressure2>engines/engine[3]/est-fuelpress</fuel-pressure2>
     </overlay>
   </model>
-
 
   <model>
     <name>prop_gov</name>
