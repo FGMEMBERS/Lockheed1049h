@@ -950,13 +950,10 @@
   <!-- Engineer Station Controls -->
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngPitch</object-name>
     <property>controls/engines/engine[0]/propeller-pitch</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -967,19 +964,11 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngPitch</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[0]/propeller-pitch</property>
-        <step>-0.02</step>
+        <factor>-0.02</factor>
         <min>0</min>
         <max>1</max>
         <wrap>false</wrap>
@@ -987,7 +976,7 @@
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[1]/propeller-pitch</property>
-        <step>-0.02</step>
+        <factor>-0.02</factor>
         <min>0</min>
         <max>1</max>
         <wrap>false</wrap>
@@ -995,7 +984,7 @@
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[2]/propeller-pitch</property>
-        <step>-0.02</step>
+        <factor>-0.02</factor>
         <min>0</min>
         <max>1</max>
         <wrap>false</wrap>
@@ -1003,48 +992,7 @@
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[3]/propeller-pitch</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngPitch</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[0]/propeller-pitch</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[1]/propeller-pitch</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[2]/propeller-pitch</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[3]/propeller-pitch</property>
-        <step>0.02</step>
+        <factor>-0.02</factor>
         <min>0</min>
         <max>1</max>
         <wrap>false</wrap>
@@ -1053,13 +1001,10 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngThrottle1</object-name>
     <property>controls/engines/engine[0]/throttle</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1070,15 +1015,23 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/throttle</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngThrottle2</object-name>
     <property>controls/engines/engine[1]/throttle</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1089,15 +1042,23 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/throttle</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngThrottle3</object-name>
     <property>controls/engines/engine[2]/throttle</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1108,15 +1069,23 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[2]/throttle</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngThrottle4</object-name>
     <property>controls/engines/engine[3]/throttle</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1127,138 +1096,11 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle1</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[0]/throttle</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle1</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[0]/throttle</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle2</object-name>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[1]/throttle</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle2</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[1]/throttle</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle3</object-name>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[2]/throttle</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle3</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[2]/throttle</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle4</object-name>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[3]/throttle</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngThrottle4</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[3]/throttle</property>
-        <step>-0.02</step>
+        <factor>-0.02</factor>
         <min>0</min>
         <max>1</max>
         <wrap>false</wrap>
@@ -1267,13 +1109,10 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngSupercharger1</object-name>
     <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1284,107 +1123,76 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>EngSupercharger2</object-name>
-    <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.95</y-m>
-      <z-m>0.65</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>EngSupercharger3</object-name>
-    <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.95</y-m>
-      <z-m>0.65</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
-  <animation>
-    <type>rotate</type>
-    <object-name>EngSupercharger4</object-name>
-    <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
-    <center>
-      <x-m>0</x-m>
-      <y-m>0.95</y-m>
-      <z-m>0.65</z-m>
-    </center>
-    <axis>
-      <x>1</x>
-      <y>0</y>
-      <z>0</z>
-    </axis>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngSupercharger1</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
       </binding>
     </action>
   </animation>
+
   <animation>
-    <type>pick</type>
+    <type>knob</type>
     <object-name>EngSupercharger2</object-name>
+    <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+    <factor>80</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.95</y-m>
+      <z-m>0.65</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
       </binding>
     </action>
   </animation>
+
   <animation>
-    <type>pick</type>
+    <type>knob</type>
     <object-name>EngSupercharger3</object-name>
+    <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+    <factor>80</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.95</y-m>
+      <z-m>0.65</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
       </binding>
     </action>
   </animation>
+
   <animation>
-    <type>pick</type>
+    <type>knob</type>
     <object-name>EngSupercharger4</object-name>
+    <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+    <factor>80</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.95</y-m>
+      <z-m>0.65</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
@@ -1393,13 +1201,10 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngMixture1</object-name>
     <property>controls/engines/engine[0]/mixture</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1410,15 +1215,23 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/mixture</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngMixture2</object-name>
     <property>controls/engines/engine[1]/mixture</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1429,15 +1242,23 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/mixture</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngMixture3</object-name>
     <property>controls/engines/engine[2]/mixture</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1448,15 +1269,23 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[2]/mixture</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngMixture4</object-name>
     <property>controls/engines/engine[3]/mixture</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>80</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1467,138 +1296,11 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture1</object-name>
     <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[0]/mixture</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture1</object-name>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[0]/mixture</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture2</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[1]/mixture</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture2</object-name>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[1]/mixture</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture3</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[2]/mixture</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture3</object-name>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[2]/mixture</property>
-        <step>0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture4</object-name>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[3]/mixture</property>
-        <step>-0.02</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngMixture4</object-name>
-    <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[3]/mixture</property>
-        <step>0.02</step>
+        <factor>-0.02</factor>
         <min>0</min>
         <max>1</max>
         <wrap>false</wrap>
@@ -1607,13 +1309,10 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngFuelSelect1</object-name>
     <property>controls/fuel/tankvalves[0]/valve</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>90</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1624,15 +1323,26 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/tankvalves[0]/valve</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngFuelSelect2</object-name>
     <property>controls/fuel/tankvalves[1]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>45</dep></entry>
-      <entry><ind>2</ind><dep>90</dep></entry>
+      <entry><ind>1</ind><dep>58</dep></entry>
+      <entry><ind>2</ind><dep>80</dep></entry>
     </interpolation>   
     <center>
       <x-m>0</x-m>
@@ -1644,15 +1354,26 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/tankvalves[1]/valve</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>2</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngFuelSelect3</object-name>
     <property>controls/fuel/tankvalves[2]/valve</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>45</dep></entry>
-      <entry><ind>2</ind><dep>90</dep></entry>
+      <entry><ind>1</ind><dep>58</dep></entry>
+      <entry><ind>2</ind><dep>80</dep></entry>
     </interpolation>   
     <center>
       <x-m>0</x-m>
@@ -1664,15 +1385,23 @@
       <y>0</y>
       <z>0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/tankvalves[2]/valve</property>
+        <factor>-1</factor>
+        <min>0</min>
+        <max>2</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
+  
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>EngFuelSelect4</object-name>
     <property>controls/fuel/tankvalves[3]/valve</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>90</dep></entry>
-    </interpolation>   
+    <factor>80</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.95</y-m>
@@ -1683,133 +1412,11 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect1</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[0]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect1</object-name>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[0]/valve</property>
-        <step>1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect2</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[1]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>2</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect2</object-name>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[1]/valve</property>
-        <step>1</step>
-        <min>0</min>
-        <max>2</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect3</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[2]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>2</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect3</object-name>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[2]/valve</property>
-        <step>1</step>
-        <min>0</min>
-        <max>2</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect4</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/fuel/tankvalves[3]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>false</wrap>
-      </binding>
-    </action>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EngFuelSelect4</object-name>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[3]/valve</property>
-        <step>1</step>
+        <factor>-1</factor>
         <min>0</min>
         <max>1</max>
         <wrap>false</wrap>
@@ -2019,6 +1626,18 @@
         <wrap>true</wrap>
       </binding>
     </action>
+    <action> 
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/enginevalves[0]/valve</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
 
   <animation>
@@ -2055,6 +1674,18 @@
         <min>0</min>
         <max>4</max>
         <wrap>true</wrap>
+      </binding>
+    </action>
+    <action> 
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/enginevalves[1]/valve</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
@@ -2095,6 +1726,18 @@
         <wrap>true</wrap>
       </binding>
     </action>
+    <action> 
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/enginevalves[2]/valve</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
 
   <animation>
@@ -2133,8 +1776,19 @@
         <wrap>true</wrap>
       </binding>
     </action>
+    <action> 
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/fuel/enginevalves[3]/valve</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>4</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
-
 
   <!-- MJB Station Stuff -->
 
@@ -2794,4 +2448,3 @@
   </animation>
 
 </PropertyList>
-

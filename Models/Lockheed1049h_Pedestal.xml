@@ -343,13 +343,56 @@
       <z>0.0</z>
     </axis>
   </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>LandingGearLever</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/gear-down</property>
+      </binding>
+    </action>
+  </animation>
 
   <animation>
     <type>rotate</type>
+    <object-name>EmerBrakeLever</object-name>
+    <property>controls/gear/brake-parking</property>
+    <interpolation>
+      <entry><ind>0.0</ind><dep>-75</dep></entry>
+      <entry><ind>1.0</ind><dep>  0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-15.25</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.404</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>EmerBrakeLever</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/brake-parking</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
     <object-name>PropPitch</object-name>
     <property>controls/engines/engine[0]/propeller-pitch</property>
-    <factor>-75</factor>
-    <offset-deg>75</offset-deg>   
+    <factor>-47</factor>
+    <offset-deg>47</offset-deg>   
     <center>
       <x-m>-15.496</x-m>
       <y-m>0.0</y-m>
@@ -360,6 +403,40 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[2]/propeller-pitch</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[3]/propeller-pitch</property>
+        <factor>-0.02</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
   </animation>
 
   <animation>
@@ -435,44 +512,13 @@
   </animation>
   <animation>
     <type>pick</type>
-    <object-name>LandingGearLever</object-name>
+    <object-name>ReverseLock</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
-        <command>property-toggle</command>
-        <property>controls/gear/gear-down</property>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
-    <type>rotate</type>
-    <object-name>EmerBrakeLever</object-name>
-    <property>controls/gear/brake-parking</property>
-    <interpolation>
-      <entry><ind>0.0</ind><dep>-75</dep></entry>
-      <entry><ind>1.0</ind><dep>  0</dep></entry>
-    </interpolation>
-    <center>
-      <x-m>-15.25</x-m>
-      <y-m>0.0</y-m>
-      <z-m>0.404</z-m>
-    </center>
-    <axis>
-      <x>0.0</x>
-      <y>1.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>EmerBrakeLever</object-name>
-    <action>
-      <button>0</button>
-      <binding>
-        <command>property-toggle</command>
-        <property>controls/gear/brake-parking</property>
+        <command>nasal</command>
+        <script>Lockheed1049h.toggle_reverse_lockout()</script>
       </binding>
     </action>
   </animation>
@@ -494,6 +540,18 @@
       <z>0.0</z>
     </axis>
   </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>ReverseThrottle1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>Lockheed1049h.toggle_prop_reverse()</script>
+      </binding>
+    </action>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -511,6 +569,18 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>ReverseThrottle2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>Lockheed1049h.toggle_prop_reverse()</script>
+      </binding>
+    </action>
   </animation>
 
   <animation>
@@ -530,6 +600,18 @@
       <z>0.0</z>
     </axis>
   </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>ReverseThrottle3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>Lockheed1049h.toggle_prop_reverse()</script>
+      </binding>
+    </action>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -548,16 +630,15 @@
       <z>0.0</z>
     </axis>
   </animation>
-
   <animation>
     <type>pick</type>
-    <object-name>ReverseLock</object-name>
+    <object-name>ReverseThrottle4</object-name>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
       <binding>
         <command>nasal</command>
-        <script>Lockheed1049h.toggle_reverse_lockout()</script>
+        <script>Lockheed1049h.toggle_prop_reverse()</script>
       </binding>
     </action>
   </animation>
@@ -566,7 +647,7 @@
     <type>rotate</type>
     <object-name>ReverseThrottle1</object-name>
     <property>controls/engines/engine[0]/reverser</property>
-    <factor>92</factor>
+    <factor>74</factor>
     <center>
       <x-m>-15.37</x-m>
       <y-m>0.0</y-m>
@@ -577,25 +658,13 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>ReverseThrottle1</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>Lockheed1049h.toggle_prop_reverse()</script>
-      </binding>
-    </action>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>ReverseThrottle2</object-name>
     <property>controls/engines/engine[1]/reverser</property>
-    <factor>92</factor>
+    <factor>74</factor>
     <center>
       <x-m>-15.37</x-m>
       <y-m>0.0</y-m>
@@ -606,25 +675,13 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>ReverseThrottle2</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>Lockheed1049h.toggle_prop_reverse()</script>
-      </binding>
-    </action>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>ReverseThrottle3</object-name>
     <property>controls/engines/engine[2]/reverser</property>
-    <factor>92</factor>
+    <factor>74</factor>
     <center>
       <x-m>-15.37</x-m>
       <y-m>0.0</y-m>
@@ -635,25 +692,13 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>ReverseThrottle3</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>Lockheed1049h.toggle_prop_reverse()</script>
-      </binding>
-    </action>
   </animation>
 
   <animation>
     <type>rotate</type>
     <object-name>ReverseThrottle4</object-name>
     <property>controls/engines/engine[3]/reverser</property>
-    <factor>92</factor>
+    <factor>74</factor>
     <center>
       <x-m>-15.37</x-m>
       <y-m>0.0</y-m>
@@ -664,18 +709,6 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>ReverseThrottle4</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>nasal</command>
-        <script>Lockheed1049h.toggle_prop_reverse()</script>
-      </binding>
-    </action>
   </animation>
 
   <!-- The Autopilot support -->
@@ -697,7 +730,7 @@
       <z>0.0</z>
     </axis>
   </animation>
-  
+
   <animation>
     <type>pick</type>
     <visible>true</visible>
