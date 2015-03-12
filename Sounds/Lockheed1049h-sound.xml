@@ -911,6 +911,55 @@ Low hardware config : 2 engines per sound; otherwise exception in main loop.
         <max>0.2</max>
       </volume>
     </click>
+
+    <wiperhu>
+      <name>wiperhu</name>
+      <mode>once</mode>
+      <path>Sounds/hu.wav</path>
+      <condition>
+        <less-than>
+      	  <property>controls/special/wiper-deg</property>
+          <value>-40</value>
+        </less-than>
+      </condition>
+      <volume>
+        <property>environment/metar/rain-norm</property>
+        <factor>1.00</factor>
+        <offset>0.00</offset>
+        <min>0.2</min>
+        <max>0.6</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <offset>1.0</offset>
+      </pitch>
+    </wiperhu>
+
+    <wiperho>
+      <name>wiperho</name>
+      <mode>once</mode>
+      <path>Sounds/ho.wav</path>
+      <condition>
+        <greater-than>
+      	  <property>controls/special/wiper-deg</property>
+          <value>45</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>environment/metar/rain-norm</property>
+        <factor>1.00</factor>
+        <offset>0.00</offset>
+        <min>0.2</min>
+        <max>0.6</max>
+      </volume>
+      <pitch>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.01</factor>
+        <offset>1.0</offset>
+      </pitch>
+    </wiperho>
+
   </fx>
 
 </PropertyList>
