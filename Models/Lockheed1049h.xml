@@ -48,8 +48,38 @@
     <name>Particle Effects</name>
     <path>Models/Lockheed1049h_ParticleEffects.xml</path>
   </model>
-
-
+  <model>
+    <name>Wiper Pilot</name>
+    <path>Models/Instruments/wiper/wiper.xml</path>
+    <offsets>
+      <x-m>-15.606</x-m>
+      <y-m> -0.369</y-m>
+      <z-m> 1.249</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg> 34</pitch-deg>
+      <heading-deg> 14</heading-deg>
+    </offsets>
+    <overlay>
+      <ac>wiperleft.ac</ac>
+      <direction>1</direction>
+    </overlay>
+  </model>
+  <model>
+    <name>Wiper Copilot</name>
+    <path>Models/Instruments/wiper/wiper.xml</path>
+    <offsets>
+      <x-m>-15.606</x-m>
+      <y-m> 0.369</y-m>
+      <z-m> 1.249</z-m>
+      <roll-deg>0</roll-deg>
+      <pitch-deg> 34</pitch-deg>
+      <heading-deg>-14</heading-deg>
+    </offsets>
+    <overlay>
+      <ac>wiperright.ac</ac>
+      <direction>-1</direction>
+    </overlay>
+  </model>
 
   <!-- Level Of Detail -->
 

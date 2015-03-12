@@ -160,6 +160,7 @@ View the README file for information about this model
       <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
       <file>Nasal/Lockheed1049h-seats.nas</file>
       <file>Nasal/mk-ap-helper.nas</file>
+      <file>Nasal/mk-wiper.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>
   </nasal>

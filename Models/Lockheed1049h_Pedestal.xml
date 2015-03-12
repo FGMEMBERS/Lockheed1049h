@@ -711,6 +711,40 @@
     </axis>
   </animation>
 
+  <!-- Wiper -->
+  <animation>
+    <type>knob</type>
+    <object-name>KnobPedWW</object-name>
+    <property>controls/special/wiper-switch</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>   0</dep></entry>
+      <entry><ind>1</ind><dep>  45</dep></entry>
+      <entry><ind>2</ind><dep> 225</dep></entry>
+      <entry><ind>3</ind><dep> 270</dep></entry>
+      <entry><ind>4</ind><dep> 315</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-15.356</x-m>
+      <y-m> -0.045</y-m>
+      <z-m>  0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/special/wiper-switch</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>5</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+  </animation>
+
   <!-- The Autopilot support -->
 
   <!-- Autopilot on off -->
