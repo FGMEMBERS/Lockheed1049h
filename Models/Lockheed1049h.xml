@@ -81,6 +81,11 @@
     </overlay>
   </model>
 
+  <!-- needed for tutorials -->
+  <model>
+    <path>Models/Aircraft/marker.xml</path>
+  </model>
+
   <!-- Level Of Detail -->
 
   <animation>
