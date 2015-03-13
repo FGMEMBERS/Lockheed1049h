@@ -50,7 +50,7 @@
   </model>
   <model>
     <name>Wiper Pilot</name>
-    <path>Models/Instruments/wiper/wiper.xml</path>
+    <path>Models/Instruments/wiper/wiperleft.xml</path>
     <offsets>
       <x-m>-15.606</x-m>
       <y-m> -0.369</y-m>
@@ -60,13 +60,12 @@
       <heading-deg> 14</heading-deg>
     </offsets>
     <overlay>
-      <ac>wiperleft.ac</ac>
       <direction>1</direction>
     </overlay>
   </model>
   <model>
     <name>Wiper Copilot</name>
-    <path>Models/Instruments/wiper/wiper.xml</path>
+    <path>Models/Instruments/wiper/wiperright.xml</path>
     <offsets>
       <x-m>-15.606</x-m>
       <y-m> 0.369</y-m>
@@ -76,7 +75,6 @@
       <heading-deg>-14</heading-deg>
     </offsets>
     <overlay>
-      <ac>wiperright.ac</ac>
       <direction>-1</direction>
     </overlay>
   </model>
