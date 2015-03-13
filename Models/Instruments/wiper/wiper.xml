@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-  <path alias="../ac"/>
-
   <animation>
     <object-name>wiperSup</object-name>
     <object-name>wiper</object-name>
