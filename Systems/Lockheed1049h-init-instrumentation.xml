@@ -49,6 +49,7 @@
       <display-sby-mhz type="int">0</display-sby-mhz>
       <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
     </frequencies>
+    <volume type="double">0.0</volume>
   </nav>
   <nav n="1">
     <frequencies>
@@ -59,6 +60,7 @@
       <display-sby-mhz type="int">0</display-sby-mhz>
       <standby-mhz-fmt type="string">116.30</standby-mhz-fmt>
     </frequencies>
+    <volume type="double">0.0</volume>
   </nav>
 
   <comm n="0">
