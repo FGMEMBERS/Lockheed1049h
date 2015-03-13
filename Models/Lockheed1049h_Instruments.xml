@@ -1122,6 +1122,7 @@
       <params>
         <selected-khz>/instrumentation/adf[0]/frequencies/selected-khz</selected-khz>
         <standby-khz>/instrumentation/adf[0]/frequencies/standby-khz</standby-khz>
+        <volume>/instrumentation/adf[0]/volume-norm</volume>
       </params>
     </overlay>
     <offsets>
@@ -1139,6 +1140,7 @@
       <params>
         <selected-khz>/instrumentation/adf[1]/frequencies/selected-khz</selected-khz>
         <standby-khz>/instrumentation/adf[1]/frequencies/standby-khz</standby-khz>
+        <volume>/instrumentation/adf[1]/volume-norm</volume>
       </params>
     </overlay>
     <offsets>
