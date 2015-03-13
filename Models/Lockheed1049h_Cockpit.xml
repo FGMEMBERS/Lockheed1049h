@@ -177,7 +177,7 @@
   <!-- Magnetos -->
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>Switch.Magneto1</object-name>
     <property>controls/engines/engine[0]/magnetos</property>
     <interpolation>
@@ -194,29 +194,11 @@
       <y2-m>-0.072</y2-m>
       <z2-m>1.590</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>Switch.Magneto1</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[0]/magnetos</property>
-        <step>1</step>
-        <min>0</min>
-        <max>3</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[0]/magnetos</property>
-        <step>-1</step>
+        <factor>1</factor>
         <min>0</min>
         <max>3</max>
         <wrap>0</wrap>
@@ -225,7 +207,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>Switch.Magneto2</object-name>
     <property>controls/engines/engine[1]/magnetos</property>
     <interpolation>
@@ -242,29 +224,11 @@
       <y2-m>-0.024</y2-m>
       <z2-m>1.590</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>Switch.Magneto2</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[1]/magnetos</property>
-        <step>1</step>
-        <min>0</min>
-        <max>3</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[1]/magnetos</property>
-        <step>-1</step>
+        <factor>1</factor>
         <min>0</min>
         <max>3</max>
         <wrap>0</wrap>
@@ -273,7 +237,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>Switch.Magneto3</object-name>
     <property>controls/engines/engine[2]/magnetos</property>
     <interpolation>
@@ -290,29 +254,11 @@
       <y2-m>0.024</y2-m>
       <z2-m>1.590</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>Switch.Magneto3</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[2]/magnetos</property>
-        <step>1</step>
-        <min>0</min>
-        <max>3</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[2]/magnetos</property>
-        <step>-1</step>
+        <factor>1</factor>
         <min>0</min>
         <max>3</max>
         <wrap>0</wrap>
@@ -321,7 +267,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>Switch.Magneto4</object-name>
     <property>controls/engines/engine[3]/magnetos</property>
     <interpolation>
@@ -338,29 +284,11 @@
       <y2-m>0.072</y2-m>
       <z2-m>1.590</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>Switch.Magneto4</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/engines/engine[3]/magnetos</property>
-        <step>1</step>
-        <min>0</min>
-        <max>3</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/engines/engine[3]/magnetos</property>
-        <step>-1</step>
+        <factor>1</factor>
         <min>0</min>
         <max>3</max>
         <wrap>0</wrap>
@@ -371,7 +299,7 @@
   <!-- OH Panel dimmer -->
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>KnobOHPanelLights</object-name>
     <property>controls/lighting/panel-norm</property>
     <interpolation>
@@ -386,31 +314,11 @@
       <y2-m>0.137</y2-m>
       <z2-m>1.595</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>KnobOHPanelLights</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/panel-norm</property>
-        <step>0.1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/panel-norm</property>
-        <step>-0.1</step>
+        <factor>0.1</factor>
         <min>0</min>
         <max>1</max>
         <wrap>0</wrap>
@@ -421,7 +329,7 @@
   <!-- OH Panel Landing Lights -->
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwLLExtendL</object-name>
     <property>controls/lighting/landing-extend-left</property>
     <interpolation>
@@ -438,13 +346,7 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwLLExtendL</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/landing-extend-left</property>
@@ -453,7 +355,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwLLExtendR</object-name>
     <property>controls/lighting/landing-extend-right</property>
     <interpolation>
@@ -470,13 +372,7 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwLLExtendR</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/landing-extend-right</property>
@@ -485,7 +381,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwLLLampL</object-name>
     <property>controls/lighting/landing-left</property>
     <interpolation>
@@ -502,13 +398,7 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwLLLampL</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/landing-left</property>
@@ -517,7 +407,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwLLLampR</object-name>
     <property>controls/lighting/landing-right</property>
     <interpolation>
@@ -534,13 +424,7 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwLLLampR</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/landing-right</property>
@@ -572,7 +456,7 @@
   <!-- Pilot side dimmer & light switches -->
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>KnobPPPanelLight</object-name>
     <property>controls/lighting/panel-norm</property>
     <interpolation>
@@ -587,31 +471,11 @@
       <y2-m>-0.878</y2-m>
       <z2-m>0.763</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>KnobPPPanelLight</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/panel-norm</property>
-        <step>0.1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/panel-norm</property>
-        <step>-0.1</step>
+        <factor>0.1</factor>
         <min>0</min>
         <max>1</max>
         <wrap>0</wrap>
@@ -620,7 +484,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>KnobPPCabinLights</object-name>
     <property>controls/lighting/cabin</property>
     <interpolation>
@@ -635,31 +499,11 @@
       <y2-m>-0.933</y2-m>
       <z2-m>0.7643</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>KnobPPCabinLights</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/cabin</property>
-        <step>0.1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/cabin</property>
-        <step>-0.1</step>
+        <factor>0.1</factor>
         <min>0</min>
         <max>1</max>
         <wrap>0</wrap>
@@ -668,7 +512,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwPPAC</object-name>
     <property>controls/lighting/beacon</property>
     <interpolation>
@@ -683,13 +527,7 @@
       <y2-m>-0.903</y2-m>
       <z2-m>0.854</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwPPAC</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/beacon</property>
@@ -697,9 +535,8 @@
     </action>
   </animation>
 
-
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwPPTail</object-name>
     <property>controls/lighting/tail</property>
     <interpolation>
@@ -714,13 +551,7 @@
       <y2-m>-0.903</y2-m>
       <z2-m>0.854</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwPPTail</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/tail</property>
@@ -729,7 +560,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwPPWT</object-name>
     <property>controls/lighting/nav</property>
     <interpolation>
@@ -744,13 +575,7 @@
       <y2-m>-0.903</y2-m>
       <z2-m>0.854</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwPPWT</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/nav</property>
@@ -759,7 +584,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwPPTaxi</object-name>
     <property>controls/lighting/taxi</property>
     <interpolation>
@@ -774,13 +599,7 @@
       <y2-m>-0.903</y2-m>
       <z2-m>0.854</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwPPTaxi</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/lighting/taxi</property>
@@ -1428,7 +1247,7 @@
   <!-- Engineer Fuel Cross-Feed and Tank 5 Controls -->
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>LvrTankC</object-name>
     <property>controls/fuel/tankvalves[4]/valve</property>
     <interpolation>
@@ -1445,13 +1264,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>LvrTankC</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/fuel/tankvalves[4]/valve</property>
@@ -1460,7 +1273,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>LvrCrossFeed1</object-name>
     <property>controls/fuel/crossfeedvalves[0]/valve</property>
     <interpolation>
@@ -1477,13 +1290,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>LvrCrossFeed1</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/fuel/crossfeedvalves[0]/valve</property>
@@ -1492,7 +1299,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>LvrCrossFeed2</object-name>
     <property>controls/fuel/crossfeedvalves[1]/valve</property>
     <interpolation>
@@ -1509,13 +1316,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>LvrCrossFeed2</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/fuel/crossfeedvalves[1]/valve</property>
@@ -1524,7 +1325,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>LvrCrossFeed3</object-name>
     <property>controls/fuel/crossfeedvalves[2]/valve</property>
     <interpolation>
@@ -1541,13 +1342,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>LvrCrossFeed3</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/fuel/crossfeedvalves[2]/valve</property>
@@ -1556,7 +1351,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>LvrCrossFeed4</object-name>
     <property>controls/fuel/crossfeedvalves[3]/valve</property>
     <interpolation>
@@ -1573,13 +1368,7 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>LvrCrossFeed4</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/fuel/crossfeedvalves[3]/valve</property>
@@ -1591,7 +1380,7 @@
   <!-- Overhead Valve Controls -->
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>FuelCutoff1</object-name>
     <property>controls/fuel/enginevalves[0]/valve</property>
     <interpolation>
@@ -1610,38 +1399,18 @@
       <y>-1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>FuelCutoff1</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/fuel/enginevalves[0]/valve</property>
-        <step>1</step>
         <min>0</min>
         <max>4</max>
-        <wrap>true</wrap>
-      </binding>
-    </action>
-    <action> 
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[0]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>4</max>
-        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>FuelCutoff2</object-name>
     <property>controls/fuel/enginevalves[1]/valve</property>
     <interpolation>
@@ -1660,38 +1429,18 @@
       <y>-1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>FuelCutoff2</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/fuel/enginevalves[1]/valve</property>
-        <step>1</step>
         <min>0</min>
         <max>4</max>
-        <wrap>true</wrap>
-      </binding>
-    </action>
-    <action> 
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[1]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>4</max>
-        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>FuelCutoff3</object-name>
     <property>controls/fuel/enginevalves[2]/valve</property>
     <interpolation>
@@ -1710,38 +1459,18 @@
       <y>-1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>FuelCutoff3</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/fuel/enginevalves[2]/valve</property>
-        <step>1</step>
         <min>0</min>
         <max>4</max>
-        <wrap>true</wrap>
-      </binding>
-    </action>
-    <action> 
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[2]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>4</max>
-        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>FuelCutoff4</object-name>
     <property>controls/fuel/enginevalves[3]/valve</property>
     <interpolation>
@@ -1760,32 +1489,12 @@
       <y>-1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>FuelCutoff4</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/fuel/enginevalves[3]/valve</property>
-        <step>1</step>
         <min>0</min>
         <max>4</max>
-        <wrap>true</wrap>
-      </binding>
-    </action>
-    <action> 
-      <button>1</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[3]/valve</property>
-        <step>-1</step>
-        <min>0</min>
-        <max>4</max>
-        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
@@ -1805,7 +1514,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>KnobEngDeskDim</object-name>
     <property>controls/lighting/panel-norm</property>
     <interpolation>
@@ -1820,31 +1529,11 @@
       <y2-m>1.0</y2-m>
       <z2-m>0.871</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>KnobEngDeskDim</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/panel-norm</property>
-        <step>0.1</step>
-        <min>0</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/panel-norm</property>
-        <step>-0.1</step>
+        <factor>0.1</factor>
         <min>0</min>
         <max>1</max>
         <wrap>0</wrap>
@@ -1853,7 +1542,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>KnobEngStartSel</object-name>
     <property>controls/switches/engine-start-select</property>
     <interpolation>
@@ -1871,13 +1560,7 @@
       <y2-m>1.0</y2-m>
       <z2-m>0.707</z2-m>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>KnobEngStartSel</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-cycle</command>
         <property>controls/switches/engine-start-select</property>
@@ -1897,7 +1580,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>KnobFEVoltsDC</object-name>
     <property>controls/switches/volts-select-dc</property>
     <interpolation>
@@ -1921,31 +1604,11 @@
       <y>1</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>KnobFEVoltsDC</object-name>
     <action>
-      <button>0</button>
-      <button>3</button>
-      <repeatable>true</repeatable>
       <binding>
         <command>property-adjust</command>
         <property>controls/switches/volts-select-dc</property>
-        <step>1</step>
-        <min>0</min>
-        <max>9</max>
-        <wrap>1</wrap>
-      </binding>
-    </action>
-    <action>
-      <button>1</button>
-      <button>4</button>
-      <repeatable>true</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/switches/volts-select-dc</property>
-        <step>-1</step>
+        <factor>1</factor>
         <min>0</min>
         <max>9</max>
         <wrap>1</wrap>
@@ -1954,7 +1617,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwBattShip</object-name>
     <property>controls/switches/battery-ship</property>
     <interpolation>
@@ -1971,13 +1634,7 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwBattShip</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/battery-ship</property>
@@ -1986,7 +1643,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwBattCart</object-name>
     <property>controls/switches/battery-cart</property>
     <interpolation>
@@ -2003,13 +1660,7 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwBattCart</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/battery-cart</property>
@@ -2018,7 +1669,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwGen1</object-name>
     <property>controls/switches/generator[0]/position</property>
     <interpolation>
@@ -2035,13 +1686,7 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwGen1</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/generator[0]/position</property>
@@ -2050,7 +1695,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwGen2</object-name>
     <property>controls/switches/generator[1]/position</property>
     <interpolation>
@@ -2067,13 +1712,7 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwGen2</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/generator[1]/position</property>
@@ -2082,7 +1721,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwGen3</object-name>
     <property>controls/switches/generator[2]/position</property>
     <interpolation>
@@ -2099,13 +1738,7 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwGen3</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/generator[2]/position</property>
@@ -2114,7 +1747,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwGen4</object-name>
     <property>controls/switches/generator[3]/position</property>
     <interpolation>
@@ -2131,13 +1764,7 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwGen4</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/generator[3]/position</property>
@@ -2146,7 +1773,7 @@
   </animation>
 
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>SwAPU</object-name>
     <property>controls/switches/gen-apu</property>
     <interpolation>
@@ -2163,13 +1790,7 @@
       <y>0</y>
       <z>0</z>
     </axis>
-  </animation>
-  <animation>
-    <type>pick</type>
-    <object-name>SwAPU</object-name>
     <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
       <binding>
         <command>property-toggle</command>
         <property>controls/switches/gen-apu</property>
