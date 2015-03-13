@@ -4,6 +4,11 @@
 
   <!-- specific ADF -->
 
+  <adf n="0">
+    <ident-audible type="bool">true</ident-audible>
+    <volume-norm type="double">0.0</volume-norm>
+  </adf>
+
   <adf n="1">
     <mode>adf</mode>
     <serviceable type="bool">true</serviceable>
@@ -11,6 +16,8 @@
       <selected-khz type="int">353</selected-khz>  <!-- Pacoima near KBUR -->
       <standby-khz type="int">373</standby-khz>    <!-- Conda near KJFK -->
     </frequencies>
+    <ident-audible type="bool">true</ident-audible>
+    <volume-norm type="double">0.0</volume-norm>
   </adf>
 
   <terrain-warning>
