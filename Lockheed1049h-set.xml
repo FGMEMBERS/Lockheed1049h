@@ -57,6 +57,12 @@ View the README file for information about this model
       </livery>
     </model> 
 
+    <checklists>
+      <checklist include="Checklists/engines-startup.xml"/>
+      <checklist include="Checklists/before-taxiing.xml"/>
+      <checklist include="Checklists/during-flight.xml"/>
+    </checklists>
+
     <menubar>
       <default>
         <menu n="100">
