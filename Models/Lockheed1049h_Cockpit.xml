@@ -76,17 +76,89 @@
     <object-name>LampGrndPwr</object-name>
   </animation>
 
-
   <!-- Panel Glows And Simulated Ambient Switch & Panel Night Lighting -->
   <animation>
     <type>material</type>
     <object-name>ConsolePilotGlow</object-name>
-    <object-name>PanelOHSwitchesGlow</object-name>
+    <object-name>PanelOHSwitchesGlow</object-name>  
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <emission>
       <red>0.7</red>
       <green>0.2</green>
       <blue>0.1</blue>
       <factor-prop>/controls/lighting/panel-norm</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>LampGrndPwrOn</object-name> 
+    <emission>
+      <red>0</red>
+      <green>1</green>
+      <blue>0</blue>
+    </emission>
+  </animation>
+
+  <!-- see my cockpit in darkness --> 
+  <animation>
+    <type>material</type>   
+    <object-name>Panel.OH.Radio</object-name> 
+    <object-name>FlightDeck</object-name> 
+    <object-name>FlightDeckA</object-name> 
+    <object-name>FlightDeckB</object-name> 
+    <object-name>FlightDeckC</object-name> 
+    <object-name>FlightDeckD</object-name> 
+    <object-name>FlightDeckWinFrame</object-name> 
+    <object-name>FlightDeckWinInsets</object-name> 
+    <object-name>EngineerDeck</object-name> 
+    <object-name>EngineerDeckklv1</object-name> 
+    <object-name>EngineerDeckklv2</object-name> 
+    <object-name>EngineerPanel</object-name>  
+    <object-name>NodePanel</object-name>
+    <object-name>SeatCP</object-name>
+    <object-name>SeatEngineer</object-name>
+    <object-name>SeatJump</object-name>
+    <object-name>SeatP</object-name>
+    <object-name>CockpitDoor</object-name>
+    <object-name>CompassBox</object-name>
+    <object-name>ConsoleCopilot</object-name>
+    <object-name>ConsolePilot</object-name>
+    <object-name>CrossFeedSta</object-name>
+    <object-name>FuelCutoff1</object-name>
+    <object-name>FuelCutoff2</object-name>
+    <object-name>FuelCutoff3</object-name>
+    <object-name>FuelCutoffDrum</object-name>
+    <object-name>FuelDump12</object-name>
+    <object-name>FuelDump34</object-name>
+    <object-name>YokeP</object-name>
+    <object-name>YokeCP</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>/controls/lighting/chart</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>KnobOHPanelLights</object-name>
+    <object-name>KnobPPCabinLights</object-name>
+    <object-name>KnobPPChartLight</object-name>
+    <object-name>KnobPPPanelLight</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <emission>
+      <red>0.05</red>
+      <green>0.05</green>
+      <blue>0.05</blue>
     </emission>
   </animation>
 
@@ -111,6 +183,9 @@
     <object-name>EngFuelSelect2</object-name>
     <object-name>EngFuelSelect3</object-name>
     <object-name>EngFuelSelect4</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <emission>
       <red>0.4</red>
       <green>0.2</green>
@@ -126,6 +201,9 @@
     <object-name>LvrCrossFeed3</object-name>
     <object-name>LvrCrossFeed4</object-name>
     <object-name>LvrTankC</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <emission>
       <red>0.1</red>
       <green>0.05</green>
@@ -163,6 +241,9 @@
     <object-name>Switch.Magneto2</object-name>
     <object-name>Switch.Magneto3</object-name>
     <object-name>Switch.Magneto4</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <emission>
       <red>0.05</red>
       <green>0.025</green>
@@ -302,10 +383,7 @@
     <type>knob</type>
     <object-name>KnobOHPanelLights</object-name>
     <property>controls/lighting/panel-norm</property>
-    <interpolation>
-      <entry><ind>0</ind><dep>  0</dep></entry>
-      <entry><ind>1</ind><dep>270</dep></entry>
-    </interpolation>
+    <factor>70</factor>
     <axis>
       <x1-m>-14.832</x1-m>
       <y1-m>0.137</y1-m>
@@ -332,10 +410,7 @@
     <type>knob</type>
     <object-name>SwLLExtendL</object-name>
     <property>controls/lighting/landing-extend-left</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <center>
       <x-m>-14.898</x-m>
       <y-m>0.0</y-m>
@@ -358,10 +433,7 @@
     <type>knob</type>
     <object-name>SwLLExtendR</object-name>
     <property>controls/lighting/landing-extend-right</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <center>
       <x-m>-14.898</x-m>
       <y-m>0.0</y-m>
@@ -384,10 +456,7 @@
     <type>knob</type>
     <object-name>SwLLLampL</object-name>
     <property>controls/lighting/landing-left</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <center>
       <x-m>-14.898</x-m>
       <y-m>0.0</y-m>
@@ -410,10 +479,7 @@
     <type>knob</type>
     <object-name>SwLLLampR</object-name>
     <property>controls/lighting/landing-right</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <center>
       <x-m>-14.898</x-m>
       <y-m>0.0</y-m>
@@ -459,10 +525,7 @@
     <type>knob</type>
     <object-name>KnobPPPanelLight</object-name>
     <property>controls/lighting/panel-norm</property>
-    <interpolation>
-      <entry><ind>0</ind><dep>  0</dep></entry>
-      <entry><ind>1</ind><dep>270</dep></entry>
-    </interpolation>
+    <factor>70</factor>
     <axis>
       <x1-m>-15.212</x1-m>
       <y1-m>-0.870</y1-m>
@@ -487,10 +550,7 @@
     <type>knob</type>
     <object-name>KnobPPCabinLights</object-name>
     <property>controls/lighting/cabin</property>
-    <interpolation>
-      <entry><ind>0</ind><dep>  0</dep></entry>
-      <entry><ind>1</ind><dep>270</dep></entry>
-    </interpolation>
+    <factor>70</factor>
     <axis>
       <x1-m>-15.008</x1-m>
       <y1-m>-0.926</y1-m>
@@ -513,12 +573,35 @@
 
   <animation>
     <type>knob</type>
+    <object-name>KnobPPChartLight</object-name>
+    <property>controls/lighting/chart</property>
+    <offset-deg>23</offset-deg>
+    <factor>70</factor>
+    <axis>
+      <x1-m>-15.168</x1-m>
+      <y1-m>-0.887</y1-m>
+      <z1-m>0.765</z1-m>
+      <x2-m>-15.170</x2-m>
+      <y2-m>-0.896</y2-m>
+      <z2-m>0.761</z2-m>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/chart</property>
+        <factor>0.1</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
     <object-name>SwPPAC</object-name>
     <property>controls/lighting/beacon</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <axis>
       <x1-m>-15.229</x1-m>
       <y1-m>-0.859</y1-m>
@@ -539,10 +622,7 @@
     <type>knob</type>
     <object-name>SwPPTail</object-name>
     <property>controls/lighting/tail</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <axis>
       <x1-m>-15.229</x1-m>
       <y1-m>-0.859</y1-m>
@@ -563,10 +643,7 @@
     <type>knob</type>
     <object-name>SwPPWT</object-name>
     <property>controls/lighting/nav</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <axis>
       <x1-m>-15.229</x1-m>
       <y1-m>-0.859</y1-m>
@@ -587,10 +664,7 @@
     <type>knob</type>
     <object-name>SwPPTaxi</object-name>
     <property>controls/lighting/taxi</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <axis>
       <x1-m>-15.229</x1-m>
       <y1-m>-0.859</y1-m>
@@ -1517,10 +1591,7 @@
     <type>knob</type>
     <object-name>KnobEngDeskDim</object-name>
     <property>controls/lighting/panel-norm</property>
-    <interpolation>
-      <entry><ind>0</ind><dep>  0</dep></entry>
-      <entry><ind>1</ind><dep>270</dep></entry>
-    </interpolation>
+    <factor>70</factor>
     <axis>
       <x1-m>-14.636</x1-m>
       <y1-m>0.0</y1-m>
@@ -1620,10 +1691,7 @@
     <type>knob</type>
     <object-name>SwBattShip</object-name>
     <property>controls/switches/battery-ship</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.785</y-m>
@@ -1646,10 +1714,7 @@
     <type>knob</type>
     <object-name>SwBattCart</object-name>
     <property>controls/switches/battery-cart</property>
-    <interpolation>
-      <entry><ind>0</ind><dep> 0</dep></entry>
-      <entry><ind>1</ind><dep>50</dep></entry>
-    </interpolation>
+    <factor>35</factor>
     <center>
       <x-m>0</x-m>
       <y-m>0.785</y-m>

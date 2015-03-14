@@ -67,8 +67,9 @@
     <landing-right type="bool">false</landing-right>
     <landing-extend-left type="bool">false</landing-extend-left>
     <landing-extend-right type="bool">false</landing-extend-right>
-    <cabin>0</cabin>
-    <beacon type="bool">false</beacon>
+    <beacon type="bool">0</beacon>
+    <cabin type="double">0</cabin>
+    <chart type="double">0</chart>
   </lighting>
 
   <switches>
