@@ -54,6 +54,18 @@
     <texture>txt_propblur.rgb</texture>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>PropBlurSlow1</object-name>
+    <object-name>PropBlurSlow2</object-name>
+    <object-name>PropBlurSlow3</object-name>
+    <object-name>PropBlurSlow4</object-name>
+    <object-name>PropBlurFast1</object-name>
+    <object-name>PropBlurFast2</object-name>
+    <object-name>PropBlurFast3</object-name>
+    <object-name>PropBlurFast4</object-name>
+  </effect>
 
   <!-- Animations  -->
 
@@ -63,40 +75,76 @@
     <type>select</type>
     <object-name>Prop1</object-name>
     <condition>
-      <less-than>
-        <property>engines/engine[0]/rpm</property>
-        <value>500</value>
-      </less-than>
+      <or>
+	<less-than>
+	  <property>engines/engine[0]/rpm</property>
+	  <value>500</value>
+	</less-than>
+	<and>
+	  <greater-than-equals>
+	    <property>engines/engine[0]/rpm</property>
+	    <value>500</value>
+	  </greater-than-equals>
+	  <not><property>sim/multiplay/generic/int[15]</property></not>
+	</and>		
+      </or>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>Prop2</object-name>
     <condition>
-      <less-than>
-        <property>engines/engine[1]/rpm</property>
-        <value>500</value>
-      </less-than>
+      <or>
+  	<less-than>
+  	  <property>engines/engine[1]/rpm</property>
+  	  <value>500</value>
+  	</less-than>
+  	<and>
+  	  <greater-than-equals>
+  	    <property>engines/engine[1]/rpm</property>
+  	    <value>500</value>
+  	  </greater-than-equals>
+  	  <not><property>sim/multiplay/generic/int[16]</property></not>
+  	</and>		
+      </or>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>Prop3</object-name>
     <condition>
-      <less-than>
-        <property>engines/engine[2]/rpm</property>
-        <value>500</value>
-      </less-than>
+      <or>
+  	<less-than>
+  	  <property>engines/engine[2]/rpm</property>
+  	  <value>500</value>
+  	</less-than>
+  	<and>
+  	  <greater-than-equals>
+  	    <property>engines/engine[2]/rpm</property>
+  	    <value>500</value>
+  	  </greater-than-equals>
+  	  <not><property>sim/multiplay/generic/int[17]</property></not>
+  	</and>		
+      </or>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>Prop4</object-name>
     <condition>
-      <less-than>
-        <property>engines/engine[3]/rpm</property>
-        <value>500</value>
-      </less-than>
+      <or>
+  	<less-than>
+  	  <property>engines/engine[3]/rpm</property>
+  	  <value>500</value>
+  	</less-than>
+  	<and>
+  	  <greater-than-equals>
+  	    <property>engines/engine[3]/rpm</property>
+  	    <value>500</value>
+  	  </greater-than-equals>
+  	  <not><property>sim/multiplay/generic/int[18]</property></not>
+  	</and>		
+      </or>
     </condition>
   </animation>
 
@@ -116,6 +164,7 @@
           <property>engines/engine[0]/rpm</property>
           <value>1350</value>
         </less-than>
+	<property>sim/multiplay/generic/int[15]</property>
       </and>
     </condition>
   </animation>
@@ -132,6 +181,7 @@
           <property>engines/engine[1]/rpm</property>
           <value>1350</value>
         </less-than>
+  	<property>sim/multiplay/generic/int[16]</property>
       </and>
     </condition>
   </animation>
@@ -148,6 +198,7 @@
           <property>engines/engine[2]/rpm</property>
           <value>1350</value>
         </less-than>
+  	<property>sim/multiplay/generic/int[17]</property>
       </and>
     </condition>
   </animation>
@@ -164,6 +215,7 @@
           <property>engines/engine[3]/rpm</property>
           <value>1350</value>
         </less-than>
+  	<property>sim/multiplay/generic/int[18]</property>
       </and>
     </condition>
   </animation>
@@ -174,40 +226,52 @@
     <type>select</type>
     <object-name>PropBlurFast1</object-name>
     <condition>
-      <greater-than-equals>
-        <property>engines/engine[0]/rpm</property>
-        <value>1350</value>
-      </greater-than-equals>
+      <and>
+	<greater-than-equals>
+	  <property>engines/engine[0]/rpm</property>
+	  <value>1350</value>
+	</greater-than-equals>
+	<property>sim/multiplay/generic/int[15]</property>
+      </and>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>PropBlurFast2</object-name>
     <condition>
-      <greater-than-equals>
-        <property>engines/engine[1]/rpm</property>
-        <value>1350</value>
-      </greater-than-equals>
+      <and>
+  	<greater-than-equals>
+  	  <property>engines/engine[1]/rpm</property>
+  	  <value>1350</value>
+  	</greater-than-equals>
+  	<property>sim/multiplay/generic/int[16]</property>
+      </and>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>PropBlurFast3</object-name>
     <condition>
-      <greater-than-equals>
-        <property>engines/engine[2]/rpm</property>
-        <value>1350</value>
-      </greater-than-equals>
+      <and>
+  	<greater-than-equals>
+  	  <property>engines/engine[2]/rpm</property>
+  	  <value>1350</value>
+  	</greater-than-equals>
+  	<property>sim/multiplay/generic/int[17]</property>
+      </and>
     </condition>
   </animation>
   <animation>
     <type>select</type>
     <object-name>PropBlurFast4</object-name>
     <condition>
-      <greater-than-equals>
-        <property>engines/engine[3]/rpm</property>
-        <value>1350</value>
-      </greater-than-equals>
+      <and>
+  	<greater-than-equals>
+  	  <property>engines/engine[3]/rpm</property>
+  	  <value>1350</value>
+  	</greater-than-equals>
+  	<property>sim/multiplay/generic/int[18]</property>
+      </and>
     </condition>
   </animation>
 

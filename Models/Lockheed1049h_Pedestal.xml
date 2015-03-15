@@ -55,11 +55,69 @@
     <object-name>PedestalShelfText</object-name>
   </animation>
 
+  <!-- see my cockpit in darkness --> 
+  <animation>
+    <type>material</type> 
+    <object-name>ParkingBrakeTubeL</object-name>
+    <object-name>ParkingBrakeTubeR</object-name>
+    <object-name>ParkingBrakeLeverL</object-name>
+    <object-name>ParkingBrakeLeverR</object-name>
+    <object-name>ParkingBrakeSupportL</object-name>
+    <object-name>ParkingBrakeSupportR</object-name>
+    <object-name>ElevatorBooster</object-name>
+    <object-name>ElBoosterBracket</object-name>
+    <object-name>APKnobPitch</object-name>
+    <object-name>APKnobHdg</object-name>
+    <object-name>RudderTabCursor</object-name>
+    <object-name>AileronTabCursor</object-name>
+    <object-name>RudderTabCursorFace</object-name>
+    <object-name>AileronTabCursorFace</object-name>
+    <object-name>RudderTabNeedle</object-name>
+    <object-name>AileronTabNeedle</object-name>
+    <object-name>LandingGearLever</object-name>
+    <object-name>EmerBrakeLever</object-name>
+    <object-name>ServoLeverAileron</object-name>
+    <object-name>ServoLeverRudder</object-name>
+    <object-name>ServoLeverElevator</object-name>
+    <object-name>PedestalShelf</object-name>
+    <object-name>PedestalMain</object-name>
+    <object-name>PedestalDrum</object-name>
+    <object-name>PedestalDrumCyl</object-name>
+    <object-name>FlapLever</object-name>
+    <object-name>PropPitch</object-name>
+    <object-name>ElectricElevatorTab</object-name>
+    <object-name>ReverseLock</object-name>
+    <object-name>AileronBooster</object-name>
+    <object-name>RudderBooster</object-name>
+    <object-name>MainThrottle4</object-name>
+    <object-name>ReverseThrottle4</object-name>
+    <object-name>MainThrottle3</object-name>
+    <object-name>ReverseThrottle3</object-name>
+    <object-name>MainThrottle2</object-name>
+    <object-name>ReverseThrottle2</object-name>
+    <object-name>MainThrottle1</object-name>
+    <object-name>ReverseThrottle1</object-name>
+    <object-name>PedestalShelfText</object-name>
+    <object-name>sockle.000</object-name>
+    <object-name>sockle.001</object-name>
+    <object-name>switch.000</object-name>
+    <object-name>switch.001</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>/controls/lighting/chart</factor-prop>
+    </emission>
+  </animation>
+
   <!-- Panel Glows -->
 
   <animation>
     <type>material</type>
-    <object-name>PedestalShelfText</object-name>
+    <object-name>PedestalShelfText</object-name>  
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <emission>
       <red>0.7</red>
       <green>0.2</green>

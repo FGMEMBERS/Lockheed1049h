@@ -109,6 +109,20 @@ Landing :
 maintain 120 kt (landing load);
 touch down 110 kt (landing load), 100 kt (empty load).
 
+________________________Emergency_________________________
+Put out fire :
+At Engineer View:
+
+Mixture  lever for this engine down
+Throttle lever for this engine down
+
+Restart after fire :
+Magnetos for this engine to both
+Mixture max. (or same as others)
+Throttle max. (or same as others)
+Starter switch to the engine no....
+and restart with S or starter button
+
 <!-- Real data -->
 ________________________ Performance _______________________
 Ceiling : 23500 ft
