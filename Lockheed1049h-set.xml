@@ -29,6 +29,10 @@ View the README file for information about this model
       <splash-texture>splash.rgb</splash-texture>
     </startup>
 
+    <remote>
+      <pilot-callsign type="string"/>
+    </remote>
+    
     <help include="Help/help.xml"/>
 
     <systems>
@@ -80,6 +84,15 @@ View the README file for information about this model
               <command>property-assign</command>
               <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
               <value type="double">122.75</value>
+            </binding>
+          </item>
+          <item>
+            <label>Select MP-Copilot</label>
+            <binding>
+              <command>nasal</command>
+              <script>
+                dual_control_tools.copilot_dialog.show(aircraft_dual_control.copilot_type);
+              </script>
             </binding>
           </item>
         </menu>
@@ -206,6 +219,15 @@ View the README file for information about this model
       <file>Nasal/mk-wiper.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>
+    <dual_control_tools>
+      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+      <file>Nasal/L1049h-dual-control.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+      <file>Nasal/Gidenstam/pilot-dual-control.nas</file>
+    </dual_control>
   </nasal>
 
   <limits>

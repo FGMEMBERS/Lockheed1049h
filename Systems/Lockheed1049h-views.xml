@@ -6,6 +6,7 @@
 <PropertyList>
 
   <view n= "0"> <!-- Pilot View -->
+    <name>Pilot view</name>
     <internal archive="y">true</internal>
     <config>
       <default-field-of-view-deg type="double">82</default-field-of-view-deg>
@@ -70,7 +71,6 @@
 
   <view n="101">
     <name>Engineer View</name>
-    <enabled type="bool">false</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
@@ -98,7 +98,6 @@
 
   <view n="102">
     <name>Copilot View</name>
-    <enabled type="bool">false</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
@@ -125,7 +124,6 @@
 
   <view n="103">
     <name>Observer View</name>
-    <enabled type="bool">false</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
@@ -151,7 +149,6 @@
 
   <view n="104">
     <name>Jump Seat View</name>
-    <enabled type="bool">false</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
@@ -179,7 +176,6 @@
 
   <view n="105">
     <name>Crew Door View</name>
-    <enabled type="bool">false</enabled>
     <type>lookfrom</type>
     <internal type="bool">true</internal>
     <config>
