@@ -18,13 +18,10 @@
     </unload>
   </nasal>
 
-
   <!-- Global offsets: determines the position of the nose -->
-
   <offsets>
     <x-m>17.8</x-m>
   </offsets>
-
 
   <!-- Sub-Model Imports -->
 
@@ -79,10 +76,6 @@
     </overlay>
   </model>
 
-  <!-- needed for tutorials -->
-  <model>
-    <path>Models/Aircraft/marker.xml</path>
-  </model>
 
   <!-- Level Of Detail -->
 
@@ -99,6 +92,10 @@
     <max-m>150</max-m>
   </animation>
 
+  <!-- needed for tutorials -->
+  <model>
+    <path>Models/Aircraft/marker.xml</path>
+  </model>
 
   <!-- Livery machine texture assignments -->
   <animation>
