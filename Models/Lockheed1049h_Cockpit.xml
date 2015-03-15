@@ -81,9 +81,6 @@
     <type>material</type>
     <object-name>ConsolePilotGlow</object-name>
     <object-name>PanelOHSwitchesGlow</object-name>  
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <emission>
       <red>0.7</red>
       <green>0.2</green>
@@ -135,9 +132,6 @@
     <object-name>FuelDump34</object-name>
     <object-name>YokeP</object-name>
     <object-name>YokeCP</object-name>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <emission>
       <red>0.2</red>
       <green>0.2</green>
@@ -152,9 +146,6 @@
     <object-name>KnobPPCabinLights</object-name>
     <object-name>KnobPPChartLight</object-name>
     <object-name>KnobPPPanelLight</object-name>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <emission>
       <red>0.05</red>
       <green>0.05</green>
@@ -183,9 +174,6 @@
     <object-name>EngFuelSelect2</object-name>
     <object-name>EngFuelSelect3</object-name>
     <object-name>EngFuelSelect4</object-name>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <emission>
       <red>0.4</red>
       <green>0.2</green>
@@ -201,9 +189,6 @@
     <object-name>LvrCrossFeed3</object-name>
     <object-name>LvrCrossFeed4</object-name>
     <object-name>LvrTankC</object-name>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <emission>
       <red>0.1</red>
       <green>0.05</green>
@@ -241,9 +226,6 @@
     <object-name>Switch.Magneto2</object-name>
     <object-name>Switch.Magneto3</object-name>
     <object-name>Switch.Magneto4</object-name>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <emission>
       <red>0.05</red>
       <green>0.025</green>
