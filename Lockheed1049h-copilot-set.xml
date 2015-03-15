@@ -199,7 +199,6 @@
   <systems include="Systems/Lockheed1049h-init-systems.xml"/>
   <instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
   <controls include="Systems/Lockheed1049h-init-controls.xml"/>
-  <engines include="Systems/Lockheed1049h-init-engines.xml"/>
 
   <!-- never be nil for copilot -->
   <engines n="0">
@@ -255,7 +254,7 @@
       <file>Nasal/mk-copilot.nas</file>
     </Lockheed1049h>
     <dual_control_tools>
-      <file>Nasal/Gidenstam/dual-control-tools.nas</file>
+      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
     </dual_control_tools>
     <aircraft_dual_control>
       <file>Nasal/L1049h-dual-control.nas</file>
@@ -266,4 +265,3 @@
   </nasal>
 
 </PropertyList>
-
