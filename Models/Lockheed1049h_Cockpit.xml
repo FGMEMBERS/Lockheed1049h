@@ -530,31 +530,6 @@
 
   <animation>
     <type>knob</type>
-    <object-name>KnobPPCabinLights</object-name>
-    <property>controls/lighting/cabin</property>
-    <factor>70</factor>
-    <axis>
-      <x1-m>-15.008</x1-m>
-      <y1-m>-0.926</y1-m>
-      <z1-m>0.768</z1-m>
-      <x2-m>-15.010</x2-m>
-      <y2-m>-0.933</y2-m>
-      <z2-m>0.7643</z2-m>
-    </axis>
-    <action>
-      <binding>
-        <command>property-adjust</command>
-        <property>controls/lighting/cabin</property>
-        <factor>0.1</factor>
-        <min>0</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
-    <type>knob</type>
     <object-name>KnobPPChartLight</object-name>
     <property>controls/lighting/chart</property>
     <offset-deg>23</offset-deg>
@@ -571,6 +546,31 @@
       <binding>
         <command>property-adjust</command>
         <property>controls/lighting/chart</property>
+        <factor>0.1</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>KnobPPCabinLights</object-name>
+    <property>controls/lighting/cabin</property>
+    <factor>70</factor>
+    <axis>
+      <x1-m>-15.008</x1-m>
+      <y1-m>-0.926</y1-m>
+      <z1-m>0.768</z1-m>
+      <x2-m>-15.010</x2-m>
+      <y2-m>-0.933</y2-m>
+      <z2-m>0.7643</z2-m>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/cabin</property>
         <factor>0.1</factor>
         <min>0</min>
         <max>1</max>
@@ -1299,7 +1299,6 @@
     </action>
   </animation>
 
-
   <!-- Engineer Fuel Cross-Feed and Tank 5 Controls -->
 
   <animation>
@@ -1555,12 +1554,77 @@
     </action>
   </animation>
 
+  <animation>
+    <type>knob</type>
+    <object-name>FuelDump12</object-name>
+    <property>controls/fuel/jettison[0]/valve</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>  0</dep></entry>
+      <entry><ind>1</ind><dep> 40</dep></entry>
+      <entry><ind>4</ind><dep> 80</dep></entry>
+      <entry><ind>3</ind><dep>120</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>-14.680</x-m>
+      <y-m>0</y-m>
+      <z-m>1.640</z-m>
+    </center>
+    <axis>
+      <x></x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+  	<property>controls/fuel/jettison[0]/valve</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>4</max>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>FuelDump34</object-name>
+    <property>controls/fuel/jettison[1]/valve</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>  0</dep></entry>
+      <entry><ind>1</ind><dep> 40</dep></entry>
+      <entry><ind>4</ind><dep> 80</dep></entry>
+      <entry><ind>3</ind><dep>120</dep></entry>
+    </interpolation>   
+    <center>
+      <x-m>-14.680</x-m>
+      <y-m>0</y-m>
+      <z-m>1.640</z-m>
+    </center>
+    <axis>
+      <x></x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+  	<property>controls/fuel/jettison[1]/valve</property>
+        <factor>1</factor>
+        <min>0</min>
+        <max>4</max>
+      </binding>
+    </action>
+  </animation>
+
   <!-- MJB Station Stuff -->
 
   <animation>
     <type>material</type>
     <object-name>MJBno1</object-name>
     <object-name>MJBno2</object-name>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <emission>
       <red>0.2</red>
       <green>0.1</green>

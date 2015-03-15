@@ -291,3 +291,160 @@ var preset_load = func(preset_index) {
     else	     { set_xfeed_valve(i,0) }				# Preset had no value, defaults to off
   } 
 }
+
+##################################### jettison the tanks #################################################
+
+setlistener("/controls/fuel/jettison[0]/valve", func(v) {
+   var tank4 	= getprop("/consumables/fuel/tank[4]/level-lbs") or 0; 	# aussen links
+   var tank5 	= getprop("/consumables/fuel/tank[5]/level-lbs") or 0; 	# innen links
+   var tank8 	= getprop("/consumables/fuel/tank[8]/level-lbs") or 0; 	# mitte
+   var tank10 = getprop("/consumables/fuel/tank[10]/level-lbs") or 0; # links
+   
+   setprop("sim/multiplay/generic/int[9]", 0);   # fuel-spray for multiplayer
+   
+		# stop jettison, if pilot push back the valve
+		interpolate("/consumables/fuel/tank[4]/level-lbs", tank4, 0);   
+		interpolate("/consumables/fuel/tank[5]/level-lbs", tank5, 0);        	
+		interpolate("/consumables/fuel/tank[8]/level-lbs", tank8, 0); 
+		interpolate("/consumables/fuel/tank[10]/level-lbs", tank10, 0);
+
+    if(v.getValue() == 1){   
+        	 
+        if (tank4 > 3200){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[4]/level-lbs", 3000, 3);
+       	}
+       	if (tank5 > 2200){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[5]/level-lbs", 2000, 3);
+       	}
+       	if (tank8 > 2000){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[8]/level-lbs", 1800, 3);
+       	}
+       	if (tank10 > 1700){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[10]/level-lbs", 1500, 3);
+       	}
+       	
+       	settimer( func{ setprop("sim/multiplay/generic/int[9]", 0);}, 3);
+       	
+    }elsif(v.getValue() == 2){
+    		
+    		if (tank4 > 1000){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[4]/level-lbs", 930, 2);
+       	}
+       	if (tank5 > 500){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[5]/level-lbs", 470, 2);
+       	}
+       	if (tank8 > 460){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[8]/level-lbs", 430, 2);
+       	}
+       	if (tank10 > 400){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[10]/level-lbs", 330, 2);
+       	}
+       	
+       	settimer( func{ setprop("sim/multiplay/generic/int[9]", 0);}, 2);
+       	
+    }elsif(v.getValue() == 3){
+
+    		if (tank4 > 220){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[4]/level-lbs", 200, 1);
+       	}
+       	if (tank5 > 220){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[5]/level-lbs", 200, 1);
+       	}
+       	if (tank8 > 220){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[8]/level-lbs", 200, 1);
+       	}
+       	if (tank10 > 220){
+          setprop("sim/multiplay/generic/int[9]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[10]/level-lbs", 200, 1);
+       	}
+       	
+       	settimer( func{ setprop("sim/multiplay/generic/int[9]", 0);}, 1);
+       	
+		}else{
+        setprop("sim/multiplay/generic/int[9]", 0);   # fuel-spray for multiplayer
+				interpolate("/consumables/fuel/tank[4]/level-lbs", tank4, 0);   
+				interpolate("/consumables/fuel/tank[5]/level-lbs", tank5, 0);        	
+				interpolate("/consumables/fuel/tank[8]/level-lbs", tank8, 0); 
+				interpolate("/consumables/fuel/tank[10]/level-lbs", tank10, 0);
+		}
+}, 1, 0);
+
+
+setlistener("/controls/fuel/jettison[1]/valve", func(v) {
+   var tank6 	= getprop("/consumables/fuel/tank[6]/level-lbs") or 0; 	# innen rechts
+   var tank7 	= getprop("/consumables/fuel/tank[7]/level-lbs") or 0; 	# aussen rechts
+   var tank11 = getprop("/consumables/fuel/tank[11]/level-lbs") or 0; # rechts
+   
+   setprop("sim/multiplay/generic/int[10]", 0);   # fuel-spray for multiplayer
+   
+    if(v.getValue() == 1){       	 
+	
+        if (tank7 > 3200){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[7]/level-lbs", 3000, 3);
+       	}
+       	if (tank6 > 2200){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[6]/level-lbs", 2000, 3);
+       	}
+       	if (tank11 > 1700){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[11]/level-lbs", 1500, 3);
+       	}
+       	
+       	settimer( func{ setprop("sim/multiplay/generic/int[10]", 0);}, 3);
+       	
+    }elsif(v.getValue() == 2){
+    		
+    		if (tank7 > 1000){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[7]/level-lbs", 930, 2);
+       	}
+       	if (tank6 > 500){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[6]/level-lbs", 470, 2);
+       	}
+       	if (tank11 > 400){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[11]/level-lbs", 330, 2);
+       	}
+       	
+       	settimer( func{ setprop("sim/multiplay/generic/int[10]", 0);}, 2);
+       	
+    }elsif(v.getValue() == 3){
+
+    		if (tank7 > 220){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[7]/level-lbs", 200, 1);
+       	}
+       	if (tank6 > 220){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[6]/level-lbs", 200, 1);
+       	}
+       	if (tank11 > 220){
+          setprop("sim/multiplay/generic/int[10]", 1);   # fuel-spray for multiplayer
+        	interpolate("/consumables/fuel/tank[11]/level-lbs", 200, 1);
+       	}
+       	
+       	settimer( func{ setprop("sim/multiplay/generic/int[10]", 0);}, 1);
+       	
+		}else{
+        setprop("sim/multiplay/generic/int[10]", 0);   # fuel-spray for multiplayer
+				interpolate("/consumables/fuel/tank[7]/level-lbs", tank7, 0);   
+				interpolate("/consumables/fuel/tank[6]/level-lbs", tank6, 0);  
+				interpolate("/consumables/fuel/tank[11]/level-lbs", tank11, 0);
+		}
+}, 1, 0);
+
+

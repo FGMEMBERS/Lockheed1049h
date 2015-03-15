@@ -12,12 +12,12 @@ View the README file for information about this model
   <sim include="Systems/Lockheed1049h-views.xml">
 
     <description>Lockheed 1049H Super Constellation</description>
-    <author>Gary Neely, Ludovic Brenta</author>
-    <aircraft-version>1.1</aircraft-version>
+    <author>Gary Neely, Marc Kraus, Ludovic Brenta</author>
+    <aircraft-version>2.0</aircraft-version>
     <status>production</status>
     <rating>
-      <FDM type="int">5</FDM>
-      <systems type="int">2</systems>
+      <FDM type="int">4</FDM>
+      <systems type="int">4</systems>
       <cockpit type="int">4</cockpit>
       <model type="int">4</model>
     </rating>
@@ -38,7 +38,7 @@ View the README file for information about this model
       <property-rule n="100">
         <path>Systems/engine-filters.xml</path>
       </property-rule>
-    </systems> 
+    </systems>
 
     <!-- Hack to make dual ADF's work: -->
     <instrumentation>
@@ -89,21 +89,48 @@ View the README file for information about this model
     <!-- Initialize props for passing lighting and door settings over multiplayer -->
     <multiplay>
       <generic>
-        <float n="0" type="double">0.0</float>
-        <float n="1" type="double">0.0</float>
-        <float n="2" type="double">0.0</float>
-        <float n="3" type="double">0.0</float>
-        <float n="4" type="double">0.0</float>
-        <int n="0" type="int">0</int>
-        <int n="1" type="int">0</int>
-        <int n="2" type="int">0</int>
-        <int n="3" type="int">0</int>
-        <int n="4" type="int">0</int>
-        <int n="5" type="int">0</int>
-        <int n="6" type="int">0</int>
+        <float n="0" type="double">0.0</float> <!-- cabin light dimmer -->
+        <float n="1" type="double">0.0</float> <!-- beacon switch -->
+        <float n="2" type="double">0.0</float> <!-- beacon blink -->
+        <float n="3" type="double">0.0</float> <!-- volt -->
+        <float n="4" type="double">0.0</float> <!-- orig. ? -->
+        <float n="5" alias="/position/altitude-agl-ft"/>    <!-- for the shadow -->
+        <float n="6" alias="/orientation/pitch-deg"/>       <!-- for the shadow -->
+        <float n="7" alias="/orientation/roll-deg"/>        <!-- for the shadow -->
+        <float n="8" alias="/controls/flight/elevator"/>    <!-- for Copilot animation-->
+        <float n="9" alias="/controls/flight/aileron"/>     <!-- for Copilot animation-->
+        <float n="10" alias="/controls/flight/rudder"/>      <!-- for Copilot animation-->   
+        <float n="11" alias="/instrumentation/slip-skid-ball/indicated-slip-skid"/><!-- for Copilot animation-->
+        <float n="12" alias="/instrumentation/turn-indicator/indicated-turn-rate"/><!-- for Copilot animation-->
+        <float n="13" alias="/controls/flight/elevator-trim"/>    <!-- for Copilot animation-->
+        <float n="14" alias="/controls/flight/aileron-trim"/>     <!-- for Copilot animation-->
+        <float n="15" alias="/controls/flight/rudder-trim"/>      <!-- for Copilot animation-->   
+        <int n="0" type="int">0</int> <!-- orig. ? -->
+        <int n="1" type="int">0</int> <!-- orig. ? -->
+        <int n="2" type="int">0</int> <!-- orig. ? -->
+        <int n="3" type="int">0</int> <!-- orig. ? -->
+        <int n="4" type="int">0</int> <!-- orig. ? -->
+        <int n="5" type="int">0</int> <!-- orig. ? -->
+        <int n="6" type="int">0</int> <!-- orig. ? -->
+        <int n="7" type="int">0</int>  <!-- Dual Control boolean light switches-->
+        <int n="8" type="int">0</int>	 <!-- ### NOT USED ANY MORE #########  not used since 21.12.2012-->
+        <int n="9" type="int">0</int>	 <!-- jettison fuel/dump-left -->
+        <int n="10" type="int">0</int> <!-- jettison fuel/dump-right -->
+        <int n="11" type="int">0</int> <!-- fire on eng 1 -->
+        <int n="12" type="int">0</int> <!-- fire on eng 2 -->
+        <int n="13" type="int">0</int> <!-- fire on eng 3 -->
+        <int n="14" type="int">0</int> <!-- fire on eng 4 -->
+        <int n="15" alias="/engines/engine[0]/running"/> <!-- eng 1 running -->
+        <int n="16" alias="/engines/engine[1]/running"/> <!-- eng 2 running -->
+        <int n="17" alias="/engines/engine[2]/running"/> <!-- eng 3 running -->
+        <int n="18" alias="/engines/engine[3]/running"/> <!-- eng 4 running -->
+        <string n="0" type="string"></string> <!-- Dual Control analog TDM-mpp1 (magnetos, flaps etc.) -->
+        <string n="1" type="string"></string> <!-- Dual Control analog TDM-mpp2 only pilot to copilot (fuel in tank etc.) -->
+        <string n="2" type="string"></string> <!-- Dual Control analog TDM-mpp3 only pilot to copilot (throttle, mixture ...) -->
+
       </generic>
     </multiplay>
-
+    <flight-recorder include="Systems/flight-recorder.xml"/>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
@@ -151,13 +178,22 @@ View the README file for information about this model
   <instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
   <controls include="Systems/Lockheed1049h-init-controls.xml"/>
 
+  <fdm>
+    <jsbsim>
+      <systems>
+	<crash-detect>
+	  <crash-on-ground type="bool">0</crash-on-ground>
+	  <crash-save type="bool">0</crash-save>
+	</crash-detect>
+      </systems>
+    </jsbsim>
+  </fdm>
+
   <nasal>
     <Lockheed1049h>
       <file>Nasal/Lockheed1049h-menu.nas</file>
       <file>Nasal/Lockheed1049h-lights.nas</file>
       <file>Nasal/Lockheed1049h-doors.nas</file>
-      <!--<file>Nasal/Lockheed1049h-rmi_driver.nas</file>-->
-      <!--<file>Nasal/Lockheed1049h-misc_instr.nas</file>-->
       <file>Nasal/Lockheed1049h-prop_reverse.nas</file>
       <file>Nasal/Lockheed1049h.nas</file>
       <file>Nasal/Lockheed1049h-fuel.nas</file>
@@ -166,6 +202,7 @@ View the README file for information about this model
       <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
       <file>Nasal/Lockheed1049h-seats.nas</file>
       <file>Nasal/mk-ap-helper.nas</file>
+      <file>Nasal/mk-crashed.nas</file>
       <file>Nasal/mk-wiper.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>

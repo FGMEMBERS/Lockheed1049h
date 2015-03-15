@@ -9,27 +9,35 @@
     </autopilot>
   </autoflight>
 
+  <door-crew-copilot>
+    <enabled>false</enabled>
+  </door-crew-copilot>
+
   <flight>
     <auto-coordination-factor type="double">0.02</auto-coordination-factor>
   </flight>
 
   <engines>
     <engine n="0">
+      <on-fire type="bool">0</on-fire>
       <magnetos archive="y">0</magnetos>
       <propeller-pitch>1.0</propeller-pitch>
       <mixture type="double">0</mixture>
     </engine>
     <engine n="1">
+      <on-fire type="bool">0</on-fire>
       <magnetos archive="y">0</magnetos>
       <propeller-pitch>1.0</propeller-pitch>
       <mixture type="double">0</mixture>
     </engine>
     <engine n="2">
+      <on-fire type="bool">0</on-fire>
       <magnetos archive="y">0</magnetos>
       <propeller-pitch>1.0</propeller-pitch>
       <mixture type="double">0</mixture>
     </engine>
     <engine n="3">
+      <on-fire type="bool">0</on-fire>
       <magnetos archive="y">0</magnetos>
       <propeller-pitch>1.0</propeller-pitch>
       <mixture type="double">0</mixture>
