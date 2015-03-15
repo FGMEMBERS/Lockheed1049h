@@ -42,6 +42,12 @@
     </config>
   </view>
 
+  <view n="7">
+    <config>
+      <target-z-offset-m archive="y">17.8</target-z-offset-m>
+    </config>
+  </view>
+
   <view n="100">
     <name>Overhead Panel</name>
     <type>lookfrom</type>
