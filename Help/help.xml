@@ -49,6 +49,10 @@
     <desc>Overhead panel view</desc>
   </key>
   <key>
+    <name>Alt+S</name>
+    <desc>Toggle superchargers low/high</desc>
+  </key>
+  <key>
     <name>Ctrl+V</name>
     <desc>Pilot view</desc>
   </key>

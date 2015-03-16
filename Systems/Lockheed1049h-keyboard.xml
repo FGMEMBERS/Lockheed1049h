@@ -195,6 +195,25 @@
       <command>nasal</command>
       <script>Lockheed1049h.engine_starter();</script>
     </binding>
+    <mod-alt>
+      <desc>Toggle superchargers</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+      </binding>
+    </mod-alt>
   </key>
 
   <key n="127">
