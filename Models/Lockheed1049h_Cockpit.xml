@@ -365,7 +365,7 @@
     <type>knob</type>
     <object-name>KnobOHPanelLights</object-name>
     <property>controls/lighting/panel-norm</property>
-    <factor>70</factor>
+    <factor>300</factor>
     <axis>
       <x1-m>-14.832</x1-m>
       <y1-m>0.137</y1-m>
@@ -507,7 +507,7 @@
     <type>knob</type>
     <object-name>KnobPPPanelLight</object-name>
     <property>controls/lighting/panel-norm</property>
-    <factor>70</factor>
+    <factor>300</factor>
     <axis>
       <x1-m>-15.212</x1-m>
       <y1-m>-0.870</y1-m>
@@ -532,8 +532,8 @@
     <type>knob</type>
     <object-name>KnobPPChartLight</object-name>
     <property>controls/lighting/chart</property>
-    <offset-deg>23</offset-deg>
-    <factor>70</factor>
+    <offset-deg>90</offset-deg> <!-- compensate for the model being mis-oriented -->
+    <factor>300</factor>
     <axis>
       <x1-m>-15.168</x1-m>
       <y1-m>-0.887</y1-m>
@@ -558,7 +558,7 @@
     <type>knob</type>
     <object-name>KnobPPCabinLights</object-name>
     <property>controls/lighting/cabin</property>
-    <factor>70</factor>
+    <factor>300</factor>
     <axis>
       <x1-m>-15.008</x1-m>
       <y1-m>-0.926</y1-m>
@@ -1637,7 +1637,7 @@
     <type>knob</type>
     <object-name>KnobEngDeskDim</object-name>
     <property>controls/lighting/panel-norm</property>
-    <factor>70</factor>
+    <factor>300</factor>
     <axis>
       <x1-m>-14.636</x1-m>
       <y1-m>0.0</y1-m>
