@@ -1,129 +1,29 @@
 <?xml version="1.0"?>
+<!--
+************************************************************************
 
-<PropertyList>
+Lockheed1049h: copilot model
 
-  <sim include="Systems/Lockheed1049h-views.xml">
-    <description>Lockheed 1049H Copilot</description>
-    <author>Lake Of Constance Hangar, Ludovic Brenta</author>
-    <aircraft-version>2.0</aircraft-version>
-    <flight-model>null</flight-model>
+Copyright (c) 2012 Marc Kraus (Lake of Constance Hangar)
+Copyright (c) 2015 Ludovic Brenta <ludovic@ludovic-brenta.org>
 
-    <startup>
-      <splash-texture>splash.png</splash-texture>
-    </startup>
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
 
-    <remote>
-      <pilot-callsign type="string"/>
-    </remote>
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-    <help include="Help/help.xml"/>
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-    <systems>
-      <electrical>
-        <path>Aircraft/Generic/generic-electrical.xml</path>
-      </electrical>
-    </systems>
+************************************************************************
+-->
 
-    <instrumentation>
-      <path>Systems/Lockheed1049h-instrumentation.xml</path>
-    </instrumentation>
-
-    <sound>
-      <audible>true</audible>
-      <path>Sounds/Lockheed1049h-sound.xml</path>
-    </sound>
-
-    <model>
-      <path>Models/L1049h-Copilot.xml</path>
-      <livery>
-        <file type="string">EasternGSF</file>
-      </livery>
-    </model> 
-
-    <menubar>
-      <default>
-        <menu n="100">
-          <label>Constellation</label>
-          <enabled type="bool">true</enabled>
-          <item>
-            <label>Select MP-Pilot</label>
-            <binding>
-              <command>nasal</command>
-              <script>
-                dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
-              </script>
-            </binding>
-          </item>
-        </menu>
-      </default>
-    </menubar>
-
-    <!-- This floats and integers are used by the different nas files from the root Lockheed -->
-    <multiplay>
-      <generic>
-        <float n="0" type="double">0.0</float> <!-- orig. ? -->
-        <float n="1" type="double">0.0</float> <!-- orig. ? -->
-        <float n="2" type="double">0.0</float> <!-- orig. ? -->
-        <float n="3" type="double">0.0</float> <!-- orig. ? -->
-        <float n="4" type="double">0.0</float> <!-- orig. ? -->
-        <int n="0" type="int">0</int> <!-- orig. ? -->
-        <int n="1" type="int">0</int> <!-- orig. ? -->
-        <int n="2" type="int">0</int> <!-- orig. ? -->
-        <int n="3" type="int">0</int> <!-- orig. ? -->
-        <int n="4" type="int">0</int> <!-- orig. ? -->
-        <int n="5" type="int">0</int> <!-- orig. ? -->
-        <int n="6" type="int">0</int> <!-- orig. ? -->
-      </generic>
-    </multiplay>
-
-    <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
-
-    <flaps>
-      <setting>0.0</setting>
-      <setting>0.25</setting>	<!-- 60% takeoff -->
-      <setting>0.5</setting>	<!-- 66% approach -->
-      <setting>0.75</setting>	<!-- 80% -->
-      <setting>1.0</setting>	<!-- 100% landing -->
-    </flaps>
-
-    <presets>
-      <fuel type="int">0</fuel>
-    </presets>
-
-  </sim>
-
-  <autopilot>
-    <settings>
-      <target-speed-kt type="double">223</target-speed-kt>
-      <target-pitch-deg type="double">0</target-pitch-deg>
-      <target-altitude-ft type="double">0</target-altitude-ft>
-      <vertical-speed-fpm type="double">0</vertical-speed-fpm>
-      <heading-bug-deg type="double">0</heading-bug-deg>
-    </settings>
-    <switches>
-      <ap type="bool">0</ap>
-      <hdg type="bool">0</hdg>
-      <alt type="bool">0</alt>
-      <ias type="bool">0</ias>
-      <nav type="bool">0</nav>
-      <appr type="bool">0</appr>
-      <gps type="bool">0</gps>
-      <hdg type="bool">0</hdg>
-      <selected-nav type="bool">1</selected-nav>
-    </switches>    
-  </autopilot>
-
-  <input>
-    <keyboard include="Systems/Lockheed1049h-keyboard.xml"/>
-  </input>
-
-  <consumables>
-    <fuel include="Systems/Lockheed1049h-init-fuel.xml"/>
-  </consumables>
-
-  <systems include="Systems/Lockheed1049h-init-systems.xml"/>
-  <instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
-  <controls include="Systems/Lockheed1049h-init-controls.xml"/>
+<PropertyList include="Lockheed1049h-common.xml">
 
   <!-- never be nil for copilot -->
   <engines n="0">
@@ -167,26 +67,53 @@
 
   <nasal>
     <Lockheed1049h>
-      <file>Nasal/Lockheed1049h-menu.nas</file>
-      <file>Nasal/Lockheed1049h-lights.nas</file>
-      <file>Nasal/Lockheed1049h-doors.nas</file>
-      <file>Nasal/Lockheed1049h.nas</file>
-      <file>Nasal/Lockheed1049h-electrical.nas</file>
-      <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
-      <file>Nasal/Lockheed1049h-seats.nas</file>
-      <file>Nasal/mk-ap-helper.nas</file>
-      <file>Nasal/mk-wiper.nas</file>
-      <file>Nasal/mk-copilot.nas</file>
+      <file n="100">Nasal/mk-copilot.nas</file>
     </Lockheed1049h>
-    <dual_control_tools>
-      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
-    </dual_control_tools>
-    <aircraft_dual_control>
-      <file>Nasal/L1049h-dual-control.nas</file>
-    </aircraft_dual_control>
-    <dual_control>
-      <file>Nasal/Gidenstam/copilot-dual-control.nas</file>
-    </dual_control>
   </nasal>
+
+  <sim include="Systems/Lockheed1049h-views.xml">
+
+    <description>Lockheed 1049H Copilot</description>
+    <flight-model>null</flight-model>
+
+    <menubar>
+      <default>
+        <menu n="100">
+          <label>Constellation</label>
+          <enabled type="bool">true</enabled>
+          <item>
+            <label>Select MP-Pilot</label>
+            <binding>
+              <command>nasal</command>
+              <script>
+                dual_control_tools.copilot_dialog.show(aircraft_dual_control.pilot_type);
+              </script>
+            </binding>
+          </item>
+        </menu>
+      </default>
+    </menubar>
+
+    <model>
+      <path>Models/L1049h-Copilot.xml</path>
+      <livery>
+        <file type="string">EasternGSF</file>
+      </livery>
+    </model> 
+
+    <view n="0"> <!-- the default view is the copilot's, not the pilot view -->
+      <name>Copilot View</name>
+      <type>lookfrom</type>
+      <internal type="bool">true</internal>
+      <config>
+        <default-field-of-view-deg type="double">82.0</default-field-of-view-deg>
+        <x-offset-m archive="y">0.45</x-offset-m>
+        <y-offset-m archive="y">1.24</y-offset-m>
+        <z-offset-m archive="y">2.89</z-offset-m>
+        <pitch-offset-deg>-11</pitch-offset-deg>
+      </config>
+    </view>
+
+  </sim>
 
 </PropertyList>

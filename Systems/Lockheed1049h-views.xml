@@ -5,19 +5,6 @@
 
 <PropertyList>
 
-  <view n= "0"> <!-- Pilot View -->
-    <name>Pilot view</name>
-    <internal archive="y">true</internal>
-    <config>
-      <default-field-of-view-deg type="double">82</default-field-of-view-deg>
-      <!-- x/y/z == right/up/back ( Blender/FG y/z/x) -->
-      <x-offset-m archive="y">-0.45</x-offset-m>
-      <y-offset-m archive="y">1.24</y-offset-m>
-      <z-offset-m archive="y">2.89</z-offset-m>
-      <pitch-offset-deg>-11</pitch-offset-deg>
-    </config>
-  </view>
-
   <view n="1">
     <config>
       <target-z-offset-m archive="y">17.8</target-z-offset-m>

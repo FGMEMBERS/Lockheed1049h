@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+************************************************************************
+
+Lockheed1049h: parts that are common to the pilot and copilot.
+
+Copyright (c) 2015 Ludovic Brenta <ludovic@ludovic-brenta.org>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+************************************************************************
+-->
+
+<PropertyList>
+
+  <autopilot>
+    <settings>
+      <target-speed-kt type="double">223</target-speed-kt>
+      <target-pitch-deg type="double">0</target-pitch-deg>
+      <target-altitude-ft type="double">0</target-altitude-ft>
+      <vertical-speed-fpm type="double">0</vertical-speed-fpm>
+      <heading-bug-deg type="double">0</heading-bug-deg>
+    </settings>
+    <switches>
+      <ap type="bool">0</ap>
+      <alt type="bool">0</alt>
+      <selected-nav type="bool">1</selected-nav>
+    </switches> 
+    <trim>
+      <elevator-trim-turn type="double">0</elevator-trim-turn>
+    </trim>    
+  </autopilot>
+
+  <consumables>
+    <fuel include="Systems/Lockheed1049h-init-fuel.xml"/>
+  </consumables>
+
+  <controls include="Systems/Lockheed1049h-init-controls.xml"/>
+
+  <fdm>
+    <jsbsim>
+      <systems>
+	<crash-detect>
+	  <crash-on-ground type="bool">0</crash-on-ground>
+	  <crash-save type="bool">0</crash-save>
+	</crash-detect>
+      </systems>
+    </jsbsim>
+  </fdm>
+
+  <instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
+
+  <input>
+    <keyboard include="Systems/Lockheed1049h-keyboard.xml"/>
+  </input>
+
+  <limits>
+    <mass-and-balance>
+      <maximum-takeoff-mass-lbs type="double">137500</maximum-takeoff-mass-lbs>
+      <maximum-landing-mass-lbs type="double">113000</maximum-landing-mass-lbs>
+    </mass-and-balance>
+    <max-flap-extension-speed>
+      <flaps type="double">0.25</flaps>
+      <speed type="double">195</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps type="double">0.50</flaps>
+      <speed type="double">174</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps type="double">0.75</flaps>
+      <speed type="double">174</speed>
+    </max-flap-extension-speed>
+    <max-flap-extension-speed>
+      <flaps type="double">1.0</flaps>
+      <speed type="double">165</speed>
+    </max-flap-extension-speed>
+    <max-gear-extension-speed type="double">165</max-gear-extension-speed>
+  </limits>
+
+  <nasal>
+    <Lockheed1049h>
+      <file>Nasal/Lockheed1049h-menu.nas</file>
+      <file>Nasal/Lockheed1049h-lights.nas</file>
+      <file>Nasal/Lockheed1049h-doors.nas</file>
+      <file>Nasal/Lockheed1049h-prop_reverse.nas</file>
+      <file>Nasal/Lockheed1049h.nas</file>
+      <file>Nasal/Lockheed1049h-fuel.nas</file>
+      <file>Nasal/Lockheed1049h-engines.nas</file>
+      <file>Nasal/Lockheed1049h-electrical.nas</file>
+      <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
+      <file>Nasal/Lockheed1049h-seats.nas</file>
+      <file>Nasal/mk-ap-helper.nas</file>
+      <file>Nasal/mk-wiper.nas</file>
+      <file>Aircraft/Generic/limits.nas</file>
+    </Lockheed1049h>
+    <dual_control_tools>
+      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+      <file>Nasal/L1049h-dual-control.nas</file>
+    </aircraft_dual_control>
+    <dual_control>
+      <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+    </dual_control>
+  </nasal>
+
+  <sim include="Systems/Lockheed1049h-views.xml">
+    <allow-toggle-cockpit>true</allow-toggle-cockpit>
+    <aircraft-version>2.0.1</aircraft-version>
+    <author>Gary Neely, Marc Kraus, Ludovic Brenta</author>
+    <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
+
+    <checklists>
+      <checklist include="Checklists/engines-startup.xml"/>
+      <checklist include="Checklists/before-taxiing.xml"/>
+      <checklist include="Checklists/during-flight.xml"/>
+    </checklists>
+
+    <flaps>
+      <setting>0.0</setting>
+      <setting>0.25</setting>	<!-- 60% takeoff -->
+      <setting>0.5</setting>	<!-- 66% approach -->
+      <setting>0.75</setting>	<!-- 80% -->
+      <setting>1.0</setting>	<!-- 100% landing -->
+    </flaps>
+
+    <flight-recorder include="Systems/flight-recorder.xml"/>
+
+    <help include="Help/help.xml"/>
+
+    <instrumentation>
+      <path>Systems/Lockheed1049h-instrumentation.xml</path>
+    </instrumentation>
+
+    <!-- Initialize props for passing lighting and door settings over multiplayer -->
+    <multiplay>
+      <generic>
+        <float n="0" type="double">0.0</float> <!-- cabin light dimmer -->
+        <float n="1" type="double">0.0</float> <!-- beacon switch -->
+        <float n="2" type="double">0.0</float> <!-- beacon blink -->
+        <float n="3" type="double">0.0</float> <!-- volt -->
+        <float n="4" type="double">0.0</float> <!-- orig. ? -->
+        <float n="5" alias="/position/altitude-agl-ft"/>    <!-- for the shadow -->
+        <float n="6" alias="/orientation/pitch-deg"/>       <!-- for the shadow -->
+        <float n="7" alias="/orientation/roll-deg"/>        <!-- for the shadow -->
+        <float n="8" alias="/controls/flight/elevator"/>    <!-- for Copilot animation-->
+        <float n="9" alias="/controls/flight/aileron"/>     <!-- for Copilot animation-->
+        <float n="10" alias="/controls/flight/rudder"/>      <!-- for Copilot animation-->   
+        <float n="11" alias="/instrumentation/slip-skid-ball/indicated-slip-skid"/><!-- for Copilot animation-->
+        <float n="12" alias="/instrumentation/turn-indicator/indicated-turn-rate"/><!-- for Copilot animation-->
+        <float n="13" alias="/controls/flight/elevator-trim"/>    <!-- for Copilot animation-->
+        <float n="14" alias="/controls/flight/aileron-trim"/>     <!-- for Copilot animation-->
+        <float n="15" alias="/controls/flight/rudder-trim"/>      <!-- for Copilot animation-->   
+        <int n="0" type="int">0</int> <!-- orig. ? -->
+        <int n="1" type="int">0</int> <!-- orig. ? -->
+        <int n="2" type="int">0</int> <!-- orig. ? -->
+        <int n="3" type="int">0</int> <!-- orig. ? -->
+        <int n="4" type="int">0</int> <!-- orig. ? -->
+        <int n="5" type="int">0</int> <!-- orig. ? -->
+        <int n="6" type="int">0</int> <!-- orig. ? -->
+        <int n="7" type="int">0</int>  <!-- Dual Control boolean light switches-->
+        <int n="8" type="int">0</int>	 <!-- ### NOT USED ANY MORE #########  not used since 21.12.2012-->
+        <int n="9" type="int">0</int>	 <!-- jettison fuel/dump-left -->
+        <int n="10" type="int">0</int> <!-- jettison fuel/dump-right -->
+        <int n="11" type="int">0</int> <!-- fire on eng 1 -->
+        <int n="12" type="int">0</int> <!-- fire on eng 2 -->
+        <int n="13" type="int">0</int> <!-- fire on eng 3 -->
+        <int n="14" type="int">0</int> <!-- fire on eng 4 -->
+        <int n="15" alias="/engines/engine[0]/running"/> <!-- eng 1 running -->
+        <int n="16" alias="/engines/engine[1]/running"/> <!-- eng 2 running -->
+        <int n="17" alias="/engines/engine[2]/running"/> <!-- eng 3 running -->
+        <int n="18" alias="/engines/engine[3]/running"/> <!-- eng 4 running -->
+        <string n="0" type="string"></string> <!-- Dual Control analog TDM-mpp1 (magnetos, flaps etc.) -->
+        <string n="1" type="string"></string> <!-- Dual Control analog TDM-mpp2 only pilot to copilot (fuel in tank etc.) -->
+        <string n="2" type="string"></string> <!-- Dual Control analog TDM-mpp3 only pilot to copilot (throttle, mixture ...) -->
+
+      </generic>
+    </multiplay>
+
+    <presets>
+      <fuel type="int">0</fuel>
+    </presets>
+
+    <rating>
+      <FDM type="int">4</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">4</model>
+    </rating>
+
+    <remote>
+      <pilot-callsign type="string"/>
+    </remote>
+
+    <sound>
+      <audible>true</audible>
+      <path>Sounds/Lockheed1049h-sound.xml</path>
+    </sound>
+
+    <startup>
+      <splash-texture>splash.png</splash-texture>
+    </startup>
+
+    <systems>
+      <electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+      <property-rule n="100">
+        <path>Systems/engine-filters.xml</path>
+      </property-rule>
+    </systems>
+
+  </sim>
+
+  <systems include="Systems/Lockheed1049h-init-systems.xml"/>
+
+</PropertyList>
