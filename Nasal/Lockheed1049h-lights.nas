@@ -96,3 +96,24 @@ var fire_prop = func(){
 }
 
 fire_prop();
+
+# Ordinance Signs
+
+var command_bell = "controls/switches/command-bell";
+var no_smoking = "controls/switches/no-smoking-signs";
+var seat_belts = "controls/switches/seat-belt-signs";
+
+var ring_command_bell = func 
+{
+    setprop(command_bell, 1);
+    settimer(func {setprop(command_bell, 0);}, 1.0);
+}
+
+setlistener(no_smoking, func {
+    ring_command_bell();
+}, startup = 0, runtime = 0);
+
+setlistener(seat_belts, func {
+    ring_command_bell();
+}, startup = 0, runtime = 0);
+
