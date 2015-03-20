@@ -843,12 +843,12 @@ Low hardware config : 2 engines per sound; otherwise exception in main loop.
 
     <ding>
       <name>Command bell</name>
-      <path>Sounds/cmd-ding.wav</path>
+      <path>Sounds/cabinalert.wav</path>
       <condition>
         <property>controls/switches/command-bell</property>
       </condition>
       <volume>
-        <factor>1.0</factor>
+        <factor>0.5</factor>
       </volume>
     </ding>
 
