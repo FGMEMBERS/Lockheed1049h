@@ -61,6 +61,9 @@
     <enginevalves n="1"><valve type="int">0</valve></enginevalves>
     <enginevalves n="2"><valve type="int">0</valve></enginevalves>
     <enginevalves n="3"><valve type="int">0</valve></enginevalves>
+
+    <jettison n="0"><valve type="int">0</valve></jettison>
+    <jettison n="1"><valve type="int">0</valve></jettison>
   </fuel>
 
   <gear>
