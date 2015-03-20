@@ -118,8 +118,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <sim include="Systems/Lockheed1049h-views.xml">
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
-    <aircraft-version>2.0.1</aircraft-version>
-    <author>Gary Neely, Marc Kraus, Ludovic Brenta</author>
+    <aircraft-version>2.0.2</aircraft-version>
+    <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
     <checklists>
@@ -203,7 +203,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <rating>
       <FDM type="int">4</FDM>
-      <systems type="int">4</systems>
+      <systems type="int">5</systems>
       <cockpit type="int">4</cockpit>
       <model type="int">4</model>
     </rating>
