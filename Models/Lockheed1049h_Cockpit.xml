@@ -2179,4 +2179,50 @@
     </action>
   </animation>
 
+  <animation>
+    <type>knob</type>
+    <object-name>SwOrdLtsNS</object-name>
+    <property>controls/switches/no-smoking-signs</property>
+    <factor>35</factor>
+    <center>
+      <x-m>-14.8961</x-m>
+      <y-m>-0.03479</y-m>
+      <z-m>1.58336</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/no-smoking-signs</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>SwOrdLtsFB</object-name>
+    <property>controls/switches/seat-belt-signs</property>
+    <factor>35</factor>
+    <center>
+      <x-m>-14.8961</x-m>
+      <y-m>-0.01685</y-m>
+      <z-m>1.58336</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/seat-belt-signs</property>
+      </binding>
+    </action>
+  </animation>
+
 </PropertyList>
