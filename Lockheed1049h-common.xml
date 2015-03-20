@@ -123,9 +123,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
     <checklists>
-      <checklist include="Checklists/engines-startup.xml"/>
-      <checklist include="Checklists/before-taxiing.xml"/>
-      <checklist include="Checklists/during-flight.xml"/>
+      <checklist include="Checklists/before-starting-engines.xml"/>
+      <checklist include="Checklists/start-engines.xml"/>
+      <checklist include="Checklists/during-warmup.xml"/>
+      <checklist include="Checklists/before-taxi.xml"/>
+      <checklist include="Checklists/before-takeoff.xml"/>
+      <checklist include="Checklists/initial-climb.xml"/>
+      <checklist include="Checklists/upper-climb.xml"/>
+      <checklist include="Checklists/pre-traffic-pattern.xml"/>
+      <checklist include="Checklists/traffic-pattern.xml"/>
+      <checklist include="Checklists/after-landing.xml"/>
+      <checklist include="Checklists/parking.xml"/>
     </checklists>
 
     <flaps>
