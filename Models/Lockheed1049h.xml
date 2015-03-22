@@ -193,7 +193,7 @@
     <type>rotate</type>
     <object-name>Elevator</object-name>
     <object-name>ElevatorTrim</object-name>
-    <property>controls/flight/elevator</property>
+    <property>surface-positions/elevator-pos-norm</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-16</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -212,7 +212,7 @@
   <animation>
     <type>rotate</type>
     <object-name>ElevatorTrim</object-name>
-    <property>controls/flight/elevator-trim</property>
+    <property>surface-positions/elevator-trim-tab-pos-norm</property>
     <interpolation>
       <entry><ind>-1</ind><dep> 22</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -234,7 +234,7 @@
     <type>rotate</type>
     <object-name>RudderL</object-name>
     <object-name>RudderTrimL</object-name>
-    <property>controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-30</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -253,7 +253,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderTrimL</object-name>
-    <property>controls/flight/rudder-trim</property>
+    <property>controls/flight/rudder-trim</property> <!-- not transmitted over MP -->
     <interpolation>
       <entry><ind>-1</ind><dep> 25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -272,7 +272,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderC</object-name>
-    <property>controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-30</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -292,7 +292,7 @@
     <type>rotate</type>
     <object-name>RudderR</object-name>
     <object-name>RudderTrimR</object-name>
-    <property>controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-30</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -311,7 +311,7 @@
   <animation>
     <type>rotate</type>
     <object-name>RudderTrimR</object-name>
-    <property>controls/flight/rudder-trim</property>
+    <property>controls/flight/rudder-trim</property> <!-- not transmitted over MP -->
     <interpolation>
       <entry><ind>-1</ind><dep> 25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -333,7 +333,7 @@
     <type>rotate</type>
     <object-name>AileronL</object-name>
     <object-name>AileronTrimL</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-25</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -352,7 +352,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AileronTrimL</object-name>
-    <property>controls/flight/aileron-trim</property>
+    <property>controls/flight/aileron-trim</property> <!-- not transmitted over MP -->
     <interpolation>
       <entry><ind>-1</ind><dep> 12</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -372,7 +372,7 @@
     <type>rotate</type>
     <object-name>AileronR</object-name>
     <object-name>AileronTrimR</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/right-aileron-pos-norm</property>
     <interpolation>
       <entry><ind>-1</ind><dep>-10</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>
@@ -391,7 +391,7 @@
   <animation>
     <type>rotate</type>
     <object-name>AileronTrimR</object-name>
-    <property>controls/flight/aileron-trim</property>
+    <property>controls/flight/aileron-trim</property> <!-- not transmitted over MP -->
     <interpolation>
       <entry><ind>-1</ind><dep> 12</dep></entry>
       <entry><ind> 0</ind><dep>  0</dep></entry>

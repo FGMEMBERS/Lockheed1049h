@@ -28,7 +28,7 @@ GNU General Public License for more details.
       </expression>
     </input>
     <gain>260.0</gain>
-    <output>/engines/engine[0]/bmep</output>
+    <output>engines/engine[0]/bmep</output>
   </filter>
 
   <filter>
@@ -45,7 +45,7 @@ GNU General Public License for more details.
     </input>
     <input>0</input>
     <gain>260.0</gain>
-    <output>/engines/engine[1]/bmep</output>
+    <output>engines/engine[1]/bmep</output>
   </filter>
 
   <filter>
@@ -62,7 +62,7 @@ GNU General Public License for more details.
     </input>
     <input>0</input>
     <gain>260.0</gain>
-    <output>/engines/engine[2]/bmep</output>
+    <output>engines/engine[2]/bmep</output>
   </filter>
 
   <filter>
@@ -79,7 +79,7 @@ GNU General Public License for more details.
     </input>
     <input>0</input>
     <gain>260.0</gain>
-    <output>/engines/engine[3]/bmep</output>
+    <output>engines/engine[3]/bmep</output>
   </filter>
 
   <filter>
@@ -95,7 +95,7 @@ GNU General Public License for more details.
       <offset>27</offset>
     </input>
     <input>0</input>
-    <output>/engines/engine[0]/est-fuelpress</output>
+    <output>engines/engine[0]/est-fuelpress</output>
   </filter>
   
   <filter>
@@ -111,7 +111,7 @@ GNU General Public License for more details.
       <offset>27</offset>
     </input>
     <input>0</input>
-    <output>/engines/engine[1]/est-fuelpress</output>
+    <output>engines/engine[1]/est-fuelpress</output>
   </filter>
   
   <filter>
@@ -127,7 +127,7 @@ GNU General Public License for more details.
       <offset>27</offset>
     </input>
     <input>0</input>
-    <output>/engines/engine[2]/est-fuelpress</output>
+    <output>engines/engine[2]/est-fuelpress</output>
   </filter>
   
   <filter>
@@ -143,7 +143,7 @@ GNU General Public License for more details.
       <offset>27</offset>
     </input>
     <input>0</input>
-    <output>/engines/engine[3]/est-fuelpress</output>
+    <output>engines/engine[3]/est-fuelpress</output>
   </filter>
 
   <!-- the BSFC value that JSBSim computes is good only at sea level;
@@ -179,7 +179,7 @@ GNU General Public License for more details.
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>
-    <output>/fdm/jsbsim/propulsion/engine[0]/bsfc-lbs_hphr</output>
+    <output>fdm/jsbsim/propulsion/engine[0]/bsfc-lbs_hphr</output>
   </filter>
 
   <filter>
@@ -210,7 +210,7 @@ GNU General Public License for more details.
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>
-    <output>/fdm/jsbsim/propulsion/engine[1]/bsfc-lbs_hphr</output>
+    <output>fdm/jsbsim/propulsion/engine[1]/bsfc-lbs_hphr</output>
   </filter>
 
   <filter>
@@ -241,7 +241,7 @@ GNU General Public License for more details.
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>
-    <output>/fdm/jsbsim/propulsion/engine[2]/bsfc-lbs_hphr</output>
+    <output>fdm/jsbsim/propulsion/engine[2]/bsfc-lbs_hphr</output>
   </filter>
 
   <filter>
@@ -272,7 +272,7 @@ GNU General Public License for more details.
       <scale>0.000001416</scale>
       <offset>0.228</offset>
     </input>
-    <output>/fdm/jsbsim/propulsion/engine[3]/bsfc-lbs_hphr</output>
+    <output>fdm/jsbsim/propulsion/engine[3]/bsfc-lbs_hphr</output>
   </filter>
 
 </PropertyList>
