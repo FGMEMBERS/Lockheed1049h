@@ -48,6 +48,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <controls include="Systems/Lockheed1049h-init-controls.xml"/>
 
+  <engines>
+    <!-- create properties needed by nasal code before the nasal starts -->
+    <engine n="0"><bmep type="double"/></engine>
+    <engine n="1"><bmep type="double"/></engine>
+    <engine n="2"><bmep type="double"/></engine>
+    <engine n="3"><bmep type="double"/></engine>
+  </engines>
+
   <fdm>
     <jsbsim>
       <systems>
