@@ -50,10 +50,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <engines>
     <!-- create properties needed by nasal code before the nasal starts -->
-    <engine n="0"><bmep type="double"/></engine>
-    <engine n="1"><bmep type="double"/></engine>
-    <engine n="2"><bmep type="double"/></engine>
-    <engine n="3"><bmep type="double"/></engine>
+    <engine n="0">
+      <bmep type="double">0</bmep>
+      <mp-osi type="double">0</mp-osi>
+    </engine>
+    <engine n="1">
+      <bmep type="double">0</bmep>
+      <mp-osi type="double">0</mp-osi>
+    </engine>
+    <engine n="2">
+      <bmep type="double">0</bmep>
+      <mp-osi type="double">0</mp-osi>
+    </engine>
+    <engine n="3">
+      <bmep type="double">0</bmep>
+      <mp-osi type="double">0</mp-osi>
+    </engine>
   </engines>
 
   <fdm>
@@ -119,14 +131,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <aircraft_dual_control>
       <file>Nasal/L1049h-dual-control.nas</file>
     </aircraft_dual_control>
-    <dual_control>
-      <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
-    </dual_control>
   </nasal>
 
   <sim include="Systems/Lockheed1049h-views.xml">
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
-    <aircraft-version>2.0.2</aircraft-version>
+    <aircraft-version>2.0.3</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 

@@ -83,11 +83,6 @@ var gear_cmd          = ["gear/gear[0]/position-norm",
 
 var door_cmd          = "controls/door-crew/position-norm";
 
-# FlightRalleyWatch
-var frw_cmd           = ["instrumentation/frw/flight-time/hours", 
-                         "instrumentation/frw/flight-time/minutes", 
-                         "instrumentation/frw/flight-time/seconds"];
-
 # Other controls
 var comm_cmd          = ["instrumentation/comm/frequencies/selected-mhz", 
                          "instrumentation/comm/frequencies/standby-mhz",
@@ -202,10 +197,6 @@ var pilot_connect_copilot = func (copilot) {
           props.globals.getNode(nav_cmd[1]),
           props.globals.getNode(nav_cmd[2]),
           props.globals.getNode(nav_cmd[3]),
-          props.globals.getNode(nav_cmd[4]),
-          props.globals.getNode(nav_cmd[5]),
-          props.globals.getNode(nav_cmd[6]),
-          props.globals.getNode(nav_cmd[7]),
           props.globals.getNode(comm_cmd[0]),
           props.globals.getNode(comm_cmd[1]),
           props.globals.getNode(comm_cmd[2]),
@@ -224,7 +215,6 @@ var pilot_connect_copilot = func (copilot) {
           props.globals.getNode(instr_cmd[7]),
           props.globals.getNode(instr_cmd[8]),
           props.globals.getNode(instr_cmd[9]),
-          props.globals.getNode(instr_cmd[10])
          ], props.globals.getNode(TDM_mpp1)),      
       DCT.TDMEncoder.new
         ([
@@ -255,9 +245,6 @@ var pilot_connect_copilot = func (copilot) {
           props.globals.getNode(bmep_cmd[5]),
           props.globals.getNode(bmep_cmd[6]),
           props.globals.getNode(bmep_cmd[7]),
-          props.globals.getNode(frw_cmd[0]),
-          props.globals.getNode(frw_cmd[1]),
-          props.globals.getNode(frw_cmd[2]),
           props.globals.getNode(agl_cmd[0]),
           props.globals.getNode(agl_cmd[1])
          ], props.globals.getNode(TDM_mpp2)),
@@ -367,10 +354,6 @@ var copilot_connect_pilot = func (pilot) {
          func(v){pilot.getNode(nav_cmd[1], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~nav_cmd[1], 1).setValue(v);},
          func(v){pilot.getNode(nav_cmd[2], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~nav_cmd[2], 1).setValue(v);},
          func(v){pilot.getNode(nav_cmd[3], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~nav_cmd[3], 1).setValue(v);},
-         func(v){pilot.getNode(nav_cmd[4], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~nav_cmd[4], 1).setValue(v);},
-         func(v){pilot.getNode(nav_cmd[5], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~nav_cmd[5], 1).setValue(v);},
-         func(v){pilot.getNode(nav_cmd[6], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~nav_cmd[6], 1).setValue(v);},
-         func(v){pilot.getNode(nav_cmd[7], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~nav_cmd[7], 1).setValue(v);},
          func(v){pilot.getNode(comm_cmd[0], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~comm_cmd[0], 1).setValue(v);},
          func(v){pilot.getNode(comm_cmd[1], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~comm_cmd[1], 1).setValue(v);},
          func(v){pilot.getNode(comm_cmd[2], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~comm_cmd[2], 1).setValue(v);},
@@ -389,7 +372,6 @@ var copilot_connect_pilot = func (pilot) {
          func(v){pilot.getNode(instr_cmd[7], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~instr_cmd[7], 1).setValue(v);},
          func(v){pilot.getNode(instr_cmd[8], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~instr_cmd[8], 1).setValue(v);},
          func(v){pilot.getNode(instr_cmd[9], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~instr_cmd[9], 1).setValue(v);},
-         func(v){pilot.getNode(instr_cmd[10], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~instr_cmd[10], 1).setValue(v);},
         ]),
 
       DCT.TDMDecoder.new
@@ -421,9 +403,6 @@ var copilot_connect_pilot = func (pilot) {
          func(v){pilot.getNode(bmep_cmd[5], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~bmep_cmd[5], 1).setValue(v);},
          func(v){pilot.getNode(bmep_cmd[6], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~bmep_cmd[6], 1).setValue(v);},
          func(v){pilot.getNode(bmep_cmd[7], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~bmep_cmd[7], 1).setValue(v);},
-         func(v){pilot.getNode(frw_cmd[0], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~frw_cmd[0], 1).setValue(v);},
-         func(v){pilot.getNode(frw_cmd[1], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~frw_cmd[1], 1).setValue(v);},
-         func(v){pilot.getNode(frw_cmd[2], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~frw_cmd[2], 1).setValue(v);},
          func(v){pilot.getNode(agl_cmd[0], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~agl_cmd[0], 1).setValue(v);},
          func(v){pilot.getNode(agl_cmd[1], 1).setValue(v); props.globals.getNode("dual-control/pilot/"~agl_cmd[1], 1).setValue(v);},
         ]),
@@ -464,12 +443,6 @@ var copilot_connect_pilot = func (pilot) {
          func(b){props.globals.getNode(ap_switch[0]).setValue(b);},
          func(b){props.globals.getNode(ap_switch[1]).setValue(b);},
          func(b){props.globals.getNode(ap_switch[2]).setValue(b);},
-         func(b){props.globals.getNode(ap_switch[3]).setValue(b);},
-         func(b){props.globals.getNode(ap_switch[4]).setValue(b);},
-         func(b){props.globals.getNode(ap_switch[5]).setValue(b);},
-         func(b){props.globals.getNode(ap_switch[6]).setValue(b);},
-         func(b){props.globals.getNode(ap_switch[7]).setValue(b);},
-         func(b){props.globals.getNode(ap_switch[8]).setValue(b);},
          func(b){props.globals.getNode(reverser_allow).setValue(b);},
          func(b){props.globals.getNode(brake_parking).setValue(b);},
         ]),
@@ -562,9 +535,6 @@ var copilot_connect_pilot = func (pilot) {
       DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~bmep_cmd[5], 1), props.globals.getNode(bmep_cmd[5]), props.globals.getNode(bmep_cmd[5]), 0.01),
       DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~bmep_cmd[6], 1), props.globals.getNode(bmep_cmd[6]), props.globals.getNode(bmep_cmd[6]), 0.01),
       DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~bmep_cmd[7], 1), props.globals.getNode(bmep_cmd[7]), props.globals.getNode(bmep_cmd[7]), 0.01),
-      DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~frw_cmd[0], 1), props.globals.getNode(frw_cmd[0]), props.globals.getNode(frw_cmd[0]), 0.01),
-      DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~frw_cmd[1], 1), props.globals.getNode(frw_cmd[1]), props.globals.getNode(frw_cmd[1]), 0.01),
-      DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~frw_cmd[2], 1), props.globals.getNode(frw_cmd[2]), props.globals.getNode(frw_cmd[2]), 0.01),
       DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~agl_cmd[0], 1), props.globals.getNode(agl_cmd[0]), props.globals.getNode(agl_cmd[0]), 0.01),
       DCT.MostRecentSelector.new(props.globals.getNode("dual-control/pilot/"~agl_cmd[1], 1), props.globals.getNode(agl_cmd[1]), props.globals.getNode(agl_cmd[1]), 0.01),
       # TDM_mpp3
