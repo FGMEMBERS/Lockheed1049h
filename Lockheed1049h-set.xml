@@ -29,6 +29,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <Lockheed1049h>
       <file n="100">Nasal/mk-crashed.nas</file>
     </Lockheed1049h>
+    <dual_control>
+      <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
+    </dual_control>
   </nasal>
 
   <sim include="Systems/Lockheed1049h-views.xml">
