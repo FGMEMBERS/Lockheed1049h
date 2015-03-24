@@ -153,6 +153,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <checklist include="Checklists/parking.xml"/>
     </checklists>
 
+    <!-- Required for parkpos=AVAILABLE option -->
+    <aircraft-class>gate</aircraft-class>
+    <aircraft-operator></aircraft-operator>
+    <dimensions>
+      <radius-m type="float">19.24</radius-m>
+      <parkpos-offset type="float">0.0</parkpos-offset>
+    </dimensions>
+
     <flaps>
       <setting>0.0</setting>
       <setting>0.25</setting>	<!-- 60% takeoff -->
