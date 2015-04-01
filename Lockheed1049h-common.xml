@@ -133,6 +133,106 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </aircraft_dual_control>
   </nasal>
 
+  <payload>
+    <!-- The weight elements must match the pointmass elements in the JSBSim file -->
+    <weight>
+      <name type="string">Main Cabin A</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">2900</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin B</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">7200</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin C</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">5400</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin D</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6100</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin E</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6100</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin F</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[8]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6300</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin G</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[9]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6100</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin H</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[10]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6100</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin I</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[11]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6100</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin J</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[12]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6100</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin K</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[13]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">7700</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Main Cabin L</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[14]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">3400</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Lower Cargo Hold A</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[15]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">2800</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Lower Cargo Hold B</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[16]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">5040</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Lower Cargo Hold C</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[17]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">5950</max-lb>
+    </weight>
+    <weight>
+      <name type="string">Lower Cargo Hold D</name>
+      <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[18]"/>
+      <min-lb type="double">0</min-lb>
+      <max-lb type="double">6370</max-lb>
+    </weight>
+  </payload>
+
   <sim include="Systems/Lockheed1049h-views.xml">
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
     <aircraft-version>2.0.3</aircraft-version>
