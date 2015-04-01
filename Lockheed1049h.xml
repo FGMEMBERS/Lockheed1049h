@@ -149,6 +149,158 @@ K:             0.039
       <y> 0 </y>
       <z> -34.1 </z>
     </location>
+    <pointmass name="Pilot">
+      <weight unit="LBS">180</weight>
+      <location unit="IN">
+	<x>190</x>
+	<y>-40</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Copilot">
+      <weight unit="LBS">180</weight>
+      <location unit="IN">
+	<x>190</x>
+	<y>40</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Flight Engineer">
+      <weight unit="LBS">180</weight>
+      <location unit="IN">
+	<x>226</x>
+	<y>40</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin A">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>300</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin B">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>392</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin C">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>477</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin D">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>546</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin E">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>620</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin F">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>694</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin G">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>842</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin H">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>842</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin I">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>916</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin J">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>989</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin K">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>1089</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Main Cabin L">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>1198</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Lower Cargo Hold A">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>402</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Lower Cargo Hold B">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>558</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Lower Cargo Hold C">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>821</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
+    <pointmass name="Lower Cargo Hold D">
+      <weight unit="LBS">0</weight>
+      <location unit="IN">
+	<x>1004</x>
+	<y>0</y>
+	<z>0</z>
+      </location>
+    </pointmass>
   </mass_balance>
 
   <ground_reactions>
@@ -417,7 +569,7 @@ K:             0.039
 
     <tank type="FUEL">    <!-- Tank 1, index 4 --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 689  </x>
         <y> -280 </y>
         <z> -34.08 </z>
       </location>
@@ -426,7 +578,7 @@ K:             0.039
     </tank>
     <tank type="FUEL">    <!-- Tank 2, index 5 --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 692 </x>
         <y> -100 </y>
         <z> -50 </z>
       </location>
@@ -435,7 +587,7 @@ K:             0.039
     </tank>
     <tank type="FUEL">    <!-- Tank 3, index 6 --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 692 </x>
         <y> 100 </y>
         <z> -50 </z>
       </location>
@@ -444,7 +596,7 @@ K:             0.039
     </tank>
     <tank type="FUEL">    <!-- Tank 4, index 7 --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 689 </x>
         <y> 280 </y>
         <z> -34.08 </z>
       </location>
@@ -454,7 +606,7 @@ K:             0.039
 
     <tank type="FUEL">    <!-- Tank 5, index 8 --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 694 </x>
         <y> 0 </y>
         <z> -90 </z>
       </location>
@@ -464,7 +616,7 @@ K:             0.039
 
     <tank type="FUEL">    <!-- Tank 1A, index 9 (not used) --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 688 </x>
         <y> -740.7 </y>
         <z> -34.08 </z>
       </location>
@@ -473,7 +625,7 @@ K:             0.039
     </tank>
     <tank type="FUEL">    <!-- Tank 2A, index 10 --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 687 </x>
         <y> -450 </y>
         <z> -34.08 </z>
       </location>
@@ -482,7 +634,7 @@ K:             0.039
     </tank>
     <tank type="FUEL">    <!-- Tank 3A, index 11 --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 687 </x>
         <y> 450 </y>
         <z> -34.08 </z>
       </location>
@@ -491,7 +643,7 @@ K:             0.039
     </tank>
     <tank type="FUEL">    <!-- Tank 4A, index 12 (not used) --> 
       <location unit="IN">
-        <x> 681.6 </x>
+        <x> 688 </x>
         <y> 740.7 </y>
         <z> -34.08 </z>
       </location>

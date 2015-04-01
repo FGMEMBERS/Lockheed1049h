@@ -160,6 +160,10 @@ Maximum cylinder head temperature: 270 degC, 550 degF
 
 ________________________ Weight limits _____________________
 See Equipment > Fuel and payload.
+The center of gravity must lie within the following limits:
+
+At 137500 lbs: between 671.3 and 685.2 inches aft of the nose
+At  90000 lbs: between 660.5 and 685.2 inches aft of the nose
   </text>
 
 </PropertyList>
