@@ -101,7 +101,8 @@
 
   <!-- see my cockpit in darkness --> 
   <animation>
-    <type>material</type>   
+    <type>material</type>
+    <object-name>PanelMain</object-name>
     <object-name>Panel.OH.Radio</object-name> 
     <object-name>FlightDeck</object-name> 
     <object-name>FlightDeckA</object-name> 
