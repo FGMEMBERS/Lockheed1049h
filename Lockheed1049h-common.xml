@@ -235,7 +235,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <sim include="Systems/Lockheed1049h-views.xml">
     <allow-toggle-cockpit>true</allow-toggle-cockpit>
-    <aircraft-version>2.0.3</aircraft-version>
+
+    <aircraft-data>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[3]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[4]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[5]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[6]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[7]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[8]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[9]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[10]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[11]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[12]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[13]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[14]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[15]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[16]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[17]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[18]</path>
+      <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
+    </aircraft-data>
+    
+    <aircraft-version>2.0.4</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
