@@ -60,6 +60,10 @@
     <name>Delete</name>
     <desc>Engage/Disengage Prop Reverse</desc>
   </key>
+  <key>
+    <name>Ctrl+Z</name>
+    <desc>Toggle autopilot on/off</desc>
+  </key>
 
   <!-- FDM ops -->
 
