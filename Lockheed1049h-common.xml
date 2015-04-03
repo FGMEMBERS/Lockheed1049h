@@ -26,8 +26,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <autopilot>
     <settings>
+      <target-bank-deg>0</target-bank-deg>
       <target-speed-kt type="double">223</target-speed-kt>
-      <target-pitch-deg type="double">0</target-pitch-deg>
+      <target-pitch-deg type="double">4.0</target-pitch-deg>
       <target-altitude-ft type="double">0</target-altitude-ft>
       <vertical-speed-fpm type="double">0</vertical-speed-fpm>
       <heading-bug-deg type="double">0</heading-bug-deg>
@@ -121,7 +122,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <file>Nasal/Lockheed1049h-electrical.nas</file>
       <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
       <file>Nasal/Lockheed1049h-seats.nas</file>
-      <file>Nasal/mk-ap-helper.nas</file>
+      <file>Nasal/Lockheed1049h-autopilot.nas</file>
       <file>Nasal/mk-wiper.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>
@@ -368,6 +369,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </startup>
 
     <systems>
+      <autopilot>
+        <path>Aircraft/Lockheed1049h/Systems/Lockheed1049h-autopilot.xml</path>
+      </autopilot>
       <electrical>
         <path>Aircraft/Generic/generic-electrical.xml</path>
       </electrical>

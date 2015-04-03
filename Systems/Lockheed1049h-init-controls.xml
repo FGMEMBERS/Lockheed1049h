@@ -7,6 +7,7 @@
     <autopilot>
       <engaged type="bool">false</engaged>
     </autopilot>
+    <bank-angle-select>20</bank-angle-select>
   </autoflight>
 
   <door-crew-copilot>
