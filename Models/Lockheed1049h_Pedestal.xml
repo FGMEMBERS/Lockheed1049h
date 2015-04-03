@@ -890,7 +890,7 @@
       <binding>
         <command>property-adjust</command>
         <property>autopilot/settings/target-pitch-deg</property>
-        <factor>0.5</factor>
+        <factor>0.1</factor>
         <min>-20</min>
         <max>20</max>
         <wrap>0</wrap>
@@ -902,9 +902,9 @@
   <animation>
     <type>knob</type>
     <object-name>APKnobHdg</object-name>
-    <property>autopilot/internal/heading-bug-error-deg</property>
-    <offset-deg>93</offset-deg> <!-- because the arrow on the knob is not straight -->
-    <factor>1</factor>
+    <property>autopilot/settings/target-bank-deg</property>
+    <offset-deg>0</offset-deg>
+    <factor>4.5</factor>
     <axis>
       <x1-m>-15.226</x1-m>
       <y1-m>0.0727</y1-m>
@@ -916,11 +916,11 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>autopilot/settings/heading-bug-deg</property>
-        <factor>1</factor>
-        <min>0</min>
-        <max>360</max>
-        <wrap>true</wrap>
+        <property>autopilot/settings/target-bank-deg</property>
+        <factor>5</factor>
+        <min>-30</min>
+        <max>30</max>
+        <wrap>false</wrap>
       </binding>
     </action>
   </animation>
@@ -929,11 +929,12 @@
   <animation>
     <type>knob</type>
     <object-name>KnobPedFP</object-name>
-    <property>controls/special/flightpath-switch</property>
+    <property>autopilot/settings/flight-path</property>
     <interpolation>
-      <entry><ind>0</ind><dep>   5</dep></entry>  <!-- AP selection off -->
-      <entry><ind>1</ind><dep> 315</dep></entry>  <!-- AP selection on VHF VOR/NDB or ILS -->
-      <entry><ind>2</ind><dep> 260</dep></entry>  <!-- AP selection on ILS and Glidepath -->
+      <entry><ind>0</ind><dep>   5</dep></entry>  <!-- OFF (Bank Select) -->
+      <entry><ind>1</ind><dep> 330</dep></entry>  <!-- VHF VOR/NDB -->
+      <entry><ind>2</ind><dep> 295</dep></entry>  <!-- Localizer -->
+      <entry><ind>3</ind><dep> 260</dep></entry>  <!-- Localizer and GS -->
     </interpolation>
     <center>
       <x-m>-15.3567</x-m>
@@ -948,10 +949,10 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/special/flightpath-switch</property>
+        <property>autopilot/settings/flight-path</property>
         <factor>1</factor>
         <min>0</min>
-        <max>2</max>
+        <max>3</max>
         <wrap>0</wrap>
       </binding>
     </action>

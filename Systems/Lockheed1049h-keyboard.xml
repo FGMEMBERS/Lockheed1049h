@@ -19,6 +19,15 @@
     </binding>
   </key>
 
+  <key n="26">
+    <name>Ctrl-Z</name>
+    <desc>Toggle autopilot on/off</desc>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_autopilot_on_off()</script>
+    </binding>
+  </key>
+
   <key n="61">
     <name>=</name>
     <desc>Menu</desc>

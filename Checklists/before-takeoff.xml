@@ -364,5 +364,66 @@ are indicated in the comments by an asterisk.
     </binding>
   </item>
 
+  <!-- Autopilot Settings* - TAKEOFF -->
+  <item>
+    <name>Autopilot Settings</name>
+    <value>TAKEOFF</value>
+    <marker>
+      <x-m>-15.3100</x-m>
+      <y-m>0.0700</y-m>
+      <z-m>0.7100</z-m>
+      <scale>7.4000</scale>
+    </marker>
+    <condition>
+      <and>
+        <equals>
+          <property>autopilot/switches/ap</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>autopilot/switches/alt</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>autopilot/settings/flight-path</property>
+          <value>0</value>
+        </equals>
+        <equals>
+          <property>autopilot/settings/target-bank-deg</property>
+          <value>0</value>
+        </equals>
+        <greater-than>
+          <property>autopilot/settings/target-pitch-deg</property>
+          <value>2.0</value>
+        </greater-than>
+      </and>
+    </condition>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/switches/ap</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/switches/alt</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/settings/flight-path</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/settings/target-bank-deg</property>
+      <value>0</value>
+    </binding>
+    <binding>
+      <command>property-assign</command>
+      <property>autopilot/settings/target-pitch-deg</property>
+      <value>4.0</value>
+    </binding>
+  </item>
+
 </PropertyList>
 
