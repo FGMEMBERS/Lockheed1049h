@@ -70,9 +70,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <filter>
     <name>CDI Filter (Localizer)</name>
     <debug>false</debug>
+    <enable>
       <condition>
         <property>autopilot/settings/localizer</property>
       </condition>
+    </enable>
     <input>instrumentation/nav[0]/heading-needle-deflection</input>
     <output>autopilot/internal/filtered-nav-heading-needle-deflection</output>
     <type>noise-spike</type>

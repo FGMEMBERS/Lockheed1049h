@@ -257,7 +257,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
     
-    <aircraft-version>2.0.4</aircraft-version>
+    <aircraft-version>2.1</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
@@ -350,7 +350,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <rating>
       <FDM type="int">4</FDM>
-      <systems type="int">5</systems>
+      <systems type="int">3</systems>
       <cockpit type="int">4</cockpit>
       <model type="int">4</model>
     </rating>
@@ -370,7 +370,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <systems>
       <autopilot>
-        <path>Aircraft/Lockheed1049h/Systems/Lockheed1049h-autopilot.xml</path>
+        <path>Systems/Lockheed1049h-autopilot.xml</path>
       </autopilot>
       <electrical>
         <path>Aircraft/Generic/generic-electrical.xml</path>
