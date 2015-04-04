@@ -5,16 +5,250 @@
   <modal>false</modal>
   <layout>vbox</layout>
 
-  <text>
-    <label>Constellation menu</label>
-  </text>
-
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>1</stretch></empty>
+    <text>
+      <label>Preferences</label>
+    </text>
+    <empty><stretch>1</stretch></empty>
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend></legend>
+      <default>1</default>
+      <keynum>27</keynum>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+    </button>
+  </group>
   <hrule><dummy/></hrule>
 
   <group>
     <layout>hbox</layout>
-    <empty><stretch>true</stretch></empty>
+    <default-padding>5</default-padding>
+    <group>
+      <layout>vbox</layout>
+      <default-padding>5</default-padding>
+        <text>
+          <halign>left</halign>
+          <label>DOORS</label>
+        </text>
+      <group>
+        <layout>hbox</layout>
+        <default-padding>5</default-padding>
+        <text>
+          <halign>left</halign>
+          <label>Crew Door Open</label>
+        </text>
+        <checkbox>
+          <halign>right</halign>
+          <property>controls/door-crew/position-norm</property>
+          <binding>
+            <command>nasal</command>
+            <script>Lockheed1049h.door_crew.toggle()</script>
+          </binding>
+        </checkbox>
+      </group>
+    </group>
+  </group>
+  <hrule><dummy/></hrule>
 
+  <group>
+    <layout>hbox</layout>
+    <default-padding>5</default-padding>
+    <group>
+      <layout>vbox</layout>
+      <default-padding>5</default-padding>
+        <text>
+          <halign>left</halign>
+          <label>LIGHTS</label>
+        </text>
+      <group>
+        <layout>hbox</layout>
+        <default-padding>5</default-padding>
+        <text>
+          <halign>left</halign>
+          <label>Light Cones</label>
+        </text>
+        <checkbox>
+          <halign>right</halign>
+          <property>controls/lighting/light-cones</property>
+          <binding>
+            <command>property-toggle</command>
+            <property>controls/lighting/light-cones</property>
+          </binding>
+        </checkbox>
+      </group>
+    </group>
+  </group>
+  <hrule><dummy/></hrule>
+
+  <group>
+    <layout>hbox</layout>
+    <default-padding>5</default-padding>
+    <group>
+      <layout>vbox</layout>
+      <default-padding>5</default-padding>
+      <text>
+        <halign>left</halign>
+        <label>SEAT AND VIEW POSITION</label>
+      </text>
+      <group>
+        <layout>vbox</layout>
+        <default-padding>0</default-padding>
+        <group>
+          <layout>hbox</layout>
+          <default-padding>5</default-padding>
+          <text>
+            <halign>left</halign>
+            <label>Seat Down-Up</label>
+          </text>
+          <slider>
+            <halign>right</halign>
+            <property>sim/current-view/y-offset-m</property>
+            <binding>
+              <condition>
+                <equals>
+                  <property>sim/current-view/view-number</property>
+                  <value>0</value>
+                </equals>
+              </condition>
+              <command>dialog-apply</command>
+            </binding>
+            <binding>
+              <condition>
+                <equals>
+                  <property>sim/current-view/view-number</property>
+                  <value>0</value>
+                </equals>
+              </condition>
+              <command>nasal</command>
+              <script>Lockheed1049h.seat_pilot_update();</script>
+            </binding>
+            <min>1.14</min>
+            <max>1.34</max>
+          </slider>
+        </group>
+        <group>
+          <layout>vbox</layout>
+          <default-padding>0</default-padding>
+          <group>
+            <layout>hbox</layout>
+            <default-padding>5</default-padding>
+            <text>
+              <halign>left</halign>
+              <label>Seat Forward-Back</label>
+            </text>
+            <slider>
+              <halign>right</halign>
+              <property>sim/current-view/z-offset-m</property>
+              <binding>
+                <condition>
+                  <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>0</value>
+                  </equals>
+                </condition>
+                <command>dialog-apply</command>
+              </binding>
+              <binding>
+                <condition>
+                  <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>0</value>
+                  </equals>
+                </condition>
+                <command>nasal</command>
+                <script>Lockheed1049h.seat_pilot_update();</script>
+              </binding>
+              <min>2.79</min>
+              <max>2.99</max>
+            </slider>
+          </group>
+        </group>
+        <group>
+          <layout>vbox</layout>
+          <default-padding>0</default-padding>
+          <group>
+            <layout>hbox</layout>
+            <default-padding>5</default-padding>
+            <text>
+              <halign>left</halign>
+              <label>View Look Down-Up</label>
+            </text>
+            <slider>
+              <halign>right</halign>
+              <property>sim/current-view/pitch-offset-deg</property>
+              <binding>
+                <condition>
+                  <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>0</value>
+                  </equals>
+                </condition>
+                <command>dialog-apply</command>
+              </binding>
+              <binding>
+                <condition>
+                  <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>0</value>
+                  </equals>
+                </condition>
+                <command>nasal</command>
+                <script>Lockheed1049h.seat_pilot_update();</script>
+              </binding>
+              <min>-15</min>
+              <max>0</max>
+            </slider>
+          </group>
+        </group>
+        <group>
+          <layout>vbox</layout>
+          <default-padding>5</default-padding>
+          <button>
+            <legend>Reset to defaults</legend>
+            <halign>right</halign>
+            <binding>
+              <condition>
+                <equals>
+                  <property>sim/current-view/view-number</property>
+                  <value>0</value>
+                </equals>
+              </condition>
+              <command>nasal</command>
+              <script>Lockheed1049h.seat_pilot_defaults();</script>
+            </binding>
+            <binding>
+              <command>dialog-update</command>
+            </binding>
+          </button>
+        </group>
+      </group>
+    </group>
+  </group>
+  <hrule><dummy/></hrule>
+
+  <group>
+    <layout>hbox</layout>
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <padding>5</padding>
+      <binding>
+        <command>dialog-apply</command>
+      </binding>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
     <button>
       <legend>Help</legend>
       <key>h</key>
@@ -26,253 +260,8 @@
         <command>dialog-close</command>
       </binding>
     </button>
-
-    <empty><stretch>true</stretch></empty>
   </group>
 
-  <text>
-    <label></label>
-  </text>
-
-  <group>
-    <layout>hbox</layout>
-    <text>
-      <halign>left</halign>
-      <label>  Crew Door, check to open:</label>
-    </text>
-    <checkbox>
-      <property>controls/door-crew/position-norm</property>
-      <binding>
-        <command>nasal</command>
-        <script>Lockheed1049h.door_crew.toggle()</script>
-      </binding>
-    </checkbox>
-  </group>
-
-  <text>
-    <label></label>
-  </text>
-
-  <group>
-    <layout>hbox</layout>
-    <text>
-      <label>Preset Tank Levels: </label>
-      <halign>left</halign>
-    </text>
-    <combo>
-      <pref-width>200</pref-width>
-      <property>systems/fuel/tanks/dialog-preset</property>
-      <value>casual flying</value>
-      <value>max landing</value>
-      <value>max takeoff</value>
-      <value>empty</value>
-    </combo>
-  </group>
-
-  <group>
-    <layout>hbox</layout>
-    <empty><stretch>true</stretch></empty>
-
-    <button>
-      <legend>Apply Selection</legend>
-      <binding>
-        <command>dialog-apply</command>
-      </binding>
-      <binding>
-        <command>nasal</command>
-        <script>Lockheed1049h.preset_select();</script>
-      </binding>
-      <binding>
-        <command>dialog-close</command>
-      </binding>
-    </button>
-
-    <empty><stretch>true</stretch></empty>
-  </group>
-
-  <text>
-    <label></label>
-  </text>
-
-
-
-  <text>
-    <halign>left</halign>
-    <label>  Captain's Seat and View Preferences:</label>
-  </text>
-  
-  <group>
-    <layout>table</layout>
-    
-    <empty>
-      <row>0</row>
-      <col>0</col>
-      <pref-width>10</pref-width>
-    </empty>
-    
-    <text>
-      <row>0</row>
-      <col>1</col>
-      <halign>left</halign>
-      <label>Seat: Down-Up</label>
-    </text>
-    
-    <slider>
-      <row>0</row>
-      <col>2</col>
-      <property>sim/current-view/y-offset-m</property>
-      <binding>
-        <condition>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>0</value>
-          </equals>
-        </condition>
-        <command>dialog-apply</command>
-      </binding>
-      <binding>
-        <condition>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>0</value>
-          </equals>
-        </condition>
-        <command>nasal</command>
-        <script>Lockheed1049h.seat_pilot_update();</script>
-      </binding>
-      <min>1.14</min>
-      <max>1.34</max>
-    </slider>
-    
-    <empty>
-      <row>1</row>
-      <col>0</col>
-      <pref-width>10</pref-width>
-    </empty>
-    
-    <text>
-      <row>1</row>
-      <col>1</col>
-      <halign>left</halign>
-      <label>Seat: Forward-Back</label>
-    </text>
-    
-    <slider>
-      <row>1</row>
-      <col>2</col>
-      <property>sim/current-view/z-offset-m</property>
-      <binding>
-        <condition>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>0</value>
-          </equals>
-        </condition>
-        <command>dialog-apply</command>
-      </binding>
-      <binding>
-        <condition>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>0</value>
-          </equals>
-        </condition>
-        <command>nasal</command>
-        <script>Lockheed1049h.seat_pilot_update();</script>
-      </binding>
-      <min>2.79</min>
-      <max>2.99</max>
-    </slider>
-    
-
-    <empty>
-      <row>2</row>
-      <col>0</col>
-      <pref-width>10</pref-width>
-    </empty>
-    
-    <text>
-      <row>2</row>
-      <col>1</col>
-      <halign>left</halign>
-      <label>View: Look Down-Up</label>
-    </text>
-    
-    <slider>
-      <row>2</row>
-      <col>2</col>
-      <property>sim/current-view/pitch-offset-deg</property>
-      <binding>
-        <condition>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>0</value>
-          </equals>
-        </condition>
-        <command>dialog-apply</command>
-      </binding>
-      <binding>
-        <condition>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>0</value>
-          </equals>
-        </condition>
-        <command>nasal</command>
-        <script>Lockheed1049h.seat_pilot_update();</script>
-      </binding>
-      <min>-15</min>
-      <max>0</max>
-    </slider>
-    
-  </group>
-
-  <group>
-    <layout>hbox</layout>
-    <empty><stretch>true</stretch></empty>
-
-    <button>
-      <legend>Reset to Defaults</legend>
-      <binding>
-        <condition>
-          <equals>
-            <property>sim/current-view/view-number</property>
-            <value>0</value>
-          </equals>
-        </condition>
-        <command>nasal</command>
-        <script>Lockheed1049h.seat_pilot_defaults();</script>
-      </binding>
-      <binding>
-        <command>dialog-update</command>
-      </binding>
-    </button>
-
-    <empty><stretch>true</stretch></empty>
-  </group>
-
-
-  <text>
-    <label></label>
-  </text>
-
-  <text>
-    <label>Fuel and seat settings saved on Flightgear exit.</label>
-  </text>
-
-  <group>
-    <layout>hbox</layout>
-    <empty><stretch>true</stretch></empty>
-
-    <button>
-      <legend>Close</legend>
-      <default>true</default>
-      <key>Esc</key>
-      <binding>
-        <command>dialog-close</command>
-      </binding>
-    </button>
-
-    <empty><stretch>true</stretch></empty>
-  </group>
 </PropertyList>
+
+
