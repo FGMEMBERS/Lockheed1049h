@@ -29,6 +29,8 @@ LockheedMain.savedata = func {
   aircraft.data.add("/systems/seat/presets/z-offset-m");	# User's pilot seat view selections
   aircraft.data.add("/systems/seat/presets/y-offset-m");
   aircraft.data.add("/systems/seat/presets/pitch-offset-deg");
+  aircraft.data.add("/controls/lighting/light-cones");
+  aircraft.data.add("/controls/lighting/light-cones");
   aircraft.data.add("/systems/fuel/tanks/request-fuel-lbs");
   #aircraft.data.add("/sim/current-view/z-offset-m");
   #aircraft.data.add("/sim/current-view/y-offset-m");

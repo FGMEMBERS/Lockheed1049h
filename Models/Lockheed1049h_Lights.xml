@@ -125,6 +125,7 @@ the ability to take the properties relative to their root.
 	</not>
 	<property>sim/multiplay/generic/int[2]</property>
 	<property>gear/gear[0]/position-norm</property>
+	<property>controls/lighting/light-cones</property>
       </and>
     </condition>
   </animation>
