@@ -121,6 +121,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <file>Nasal/Lockheed1049h-engines.nas</file>
       <file>Nasal/Lockheed1049h-electrical.nas</file>
       <file>Nasal/Lockheed1049h-instrumentation_drivers.nas</file>
+      <file>Nasal/Lockheed1049h-refuel.nas</file>
       <file>Nasal/Lockheed1049h-seats.nas</file>
       <file>Nasal/Lockheed1049h-autopilot.nas</file>
       <file>Nasal/mk-wiper.nas</file>
