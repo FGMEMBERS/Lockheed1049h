@@ -236,8 +236,11 @@ var tank_status = func(tank_index,request_lbs) {
 # Fuel preset functions:
 #
 
-									# This function is called when user chooses a
-									# fuel preset from the 1049H dialog menu:
+# This hash must match the indexes in Lockheed1049h-fuel-presets.xml
+var Preset = {CASUAL: 0, MANAGED: 1, MLW: 2, MTOW: 3, MANUAL: 4};
+
+# This function is called when user chooses a fuel preset
+# from the 1049H refuelling menu:
 var preset_select = func {
   value = getprop("/systems/fuel/tanks/dialog-preset");			# Get name of preset selected via dialog
 									# Look for preset that matches selection
@@ -289,7 +292,18 @@ var preset_load = func(preset_index) {
     var valve = preset_xfeeds[i].getChild("valve");
     if(valve != nil) { set_xfeed_valve(i,valve.getValue()) }		# Set tank valve to preset
     else	     { set_xfeed_valve(i,0) }				# Preset had no value, defaults to off
-  } 
+  }
+
+  # Some presets use Lockheed1049h-refuel.nas to calculate quantities
+  if (preset_index == Preset.MLW) {
+      request_fuel_quantity_mlw();
+  } elsif (preset_index == Preset.MTOW) {
+      request_fuel_quantity_mtow();
+  } elsif (preset_index == Preset.MANUAL) {
+      var lbs = getprop("systems/fuel/tanks/request-fuel-lbs");
+      request_fuel_quantity_lbs(lbs);
+  }
+
 }
 
 ##################################### jettison the tanks #################################################
