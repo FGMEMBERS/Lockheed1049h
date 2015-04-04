@@ -68,6 +68,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
               </script>
             </binding>
           </item>
+          <item>
+            <label>Refuelling</label>
+            <binding>
+              <command>nasal</command>
+              <script><![CDATA[
+                var node = "sim/gui/dialogs/refuel/dialog";
+                var path = "Dialogs/Lockheed1049h-refuel.xml";
+                gui.Dialog.new(node, path).open();
+              ]]></script>
+            </binding>
+          </item>
         </menu>
       </default>
     </menubar>
