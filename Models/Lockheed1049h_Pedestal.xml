@@ -917,7 +917,7 @@
       <binding>
         <command>property-adjust</command>
         <property>autopilot/settings/target-bank-deg</property>
-        <factor>5</factor>
+        <factor>1</factor>
         <min>-30</min>
         <max>30</max>
         <wrap>false</wrap>
