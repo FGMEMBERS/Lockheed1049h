@@ -734,6 +734,19 @@
   <!-- Yokes -->
 
   <animation>
+    <type>select</type>
+    <object-name>YokeColumnP</object-name>
+    <object-name>YokeP</object-name>
+    <object-name>YokeColumnCP</object-name>
+    <object-name>YokeCP</object-name>
+    <condition>
+      <not>
+        <property>sim/model/options/hide-yokes</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>YokeColumnP</object-name>
     <object-name>YokeP</object-name>

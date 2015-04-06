@@ -5,6 +5,15 @@
   <path>compass_mdi_with_hdg.ac</path>
 
   <animation>
+    <type>select</type>
+    <object-name>MDI.KnobHdg</object-name>
+    <object-name>MDI.HdgBug</object-name>
+    <condition>
+      <property>sim/model/options/show-heading-bug</property>
+    </condition>
+  </animation>
+
+  <animation>
     <type>material</type>
     <object-name>MDI.KnobHdg</object-name>
     <emission>

@@ -31,10 +31,10 @@
 
   <group>
     <layout>hbox</layout>
-    <default-padding>5</default-padding>
+    <default-padding>10</default-padding>
     <group>
       <layout>vbox</layout>
-      <default-padding>5</default-padding>
+      <default-padding>1</default-padding>
         <text>
           <halign>left</halign>
           <label>DOORS</label>
@@ -61,27 +61,75 @@
 
   <group>
     <layout>hbox</layout>
-    <default-padding>5</default-padding>
+    <default-padding>10</default-padding>
     <group>
       <layout>vbox</layout>
-      <default-padding>5</default-padding>
-        <text>
-          <halign>left</halign>
-          <label>LIGHTS</label>
-        </text>
+      <default-padding>1</default-padding>
+      <text>
+        <halign>left</halign>
+        <label>EQUIPMENT</label>
+      </text>
       <group>
         <layout>hbox</layout>
         <default-padding>5</default-padding>
         <text>
           <halign>left</halign>
-          <label>Light Cones</label>
+          <label>Hide Light Cones</label>
         </text>
         <checkbox>
           <halign>right</halign>
-          <property>controls/lighting/light-cones</property>
+          <property>sim/model/options/hide-light-cones</property>
           <binding>
             <command>property-toggle</command>
-            <property>controls/lighting/light-cones</property>
+            <property>sim/model/options/hide-light-cones</property>
+          </binding>
+        </checkbox>
+      </group>
+      <group>
+        <layout>hbox</layout>
+        <default-padding>5</default-padding>
+        <text>
+          <halign>left</halign>
+          <label>Hide Yokes</label>
+        </text>
+        <checkbox>
+          <halign>right</halign>
+          <property>sim/model/options/hide-yokes</property>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/model/options/hide-yokes</property>
+          </binding>
+        </checkbox>
+      </group>
+      <group>
+        <layout>hbox</layout>
+        <default-padding>5</default-padding>
+        <text>
+          <halign>left</halign>
+          <label>Hide Dice</label>
+        </text>
+        <checkbox>
+          <halign>right</halign>
+          <property>sim/model/options/hide-dice</property>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/model/options/hide-dice</property>
+          </binding>
+        </checkbox>
+      </group>
+      <group>
+        <layout>hbox</layout>
+        <default-padding>5</default-padding>
+        <text>
+          <halign>left</halign>
+          <label>Show Heading Bug</label>
+        </text>
+        <checkbox>
+          <halign>right</halign>
+          <property>sim/model/options/show-heading-bug</property>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/model/options/show-heading-bug</property>
           </binding>
         </checkbox>
       </group>
@@ -91,10 +139,10 @@
 
   <group>
     <layout>hbox</layout>
-    <default-padding>5</default-padding>
+    <default-padding>10</default-padding>
     <group>
       <layout>vbox</layout>
-      <default-padding>5</default-padding>
+      <default-padding>1</default-padding>
       <text>
         <halign>left</halign>
         <label>SEAT AND VIEW POSITION</label>
