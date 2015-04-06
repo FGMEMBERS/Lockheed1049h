@@ -82,7 +82,6 @@
     <beacon type="bool">0</beacon>
     <cabin type="double">0</cabin>
     <chart type="double">0</chart>
-    <light-cones type="bool" archive="y">true</light-cones>
   </lighting>
 
   <switches>

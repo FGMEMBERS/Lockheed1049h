@@ -300,6 +300,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>Systems/Lockheed1049h-instrumentation.xml</path>
     </instrumentation>
 
+    <model>
+      <options>
+        <hide-dice type="bool" archive="y">false</hide-dice>
+        <hide-light-cones type="bool" archive="y">false</hide-light-cones>
+        <hide-yokes type="bool" archive="y">false</hide-yokes>
+        <show-heading-bug type="bool" archive="y">false</show-heading-bug>
+      </options>
+    </model>
+
     <!-- Initialize props for passing lighting and door settings over multiplayer -->
     <multiplay>
       <generic>

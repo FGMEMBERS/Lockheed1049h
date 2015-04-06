@@ -120,12 +120,14 @@ the ability to take the properties relative to their root.
     <object-name>Cone-texture</object-name>
     <condition>
       <and>
-	<not>
-	  <property>sim/rendering/rembrandt/enabled</property>
-	</not>
-	<property>sim/multiplay/generic/int[2]</property>
-	<property>gear/gear[0]/position-norm</property>
-	<property>controls/lighting/light-cones</property>
+        <not>
+          <property>sim/rendering/rembrandt/enabled</property>
+        </not>
+        <property>sim/multiplay/generic/int[2]</property>
+        <property>gear/gear[0]/position-norm</property>
+        <not>
+          <property>sim/model/options/hide-light-cones</property>
+        </not>
       </and>
     </condition>
   </animation>
