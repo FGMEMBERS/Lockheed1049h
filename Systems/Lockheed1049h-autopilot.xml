@@ -34,7 +34,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <name>Pitch Select Filter</name>
     <debug>false</debug>
     <type>exponential</type>
-    <filter-time>1.0</filter-time>
+    <filter-time>0.3</filter-time>
     <input>autopilot/settings/target-pitch-deg</input>
     <output>autopilot/internal/filtered-target-pitch-deg</output>
   </filter>
@@ -44,7 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <name>Bank Select Filter</name>
     <debug>false</debug>
     <type>exponential</type>
-    <filter-time>1.0</filter-time>
+    <filter-time>0.3</filter-time>
     <input>autopilot/settings/target-bank-deg</input>
     <output>autopilot/internal/filtered-target-bank-deg</output>
   </filter>
@@ -61,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </condition>
     </enable>
     <input>instrumentation/nav[0]/heading-needle-deflection</input>
-    <output>autopilot/internal/filtered-nav-heading-needle-deflection</output>
+    <output>instrumentation/nav[0]/filtered-heading-needle-deflection</output>
     <type>noise-spike</type>
     <max-rate-of-change>0.5</max-rate-of-change>
   </filter>
@@ -76,20 +76,57 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </condition>
     </enable>
     <input>instrumentation/nav[0]/heading-needle-deflection</input>
-    <output>autopilot/internal/filtered-nav-heading-needle-deflection</output>
+    <output>instrumentation/nav[0]/filtered-heading-needle-deflection</output>
     <type>noise-spike</type>
-    <max-rate-of-change>1.0</max-rate-of-change>
+    <max-rate-of-change>0.5</max-rate-of-change>
+  </filter>
+
+  <!-- Calculate the DG heading bug error  -->
+  <filter>
+    <name>DG Heading Bug Error Computer</name>
+    <debug>false</debug>
+    <type>gain</type>
+    <gain>1.0</gain>
+    <input>autopilot/settings/heading-bug-deg</input>
+    <reference>instrumentation/heading-indicator/indicated-heading-deg</reference>
+    <output>autopilot/internal/dg-heading-bug-error-deg</output>
   </filter>
 
   <!-- Calculate a NAV course error from the CDI needle deflection -->
   <pi-simple-controller>
     <name>Course Deflection Indicator Integrator</name>
     <debug>false</debug>
-    <input>autopilot/internal/filtered-nav-heading-needle-deflection</input>
+    <enable>
+      <condition>
+        <not>
+          <property>autopilot/settings/localizer</property>
+        </not>
+      </condition>
+    </enable>
+    <input>instrumentation/nav[0]/filtered-heading-needle-deflection</input>
     <output>autopilot/internal/nav-course-error-deg</output>
     <config>
       <Kp>4.5</Kp>
       <Ki>0.02</Ki>
+    </config>
+    <min>-45.0</min>
+    <max>45.0</max>
+  </pi-simple-controller>
+
+  <!-- Calculate a localizer course error from the CDI needle deflection -->
+  <pi-simple-controller>
+    <name>Course Deflection Indicator Integrator</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+        <property>autopilot/settings/localizer</property>
+      </condition>
+    </enable>
+    <input>instrumentation/nav[0]/filtered-heading-needle-deflection</input>
+    <output>autopilot/internal/nav-course-error-deg</output>
+    <config>
+      <Kp>2.25</Kp>
+      <Ki>0.01</Ki>
     </config>
     <min>-45.0</min>
     <max>45.0</max>
@@ -113,7 +150,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <type>gain</type>
     <gain>1.0</gain>
     <input>autopilot/internal/intercept-heading-deg</input>
-    <reference>orientation/heading-magnetic-deg</reference>
+    <reference>instrumentation/heading-indicator/indicated-heading-deg</reference>
     <output>autopilot/internal/nav1-intercept-error-deg</output>
   </filter>
 
@@ -150,6 +187,53 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <output>autopilot/internal/gs-captured</output>
   </flipflop>
 
+  <flipflop>
+    <name>Wing Leveler Heading Hold</name>
+    <type>SR</type>
+    <debug>false</debug>
+    <S>
+      <and>
+        <equals>
+          <property>autopilot/locks/heading</property>
+          <value>wing-leveler</value>
+        </equals>
+        <greater-than>
+          <property>autopilot/settings/target-bank-deg</property>
+          <value>-1.0</value>
+        </greater-than>
+        <less-than>
+          <property>autopilot/settings/target-bank-deg</property>
+          <value>+1.0</value>
+        </less-than>
+        <greater-than>
+          <property>orientation/roll-deg</property>
+          <value>-1.0</value>
+        </greater-than>
+        <less-than>
+          <property>orientation/roll-deg</property>
+          <value>+1.0</value>
+        </less-than>
+      </and>
+    </S>
+    <R>
+      <or>
+        <not-equals>
+          <property>autopilot/locks/heading</property>
+          <value>wing-leveler</value>
+        </not-equals>
+        <less-than-equals>
+          <property>autopilot/settings/target-bank-deg</property>
+          <value>-1.0</value>
+        </less-than-equals>
+        <greater-than-equals>
+          <property>autopilot/settings/target-bank-deg</property>
+          <value>+1.0</value>
+        </greater-than-equals>
+      </or>
+    </R>
+    <output>autopilot/internal/wing-leveler-heading-hold</output>
+  </flipflop>
+
   <filter>
     <name>Aileron Servo</name>
     <debug>false</debug>
@@ -167,7 +251,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <input>autopilot/internal/servos/aileron</input>
     <output>controls/flight/aileron</output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.25</max-rate-of-change>
+    <max-rate-of-change>0.33</max-rate-of-change>
     <min>-1.0</min>
     <max>1.0</max>
   </filter>
@@ -189,7 +273,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <input>autopilot/internal/servos/elevator-trim</input>
     <output>controls/flight/elevator-trim</output>
     <type>noise-spike</type>
-    <max-rate-of-change>0.25</max-rate-of-change>
+    <max-rate-of-change>0.33</max-rate-of-change>
     <min>-1.0</min>
     <max>1.0</max>
   </filter>
@@ -203,10 +287,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <debug>false</debug>
     <enable>
       <condition>
-        <equals>
-          <property>autopilot/locks/heading</property>
-          <value>wing-leveler</value>
-        </equals>
+        <and>
+          <equals>
+            <property>autopilot/locks/heading</property>
+            <value>wing-leveler</value>
+          </equals>
+          <not>
+            <property>autopilot/internal/wing-leveler-heading-hold</property>
+          </not>
+        </and>
       </condition>
     </enable>
     <type>gain</type>
@@ -228,15 +317,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <debug>false</debug>
     <enable>
       <condition>
-        <equals>
-          <property>autopilot/locks/heading</property>
-          <value>dg-heading-hold</value>
-        </equals>
+        <or>
+          <equals>
+            <property>autopilot/locks/heading</property>
+            <value>dg-heading-hold</value>
+          </equals>
+          <property>autopilot/internal/wing-leveler-heading-hold</property>
+        </or>
       </condition>
     </enable>
     <type>gain</type>
     <gain>2.0</gain>
-    <input>autopilot/internal/heading-bug-error-deg</input>
+    <input>autopilot/internal/dg-heading-bug-error-deg</input>
     <output>autopilot/internal/target-roll-deg</output>
     <min>
       <property>controls/autoflight/bank-angle-select</property>
@@ -447,8 +539,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <reference>autopilot/internal/target-climb-rate-fps</reference>
     <output>autopilot/internal/servos/elevator-trim</output>
     <config>
-      <Kp>-0.01</Kp>
-      <Ti>40.0</Ti>
+      <Kp>-0.015</Kp>
+      <Ti>30.0</Ti>
       <Td>0.0001</Td>
       <u_min>-1.0</u_min>
       <u_max>1.0</u_max>

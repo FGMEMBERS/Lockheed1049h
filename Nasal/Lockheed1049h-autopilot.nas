@@ -157,6 +157,11 @@ setlistener("autopilot/settings/flight-path", func(node) {
     });
 }, startup = 1, runtime = 0);
 
+setlistener("autopilot/internal/wing-leveler-heading-hold", func(node) {
+    var heading = int(getprop("instrumentation/heading-indicator/indicated-heading-deg"));
+    setprop("autopilot/settings/heading-bug-deg", heading);
+}, startup = 0, runtime = 0);
+
 # Listeners for changes through the dialog
 
 setlistener("autopilot/locks/heading", func(node) {
@@ -185,6 +190,7 @@ setlistener("/sim/signals/reinit", func(status) {
         setprop("autopilot/settings/flight-path", 0);
         setprop("autopilot/settings/target-bank-deg", 0);
         setprop("autopilot/settings/target-pitch-deg", 4.0);
+        setprop("autopilot/internal/wing-leveler-heading-hold", 0);
     } else {
         foreach(var id; _listeners) {
             logprint(3, "Removing listener ", id);
