@@ -715,16 +715,16 @@ are indicated in the comments by an asterisk.
 
   <item>
     <name>Center of Gravity</name>
-    <value>670-682 inches</value>
+    <value>671.3-685.2 inches</value>
     <condition>
       <and>
         <greater-than-equals>
           <property>fdm/jsbsim/inertia/cg-x-in</property>
-          <value>670.0</value>
+          <value>671.3</value>
         </greater-than-equals>
         <less-than-equals>
           <property>fdm/jsbsim/inertia/cg-x-in</property>
-          <value>682.0</value>
+          <value>685.2</value>
         </less-than-equals>
       </and>
     </condition>
