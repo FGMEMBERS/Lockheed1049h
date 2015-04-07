@@ -685,14 +685,55 @@ are indicated in the comments by an asterisk.
       <z-m>1.3600</z-m>
       <scale>5.8000</scale>
     </marker>
+    <binding>
+      <command>nasal</command>
+      <script><![CDATA[
+        gui.showWeightDialog();
+      ]]></script>
+    </binding>
   </item>
 
   <!-- Engine Oil Quantity - CHECK -->
 
   <!-- Gross Weight and CG - CHECK -->
   <item>
-    <name>Gross Weight and CG</name>
-    <value>CHECK</value>
+    <name>Gross Weight</name>
+    <value>BELOW MTOW</value>
+    <condition>
+      <less-than-equals>
+        <property>fdm/jsbsim/inertia/weight-lbs</property>
+        <property>limits/mass-and-balance/maximum-takeoff-mass-lbs</property>
+      </less-than-equals>
+    </condition>
+    <binding>
+      <command>nasal</command>
+      <script><![CDATA[
+        gui.showWeightDialog();
+      ]]></script>
+    </binding>
+  </item>
+
+  <item>
+    <name>Center of Gravity</name>
+    <value>671.3-685.2 inches</value>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>fdm/jsbsim/inertia/cg-x-in</property>
+          <value>671.3</value>
+        </greater-than-equals>
+        <less-than-equals>
+          <property>fdm/jsbsim/inertia/cg-x-in</property>
+          <value>685.2</value>
+        </less-than-equals>
+      </and>
+    </condition>
+    <binding>
+      <command>nasal</command>
+      <script><![CDATA[
+        gui.showWeightDialog();
+      ]]></script>
+    </binding>
   </item>
 
   <!-- Oxygen and Masks - CHECK -->
