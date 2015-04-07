@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <autoflight>
+    <altitude-switch type="bool">false</altitude-switch>
+    <autopilot>
+      <engaged type="bool">false</engaged>
+    </autopilot>
+    <bank-angle-select>20</bank-angle-select>
+  </autoflight>
+
+  <door-crew-copilot>
+    <enabled>false</enabled>
+  </door-crew-copilot>
+
+  <flight>
+    <auto-coordination-factor type="double">0.02</auto-coordination-factor>
+  </flight>
+
+  <engines>
+    <engine n="0">
+      <on-fire type="bool">0</on-fire>
+      <magnetos archive="y">0</magnetos>
+      <propeller-pitch>1.0</propeller-pitch>
+      <mixture type="double">0</mixture>
+    </engine>
+    <engine n="1">
+      <on-fire type="bool">0</on-fire>
+      <magnetos archive="y">0</magnetos>
+      <propeller-pitch>1.0</propeller-pitch>
+      <mixture type="double">0</mixture>
+    </engine>
+    <engine n="2">
+      <on-fire type="bool">0</on-fire>
+      <magnetos archive="y">0</magnetos>
+      <propeller-pitch>1.0</propeller-pitch>
+      <mixture type="double">0</mixture>
+    </engine>
+    <engine n="3">
+      <on-fire type="bool">0</on-fire>
+      <magnetos archive="y">0</magnetos>
+      <propeller-pitch>1.0</propeller-pitch>
+      <mixture type="double">0</mixture>
+    </engine>
+    <reverser_allow type="bool">false</reverser_allow>  <!-- Required for prop thrust reverse system -->
+  </engines>
+
+  <fuel>
+    <tankvalves n="0"><valve type="int">1.0</valve></tankvalves>
+    <tankvalves n="1"><valve type="int">1.0</valve></tankvalves>
+    <tankvalves n="2"><valve type="int">1.0</valve></tankvalves>
+    <tankvalves n="3"><valve type="int">1.0</valve></tankvalves>
+    <tankvalves n="4"><valve type="int">1.0</valve></tankvalves>
+
+    <crossfeedvalves n="0"><valve type="int">0.0</valve></crossfeedvalves>
+    <crossfeedvalves n="1"><valve type="int">0.0</valve></crossfeedvalves>
+    <crossfeedvalves n="2"><valve type="int">0.0</valve></crossfeedvalves>
+    <crossfeedvalves n="3"><valve type="int">0.0</valve></crossfeedvalves>
+
+    <enginevalves n="0"><valve type="int">0</valve></enginevalves>
+    <enginevalves n="1"><valve type="int">0</valve></enginevalves>
+    <enginevalves n="2"><valve type="int">0</valve></enginevalves>
+    <enginevalves n="3"><valve type="int">0</valve></enginevalves>
+
+    <jettison n="0"><valve type="int">0</valve></jettison>
+    <jettison n="1"><valve type="int">0</valve></jettison>
+  </fuel>
+
+  <gear>
+    <brake-parking type="double">1.0</brake-parking>
+  </gear>
+
+  <lighting>
+    <nav type="bool">false</nav>
+    <tail type="bool">false</tail>
+    <taxi type="bool">false</taxi>
+    <landing-left type="bool">false</landing-left>
+    <landing-right type="bool">false</landing-right>
+    <landing-extend-left type="bool">false</landing-extend-left>
+    <landing-extend-right type="bool">false</landing-extend-right>
+    <beacon type="bool">0</beacon>
+    <cabin type="double">0</cabin>
+    <chart type="double">0</chart>
+  </lighting>
+
+  <switches>
+    <engine-start-select type="int">0</engine-start-select>
+    <generator n="0"><position type="int">0</position></generator>
+    <generator n="1"><position type="int">0</position></generator>
+    <generator n="2"><position type="int">0</position></generator>
+    <generator n="3"><position type="int">0</position></generator>
+    <gen-apu type="int">0</gen-apu>
+    <battery-ship type="int">0</battery-ship>
+    <battery-cart type="int">0</battery-cart>
+    <volts-select-dc type="int">0</volts-select-dc>
+    <volts-select-ac type="int">0</volts-select-ac>
+    <horn type="double">0.0</horn>
+    <command-bell type="double">0.0</command-bell>
+  </switches>
+
+  <special>
+    <flightpath-switch type="int">0</flightpath-switch>
+    <wiper-switch type="int">0</wiper-switch>
+    <wiper-deg type="double">55.0</wiper-deg>
+    <fire-warning type="double">0</fire-warning>
+  </special>
+
+</PropertyList>
