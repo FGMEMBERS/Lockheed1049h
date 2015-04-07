@@ -108,6 +108,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <speed type="double">165</speed>
     </max-flap-extension-speed>
     <max-gear-extension-speed type="double">165</max-gear-extension-speed>
+    <max-negative-g type="double">-1.0</max-negative-g>
+    <max-positive-g type="double">2.5</max-positive-g> <!-- 2.0 if flaps down -->
+    <vne type="double">263</vne> <!-- indicated airspeed in knots -->
   </limits>
 
   <nasal>
@@ -258,7 +261,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
     
-    <aircraft-version>2.3</aircraft-version>
+    <aircraft-version>2.3.1</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
@@ -387,6 +390,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </electrical>
       <property-rule n="100">
         <path>Systems/engine-filters.xml</path>
+      </property-rule>
+      <property-rule n="101">
+        <path>Systems/load-factor-filters.xml</path>
       </property-rule>
     </systems>
 
