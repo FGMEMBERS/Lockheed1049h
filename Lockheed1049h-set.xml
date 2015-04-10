@@ -90,6 +90,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
               ]]></script>
             </binding>
           </item>
+          <item>
+            <label>Autostart</label>
+            <binding>
+              <command>nasal</command>
+              <script><![CDATA[
+                 Lockheed1049h.startup();
+              ]]></script>
+            </binding>
+          </item>
         </menu>
       </default>
     </menubar>
