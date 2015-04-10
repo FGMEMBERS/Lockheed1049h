@@ -688,7 +688,10 @@ are indicated in the comments by an asterisk.
     <binding>
       <command>nasal</command>
       <script><![CDATA[
-        gui.showWeightDialog();
+        var auto = getprop("sim/checklists/auto") or 0;
+        if (!auto) {
+          gui.showWeightDialog();
+        }
       ]]></script>
     </binding>
   </item>
@@ -708,7 +711,10 @@ are indicated in the comments by an asterisk.
     <binding>
       <command>nasal</command>
       <script><![CDATA[
-        gui.showWeightDialog();
+        var auto = getprop("sim/checklists/auto") or 0;
+        if (!auto) {
+          gui.showWeightDialog();
+        }
       ]]></script>
     </binding>
   </item>
@@ -731,7 +737,10 @@ are indicated in the comments by an asterisk.
     <binding>
       <command>nasal</command>
       <script><![CDATA[
-        gui.showWeightDialog();
+        var auto = getprop("sim/checklists/auto") or 0;
+        if (!auto) {
+          gui.showWeightDialog();
+        }
       ]]></script>
     </binding>
   </item>
