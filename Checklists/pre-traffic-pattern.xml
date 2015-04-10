@@ -21,6 +21,24 @@ are indicated in the comments by an asterisk.
 
   <title>Pre Traffic Pattern</title>
 
+  <!-- Landing Weight* - CHECK -->
+  <item>
+    <name>Gross Weight</name>
+    <value>BELOW MLW</value>
+    <condition>
+      <less-than-equals>
+        <property>fdm/jsbsim/inertia/weight-lbs</property>
+        <property>limits/mass-and-balance/maximum-landing-mass-lbs</property>
+      </less-than-equals>
+    </condition>
+    <binding>
+      <command>nasal</command>
+      <script><![CDATA[
+        gui.showWeightDialog();
+      ]]></script>
+    </binding>
+  </item>
+
   <!-- Landing Lights* - EXTEND AND ON -->
   <item>
     <name>Landing Lights</name>
