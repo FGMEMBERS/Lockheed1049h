@@ -45,6 +45,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <menu n="100">
           <label>Constellation</label>
           <item>
+            <label>Autostart</label>
+            <binding>
+              <command>nasal</command>
+              <script><![CDATA[
+                 Lockheed1049h.startup();
+              ]]></script>
+            </binding>
+          </item>
+          <item>
+            <label>Pushback</label>
+            <name>pushback</name>
+            <binding>
+              <command>dialog-show</command>
+              <dialog-name>pushback</dialog-name>
+            </binding>
+          </item>
+          <item>
             <label>Select Livery</label>
             <binding>
               <command>nasal</command>
@@ -87,15 +104,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 var node = "sim/gui/dialogs/refuel/dialog";
                 var path = "Dialogs/Lockheed1049h-refuel.xml";
                 gui.Dialog.new(node, path).open();
-              ]]></script>
-            </binding>
-          </item>
-          <item>
-            <label>Autostart</label>
-            <binding>
-              <command>nasal</command>
-              <script><![CDATA[
-                 Lockheed1049h.startup();
               ]]></script>
             </binding>
           </item>

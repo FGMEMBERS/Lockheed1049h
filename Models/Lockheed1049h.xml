@@ -75,7 +75,15 @@
       <direction>-1</direction>
     </overlay>
   </model>
-
+  <model>
+    <name>Pushback</name>
+    <path>Models/Airport/Pushback/Goldhofert.xml</path>
+    <offsets>
+      <x-m>-15.3</x-m>
+      <y-m>0</y-m>
+      <z-m>-3.75</z-m>
+    </offsets>
+  </model>
 
   <!-- Level Of Detail -->
 

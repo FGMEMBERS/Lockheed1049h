@@ -262,7 +262,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
     
-    <aircraft-version>2.4</aircraft-version>
+    <aircraft-version>2.5</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
@@ -322,6 +322,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <hide-yokes type="bool" archive="y">false</hide-yokes>
         <show-heading-bug type="bool" archive="y">false</show-heading-bug>
       </options>
+      <pushback>
+        <kp type="double">460</kp>
+        <ki type="double">25</ki>
+        <kd type="double">0</kd>
+        <position-norm type="double">0</position-norm>
+        <target-speed-fps type="double">0</target-speed-fps>
+      </pushback>
     </model>
 
     <!-- Initialize props for passing lighting and door settings over multiplayer -->
