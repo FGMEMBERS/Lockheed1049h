@@ -97,8 +97,10 @@
     <volts-select-ac type="int">0</volts-select-ac>
     <horn type="double">0.0</horn>
     <command-bell type="double">0.0</command-bell>
+    <no-smoking-signs type="bool">false</no-smoking-signs>
+    <seat-belt-signs type="bool">false</seat-belt-signs>
   </switches>
-
+ 
   <special>
     <flightpath-switch type="int">0</flightpath-switch>
     <wiper-switch type="int">0</wiper-switch>

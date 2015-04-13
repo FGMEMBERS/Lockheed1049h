@@ -37,12 +37,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <ap type="bool">0</ap>
       <alt type="bool">0</alt>
       <selected-nav type="bool">1</selected-nav>
-    </switches> 
+    </switches>
     <trim>
       <elevator-trim-turn type="double">0</elevator-trim-turn>
-    </trim>    
+    </trim>
   </autopilot>
-
+ 
   <consumables>
     <fuel include="Systems/Lockheed1049h-init-fuel.xml"/>
   </consumables>
@@ -261,8 +261,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[18]</path>
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
-    
-    <aircraft-version>2.5</aircraft-version>
+
+    <aircraft-version>2.5.1</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
@@ -279,18 +279,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <checklist include="Checklists/after-landing.xml"/>
       <checklist include="Checklists/parking.xml"/>
       <!--
-           Support for autostart and shutdown via checklists. Indexes
-           correspond to the checklists above. If additional checklists
-           are added the startup and shutdown indexes may change.
+      Support for autostart and shutdown via checklists. Indexes
+      correspond to the checklists above. If additional checklists
+      are added the startup and shutdown indexes may change.
       -->
-      <startup>
+      <ground-start>
         <index n="0">0</index>  <!-- Before Starting Engines -->
         <index n="1">1</index>  <!-- Start Engines -->
         <index n="2">2</index>  <!-- During Warmup -->
         <index n="3">4</index>  <!-- Before Takeoff -->
-      </startup>
+      </ground-start>
+      <in-air-start>
+        <index n="0">0</index>  <!-- Before Starting Engines -->
+        <index n="1">1</index>  <!-- Start Engines -->
+        <index n="2">2</index>  <!-- During Warmup -->
+        <index n="4">5</index>  <!-- Initial Climb -->
+      </in-air-start>
     </checklists>
-
+ 
     <!-- Required for parkpos=AVAILABLE option -->
     <aircraft-class>gate</aircraft-class>
     <aircraft-operator></aircraft-operator>
@@ -344,12 +350,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <float n="7" alias="/orientation/roll-deg"/>        <!-- for the shadow -->
         <float n="8" alias="/controls/flight/elevator"/>    <!-- for Copilot animation-->
         <float n="9" alias="/controls/flight/aileron"/>     <!-- for Copilot animation-->
-        <float n="10" alias="/controls/flight/rudder"/>      <!-- for Copilot animation-->   
+        <float n="10" alias="/controls/flight/rudder"/>      <!-- for Copilot animation-->
         <float n="11" alias="/instrumentation/slip-skid-ball/indicated-slip-skid"/><!-- for Copilot animation-->
         <float n="12" alias="/instrumentation/turn-indicator/indicated-turn-rate"/><!-- for Copilot animation-->
         <float n="13" alias="/controls/flight/elevator-trim"/>    <!-- for Copilot animation-->
         <float n="14" alias="/controls/flight/aileron-trim"/>     <!-- for Copilot animation-->
-        <float n="15" alias="/controls/flight/rudder-trim"/>      <!-- for Copilot animation-->   
+        <float n="15" alias="/controls/flight/rudder-trim"/>      <!-- for Copilot animation-->
         <int n="0" type="int">0</int> <!-- orig. ? -->
         <int n="1" type="int">0</int> <!-- orig. ? -->
         <int n="2" type="int">0</int> <!-- orig. ? -->

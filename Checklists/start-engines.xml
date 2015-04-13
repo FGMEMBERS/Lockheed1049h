@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- 
+ 
+<!--
 Checklist: Start Engines
-
+ 
 Adapted from Lockheed Super Constallation Crew Operating Manual, 1952, p96
 @see http://www.avialogs.com/viewer/avialogs-documentviewer.php?id=3447
 
@@ -150,13 +150,10 @@ are indicated in the comments by an asterisk.
     </marker>
     <condition>
       <or>
+        <property>engines/engine[2]/running</property>
         <equals>
-	  <property>engines/engine[2]/running</property>
-	  <value>true</value>
-        </equals>
-        <equals>
-	  <property>controls/switches/engine-start-select</property>
-	  <value>3</value>
+          <property>controls/switches/engine-start-select</property>
+          <value>3</value>
         </equals>
       </or>
     </condition>
@@ -176,18 +173,17 @@ are indicated in the comments by an asterisk.
       <scale>4.5868</scale>
     </marker>
     <condition>
-      <equals>
-        <property>engines/engine[2]/running</property>
-        <value>true</value>
-      </equals>
+      <property>engines/engine[2]/running</property>
     </condition>
     <binding>
       <command>nasal</command>
       <script><![CDATA[
         setprop("controls/engines/engine[2]/starter", 1);
-        settimer(func {
+        var t = maketimer(3.0, func {
           setprop("controls/engines/engine[2]/starter", 0);
-        }, 1.5);
+        });
+        t.singleShot = 1;
+        t.start()
       ]]></script>
     </binding>
   </item>
@@ -225,13 +221,10 @@ are indicated in the comments by an asterisk.
     </marker>
     <condition>
       <or>
+      <property>engines/engine[3]/running</property>
         <equals>
-	  <property>engines/engine[3]/running</property>
-	  <value>true</value>
-        </equals>
-        <equals>
-	  <property>controls/switches/engine-start-select</property>
-	  <value>4</value>
+          <property>controls/switches/engine-start-select</property>
+          <value>4</value>
         </equals>
       </or>
     </condition>
@@ -251,18 +244,17 @@ are indicated in the comments by an asterisk.
       <scale>4.5868</scale>
     </marker>
     <condition>
-      <equals>
-        <property>engines/engine[3]/running</property>
-        <value>true</value>
-      </equals>
+      <property>engines/engine[3]/running</property>
     </condition>
     <binding>
       <command>nasal</command>
       <script><![CDATA[
         setprop("controls/engines/engine[3]/starter", 1);
-        settimer(func {
+        var t = maketimer(3.0, func {
           setprop("controls/engines/engine[3]/starter", 0);
-        }, 1.5);
+        });
+        t.singleShot = 1;
+        t.start()
       ]]></script>
     </binding>
   </item>
@@ -300,13 +292,10 @@ are indicated in the comments by an asterisk.
     </marker>
     <condition>
       <or>
+        <property>engines/engine[1]/running</property>
         <equals>
-	  <property>engines/engine[1]/running</property>
-	  <value>true</value>
-        </equals>
-        <equals>
-	  <property>controls/switches/engine-start-select</property>
-	  <value>2</value>
+          <property>controls/switches/engine-start-select</property>
+          <value>2</value>
         </equals>
       </or>
     </condition>
@@ -326,18 +315,17 @@ are indicated in the comments by an asterisk.
       <scale>4.5868</scale>
     </marker>
     <condition>
-      <equals>
-        <property>engines/engine[1]/running</property>
-        <value>true</value>
-      </equals>
+      <property>engines/engine[1]/running</property>
     </condition>
     <binding>
       <command>nasal</command>
       <script><![CDATA[
         setprop("controls/engines/engine[1]/starter", 1);
-        settimer(func {
+        var t = maketimer(3.0, func {
           setprop("controls/engines/engine[1]/starter", 0);
-        }, 1.5);
+        });
+        t.singleShot = 1;
+        t.start()
       ]]></script>
     </binding>
   </item>
@@ -375,13 +363,10 @@ are indicated in the comments by an asterisk.
     <value>ENGINE 1</value>
     <condition>
       <or>
+        <property>engines/engine[0]/running</property>
         <equals>
-	  <property>engines/engine[0]/running</property>
-	  <value>true</value>
-        </equals>
-        <equals>
-	  <property>controls/switches/engine-start-select</property>
-	  <value>1</value>
+          <property>controls/switches/engine-start-select</property>
+          <value>1</value>
         </equals>
       </or>
     </condition>
@@ -401,18 +386,17 @@ are indicated in the comments by an asterisk.
       <scale>4.5868</scale>
     </marker>
     <condition>
-      <equals>
-        <property>engines/engine[0]/running</property>
-        <value>true</value>
-      </equals>
+      <property>engines/engine[0]/running</property>
     </condition>
     <binding>
       <command>nasal</command>
       <script><![CDATA[
         setprop("controls/engines/engine[0]/starter", 1);
-        settimer(func {
+        var t = maketimer(3.0, func {
           setprop("controls/engines/engine[0]/starter", 0);
-        }, 1.5);
+        });
+        t.singleShot = 1;
+        t.start()
       ]]></script>
     </binding>
   </item>
