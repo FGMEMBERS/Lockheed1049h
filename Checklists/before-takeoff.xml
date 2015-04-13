@@ -30,16 +30,16 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/flight/elevator-trim</property>
-	  <value>0</value>
+          <property>controls/flight/elevator-trim</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/flight/rudder-trim</property>
-	  <value>0</value>
+          <property>controls/flight/rudder-trim</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/flight/aileron-trim</property>
-	  <value>0</value>
+          <property>controls/flight/aileron-trim</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>
@@ -64,10 +64,10 @@ are indicated in the comments by an asterisk.
       <scale>4.4876</scale>
     </marker>
     <condition>
-      <greater-than>
-        <property>controls/flight/flaps</property>
-        <value>0</value>
-      </greater-than>
+      <greater-than-equals>
+        <property>surface-positions/flap-pos-norm</property>
+        <value>0.25</value>
+      </greater-than-equals>
     </condition>
     <binding>
       <command>nasal</command>
@@ -205,36 +205,36 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <greater-than>
-	  <property>controls/engines/engine[0]/cowl-flaps-norm</property>
-	  <value>0.19</value>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>0.19</value>
         </greater-than>
         <less-than>
-	  <property>controls/engines/engine[0]/cowl-flaps-norm</property>
-	  <value>0.21</value>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>0.21</value>
         </less-than>
         <greater-than>
-	  <property>controls/engines/engine[1]/cowl-flaps-norm</property>
-	  <value>0.19</value>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>0.19</value>
         </greater-than>
         <less-than>
-	  <property>controls/engines/engine[1]/cowl-flaps-norm</property>
-	  <value>0.21</value>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>0.21</value>
         </less-than>
         <greater-than>
-	  <property>controls/engines/engine[2]/cowl-flaps-norm</property>
-	  <value>0.19</value>
+          <property>controls/engines/engine[2]/cowl-flaps-norm</property>
+          <value>0.19</value>
         </greater-than>
         <less-than>
-	  <property>controls/engines/engine[2]/cowl-flaps-norm</property>
-	  <value>0.21</value>
+          <property>controls/engines/engine[2]/cowl-flaps-norm</property>
+          <value>0.21</value>
         </less-than>
         <greater-than>
-	  <property>controls/engines/engine[3]/cowl-flaps-norm</property>
-	  <value>0.19</value>
+          <property>controls/engines/engine[3]/cowl-flaps-norm</property>
+          <value>0.19</value>
         </greater-than>
         <less-than>
-	  <property>controls/engines/engine[3]/cowl-flaps-norm</property>
-	  <value>0.21</value>
+          <property>controls/engines/engine[3]/cowl-flaps-norm</property>
+          <value>0.21</value>
         </less-than>
       </and>
     </condition>
@@ -279,20 +279,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/lighting/landing-extend-left</property>
-	  <value>1</value>
+          <property>controls/lighting/landing-extend-left</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-extend-right</property>
-	  <value>1</value>
+          <property>controls/lighting/landing-extend-right</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-left</property>
-	  <value>1</value>
+          <property>controls/lighting/landing-left</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-right</property>
-	  <value>1</value>
+          <property>controls/lighting/landing-right</property>
+          <value>1</value>
         </equals>
       </and>
     </condition>
