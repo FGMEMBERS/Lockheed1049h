@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- 
+ 
+<!--
 Checklist: Before Starting Engines
-
+ 
 Adapted from Lockheed Super Constallation Crew Operating Manual, 1952, p96
 @see http://www.avialogs.com/viewer/avialogs-documentviewer.php?id=3447
 
@@ -149,20 +149,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/engines/engine[0]/magnetos</property>
-	  <value>0</value>
+          <property>controls/engines/engine[0]/magnetos</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[1]/magnetos</property>
-	  <value>0</value>
+          <property>controls/engines/engine[1]/magnetos</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[2]/magnetos</property>
-	  <value>0</value>
+          <property>controls/engines/engine[2]/magnetos</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[3]/magnetos</property>
-	  <value>0</value>
+          <property>controls/engines/engine[3]/magnetos</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>
@@ -278,12 +278,12 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/fuel/jettison[0]/valve</property>
-	  <value>0</value>
+          <property>controls/fuel/jettison[0]/valve</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/fuel/jettison[1]/valve</property>
-	  <value>0</value>
+          <property>controls/fuel/jettison[1]/valve</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>
@@ -339,20 +339,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/switches/generator[0]/position</property>
-	  <value>0</value>
+          <property>controls/switches/generator[0]/position</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/switches/generator[1]/position</property>
-	  <value>0</value>
+          <property>controls/switches/generator[1]/position</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/switches/generator[2]/position</property>
-	  <value>0</value>
+          <property>controls/switches/generator[2]/position</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/switches/generator[3]/position</property>
-	  <value>0</value>
+          <property>controls/switches/generator[3]/position</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>
@@ -393,20 +393,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/fuel/crossfeedvalves[0]/valve</property>
-	  <value>0</value>
+          <property>controls/fuel/crossfeedvalves[0]/valve</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/fuel/crossfeedvalves[1]/valve</property>
-	  <value>0</value>
+          <property>controls/fuel/crossfeedvalves[1]/valve</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/fuel/crossfeedvalves[2]/valve</property>
-	  <value>0</value>
+          <property>controls/fuel/crossfeedvalves[2]/valve</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/fuel/crossfeedvalves[3]/valve</property>
-	  <value>0</value>
+          <property>controls/fuel/crossfeedvalves[3]/valve</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>
@@ -524,20 +524,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
-	  <value>0</value>
+          <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
-	  <value>0</value>
+          <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
-	  <value>0</value>
+          <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
-	  <value>0</value>
+          <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>
@@ -576,20 +576,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/fuel/tankvalves[0]/valve</property>
-	  <value>1</value>
+          <property>controls/fuel/tankvalves[0]/valve</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>controls/fuel/tankvalves[1]/valve</property>
-	  <value>2</value>
+          <property>controls/fuel/tankvalves[1]/valve</property>
+          <value>2</value>
         </equals>
         <equals>
-	  <property>controls/fuel/tankvalves[2]/valve</property>
-	  <value>2</value>
+          <property>controls/fuel/tankvalves[2]/valve</property>
+          <value>2</value>
         </equals>
         <equals>
-	  <property>controls/fuel/tankvalves[3]/valve</property>
-	  <value>1</value>
+          <property>controls/fuel/tankvalves[3]/valve</property>
+          <value>1</value>
         </equals>
       </and>
     </condition>
@@ -628,20 +628,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/engines/engine[0]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[1]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[2]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[2]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[3]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[3]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
       </and>
     </condition>
@@ -688,7 +688,10 @@ are indicated in the comments by an asterisk.
     <binding>
       <command>nasal</command>
       <script><![CDATA[
-        gui.showWeightDialog();
+        var auto = getprop("sim/checklists/auto/active") or 0;
+        if (!auto) {
+          gui.showWeightDialog();
+        }
       ]]></script>
     </binding>
   </item>
@@ -708,7 +711,10 @@ are indicated in the comments by an asterisk.
     <binding>
       <command>nasal</command>
       <script><![CDATA[
-        gui.showWeightDialog();
+        var auto = getprop("sim/checklists/auto/active") or 0;
+        if (!auto) {
+          gui.showWeightDialog();
+        }
       ]]></script>
     </binding>
   </item>
@@ -731,7 +737,10 @@ are indicated in the comments by an asterisk.
     <binding>
       <command>nasal</command>
       <script><![CDATA[
-        gui.showWeightDialog();
+        var auto = getprop("sim/checklists/auto/active") or 0;
+        if (!auto) {
+          gui.showWeightDialog();
+        }
       ]]></script>
     </binding>
   </item>

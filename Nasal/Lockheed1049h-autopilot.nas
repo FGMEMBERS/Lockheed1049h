@@ -26,8 +26,6 @@
 ################################################################################
 
 var _lock = 0;
-var _listeners = [];
-var _parent_setlistener = setlistener;
 
 var FlightPathMode = {OFF: 0, VOR: 1, LOC: 2, APP: 3};
 
@@ -48,32 +46,40 @@ var lock = func(f)
     _lock = 0;
 }
 
-# Override the setlistener function to store listener ids in a list
+# Capture the current altitude into the autopilot target altitude
 #
-var setlistener = func(property, function, startup = 0, runtime = 1)
+var capture_altitude = func()
 {
-    var id = _parent_setlistener(property, function, startup, runtime);
-    append(_listeners, id);
+    var a = math.round(getprop("position/altitude-ft"));
+    setprop("autopilot/settings/target-altitude-ft", a);
+}
+
+# Capture the current heading into the autopilot target heading
+#
+var capture_heading = func()
+{
+    var hi = "instrumentation/heading-indicator";
+    var heading = getprop(hi, "indicated-heading-deg");
+    setprop("autopilot/settings/heading-bug-deg", math.round(heading));
 }
 
 # Configure the vertical modes of the autopilot based on switch positions.
 #
 # When switching to altitude hold, captures the current altitude into the
-# target altitude. When switching to pitch mode, captures the current pitch
-# into target pitch.
+# target altitude. Does not capture the current pitch when switching to
+# pitch mode.
 #
 var configure_vertical_mode = func()
 {
-    var fp = getprop("autopilot/settings/flight-path");
-
     if (getprop("autopilot/switches/ap")) {
+        var fp = getprop("autopilot/settings/flight-path");
         if (fp == FlightPathMode.APP) {
             setprop ("autopilot/locks/altitude", "gs1-hold");
+            capture_altitude();
         } else {
             if (getprop("autopilot/switches/alt")) {
-                var a = int(getprop ("position/altitude-ft"));
                 setprop("autopilot/locks/altitude", "altitude-hold");
-                setprop("autopilot/settings/target-altitude-ft", a);
+                capture_altitude();
             } else {
                 setprop("autopilot/locks/altitude", "pitch-hold");
             }
@@ -92,9 +98,8 @@ var configure_vertical_mode = func()
 #
 var configure_lateral_mode = func()
 {
-    var fp = getprop("autopilot/settings/flight-path");
-
     if (getprop("autopilot/switches/ap")) {
+        var fp = getprop("autopilot/settings/flight-path");
         if (fp == FlightPathMode.OFF) {
             setprop("autopilot/locks/heading", "wing-leveler");
         } else {
@@ -107,6 +112,9 @@ var configure_lateral_mode = func()
     }
 }
 
+# Infers the flight path setting based on autopilot locks changed through the
+# generic autopilot dialog.
+#
 var infer_flight_path_setting = func()
 {
     var lmode = getprop("autopilot/locks/heading");
@@ -116,7 +124,7 @@ var infer_flight_path_setting = func()
         if (vmode == "gs1-hold") {
             setprop("autopilot/settings/flight-path", FlightPathMode.APP);
         } else {
-            var gs = getprop("instrumentation/nav[0]/gs-in-range");
+            var gs = getprop("instrumentation/nav/gs-in-range");
             var fp = gs ? FlightPathMode.LOC : FlightPathMode.VOR;
             setprop("autopilot/settings/flight-path", fp);
         }
@@ -125,6 +133,9 @@ var infer_flight_path_setting = func()
     }
 }
 
+# Helper to toggle the autopilot on off. Can be called from key shortcut or
+# from a joystick/yoke button.
+#
 var toggle_autopilot_on_off = func()
 {
     var state = getprop("autopilot/switches/ap");
@@ -158,8 +169,7 @@ setlistener("autopilot/settings/flight-path", func(node) {
 }, startup = 1, runtime = 0);
 
 setlistener("autopilot/internal/wing-leveler-heading-hold", func(node) {
-    var heading = int(getprop("instrumentation/heading-indicator/indicated-heading-deg"));
-    setprop("autopilot/settings/heading-bug-deg", heading);
+    capture_heading();
 }, startup = 0, runtime = 0);
 
 # Listeners for changes through the dialog
@@ -189,13 +199,8 @@ setlistener("/sim/signals/reinit", func(status) {
         setprop("autopilot/switches/alt", 0);
         setprop("autopilot/settings/flight-path", 0);
         setprop("autopilot/settings/target-bank-deg", 0);
-        setprop("autopilot/settings/target-pitch-deg", 4.0);
+        setprop("autopilot/settings/target-pitch-deg", 5.0);
         setprop("autopilot/internal/wing-leveler-heading-hold", 0);
-    } else {
-        foreach(var id; _listeners) {
-            logprint(3, "Removing listener ", id);
-            removelistener(id);
-        }
     }
 }, startup = 1, runtime = 0);
 

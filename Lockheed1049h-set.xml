@@ -45,6 +45,27 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <menu n="100">
           <label>Constellation</label>
           <item>
+            <label>Autostart</label>
+            <binding>
+              <command>nasal</command>
+              <script><![CDATA[
+                if (getprop("gear/gear/wow")) {
+                    Lockheed1049h.complete_checklists("ground-start");
+                } else {
+                    Lockheed1049h.complete_checklists("in-air-start");
+                }
+              ]]></script>
+            </binding>
+          </item>
+          <item>
+            <label>Pushback</label>
+            <name>pushback</name>
+            <binding>
+              <command>dialog-show</command>
+              <dialog-name>pushback</dialog-name>
+            </binding>
+          </item>
+          <item>
             <label>Select Livery</label>
             <binding>
               <command>nasal</command>
@@ -99,8 +120,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <livery>
         <file type="string">EasternGSF</file>
       </livery>
-    </model> 
-
+    </model>
+ 
     <view n= "0"> <!-- Pilot View: not available in the copilot-set.xml -->
       <name>Pilot view</name>
       <internal type="bool" archive="y">true</internal>

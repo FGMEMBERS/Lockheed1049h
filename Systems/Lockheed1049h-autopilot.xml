@@ -49,52 +49,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <output>autopilot/internal/filtered-target-bank-deg</output>
   </filter>
 
-  <!-- Smoothes out the CDI needle in VOR mode -->
+  <!-- Copies the heading bug selection from the autopilot dialog to the DG -->
   <filter>
-    <name>CDI Filter (VHF)</name>
-    <debug>false</debug>
-    <enable>
-      <condition>
-        <not>
-          <property>autopilot/settings/localizer</property>
-        </not>
-      </condition>
-    </enable>
-    <input>instrumentation/nav[0]/heading-needle-deflection</input>
-    <output>instrumentation/nav[0]/filtered-heading-needle-deflection</output>
-    <type>noise-spike</type>
-    <max-rate-of-change>0.5</max-rate-of-change>
-  </filter>
-
-  <!-- Smoothes out the CDI needle in LOC mode -->
-  <filter>
-    <name>CDI Filter (Localizer)</name>
-    <debug>false</debug>
-    <enable>
-      <condition>
-        <property>autopilot/settings/localizer</property>
-      </condition>
-    </enable>
-    <input>instrumentation/nav[0]/heading-needle-deflection</input>
-    <output>instrumentation/nav[0]/filtered-heading-needle-deflection</output>
-    <type>noise-spike</type>
-    <max-rate-of-change>0.5</max-rate-of-change>
-  </filter>
-
-  <!-- Calculate the DG heading bug error  -->
-  <filter>
-    <name>DG Heading Bug Error Computer</name>
+    <name>Heading Bug Property Copy</name>
     <debug>false</debug>
     <type>gain</type>
     <gain>1.0</gain>
     <input>autopilot/settings/heading-bug-deg</input>
-    <reference>instrumentation/heading-indicator/indicated-heading-deg</reference>
-    <output>autopilot/internal/dg-heading-bug-error-deg</output>
+    <output>instrumentation/heading-indicator/heading-bug-deg</output>
   </filter>
 
-  <!-- Calculate a NAV course error from the CDI needle deflection -->
-  <pi-simple-controller>
-    <name>Course Deflection Indicator Integrator</name>
+  <!-- Smoothes out the CDI needle, especially around a VOR station -->
+  <filter>
+    <name>CDI Filter (VOR)</name>
     <debug>false</debug>
     <enable>
       <condition>
@@ -103,42 +70,91 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </not>
       </condition>
     </enable>
-    <input>instrumentation/nav[0]/filtered-heading-needle-deflection</input>
-    <output>autopilot/internal/nav-course-error-deg</output>
-    <config>
-      <Kp>4.5</Kp>
-      <Ki>0.02</Ki>
-    </config>
-    <min>-45.0</min>
-    <max>45.0</max>
-  </pi-simple-controller>
+    <input>instrumentation/nav/heading-needle-deflection</input>
+    <output>instrumentation/nav/filtered-heading-needle-deflection</output>
+    <type>noise-spike</type>
+    <max-rate-of-change>1.0</max-rate-of-change>
+  </filter>
 
-  <!-- Calculate a localizer course error from the CDI needle deflection -->
-  <pi-simple-controller>
-    <name>Course Deflection Indicator Integrator</name>
+  <filter>
+    <name>CDI Filter (LOC)</name>
     <debug>false</debug>
     <enable>
       <condition>
         <property>autopilot/settings/localizer</property>
       </condition>
     </enable>
-    <input>instrumentation/nav[0]/filtered-heading-needle-deflection</input>
+    <input>instrumentation/nav/heading-needle-deflection</input>
+    <output>instrumentation/nav/filtered-heading-needle-deflection</output>
+    <type>noise-spike</type>
+    <max-rate-of-change>2.0</max-rate-of-change>
+  </filter>
+
+  <!-- Calculate a course error from the CDI needle deflection -->
+  <pi-simple-controller>
+    <name>CDI Integrator (VHF)</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+        <not>
+          <property>autopilot/settings/localizer</property>
+        </not>
+      </condition>
+    </enable>
+    <input>instrumentation/nav/filtered-heading-needle-deflection</input>
     <output>autopilot/internal/nav-course-error-deg</output>
     <config>
-      <Kp>2.25</Kp>
-      <Ki>0.01</Ki>
+      <Kp>4.5</Kp>
+      <Ki>0.0</Ki>
     </config>
     <min>-45.0</min>
     <max>45.0</max>
   </pi-simple-controller>
 
-  <!-- Calculate an intercept heading from the radial and course error -->
+  <pi-simple-controller>
+    <name>CDI Integrator (LOC)</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+        <property>autopilot/settings/localizer</property>
+      </condition>
+    </enable>
+    <input>instrumentation/nav/filtered-heading-needle-deflection</input>
+    <output>autopilot/internal/nav-course-error-deg</output>
+    <config>
+      <Kp>2.25</Kp>
+      <Ki>0.0</Ki>
+    </config>
+    <min>-22.5</min>
+    <max>22.5</max>
+  </pi-simple-controller>
+
+  <!-- Calculate an intercept heading from the localizer and course error -->
   <filter>
-    <name>NAV1 Intercept Heading Computer</name>
+    <name>Intercept Heading Computer</name>
     <debug>false</debug>
     <type>gain</type>
     <gain>1.0</gain>
-    <input>instrumentation/nav[0]/radials/target-radial-deg</input>
+    <input>
+      <condition>
+        <not>
+          <property>instrumentation/nav/has-gs</property>
+        </not>
+      </condition>
+      <property>instrumentation/nav/radials/selected-deg</property>
+    </input>
+    <input>
+      <condition>
+        <property>instrumentation/nav/has-gs</property>
+      </condition>
+      <property>instrumentation/nav/radials/target-radial-deg</property>
+      <offset>
+        <product>
+          <property>environment/magnetic-variation-deg</property>
+          <value>-1.0</value>
+        </product>
+      </offset>
+    </input>
     <reference>autopilot/internal/nav-course-error-deg</reference>
     <output>autopilot/internal/intercept-heading-deg</output>
   </filter>
@@ -154,6 +170,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <output>autopilot/internal/nav1-intercept-error-deg</output>
   </filter>
 
+  <!-- Create a flag to indicate that the glideslope has been captured -->
   <flipflop>
     <name>Glideslope Capture</name>
     <type>SR</type>
@@ -164,9 +181,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <property>autopilot/locks/altitude</property>
           <value>gs1-hold</value>
         </equals>
-        <property>instrumentation/nav[0]/gs-in-range</property>
+        <property>instrumentation/nav/gs-in-range</property>
         <less-than>
-          <property>instrumentation/nav[0]/gs-needle-deflection</property>
+          <property>instrumentation/nav/gs-needle-deflection</property>
           <value>0.0</value>
         </less-than>
       </and>
@@ -180,13 +197,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           </equals>
         </not>
         <not>
-          <property>instrumentation/nav[0]/gs-in-range</property>
+          <property>instrumentation/nav/gs-in-range</property>
         </not>
       </or>
     </R>
     <output>autopilot/internal/gs-captured</output>
   </flipflop>
 
+  <!-- Create a flag to indicate wing leveler should hold heading -->
   <flipflop>
     <name>Wing Leveler Heading Hold</name>
     <type>SR</type>
@@ -233,6 +251,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </R>
     <output>autopilot/internal/wing-leveler-heading-hold</output>
   </flipflop>
+
+  <!-- =============================================================== -->
+  <!-- Servos                                                          -->
+  <!-- =============================================================== -->
 
   <filter>
     <name>Aileron Servo</name>
@@ -328,7 +350,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </enable>
     <type>gain</type>
     <gain>2.0</gain>
-    <input>autopilot/internal/dg-heading-bug-error-deg</input>
+    <input>autopilot/internal/heading-bug-error-deg</input>
     <output>autopilot/internal/target-roll-deg</output>
     <min>
       <property>controls/autoflight/bank-angle-select</property>
@@ -475,26 +497,72 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   </pid-controller>
 
   <pi-simple-controller>
-    <name>Climb Rate Computer</name>
+    <name>Climb Rate Computer (not route-manager)</name>
     <debug>false</debug>
     <enable>
       <condition>
-        <or>
-          <equals>
-            <property>autopilot/locks/altitude</property>
-            <value>altitude-hold</value>
-          </equals>
-          <and>
+        <and>
+          <or>
             <equals>
               <property>autopilot/locks/altitude</property>
-              <value>gs1-hold</value>
+              <value>altitude-hold</value>
             </equals>
+            <and>
+              <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>gs1-hold</value>
+              </equals>
+              <equals>
+                <property>autopilot/internal/gs-captured</property>
+                <value>0</value>
+              </equals>
+            </and>
+          </or>
+          <not-equals>
+            <property>autopilot/locks/heading</property>
+            <value>true-heading-hold</value>
+          </not-equals>
+        </and>
+      </condition>
+    </enable>
+    <input>position/altitude-ft</input>
+    <reference>autopilot/settings/target-altitude-ft</reference>
+    <output>autopilot/internal/target-climb-rate-fps</output>
+    <config>
+      <Kp>0.15</Kp>
+      <Ki>0.005</Ki>
+      <min>-6.67</min>
+      <max>6.67</max>
+    </config>
+  </pi-simple-controller>
+
+  <pi-simple-controller>
+    <name>Climb Rate Computer (route-manager)</name>
+    <debug>false</debug>
+    <enable>
+      <condition>
+        <and>
+          <or>
             <equals>
-              <property>autopilot/internal/gs-captured</property>
-              <value>0</value>
+              <property>autopilot/locks/altitude</property>
+              <value>altitude-hold</value>
             </equals>
-          </and>
-        </or>
+            <and>
+              <equals>
+                <property>autopilot/locks/altitude</property>
+                <value>gs1-hold</value>
+              </equals>
+              <equals>
+                <property>autopilot/internal/gs-captured</property>
+                <value>0</value>
+              </equals>
+            </and>
+          </or>
+          <equals>
+            <property>autopilot/locks/heading</property>
+            <value>true-heading-hold</value>
+          </equals>
+        </and>
       </condition>
     </enable>
     <input>position/altitude-ft</input>
@@ -502,9 +570,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <output>autopilot/internal/target-climb-rate-fps</output>
     <config>
       <Kp>0.12</Kp>
-      <Ki>0.0</Ki>
-      <u_min>-16.67</u_min>
-      <u_max>16.67</u_max>
+      <Ki>0.005</Ki>
+      <min>-16.67</min>
+      <max>16.67</max>
     </config>
   </pi-simple-controller>
 
@@ -539,7 +607,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <reference>autopilot/internal/target-climb-rate-fps</reference>
     <output>autopilot/internal/servos/elevator-trim</output>
     <config>
-      <Kp>-0.015</Kp>
+      <Kp>-0.01</Kp>
       <Ti>30.0</Ti>
       <Td>0.0001</Td>
       <u_min>-1.0</u_min>
@@ -565,7 +633,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </condition>
     </enable>
     <input>velocities/vertical-speed-fps</input>
-    <reference>instrumentation/nav[0]/gs-rate-of-climb</reference>
+    <reference>instrumentation/nav/gs-rate-of-climb</reference>
     <output>autopilot/internal/servos/elevator-trim</output>
     <config>
       <Kp>-0.01</Kp>
