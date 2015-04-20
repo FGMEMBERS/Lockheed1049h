@@ -262,7 +262,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
 
-    <aircraft-version>2.5.1</aircraft-version>
+    <aircraft-version>2.5.2</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
@@ -418,6 +418,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </property-rule>
       <property-rule n="101">
         <path>Systems/load-factor-filters.xml</path>
+      </property-rule>
+      <property-rule n="102">
+        <path>Systems/instrumentation-filters.xml</path>
       </property-rule>
     </systems>
 
