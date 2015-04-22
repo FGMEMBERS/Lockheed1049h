@@ -1,5 +1,7 @@
 Lockheed Super Constellation 1049H
-----------------------------------
+==================================
+
+![Buck Image](http://www.buckarooshangar.com/flightgear/images/Lockheed1049Ha.jpg)
 
 The Lockheed 1049H is a passenger/freight convertible version of the famed Lockheed 1049G. 53 were built between 1957-1958. The 1049H can be converted between configurations in just a few hours. Perhaps the best example of a surviving 1049H is the "Star of America", the "Save A Connie" Lockheed Super Constellation of the Airline History Museum at Kansas City. Though sometimes listed as a 1049G, it is actually a 1049H converted to passenger operations. You can clearly see the cargo door openings in photos of this aircraft. My model was not made to represent a particular 1049H aircraft, but rather a class of multi-purpose Connie's surviving in that role through the 70's.
 
@@ -129,8 +131,8 @@ Brett "Gooneybird" Harrison and Durk Talsma contributed the KLM livery.
 
 I would like to thank everyone else who has followed this project and provided support and encouragement.
 
----
-Gary R. Neely "Buckaroo"
+
+*Gary R. Neely "Buckaroo"*
 Dec 2010
 grneely@gmail.com
 
