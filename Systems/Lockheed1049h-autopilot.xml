@@ -307,21 +307,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <property>autopilot/locks/heading</property>
           <value>wing-leveler</value>
         </equals>
-        <greater-than>
-          <property>autopilot/settings/target-bank-deg</property>
-          <value>-1.0</value>
-        </greater-than>
         <less-than>
-          <property>autopilot/settings/target-bank-deg</property>
-          <value>+1.0</value>
+          <expression>
+            <fabs>
+              <property>autopilot/settings/target-bank-deg</property>
+            </fabs>
+          </expression>
+          <value>1.0</value>
         </less-than>
-        <greater-than>
-          <property>orientation/roll-deg</property>
-          <value>-1.0</value>
-        </greater-than>
         <less-than>
-          <property>orientation/roll-deg</property>
-          <value>+1.0</value>
+          <expression>
+            <fabs>
+              <property>orientation/roll-deg</property>
+            </fabs>
+          </expression>
+          <value>1.0</value>
         </less-than>
       </and>
     </S>
@@ -331,13 +331,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <property>autopilot/locks/heading</property>
           <value>wing-leveler</value>
         </not-equals>
-        <less-than-equals>
-          <property>autopilot/settings/target-bank-deg</property>
-          <value>-1.0</value>
-        </less-than-equals>
         <greater-than-equals>
-          <property>autopilot/settings/target-bank-deg</property>
-          <value>+1.0</value>
+          <expression>
+            <fabs>
+              <property>autopilot/settings/target-bank-deg</property>
+            </fabs>
+          </expression>
+          <value>1.0</value>
         </greater-than-equals>
       </or>
     </R>
@@ -401,29 +401,33 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <debug>false</debug>
     <enable>
       <condition>
-        <and>
-          <equals>
-            <property>autopilot/locks/heading</property>
-            <value>wing-leveler</value>
-          </equals>
-          <not>
-            <property>autopilot/internal/wing-leveler-heading-hold</property>
-          </not>
-        </and>
+        <or>
+          <greater-than-equals>
+            <expression>
+              <fabs>
+                <property>autopilot/internal/filtered-target-bank-deg</property>
+              </fabs>
+            </expression>
+            <value>1.0</value>
+          </greater-than-equals>
+          <and>
+            <equals>
+              <property>autopilot/locks/heading</property>
+              <value>wing-leveler</value>
+            </equals>
+            <not>
+              <property>autopilot/internal/wing-leveler-heading-hold</property>
+            </not>
+          </and>
+        </or>
       </condition>
     </enable>
     <type>gain</type>
     <gain>1.0</gain>
     <input>autopilot/internal/filtered-target-bank-deg</input>
     <output>autopilot/internal/target-roll-deg</output>
-    <min>
-      <property>controls/autoflight/bank-angle-select</property>
-      <scale>-1.0</scale>
-    </min>
-    <max>
-      <property>controls/autoflight/bank-angle-select</property>
-      <scale>+1.0</scale>
-    </max>
+    <min>-30.0</min>
+    <max>+30.0</max>
   </filter>
 
   <filter>
@@ -484,10 +488,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <debug>false</debug>
     <enable>
       <condition>
-        <equals>
-          <property>autopilot/locks/heading</property>
-          <value>nav1-hold</value>
-        </equals>
+        <and>
+          <less-than>
+            <expression>
+              <fabs>
+                <property>autopilot/internal/filtered-target-bank-deg</property>
+              </fabs>
+            </expression>
+            <value>1.0</value>
+          </less-than>
+          <equals>
+            <property>autopilot/locks/heading</property>
+            <value>nav1-hold</value>
+          </equals>
+        </and>
       </condition>
     </enable>
     <type>gain</type>
