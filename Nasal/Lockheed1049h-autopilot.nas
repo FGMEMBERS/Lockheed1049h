@@ -138,8 +138,16 @@ var infer_flight_path_setting = func()
 #
 var toggle_autopilot_on_off = func()
 {
-    var state = getprop("autopilot/switches/ap");
-    setprop("autopilot/switches/ap", state ? 0 : 1);
+    var ap = getprop("autopilot/switches/ap");
+    var alt = getprop("autopilot/switches/alt");
+
+    if (!ap and alt) {
+        setprop("sim/messages/pilot",
+            "Cannot engage autopilot when altitude switch is on"
+        );
+        return;
+    }
+    setprop("autopilot/switches/ap", !ap);
 }
 
 ################################################################################
@@ -185,6 +193,13 @@ setlistener("autopilot/locks/altitude", func(node) {
     lock(func {
         infer_flight_path_setting();
         setprop("autopilot/switches/alt", node.getValue() == "altitude-hold");
+        setprop("autopilot/switches/ap", node.getValue() != "");
+    });
+}, startup = 1, runtime = 0);
+
+setlistener("autopilot/locks/speed", func(node) {
+    lock(func {
+        setprop("autopilot/switches/ap", node.getValue() != "");
     });
 }, startup = 1, runtime = 0);
 
@@ -199,7 +214,7 @@ setlistener("/sim/signals/reinit", func(status) {
         setprop("autopilot/switches/alt", 0);
         setprop("autopilot/settings/flight-path", 0);
         setprop("autopilot/settings/target-bank-deg", 0);
-        setprop("autopilot/settings/target-pitch-deg", 5.0);
+        setprop("autopilot/settings/target-pitch-deg", 4.0);
         setprop("autopilot/internal/wing-leveler-heading-hold", 0);
     }
 }, startup = 1, runtime = 0);

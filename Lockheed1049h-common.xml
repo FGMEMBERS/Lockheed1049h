@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <settings>
       <target-bank-deg>0</target-bank-deg>
       <target-speed-kt type="double">223</target-speed-kt>
-      <target-pitch-deg type="double">5.0</target-pitch-deg>
+      <target-pitch-deg type="double">4.0</target-pitch-deg>
       <target-altitude-ft type="double">0</target-altitude-ft>
       <vertical-speed-fpm type="double">0</vertical-speed-fpm>
       <heading-bug-deg type="double">0</heading-bug-deg>

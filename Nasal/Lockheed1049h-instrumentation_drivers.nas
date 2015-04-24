@@ -5,12 +5,9 @@
 # Code by Gary Neely aka 'Buckaroo' except as otherwise noted
 #
 # Support for backup Attitude Indicators
-# Support for Autopilot Active indicator
 # Switch throw animation support
 # Support for nav freq decimal digits
 #
-
-
 
 #
 # Support for the backup Attitude Indicators
@@ -32,34 +29,6 @@ var update_ai = func {
   }
   settimer(update_ai, 10);
 }
-
-
-
-#
-# Manages the operation of the Autopilot light.
-# If any AP functions active (the lock has some non-zero-length string value), set ap-warn,
-# which drives the light animation.
-#
-
-var UPDATE_PERIOD	= 1;					# How often to update in seconds (0 = framerate)
-
-var ap_hdg	= props.globals.getNode("/autopilot/locks/heading",1);
-var ap_alt	= props.globals.getNode("/autopilot/locks/altitude",1);
-var ap_spd	= props.globals.getNode("/autopilot/locks/speed",1);
-var ap_warn	= props.globals.getNode("/systems/autopilot/ap-warn",1);
-
-
-var update_apwarn = func {
-  if (ap_hdg.getType() == "STRING") {				# Check if values initialized
-    if (size(ap_hdg.getValue()) > 0 or size(ap_alt.getValue()) > 0 or size(ap_spd.getValue()) > 0)
-      { ap_warn.setValue(1); }
-    else { ap_warn.setValue(0); }
-  }
-
-  settimer(update_apwarn, UPDATE_PERIOD);
-}
-
-
 
 #
 # A little setup for simulating short switch throws:
@@ -198,7 +167,6 @@ var update_comms = func {
 
 var InstrumentationInit = func {
   settimer(update_comms, 2);				# Delay startup a bit to allow things to initialize
-  settimer(update_apwarn, 2);				# Delay startup a bit to allow things to initialize
   #interpolate(ai_spin, 1, 15);				# Spin up the backup AI gyro
   settimer(update_ai, 20);				# Maintain spin on backup AI
 }
