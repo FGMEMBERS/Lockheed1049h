@@ -139,4 +139,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <output>instrumentation/rmi-needle[1]/value</output>
   </filter>
 
+  <!-- =============================================================== -->
+  <!-- Autopilot Warning Light                                         -->
+  <!-- =============================================================== -->
+
+  <logic>
+    <name>Autopilot Warning Light</name>
+    <inverted>true</inverted>
+    <input>
+      <and>
+        <equals>
+          <property>autopilot/locks/heading</property>
+          <value></value>
+        </equals>
+        <equals>
+          <property>autopilot/locks/altitude</property>
+          <value></value>
+        </equals>
+        <equals>
+          <property>autopilot/locks/speed</property>
+          <value></value>
+        </equals>
+      </and>
+    </input>
+    <output>systems/autopilot/ap-warn</output>
+  </logic>
+
 </PropertyList>

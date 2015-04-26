@@ -805,9 +805,8 @@
 
   <!-- The Autopilot support -->
 
-  <!-- Autopilot on off -->
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>switch.001</object-name>
     <property>autopilot/switches/ap</property>
     <factor>-50</factor>
@@ -821,25 +820,17 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <visible>true</visible>
-    <object-name>switch.001</object-name>
-    <object-name>sockle.001</object-name>
     <action>
-      <button>0</button>
       <binding>
-        <command>property-toggle</command>
-        <property>autopilot/switches/ap</property>
+        <command>nasal</command>
+        <script>Lockheed1049h.toggle_autopilot_on_off()</script>
       </binding>
     </action>
   </animation>
 
   <!-- Autopilot ALT on off -->
   <animation>
-    <type>rotate</type>
+    <type>knob</type>
     <object-name>switch.000</object-name>
     <property>autopilot/switches/alt</property>
     <factor>-50</factor>
@@ -853,22 +844,13 @@
       <y>1.0</y>
       <z>0.0</z>
     </axis>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <visible>true</visible>
-    <object-name>switch.000</object-name>
-    <object-name>sockle.000</object-name>
     <action>
-      <button>0</button>
       <binding>
         <command>property-toggle</command>
         <property>autopilot/switches/alt</property>
       </binding>
     </action>
   </animation>
-
 
   <!-- Autopilot Pitch wheels -->
   <animation>
@@ -888,12 +870,33 @@
     </axis>
     <action>
       <binding>
+        <condition>
+          <not>
+            <property>autopilot/switches/alt</property>
+          </not>
+        </condition>
         <command>property-adjust</command>
         <property>autopilot/settings/target-pitch-deg</property>
         <factor>0.1</factor>
         <min>-20</min>
         <max>20</max>
         <wrap>0</wrap>
+      </binding>
+      <binding>
+        <condition>
+          <and>
+            <property>autopilot/switches/alt</property>
+            <not>
+              <equals>
+                <property>sim/messages/pilot</property>
+                <value>Pitch wheel is locked when altitude control switch is on</value>
+              </equals>
+            </not>
+          </and>
+        </condition>
+        <command>property-assign</command>
+        <property>sim/messages/pilot</property>
+        <value>Pitch wheel is locked when altitude control switch is on</value>
       </binding>
     </action>
   </animation>

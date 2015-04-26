@@ -4,62 +4,9 @@
 #
 # Code by Gary Neely aka 'Buckaroo' except as otherwise noted
 #
-# Support for backup Attitude Indicators
-# Support for Autopilot Active indicator
 # Switch throw animation support
 # Support for nav freq decimal digits
 #
-
-
-
-#
-# Support for the backup Attitude Indicators
-#
-# The backup AI presumably relies on either vacuum or electrically powered gyros which must
-# be kept spinning to function. Some part of FG decrements the spin value, and some part
-# increments it, but it seems to rely on an engine #1 setting (RPM) that is not reliable or perhaps
-# reasonable in the case of YASim jet engine models. Therefore I power it here by updating it
-# every 5 seconds if the dc bus is active. In time this might become part of the electrical system.
-#
-
-var bus_dc	= props.globals.getNode("/systems/electrical/bus-dc");
-var ai_spin	= props.globals.getNode("/instrumentation/attitude-indicator/spin");
-
-var update_ai = func {
-  if (bus_dc.getNode("volts").getValue() > 23) {
-    #ai_spin.setValue(1);
-    interpolate(ai_spin, 1, 9);					# Spin up the backup AI gyro
-  }
-  settimer(update_ai, 10);
-}
-
-
-
-#
-# Manages the operation of the Autopilot light.
-# If any AP functions active (the lock has some non-zero-length string value), set ap-warn,
-# which drives the light animation.
-#
-
-var UPDATE_PERIOD	= 1;					# How often to update in seconds (0 = framerate)
-
-var ap_hdg	= props.globals.getNode("/autopilot/locks/heading",1);
-var ap_alt	= props.globals.getNode("/autopilot/locks/altitude",1);
-var ap_spd	= props.globals.getNode("/autopilot/locks/speed",1);
-var ap_warn	= props.globals.getNode("/systems/autopilot/ap-warn",1);
-
-
-var update_apwarn = func {
-  if (ap_hdg.getType() == "STRING") {				# Check if values initialized
-    if (size(ap_hdg.getValue()) > 0 or size(ap_alt.getValue()) > 0 or size(ap_spd.getValue()) > 0)
-      { ap_warn.setValue(1); }
-    else { ap_warn.setValue(0); }
-  }
-
-  settimer(update_apwarn, UPDATE_PERIOD);
-}
-
-
 
 #
 # A little setup for simulating short switch throws:
@@ -198,7 +145,4 @@ var update_comms = func {
 
 var InstrumentationInit = func {
   settimer(update_comms, 2);				# Delay startup a bit to allow things to initialize
-  settimer(update_apwarn, 2);				# Delay startup a bit to allow things to initialize
-  #interpolate(ai_spin, 1, 15);				# Spin up the backup AI gyro
-  settimer(update_ai, 20);				# Maintain spin on backup AI
 }

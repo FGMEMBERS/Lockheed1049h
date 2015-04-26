@@ -254,7 +254,7 @@ Syd Adams
         <property alias="../../../../selected-deg"/>
         <factor>1</factor>
         <min>0</min>
-        <max>359</max>
+        <max>360</max>
         <wrap>true</wrap>
       </binding>
     </action>
