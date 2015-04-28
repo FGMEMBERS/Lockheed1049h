@@ -103,7 +103,6 @@
   <animation>
     <type>material</type>
     <object-name>PanelMain</object-name>
-    <object-name>Panel.OH.Radio</object-name> 
     <object-name>FlightDeck</object-name> 
     <object-name>FlightDeckA</object-name> 
     <object-name>FlightDeckB</object-name> 
@@ -176,10 +175,10 @@
     <object-name>EngFuelSelect3</object-name>
     <object-name>EngFuelSelect4</object-name>
     <emission>
-      <red>0.4</red>
+      <red>0.2</red>
       <green>0.2</green>
-      <blue>0.1</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <blue>0.2</blue>
+      <factor-prop>/controls/lighting/chart</factor-prop>
     </emission>
   </animation>
 
@@ -200,6 +199,9 @@
 
   <animation>
     <type>material</type>
+    <object-name>PanelOHSwitches</object-name>
+    <object-name>Panel.OH.Radio</object-name>
+    <object-name>SwComBell</object-name>
     <object-name>SwPPTail</object-name>
     <object-name>SwPPWT</object-name>
     <object-name>SwPPTaxi</object-name>
@@ -228,10 +230,10 @@
     <object-name>Switch.Magneto3</object-name>
     <object-name>Switch.Magneto4</object-name>
     <emission>
-      <red>0.05</red>
-      <green>0.025</green>
-      <blue>0.0125</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>0.15</red>
+      <green>0.15</green>
+      <blue>0.15</blue>
+      <factor-prop>/controls/lighting/chart</factor-prop>
     </emission>
   </animation>
 

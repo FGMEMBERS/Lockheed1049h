@@ -112,6 +112,28 @@ var configure_lateral_mode = func()
     }
 }
 
+# Configure the speed modes of the autopilot based on switch positions.
+#
+# Speed modes are not supported by the cockpit autopilot controls but a pilot
+# may use auto-throttle via the generic autopilot dialog. Any speed
+# mode should be cleared when the autopilot is disconnected.
+#
+var configure_speed_mode = func()
+{
+    if (!getprop("autopilot/switches/ap")) {
+        setprop("autopilot/locks/speed", "");
+    }
+}
+
+# Convenience function to configure all autopilot modes
+#
+var configure_all_modes = func()
+{
+    configure_lateral_mode();
+    configure_vertical_mode();
+    configure_speed_mode();
+}
+
 # Infers the flight path setting based on autopilot locks changed through the
 # generic autopilot dialog.
 #
@@ -158,8 +180,7 @@ var toggle_autopilot_on_off = func()
 
 setlistener("/autopilot/switches/ap", func(ap) {
     lock(func {
-        configure_lateral_mode();
-        configure_vertical_mode();
+        configure_all_modes();
     });
 }, startup = 1, runtime = 0);
 
@@ -186,6 +207,7 @@ setlistener("autopilot/locks/heading", func(node) {
     lock(func {
         infer_flight_path_setting();
         setprop("autopilot/switches/ap", node.getValue() != "");
+        configure_all_modes();
     });
 }, startup = 1, runtime = 0);
 
@@ -194,12 +216,14 @@ setlistener("autopilot/locks/altitude", func(node) {
         infer_flight_path_setting();
         setprop("autopilot/switches/alt", node.getValue() == "altitude-hold");
         setprop("autopilot/switches/ap", node.getValue() != "");
+        configure_all_modes();
     });
 }, startup = 1, runtime = 0);
 
 setlistener("autopilot/locks/speed", func(node) {
     lock(func {
         setprop("autopilot/switches/ap", node.getValue() != "");
+        configure_all_modes();
     });
 }, startup = 1, runtime = 0);
 
