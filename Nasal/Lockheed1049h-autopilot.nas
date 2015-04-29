@@ -207,7 +207,6 @@ setlistener("autopilot/locks/heading", func(node) {
     lock(func {
         infer_flight_path_setting();
         setprop("autopilot/switches/ap", node.getValue() != "");
-        configure_all_modes();
     });
 }, startup = 1, runtime = 0);
 
@@ -216,14 +215,12 @@ setlistener("autopilot/locks/altitude", func(node) {
         infer_flight_path_setting();
         setprop("autopilot/switches/alt", node.getValue() == "altitude-hold");
         setprop("autopilot/switches/ap", node.getValue() != "");
-        configure_all_modes();
     });
 }, startup = 1, runtime = 0);
 
 setlistener("autopilot/locks/speed", func(node) {
     lock(func {
         setprop("autopilot/switches/ap", node.getValue() != "");
-        configure_all_modes();
     });
 }, startup = 1, runtime = 0);
 
