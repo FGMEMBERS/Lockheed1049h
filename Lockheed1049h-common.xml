@@ -127,7 +127,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <file>Nasal/Lockheed1049h-refuel.nas</file>
       <file>Nasal/Lockheed1049h-seats.nas</file>
       <file>Nasal/Lockheed1049h-autopilot.nas</file>
-      <file>Nasal/Lockheed1049h-autostart.nas</file>
+      <file>Nasal/Lockheed1049h-util.nas</file>
       <file>Nasal/mk-wiper.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>
@@ -137,6 +137,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <aircraft_dual_control>
       <file>Nasal/L1049h-dual-control.nas</file>
     </aircraft_dual_control>
+    <autochecklist>
+      <file>Aircraft/Generic/autochecklist.nas</file>
+    </autochecklist>
   </nasal>
 
   <payload>
@@ -262,7 +265,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
 
-    <aircraft-version>2.7</aircraft-version>
+    <aircraft-version>2.8</aircraft-version>
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
@@ -281,20 +284,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <!--
       Support for autostart and shutdown via checklists. Indexes
       correspond to the checklists above. If additional checklists
-      are added the startup and shutdown indexes may change.
+      are added the indexes may change.
       -->
-      <ground-start>
+      <terminal-start>
+        <index n="0">0</index>  <!-- Before Starting Engines -->
+        <index n="1">1</index>  <!-- Start Engines -->
+        <index n="2">2</index>  <!-- During Warmup -->
+        <index n="3">3</index>  <!-- Before Taxi -->
+      </terminal-start>
+      <runway-start>
         <index n="0">0</index>  <!-- Before Starting Engines -->
         <index n="1">1</index>  <!-- Start Engines -->
         <index n="2">2</index>  <!-- During Warmup -->
         <index n="3">4</index>  <!-- Before Takeoff -->
-      </ground-start>
+      </runway-start>
       <in-air-start>
         <index n="0">0</index>  <!-- Before Starting Engines -->
         <index n="1">1</index>  <!-- Start Engines -->
         <index n="2">2</index>  <!-- During Warmup -->
         <index n="4">5</index>  <!-- Initial Climb -->
       </in-air-start>
+      <after-landing>
+        <index n="0">9</index>  <!-- After Landing -->
+      </after-landing>
     </checklists>
  
     <!-- Required for parkpos=AVAILABLE option -->
