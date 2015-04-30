@@ -185,6 +185,16 @@
       <property>sim/current-view/view-number</property>
       <value>10</value>
     </binding>
+    <mod-alt>
+      <binding>
+        <command>nasal</command>
+        <script><![CDATA[
+          if (props.globals.getNode("sim/checklists/auto") != nil) {
+              autochecklist.complete_checklists("after-landing", 0);
+          }
+        ]]></script>
+      </binding>
+    </mod-alt>
   </key>
 
   <key n="111">
