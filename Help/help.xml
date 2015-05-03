@@ -45,6 +45,10 @@
     <desc>Unlock/Lock Prop Reversing</desc>
   </key>
   <key>
+    <name>Alt+L</name>
+    <desc>Run After Landing Checklist</desc>
+  </key>
+  <key>
     <name>O</name>
     <desc>Overhead panel view</desc>
   </key>

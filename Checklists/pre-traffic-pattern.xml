@@ -92,7 +92,29 @@ are indicated in the comments by an asterisk.
   </item>
 
   <!-- Autopilot Servo Disconnect Levers - OFF -->
+
   <!-- Brakes - CHECKED -->
+  <item>
+    <name>Parking Brake</name>
+    <value>OFF</value>
+    <marker>
+      <x-m>-15.4300</x-m>
+      <y-m>-0.1700</y-m>
+      <z-m>0.5600</z-m>
+      <scale>3.6000</scale>
+    </marker>
+    <condition>
+      <equals>
+        <property>controls/gear/brake-parking</property>
+        <value>0</value>
+      </equals>
+    </condition>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/gear/brake-parking</property>
+      <value>0</value>
+    </binding>
+  </item>
 
   <!-- Ordinance Lights (Seat Belts / No Smoking) - ON -->
   <item>

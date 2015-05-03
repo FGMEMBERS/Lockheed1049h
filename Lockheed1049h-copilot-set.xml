@@ -98,7 +98,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </menubar>
 
     <model>
-      <path>Models/L1049h-Copilot.xml</path>
+      <path>Aircraft/Lockheed1049h/Models/L1049h-Copilot.xml</path>
       <livery>
         <file type="string">EasternGSF</file>
       </livery>

@@ -49,10 +49,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             <binding>
               <command>nasal</command>
               <script><![CDATA[
-                if (getprop("gear/gear/wow")) {
-                    Lockheed1049h.complete_checklists("ground-start");
+                if (props.globals.getNode("sim/checklists/auto") == nil) {
+                    setprop("sim/messages/copilot",
+                        "Autostart needs FGDATA 3.5 or higher"
+                    );
+                    return;
+                }
+                if (getprop("gear/gear[1]/wow")) {
+                    if (Lockheed1049h.is_near_runway()) {
+                        setprop("sim/checklists/auto/completed-message",
+                            "Checklists complete, ready for takeoff"
+                        );
+                        autochecklist.complete_checklists("runway-start");
+                    } else {
+                        setprop("sim/checklists/auto/completed-message",
+                            "Checklists complete, ready to taxi"
+                        );
+                        autochecklist.complete_checklists("terminal-start");
+                    }
                 } else {
-                    Lockheed1049h.complete_checklists("in-air-start");
+                    autochecklist.complete_checklists("in-air-start", 0);
                 }
               ]]></script>
             </binding>
@@ -116,7 +132,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </menubar>
 
     <model>
-      <path>Models/Lockheed1049h.xml</path>
+      <path>Aircraft/Lockheed1049h/Models/Lockheed1049h.xml</path>
       <livery>
         <file type="string">EasternGSF</file>
       </livery>
