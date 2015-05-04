@@ -8536,7 +8536,7 @@ refs 4
 kids 0
 OBJECT poly
 name "LightTaxiGlowH.001"
-loc -26.077454 -1.737711 -6.980952
+loc -23.885317 -1.287711 -11.6781385
 data 18
 LightTaxiGlowH.001
 texture "txt_lights_exterior.rgb"
@@ -8602,7 +8602,7 @@ refs 4
 kids 0
 OBJECT poly
 name "LightTaxiGlowH.002"
-loc -26.148281 -1.737711 6.689009
+loc -23.885317 -1.287711 11.6781385
 data 18
 LightTaxiGlowH.002
 texture "txt_lights_exterior.rgb"

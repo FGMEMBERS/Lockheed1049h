@@ -11,7 +11,7 @@
   <!-- Start livery machine -->
   <nasal>
     <load>
-      var livery_update = aircraft.livery_update.new("Models/Liveries");
+      var livery_update = aircraft.livery_update.new("Aircraft/Lockheed1049h/Models/Liveries");
     </load>
     <unload>
       livery_update.stop();
@@ -27,27 +27,27 @@
 
   <model>
     <name>Cockpit</name>
-    <path>Models/Lockheed1049h_Cockpit.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Cockpit.xml</path>
   </model>
   <model>
     <name>Antennas</name>
-    <path>Models/Lockheed1049h_Antennas.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Antennas.xml</path>
   </model>
   <model>
     <name>External Lights</name>
-    <path>Models/Lockheed1049h_Lights.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Lights.xml</path>
   </model>
   <model>
     <name>Propellers</name>
-    <path>Models/Lockheed1049h_Props.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Props.xml</path>
   </model>
   <model>
     <name>Particle Effects</name>
-    <path>Models/Lockheed1049h_ParticleEffects.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_ParticleEffects.xml</path>
   </model>
   <model>
     <name>Wiper Pilot</name>
-    <path>Models/Instruments/wiper/wiperleft.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Instruments/wiper/wiperleft.xml</path>
     <offsets>
       <x-m>-15.606</x-m>
       <y-m> -0.369</y-m>
@@ -62,7 +62,7 @@
   </model>
   <model>
     <name>Wiper Copilot</name>
-    <path>Models/Instruments/wiper/wiperright.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Instruments/wiper/wiperright.xml</path>
     <offsets>
       <x-m>-15.606</x-m>
       <y-m> 0.369</y-m>
@@ -79,7 +79,7 @@
     <name>Pushback</name>
     <path>Models/Airport/Pushback/Goldhofert.xml</path>
     <offsets>
-      <x-m>-15.3</x-m>
+      <x-m>-17.8</x-m>
       <y-m>0</y-m>
       <z-m>-3.75</z-m>
     </offsets>
@@ -1340,7 +1340,7 @@
       </less-than>
     </condition>
     <property>gear/gear[0]/steering-norm</property>
-    <factor>30</factor>
+    <factor>70</factor>
     <axis>
       <x1-m>-14.771</x1-m>
       <y1-m>0</y1-m>

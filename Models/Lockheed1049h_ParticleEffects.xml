@@ -10,7 +10,7 @@
 
   <!-- Smoke (starting engine, #1) -->
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[0]/cranking</property>
@@ -25,7 +25,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[0]/cranking</property>
@@ -40,7 +40,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[0]/cranking</property>
@@ -58,7 +58,7 @@
 
   <!-- Smoke (starting engine, #2) -->
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[1]/cranking</property>
@@ -73,7 +73,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[1]/cranking</property>
@@ -88,7 +88,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[1]/cranking</property>
@@ -105,7 +105,7 @@
 
   <!-- Smoke (starting engine, #3) -->
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[2]/cranking</property>
@@ -120,7 +120,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[2]/cranking</property>
@@ -135,7 +135,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[2]/cranking</property>
@@ -152,7 +152,7 @@
 
   <!-- Smoke (starting engine, #4) -->
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[3]/cranking</property>
@@ -167,7 +167,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[3]/cranking</property>
@@ -182,7 +182,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/smoke.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/smoke.xml</path>
     <condition>
       <and>
         <property>engines/engine[3]/cranking</property>
@@ -199,7 +199,7 @@
 
   <!-- Fire , #1 -->
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -217,7 +217,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -236,7 +236,7 @@
   </model>
 
   <model>
-    <path>Models/Effects/fire.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire.xml</path>
     <condition>
       <and>
 	<less-than-equals>
@@ -257,7 +257,7 @@
 
   <!-- Fire, #2 -->
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -275,7 +275,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -294,7 +294,7 @@
   </model>
 
   <model>
-    <path>Models/Effects/fire.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire.xml</path>
     <condition>
       <and>
 	<less-than-equals>
@@ -315,7 +315,7 @@
 
   <!-- Fire, #3 -->
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -333,7 +333,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -352,7 +352,7 @@
   </model>
 
   <model>
-    <path>Models/Effects/fire.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire.xml</path>
     <condition>
       <and>
 	<less-than-equals>
@@ -372,7 +372,7 @@
 
   <!-- Fire, #4 -->
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -390,7 +390,7 @@
     </offsets>
   </model>
   <model>
-    <path>Models/Effects/fire-in-flight.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire-in-flight.xml</path>
     <condition>
       <and>
 	<greater-than>
@@ -409,7 +409,7 @@
   </model>
 
   <model>
-    <path>Models/Effects/fire.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fire.xml</path>
     <condition>
       <and>
 	<less-than-equals>
@@ -429,7 +429,7 @@
 
   <!-- Jettison / Fuel dump, #1 -->
   <model>
-    <path>Models/Effects/fuel_dump.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
       <property>sim/multiplay/generic/int[9]</property>
     </condition>
@@ -443,7 +443,7 @@
 
   <!-- Jettison / Fuel dump, #2 -->
   <model>
-    <path>Models/Effects/fuel_dump.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
       <property>sim/multiplay/generic/int[9]</property>
     </condition>
@@ -457,7 +457,7 @@
 
   <!-- Jettison / Fuel dump, #3 -->
   <model>
-    <path>Models/Effects/fuel_dump.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
       <property>sim/multiplay/generic/int[10]</property>
     </condition>
@@ -471,7 +471,7 @@
 
   <!-- Jettison / Fuel dump, #4 -->
   <model>
-    <path>Models/Effects/fuel_dump.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
       <property>sim/multiplay/generic/int[10]</property>
     </condition>
