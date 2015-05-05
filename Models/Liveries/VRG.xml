@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">VARIG</name>
+      <texture>Liveries/VRG_fuselage.png</texture>
+    </livery>
+    <cowls>
+      <texture>Liveries/VRG_cowls.png</texture>
+    </cowls>
+    <rudders>
+      <texture>Liveries/VRG_rudders.png</texture>
+    </rudders>
+    <wing>
+      <texture>txt_livery_wing.rgb</texture>
+    </wing>
+    <propellers>
+      <texture>txt_livery_prop1_DLH.rgb</texture>
+    </propellers>
+    <propellerdisks>
+      <texture>txt_propblur_DLH.rgb</texture>
+    </propellerdisks>
+  </model>
+</sim>
+</PropertyList>
