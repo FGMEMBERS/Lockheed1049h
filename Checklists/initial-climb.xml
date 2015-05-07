@@ -62,9 +62,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-      controls.flapsDown(-1);
-      ]]></script>
+      <script>controls.flapsDown(-4);</script>
     </binding>
   </item>
 
@@ -81,20 +79,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/lighting/landing-left</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-left</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-right</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-right</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-extend-left</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-extend-left</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-extend-right</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-extend-right</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>
@@ -202,9 +200,9 @@ are indicated in the comments by an asterisk.
     <name>No Smoking Signs</name>
     <value>OFF</value>
     <marker>
-      <x-m>-14.9000</x-m>
-      <y-m>-0.0100</y-m>
-      <z-m>1.4000</z-m>
+      <x-m>-14.8900</x-m>
+      <y-m>-0.0300</y-m>
+      <z-m>1.5700</z-m>
       <scale>1.0000</scale>
     </marker>
     <condition>
@@ -224,9 +222,9 @@ are indicated in the comments by an asterisk.
     <name>Seat Belt Signs</name>
     <value>OFF</value>
     <marker>
-      <x-m>-14.9000</x-m>
+      <x-m>-14.8900</x-m>
       <y-m>-0.0100</y-m>
-      <z-m>1.4000</z-m>
+      <z-m>1.5700</z-m>
       <scale>1.0000</scale>
     </marker>
     <condition>
@@ -261,12 +259,12 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <less-than>
-	  <property>instrumentation/altimeter/setting-inhg</property>
-	  <value>29.921</value>
+          <property>instrumentation/altimeter/setting-inhg</property>
+          <value>29.921</value>
         </less-than>
         <greater-than>
-	  <property>instrumentation/altimeter/setting-inhg</property>
-	  <value>29.919</value>
+          <property>instrumentation/altimeter/setting-inhg</property>
+          <value>29.919</value>
         </greater-than>
       </and>
     </condition>

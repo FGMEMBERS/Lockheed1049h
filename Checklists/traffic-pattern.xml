@@ -95,36 +95,36 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <less-than>
-	  <property>controls/engines/engine[0]/propeller-pitch</property>
-	  <value>0.82</value>
+          <property>controls/engines/engine[0]/propeller-pitch</property>
+          <value>0.82</value>
         </less-than>
         <greater-than>
-	  <property>controls/engines/engine[0]/propeller-pitch</property>
-	  <value>0.78</value>
+          <property>controls/engines/engine[0]/propeller-pitch</property>
+          <value>0.78</value>
         </greater-than>
         <less-than>
-	  <property>controls/engines/engine[1]/propeller-pitch</property>
-	  <value>0.82</value>
+          <property>controls/engines/engine[1]/propeller-pitch</property>
+          <value>0.82</value>
         </less-than>
         <greater-than>
-	  <property>controls/engines/engine[1]/propeller-pitch</property>
-	  <value>0.78</value>
+          <property>controls/engines/engine[1]/propeller-pitch</property>
+          <value>0.78</value>
         </greater-than>
         <less-than>
-	  <property>controls/engines/engine[2]/propeller-pitch</property>
-	  <value>0.82</value>
+          <property>controls/engines/engine[2]/propeller-pitch</property>
+          <value>0.82</value>
         </less-than>
         <greater-than>
-	  <property>controls/engines/engine[2]/propeller-pitch</property>
-	  <value>0.78</value>
+          <property>controls/engines/engine[2]/propeller-pitch</property>
+          <value>0.78</value>
         </greater-than>
         <less-than>
-	  <property>controls/engines/engine[3]/propeller-pitch</property>
-	  <value>0.82</value>
+          <property>controls/engines/engine[3]/propeller-pitch</property>
+          <value>0.82</value>
         </less-than>
         <greater-than>
-	  <property>controls/engines/engine[3]/propeller-pitch</property>
-	  <value>0.78</value>
+          <property>controls/engines/engine[3]/propeller-pitch</property>
+          <value>0.78</value>
         </greater-than>
       </and>
     </condition>
