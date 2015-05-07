@@ -34,20 +34,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/engines/engine[0]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[1]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[2]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[2]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
         <equals>
-	  <property>controls/engines/engine[3]/cowl-flaps-norm</property>
-	  <value>1.0</value>
+          <property>controls/engines/engine[3]/cowl-flaps-norm</property>
+          <value>1.0</value>
         </equals>
       </and>
     </condition>
@@ -150,7 +150,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script>controls.flapsDown(-4)</script>
+      <script>controls.flapsDown(-4);</script>
     </binding>
   </item>
 
@@ -167,20 +167,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/lighting/landing-left</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-left</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-right</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-right</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-extend-left</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-extend-left</property>
+          <value>0</value>
         </equals>
         <equals>
-	  <property>controls/lighting/landing-extend-right</property>
-	  <value>0</value>
+          <property>controls/lighting/landing-extend-right</property>
+          <value>0</value>
         </equals>
       </and>
     </condition>

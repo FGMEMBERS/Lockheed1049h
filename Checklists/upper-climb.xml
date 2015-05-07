@@ -34,20 +34,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
-	  <value>1</value>
+          <property>fdm/jsbsim/propulsion/engine[0]/boost-speed</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
-	  <value>1</value>
+          <property>fdm/jsbsim/propulsion/engine[1]/boost-speed</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
-	  <value>1</value>
+          <property>fdm/jsbsim/propulsion/engine[2]/boost-speed</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
-	  <value>1</value>
+          <property>fdm/jsbsim/propulsion/engine[3]/boost-speed</property>
+          <value>1</value>
         </equals>
       </and>
     </condition>
@@ -140,12 +140,12 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <less-than>
-	  <property>instrumentation/altimeter/setting-inhg</property>
-	  <value>29.921</value>
+          <property>instrumentation/altimeter/setting-inhg</property>
+          <value>29.921</value>
         </less-than>
         <greater-than>
-	  <property>instrumentation/altimeter/setting-inhg</property>
-	  <value>29.919</value>
+          <property>instrumentation/altimeter/setting-inhg</property>
+          <value>29.919</value>
         </greater-than>
       </and>
     </condition>
