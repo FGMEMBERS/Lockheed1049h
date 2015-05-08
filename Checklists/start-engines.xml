@@ -177,14 +177,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-        setprop("controls/engines/engine[2]/starter", 1);
-        var t = maketimer(3.0, func {
-          setprop("controls/engines/engine[2]/starter", 0);
-        });
-        t.singleShot = 1;
-        t.start()
-      ]]></script>
+      <script>Lockheed1049h.start_selected_engine();</script>
     </binding>
   </item>
 
@@ -248,14 +241,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-        setprop("controls/engines/engine[3]/starter", 1);
-        var t = maketimer(3.0, func {
-          setprop("controls/engines/engine[3]/starter", 0);
-        });
-        t.singleShot = 1;
-        t.start()
-      ]]></script>
+      <script>Lockheed1049h.start_selected_engine();</script>
     </binding>
   </item>
 
@@ -319,14 +305,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-        setprop("controls/engines/engine[1]/starter", 1);
-        var t = maketimer(3.0, func {
-          setprop("controls/engines/engine[1]/starter", 0);
-        });
-        t.singleShot = 1;
-        t.start()
-      ]]></script>
+      <script>Lockheed1049h.start_selected_engine();</script>
     </binding>
   </item>
 
@@ -390,14 +369,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-        setprop("controls/engines/engine[0]/starter", 1);
-        var t = maketimer(3.0, func {
-          setprop("controls/engines/engine[0]/starter", 0);
-        });
-        t.singleShot = 1;
-        t.start()
-      ]]></script>
+      <script>Lockheed1049h.start_selected_engine();</script>
     </binding>
   </item>
 

@@ -52,3 +52,31 @@ var is_near_runway = func()
     return distance_to_nearest_runway(from:current_position()) < 50.0;
 }
 
+# Show the fuel and payload dialog. Does not display the dialog if
+# automated checklists are running
+#
+var show_weight_dialog = func()
+{
+    var auto = getprop("sim/checklists/auto/active") or 0;
+    if (!auto) gui.showWeightDialog();
+}
+
+# Fire the starter on the engine selected by the starter select
+#
+var start_selected_engine = func()
+{
+    var selected = getprop("controls/switches/engine-start-select") or 0;
+    if (selected < 1 or selected > 4) return;
+
+    var engines = props.globals.getNode("controls/engines");
+    var engine = engines.getChild("engine", selected - 1);
+    var starter = engine.getNode("starter");
+
+    starter.setValue(1);
+    var t = maketimer(3.0, func {
+        starter.setValue(0);
+    });
+    t.singleShot = 1;
+    t.start()
+}
+

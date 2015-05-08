@@ -225,9 +225,9 @@ are indicated in the comments by an asterisk.
     <name>No Smoking Signs</name>
     <value>ON</value>
     <marker>
-      <x-m>-14.9000</x-m>
-      <y-m>-0.0100</y-m>
-      <z-m>1.4000</z-m>
+      <x-m>-14.8900</x-m>
+      <y-m>-0.0300</y-m>
+      <z-m>1.5700</z-m>
       <scale>1.0000</scale>
     </marker>
     <condition>
@@ -247,9 +247,9 @@ are indicated in the comments by an asterisk.
     <name>Seat Belt Signs</name>
     <value>ON</value>
     <marker>
-      <x-m>-14.9000</x-m>
+      <x-m>-14.8900</x-m>
       <y-m>-0.0100</y-m>
-      <z-m>1.4000</z-m>
+      <z-m>1.5700</z-m>
       <scale>1.0000</scale>
     </marker>
     <condition>
@@ -687,12 +687,7 @@ are indicated in the comments by an asterisk.
     </marker>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-        var auto = getprop("sim/checklists/auto/active") or 0;
-        if (!auto) {
-          gui.showWeightDialog();
-        }
-      ]]></script>
+      <script>Lockheed1049h.show_weight_dialog();</script>
     </binding>
   </item>
 
@@ -710,12 +705,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-        var auto = getprop("sim/checklists/auto/active") or 0;
-        if (!auto) {
-          gui.showWeightDialog();
-        }
-      ]]></script>
+      <script>Lockheed1049h.show_weight_dialog();</script>
     </binding>
   </item>
 
@@ -736,12 +726,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-        var auto = getprop("sim/checklists/auto/active") or 0;
-        if (!auto) {
-          gui.showWeightDialog();
-        }
-      ]]></script>
+      <script>Lockheed1049h.show_weight_dialog();</script>
     </binding>
   </item>
 

@@ -10,12 +10,12 @@
 
   <model>
     <name>Instruments</name>
-    <path>Models/Lockheed1049h_Instruments.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Instruments.xml</path>
   </model>
 
   <model>
     <name>Pedestal</name>
-    <path>Models/Lockheed1049h_Pedestal.xml</path>
+    <path>Aircraft/Lockheed1049h/Models/Lockheed1049h_Pedestal.xml</path>
   </model>
 
   <!-- Special Shaders -->

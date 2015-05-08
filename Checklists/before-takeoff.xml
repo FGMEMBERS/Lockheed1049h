@@ -27,6 +27,12 @@ are indicated in the comments by an asterisk.
   <item>
     <name>Trim Tabs</name>
     <value>CHECKED</value>
+    <marker>
+      <x-m>-15.3519</x-m>
+      <y-m>-0.1384</y-m>
+      <z-m>0.7793</z-m>
+      <scale>12.0</scale>
+    </marker>
     <condition>
       <and>
         <equals>
@@ -46,9 +52,9 @@ are indicated in the comments by an asterisk.
     <binding>
       <command>nasal</command>
       <script><![CDATA[
-      Lockheed1049h.applyTrimWheels(0, 0);
-      Lockheed1049h.applyTrimWheels(0, 1);
-      Lockheed1049h.applyTrimWheels(0, 2);
+        Lockheed1049h.applyTrimWheels(0, 0);
+        Lockheed1049h.applyTrimWheels(0, 1);
+        Lockheed1049h.applyTrimWheels(0, 2);
       ]]></script>
     </binding>
   </item>
@@ -71,9 +77,7 @@ are indicated in the comments by an asterisk.
     </condition>
     <binding>
       <command>nasal</command>
-      <script><![CDATA[
-      controls.flapsDown(1);
-      ]]></script>
+      <script>controls.flapsDown(1);</script>
     </binding>
   </item>
 

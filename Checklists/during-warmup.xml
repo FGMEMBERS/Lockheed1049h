@@ -105,20 +105,20 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-	  <property>controls/switches/generator[0]/position</property>
-	  <value>1</value>
+          <property>controls/switches/generator[0]/position</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>controls/switches/generator[1]/position</property>
-	  <value>1</value>
+          <property>controls/switches/generator[1]/position</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>controls/switches/generator[2]/position</property>
-	  <value>1</value>
+          <property>controls/switches/generator[2]/position</property>
+          <value>1</value>
         </equals>
         <equals>
-	  <property>controls/switches/generator[3]/position</property>
-	  <value>1</value>
+          <property>controls/switches/generator[3]/position</property>
+          <value>1</value>
         </equals>
       </and>
     </condition>
