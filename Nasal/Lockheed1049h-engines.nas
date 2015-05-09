@@ -17,14 +17,44 @@
 # These vars declared in electrical.nas:
 # MIN_VOLTS, bus_dc
 
-# Starter button pressed:
-var engine_starter = func {
-   if (bus_dc.getNode("volts").getValue() <= MIN_VOLTS) { # Insufficient volts on bus
-      return 0;
-   }
-   var engine = getprop ("/controls/switches/engine-start-select");
-   if (engine == 0) { return 0; } # No engine selected
-   setprop ("/controls/engines/engine[" ~ (engine - 1) ~ "]/starter", 1);
+# Set the starter on a given engine on or off but only on if it has power.
+#
+var set_engine_starter = func(engine, on)
+{
+    var engines = props.globals.getNode("controls/engines");
+    var starter = engines.getChild("engine", engine).getNode("starter");
+    var powered = bus_dc.getNode("volts").getValue() >= MIN_VOLTS;
+
+    starter.setValue(on and powered);
+}
+
+# Set the state of the engine starter on the selected engine in response to
+# changes to the engine starter switch.
+#
+var engine_start_listener = func(engine_start)
+{
+    var selected = getprop("controls/switches/engine-start-select");
+
+    if (selected > 0) {
+        set_engine_starter(selected - 1, engine_start.getValue());
+    }
+}
+
+# Ensure starters on unselected engines are turned off when the starter select
+# dial changes. Disabled for automated checklist starts because multiple
+# starters may fire during expedited (in-air) starts.
+#
+var engine_select_listener = func(engine_start_select)
+{
+    var auto = getprop("sim/checklists/auto/active") or 0;
+    if (auto) return;
+
+    var engine_start = getprop("controls/switches/engine-start");
+
+    for (var s = 1; s <= 4; s += 1) {
+        var selected = (s == engine_start_select.getValue());
+        set_engine_starter(s - 1, selected and engine_start);
+    }
 }
 
 # Adjust the cooling factor of each engine as cowl flaps are opened or closed.
@@ -38,6 +68,8 @@ var adjust_cooling_factor = func (cowl_flaps_node) {
 var cowl_flaps_listeners = [ 0, 0, 0, 0 ]; # prevents re-registering listeners on Shift+Esc
 
 setlistener ("/sim/signals/fdm-initialized", func {
+
+   # Listen for changes to cowl flap settings
    for (var engine = 0; engine < 4; engine = engine + 1) {
       if (cowl_flaps_listeners [engine] == 0) {
          cowl_flaps_listeners [engine] =
@@ -48,4 +80,15 @@ setlistener ("/sim/signals/fdm-initialized", func {
          print ("FDM reinitialized; not re-registering cowl flap listeners.");
       }
    }
+
+   # Listen for changes to engine start switch
+   setlistener("controls/switches/engine-start",
+       engine_start_listener, 0, 0
+   );
+
+   # Listen for changes to engine start select switch
+   setlistener("controls/switches/engine-start-select",
+       engine_select_listener, 0, 0
+   );
+
 }, 0, 0);

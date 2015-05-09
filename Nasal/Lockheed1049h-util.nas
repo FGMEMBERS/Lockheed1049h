@@ -61,22 +61,32 @@ var show_weight_dialog = func()
     if (!auto) gui.showWeightDialog();
 }
 
-# Fire the starter on the engine selected by the starter select
+# Helper function to start the selected engine from a checklist binding. If
+# the binding is being run using expedited checklists, starts the engine
+# directly, otherwise uses the engine starter switch
 #
 var start_selected_engine = func()
 {
-    var selected = getprop("controls/switches/engine-start-select") or 0;
-    if (selected < 1 or selected > 4) return;
+    var expedited = getprop("sim/checklists/auto/expedited") or 0;
+    var auto = getprop("sim/checklists/auto/active") or 0;
+    var starter = nil;
 
-    var engines = props.globals.getNode("controls/engines");
-    var engine = engines.getChild("engine", selected - 1);
-    var starter = engine.getNode("starter");
+    if (auto and expedited) {
+        var selected = getprop("controls/switches/engine-start-select");
+        var engines = props.globals.getNode("controls/engines");
+        starter = engines.getChild("engine", selected - 1).getNode("starter");
+    } else {
+        starter = props.globals.getNode("controls/switches/engine-start");
+    }
 
     starter.setValue(1);
-    var t = maketimer(3.0, func {
+
+    # Hold duration must be less than automated checklist wait time (3.0s),
+    # otherwise engine starts interfere with each other
+    var t = maketimer(2.5, func {
         starter.setValue(0);
     });
     t.singleShot = 1;
-    t.start()
+    t.start();
 }
 
