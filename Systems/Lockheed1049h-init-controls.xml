@@ -85,6 +85,8 @@
   </lighting>
 
   <switches>
+    <engine-start type="bool">false</engine-start>
+    <engine-prime type="bool">false</engine-prime>
     <engine-start-select type="int">0</engine-start-select>
     <generator n="0"><position type="int">0</position></generator>
     <generator n="1"><position type="int">0</position></generator>
