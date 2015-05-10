@@ -26,9 +26,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <PropertyList include="Lockheed1049h-common.xml">
 
   <nasal>
-    <Lockheed1049h>
-      <file n="100">Nasal/mk-crashed.nas</file>
-    </Lockheed1049h>
+    <engine-fire>
+      <file>Nasal/mk-crashed.nas</file>
+    </engine-fire>
     <dual_control>
       <file>Aircraft/Generic/DualControl/pilot-dual-control.nas</file>
     </dual_control>
