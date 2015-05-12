@@ -1333,12 +1333,7 @@
     <object-name>LGnoseHubR</object-name>
     <object-name>LGnoseTorqueBarU</object-name>
     <object-name>LGnoseTorqueBarL</object-name>
-    <condition>
-      <less-than>
-        <property>position/altitude-agl-ft</property>
-        <value>50.0</value>
-      </less-than>
-    </condition>
+    <condition>gear/gear[0]/wow</condition>
     <property>gear/gear[0]/steering-norm</property>
     <factor>70</factor>
     <axis>

@@ -4,5 +4,20 @@
 
   <path>master_fire.ac</path>
 
-</PropertyList>
+  <animation>
+    <type>select</type>
+    <object-name>LampMasterFireOn</object-name>
+    <condition>
+      <and>
+        <property>controls/special/fire-warning</property>
+        <or>
+          <property>sim/multiplay/generic/int[11]</property>
+          <property>sim/multiplay/generic/int[12]</property>
+          <property>sim/multiplay/generic/int[13]</property>
+          <property>sim/multiplay/generic/int[14]</property>
+        </or>
+      </and>
+    </condition>
+  </animation>
 
+</PropertyList>

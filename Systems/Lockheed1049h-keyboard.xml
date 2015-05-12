@@ -211,9 +211,17 @@
     <name>s</name>
     <desc>Selected Engine Starter</desc>
     <binding>
-      <command>nasal</command>
-      <script>Lockheed1049h.engine_starter();</script>
+      <command>property-assign</command>
+      <property>controls/switches/engine-start</property>
+      <value>1</value>
     </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/switches/engine-start</property>
+        <value>0</value>
+      </binding>
+    </mod-up>
     <mod-alt>
       <desc>Toggle superchargers</desc>
       <binding>

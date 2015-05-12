@@ -143,18 +143,18 @@ var randomly_set_engines_on_fire = maketimer (5.5, func {
    else if (e <= 0.75) engine = 2;
    else engine = 3;
        
-   if (getprop("/controls/engines/engine["~engine~"]/on-fire")) {
-      # Already on fire, do nothing.
+   if (getprop("/controls/engines/engine["~engine~"]/on-fire")
+       or !getprop("/engines/engine["~engine~"]/fuel-flow-gph") > 0) {
+      # Already on fire or no fuel flow, do nothing.
       return;
    }
    var probability = 0;
    # The probability that the engine catches fire increases with
-   # cylinder head temperature.
+   # cylinder head temperature if above 550 degF.  Above 650 degF,
+   # the probability becomes certainty.
    var cht = getprop("/engines/engine["~engine~"]/cht-degf") - 550;
-   if (cht > 0) {
-      probability = cht / 550 + rand ();
-   }
-   if (probability > 1.0) {              
+   if (cht > 0) { probability = cht / 100; }
+   if (rand () < probability) {
       setprop("/controls/engines/engine["~engine~"]/on-fire", 1);
    }
 });
