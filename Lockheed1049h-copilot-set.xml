@@ -66,9 +66,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   </fdm>
 
   <nasal>
-    <Lockheed1049h>
-      <file n="100">Nasal/mk-copilot.nas</file>
-    </Lockheed1049h>
+    <copilot>
+      <file>Nasal/mk-copilot.nas</file>
+    </copilot>
     <dual_control>
       <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
     </dual_control>
