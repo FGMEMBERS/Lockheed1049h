@@ -12,8 +12,8 @@
 var DCT = dual_control_tools;
 
 ## Pilot/copilot aircraft identifiers. Used by dual_control.
-var pilot_type   = "Models/Lockheed1049h.xml";
-var copilot_type = "Models/L1049h-Copilot.xml";
+var pilot_type   = "Aircraft/Lockheed1049h/Models/Lockheed1049h.xml";
+var copilot_type = "Aircraft/Lockheed1049h/Models/L1049h-Copilot.xml";
 
 ############################ PROPERTIES MP ###########################
 
