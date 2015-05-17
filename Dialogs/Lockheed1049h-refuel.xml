@@ -105,6 +105,30 @@
         <layout>hbox</layout>
         <default-padding>5</default-padding>
         <text>
+          <label>Refuelling Errors</label>
+          <halign>left</halign>
+        </text>
+        <slider>
+          <property>sim/model/options/refuel-error-pct</property>
+          <pref-width>160</pref-width>
+          <min>0.0</min>
+          <max>5.0</max>
+          <live>true</live>
+          <halign>right</halign>
+          <binding>
+            <command>dialog-apply</command>
+          </binding>
+        </slider>
+      </group>
+      <text>
+        <label>None                          High </label>
+        <halign>right</halign>
+      </text>
+      <text><label/></text>
+      <group>
+        <layout>hbox</layout>
+        <default-padding>5</default-padding>
+        <text>
           <label>Request Fuel (lbs)</label>
           <halign>left</halign>
         </text>
