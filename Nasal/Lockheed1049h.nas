@@ -33,6 +33,7 @@ LockheedMain.savedata = func {
   aircraft.data.add("/sim/model/options/hide-dice");
   aircraft.data.add("/sim/model/options/hide-light-cones");
   aircraft.data.add("/sim/model/options/hide-yokes");
+  aircraft.data.add("/sim/model/options/refuel-error-pct");
   aircraft.data.add("/sim/model/options/show-heading-bug");
   #aircraft.data.add("/sim/current-view/z-offset-m");
   #aircraft.data.add("/sim/current-view/y-offset-m");
