@@ -253,6 +253,39 @@ var preset_select = func {
   }
 }
 
+# Tanks on the Lockheed Constellation were refuelled individually and quantities
+# measured using a dipstick, so exact quantities are unrealistic. This function
+# applies a random error to the quantity of fuel in each tank.
+#
+# The amount of error is controlled by the refuel-error-pct property under
+# sim/model/options. If this is zero or undefined, no refuelling error is
+# applied.
+#
+var apply_refuelling_error = func()
+{
+    var refuel_error_pct = getprop("sim/model/options/refuel-error-pct") or 0.0;
+    if (refuel_error_pct == 0.0) return;
+
+    srand();
+
+    foreach (var tank; tanks) {
+        var qnode = tank.getNode("level-gal_us");
+        var quantity_usg = qnode.getValue();
+        var capacity_usg = tank.getNode("capacity-gal_us").getValue();
+        if (quantity_usg > 0.0) {
+            # Make the applied error +/- the absolute percentage
+            var error_pct = refuel_error_pct * (rand() * 2.0 - 1.0);
+            # Error is based on tank size, not quantity of fuel in it. The error
+            # is in the measurement of depth of fuel in the tank.
+            var error_usg = capacity_usg * error_pct / 100;
+            if (quantity_usg + error_usg <= capacity_usg) {
+                qnode.setValue(quantity_usg + error_usg);
+            } else {
+                qnode.setValue(capacity_usg);
+            }
+        }
+    }
+}
 									# Fetch a fuel configuration:
 var preset_fetch = func {
   preset_index = getprop("/sim/presets/fuel");				# Try to get a preset selection from FG saved preferences
@@ -304,6 +337,7 @@ var preset_load = func(preset_index) {
       request_fuel_quantity_lbs(lbs);
   }
 
+  apply_refuelling_error();
 }
 
 ##################################### jettison the tanks #################################################
