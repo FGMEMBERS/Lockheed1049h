@@ -43,7 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <running type="bool">0</running>
       <fuel-flow-gph type="double">0</fuel-flow-gph>
     </engine>
-  </engines>       
+  </engines>
 
   <!-- never be nil for copilot -->
   <fdm>
@@ -78,7 +78,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <description>Lockheed 1049H Copilot</description>
     <flight-model>null</flight-model>
-
+    <variant-of>Lockheed1049h</variant-of>
     <menubar>
       <default>
         <menu n="100">
@@ -102,7 +102,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <livery>
         <file type="string">EasternGSF</file>
       </livery>
-    </model> 
+    </model>
 
     <view n="0"> <!-- the default view is the copilot's, not the pilot view -->
       <name>Copilot View</name>
