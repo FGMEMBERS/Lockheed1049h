@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">HB-RSC</name>
+        <texture>txt_livery_fuselage_HB-RSC.png</texture>
+      </livery>
+      <cowls>
+        <texture>txt_livery_cowls_HB-RSC.png</texture>
+      </cowls>
+      <rudders>
+        <texture>txt_livery_rudders_HB-RSC.png</texture>
+      </rudders>
+      <wing>
+        <texture>txt_livery_wing_HB-RSC.png</texture>
+      </wing>
+      <propellers>
+        <texture>txt_livery_prop1_HB-RSC.png</texture>
+      </propellers>
+      <propellerdisks>
+        <texture>txt_propblur_EST.rgb</texture>
+      </propellerdisks>
+    </model>
+  </sim>
+</PropertyList>
