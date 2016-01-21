@@ -104,7 +104,19 @@
   <!-- see my cockpit in darkness --> 
   <animation>
     <type>material</type>
-    <object-name>PanelMain</object-name>
+    <object-name>Avionics</object-name>
+    <object-name>Books</object-name>
+    <object-name>CompassBox</object-name>
+    <object-name>ConsoleCopilot</object-name>
+    <object-name>ConsolePilot</object-name>
+    <object-name>CrossFeedSta</object-name>
+    <object-name>EngFuelPlacards</object-name>
+    <object-name>EngPlacards</object-name>
+    <object-name>EngineerDeck</object-name> 
+    <object-name>EngineerDeckLv1</object-name> 
+    <object-name>EngineerDeckLv2</object-name> 
+    <object-name>EngineerPanel</object-name>
+    <object-name>EngPanel1</object-name>
     <object-name>FlightDeck</object-name> 
     <object-name>FlightDeckA</object-name> 
     <object-name>FlightDeckB</object-name> 
@@ -112,28 +124,25 @@
     <object-name>FlightDeckD</object-name> 
     <object-name>FlightDeckWinFrame</object-name> 
     <object-name>FlightDeckWinInsets</object-name> 
-    <object-name>EngineerDeck</object-name> 
-    <object-name>EngineerDeckklv1</object-name> 
-    <object-name>EngineerDeckklv2</object-name> 
-    <object-name>EngineerPanel</object-name>  
+    <object-name>FuelCutoff1</object-name>
+    <object-name>FuelCutoff2</object-name>
+    <object-name>FuelCutoff3</object-name>
+    <object-name>FuelCutoff4</object-name>
+    <object-name>FuelCutoffDrum</object-name>
+    <object-name>FuelDump12</object-name>
+    <object-name>FuelDump34</object-name>
     <object-name>NodePanel</object-name>
+    <object-name>OxyTanks</object-name>
+    <object-name>PanelMain</object-name>
+    <object-name>PanelFEGenFieldEmer</object-name>
+    <object-name>RadioShelving_0</object-name>
+    <object-name>RadioShelving_1</object-name>
     <object-name>SeatCP</object-name>
     <object-name>SeatEngineer</object-name>
     <object-name>SeatJump</object-name>
     <object-name>SeatP</object-name>
-    <object-name>CockpitDoor</object-name>
-    <object-name>CompassBox</object-name>
-    <object-name>ConsoleCopilot</object-name>
-    <object-name>ConsolePilot</object-name>
-    <object-name>CrossFeedSta</object-name>
-    <object-name>FuelCutoff1</object-name>
-    <object-name>FuelCutoff2</object-name>
-    <object-name>FuelCutoff3</object-name>
-    <object-name>FuelCutoffDrum</object-name>
-    <object-name>FuelDump12</object-name>
-    <object-name>FuelDump34</object-name>
-    <object-name>YokeP</object-name>
     <object-name>YokeCP</object-name>
+    <object-name>YokeP</object-name>
     <emission>
       <red>0.2</red>
       <green>0.2</green>
@@ -195,7 +204,7 @@
       <red>0.1</red>
       <green>0.05</green>
       <blue>0.025</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <factor-prop>/controls/lighting/chart</factor-prop>
     </emission>
   </animation>
 
@@ -1647,7 +1656,7 @@
       <red>0.2</red>
       <green>0.1</green>
       <blue>0.05</blue>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <factor-prop>/controls/lighting/chart</factor-prop>
     </emission>
   </animation>
 

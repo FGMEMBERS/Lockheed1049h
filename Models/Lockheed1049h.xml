@@ -169,7 +169,16 @@
     <texture-prop>texture</texture-prop>
     <texture>txt_livery_wing.rgb</texture>
   </animation>
-
+  <animation>
+    <type>material</type>
+    <object-name>DoorCrewInt</object-name>
+    <emission>
+      <red>0.2</red>
+      <green>0.2</green>
+      <blue>0.2</blue>
+      <factor-prop>/controls/lighting/chart</factor-prop>
+    </emission>
+  </animation>
 
   <!-- Special Shaders -->
 
