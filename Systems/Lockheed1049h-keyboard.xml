@@ -2,6 +2,17 @@
 
 <PropertyList>
 
+  <key n="1">
+    <!-- The default key sets altitude hold mode with a target
+         altitude of zero.  Override with our custom autopilot to
+         capture and hold current altitude. -->
+    <name>Ctrl+A</name>
+    <binding>
+      <command>property-toggle</command>
+      <property>autopilot/switches/alt</property>
+    </binding>
+  </key>
+
   <key n="4">
     <name>Ctrl+D</name>
     <binding>
