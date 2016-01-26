@@ -1343,8 +1343,7 @@
     <object-name>LGnoseTorqueBarU</object-name>
     <object-name>LGnoseTorqueBarL</object-name>
     <condition>gear/gear[0]/wow</condition>
-    <property>gear/gear[0]/steering-norm</property>
-    <factor>70</factor>
+    <property>fdm/jsbsim/fcs/steer-pos-deg</property>
     <axis>
       <x1-m>-14.771</x1-m>
       <y1-m>0</y1-m>

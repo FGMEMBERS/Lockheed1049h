@@ -314,8 +314,8 @@ K:             0.039
         <y>0</y>
         <z>-145</z> <!-- 149.7 -->
       </location>
-      <static_friction> 0.8 </static_friction>
-      <dynamic_friction> 0.5 </dynamic_friction>
+      <static_friction> 0.95 </static_friction>
+      <dynamic_friction> 0.6 </dynamic_friction>
       <rolling_friction> 0.02 </rolling_friction>
       <spring_coeff unit="LBS/FT"> 36000 </spring_coeff> <!-- 36000 -->
       <damping_coeff unit="LBS/FT/SEC"> 14000 </damping_coeff> <!-- 12000 -->
