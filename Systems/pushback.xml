@@ -19,7 +19,7 @@
       <default value="58.5"/>   <!-- pushback disconnected -->
       <test    value="70.0">    <!-- pushback connected -->
         systems/pushback/linked == 0
-      </test>111
+      </test>
     </switch>
 
     <pure_gain name="fcs/steer-pos-deg[0]">
