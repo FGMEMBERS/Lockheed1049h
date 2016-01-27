@@ -48,7 +48,6 @@ the ability to take the properties relative to their root.
     <object-name>LightVolume.001</object-name>
     <object-name>LightVolume.002</object-name>
     <object-name>LightBall</object-name>
-    <object-name>Cone-texture</object-name>	
     <nopreview/>
   </animation>
 
@@ -76,7 +75,6 @@ the ability to take the properties relative to their root.
     <object-name>LightTailGlow</object-name>
     <object-name>LightNavGlowL</object-name>
     <object-name>LightNavGlowR</object-name>		
-    <object-name>Cone-texture</object-name>	
     <object-name>NavLightBackVolume</object-name>
     <object-name>NavLightVolume_right</object-name>
     <object-name>NavLightVolume_left</object-name>
@@ -111,30 +109,6 @@ the ability to take the properties relative to their root.
     <object-name>LightTailGlow</object-name>
     <object-name>LightNavGlowL</object-name>
     <object-name>LightNavGlowR</object-name>
-    <object-name>Cone-texture</object-name>
-  </effect>
-
-  <!-- Landing and Search Light fake cone - disable in rembrand -->
-  <animation>
-    <type>select</type>
-    <object-name>Cone-texture</object-name>
-    <condition>
-      <and>
-        <not>
-          <property>sim/rendering/rembrandt/enabled</property>
-        </not>
-        <property>sim/multiplay/generic/int[2]</property>
-        <property>gear/gear[0]/position-norm</property>
-        <not>
-          <property>sim/model/options/hide-light-cones</property>
-        </not>
-      </and>
-    </condition>
-  </animation>
-  
-  <effect>
-    <inherits-from>Models/light-cone.eff</inherits-from>
-    <object-name>Cone-texture</object-name>
   </effect>
 
   <!-- Animations -->
@@ -783,6 +757,72 @@ the ability to take the properties relative to their root.
     <far-m>10</far-m>
   </animation>
 
+  <!-- John Williams kindly provided these light spots for me from his
+       757-200. Let his name shine here for eternity. -->
 
+  <model>
+    <name>Taxi Light Spot</name>
+    <path>Aircraft/Lockheed1049h/Models/light_c.ac</path>
+    <offsets>
+      <x-m>-28</x-m>
+      <y-m>0</y-m>
+      <z-m>-1</z-m>
+    </offsets>
+  </model>
+  <animation>
+    <type>select</type>
+    <object-name>Taxi Light Spot</object-name>
+    <condition>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
+      <property>sim/multiplay/generic/int[2]</property>
+      <property>gear/gear[0]/position-norm</property>
+    </condition>
+  </animation>
+
+  <model>
+    <name>Left Landing Light Spot</name>
+    <path>Aircraft/Lockheed1049h/Models/light_l.ac</path>
+    <offsets>
+      <x-m>-29</x-m>
+      <y-m>-8</y-m>
+      <z-m>-1</z-m>
+      <heading-deg>-26</heading-deg>
+    </offsets>
+  </model>
+  <animation>
+    <type>select</type>
+    <object-name>Left Landing Light Spot</object-name>
+    <condition>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
+      <property>sim/multiplay/generic/int[3]</property>
+      <property>sim/multiplay/generic/int[5]</property>
+    </condition>
+  </animation>
+
+  <model>
+    <name>Right Landing Light Spot</name>
+    <path>Aircraft/Lockheed1049h/Models/light_r.ac</path>
+    <offsets>
+      <x-m>-29</x-m>
+      <y-m>8</y-m>
+      <z-m>-1</z-m>
+      <heading-deg>26</heading-deg>
+    </offsets>
+  </model>
+  <animation>
+    <type>select</type>
+    <object-name>Right Landing Light Spot</object-name>
+    <condition>
+      <not>
+        <property>sim/rendering/rembrandt/enabled</property>
+      </not>
+      <property>sim/multiplay/generic/int[4]</property>
+      <property>sim/multiplay/generic/int[6]</property>
+    </condition>
+  </animation>
+  
 </PropertyList>
-

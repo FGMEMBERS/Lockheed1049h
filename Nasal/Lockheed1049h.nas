@@ -31,7 +31,6 @@ LockheedMain.savedata = func {
   aircraft.data.add("/systems/seat/presets/pitch-offset-deg");
   aircraft.data.add("/systems/fuel/tanks/request-fuel-lbs");
   aircraft.data.add("/sim/model/options/hide-dice");
-  aircraft.data.add("/sim/model/options/hide-light-cones");
   aircraft.data.add("/sim/model/options/hide-yokes");
   aircraft.data.add("/sim/model/options/refuel-error-pct");
   aircraft.data.add("/sim/model/options/show-heading-bug");
