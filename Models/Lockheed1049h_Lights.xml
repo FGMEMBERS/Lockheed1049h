@@ -762,7 +762,7 @@ the ability to take the properties relative to their root.
 
   <model>
     <name>Taxi Light Spot</name>
-    <path>Aircraft/Lockheed1049h/Models/light_c.ac</path>
+    <path>Aircraft/Lockheed1049h/Models/light_c.xml</path>
     <offsets>
       <x-m>-28</x-m>
       <y-m>0</y-m>
@@ -783,7 +783,7 @@ the ability to take the properties relative to their root.
 
   <model>
     <name>Left Landing Light Spot</name>
-    <path>Aircraft/Lockheed1049h/Models/light_l.ac</path>
+    <path>Aircraft/Lockheed1049h/Models/light_l.xml</path>
     <offsets>
       <x-m>-29</x-m>
       <y-m>-8</y-m>
@@ -805,7 +805,7 @@ the ability to take the properties relative to their root.
 
   <model>
     <name>Right Landing Light Spot</name>
-    <path>Aircraft/Lockheed1049h/Models/light_r.ac</path>
+    <path>Aircraft/Lockheed1049h/Models/light_r.xml</path>
     <offsets>
       <x-m>-29</x-m>
       <y-m>8</y-m>
@@ -824,5 +824,5 @@ the ability to take the properties relative to their root.
       <property>sim/multiplay/generic/int[6]</property>
     </condition>
   </animation>
-  
+
 </PropertyList>

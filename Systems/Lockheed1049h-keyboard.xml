@@ -104,21 +104,19 @@
 
   <key n="100">
     <name>d</name>
-    <desc>Crew door view</desc>
+    <desc>Crew Door View</desc>
     <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>13</value>
+      <command>nasal</command>
+      <script>setprop ("/sim/current-view/view-number", view.indexof ("Crew Door View"));</script>
     </binding>
   </key>
 
   <key n="101">
     <name>e</name>
-    <desc>Engineer view</desc>
+    <desc>Engineer View</desc>
     <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>9</value>
+      <command>nasal</command>
+      <script>setprop ("/sim/current-view/view-number", view.indexof ("Engineer View"));</script>
     </binding>
   </key>
 
@@ -170,31 +168,28 @@
 
   <key n="106">
     <name>j</name>
-    <desc>Jumpseat view</desc>
+    <desc>Jump Seat View</desc>
     <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>12</value>
+      <command>nasal</command>
+      <script>setprop ("/sim/current-view/view-number", view.indexof ("Jump Seat View"));</script>
     </binding>
   </key>
 
   <key n="107">
     <name>k</name>
-    <desc>Observer view</desc>
+    <desc>Observer View</desc>
     <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>11</value>
+      <command>nasal</command>
+      <script>setprop ("/sim/current-view/view-number", view.indexof ("Observer View"));</script>
     </binding>
   </key>
 
   <key n="108">
     <name>l</name>
-    <desc>Copilot view</desc>
+    <desc>Copilot View</desc>
     <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>10</value>
+      <command>nasal</command>
+      <script>setprop ("/sim/current-view/view-number", view.indexof ("Copilot View"));</script>
     </binding>
     <mod-alt>
       <binding>
@@ -210,11 +205,10 @@
 
   <key n="111">
     <name>o</name>
-    <desc>Overhead panel view</desc>
+    <desc>Overhead Panel</desc>
     <binding>
-      <command>property-assign</command>
-      <property>sim/current-view/view-number</property>
-      <value>8</value>
+      <command>nasal</command>
+      <script>setprop ("/sim/current-view/view-number", view.indexof ("Overhead Panel"));</script>
     </binding>
   </key>
 
