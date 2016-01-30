@@ -2,8 +2,8 @@
 <system name="pushback">
   <!-- copied from http://wiki.flightgear.org/Howto:Implement_pushback -->
   <property>sim/model/pushback/target-speed-fps</property>
-  <channel name="Pushback">
-    
+
+  <channel name="pushback connected">
     <switch name="systems/pushback/linked">
       <default value="-1"/>
       <test value="0">
@@ -12,6 +12,24 @@
         gear/unit[0]/wheel-speed-fps lt 50
       </test>
     </switch>
+  </channel>
+    
+  <channel name="nose wheel steering">
+    <switch name="fcs/steer-max-deg">
+      <default value="58.5"/>   <!-- pushback disconnected -->
+      <test    value="70.0">    <!-- pushback connected -->
+        systems/pushback/linked == 0
+      </test>
+    </switch>
+
+    <pure_gain name="fcs/steer-pos-deg[0]">
+      <input>fcs/steer-cmd-norm</input>
+      <gain>fcs/steer-max-deg</gain>
+      <output>fcs/steer-pos-deg[0]</output>
+    </pure_gain>
+  </channel>
+
+  <channel name="Pushback">
     
     <summer name="systems/pushback/speed-error">
       <input>/sim/model/pushback/target-speed-fps</input>
@@ -54,4 +72,5 @@
     </fcs_function>
     
   </channel>
+
 </system>

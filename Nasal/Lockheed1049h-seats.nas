@@ -60,8 +60,4 @@ var seat_load_presets = func {
   view_z.setValue(preset_z.getValue());
   view_y.setValue(preset_y.getValue());
   view_pitch.setValue(preset_pitch.getValue());
-
 }
-
-
-seat_load_presets();

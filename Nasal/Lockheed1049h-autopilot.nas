@@ -50,7 +50,7 @@ var lock = func(f)
 #
 var capture_altitude = func()
 {
-    var a = math.round(getprop("position/altitude-ft"));
+    var a = math.round(getprop("instrumentation/altimeter/indicated-altitude-ft"));
     setprop("autopilot/settings/target-altitude-ft", a);
 }
 

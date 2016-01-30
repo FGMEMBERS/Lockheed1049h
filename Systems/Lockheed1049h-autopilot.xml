@@ -631,7 +631,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </and>
       </condition>
     </enable>
-    <input>position/altitude-ft</input>
+    <input>instrumentation/altimeter/indicated-altitude-ft</input>
     <reference>autopilot/settings/target-altitude-ft</reference>
     <output>autopilot/internal/target-climb-rate-fps</output>
     <config>
@@ -671,7 +671,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </and>
       </condition>
     </enable>
-    <input>position/altitude-ft</input>
+    <input>instrumentation/altimeter/indicated-altitude-ft</input>
     <reference>autopilot/settings/target-altitude-ft</reference>
     <output>autopilot/internal/target-climb-rate-fps</output>
     <config>

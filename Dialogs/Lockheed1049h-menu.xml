@@ -74,22 +74,6 @@
         <default-padding>5</default-padding>
         <text>
           <halign>left</halign>
-          <label>Hide Light Cones</label>
-        </text>
-        <checkbox>
-          <halign>right</halign>
-          <property>sim/model/options/hide-light-cones</property>
-          <binding>
-            <command>property-toggle</command>
-            <property>sim/model/options/hide-light-cones</property>
-          </binding>
-        </checkbox>
-      </group>
-      <group>
-        <layout>hbox</layout>
-        <default-padding>5</default-padding>
-        <text>
-          <halign>left</halign>
           <label>Hide Yokes</label>
         </text>
         <checkbox>
