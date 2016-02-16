@@ -764,9 +764,7 @@ the ability to take the properties relative to their root.
     <name>Taxi Light Spot</name>
     <path>Aircraft/Lockheed1049h/Models/light_c.xml</path>
     <offsets>
-      <x-m>-28</x-m>
-      <y-m>0</y-m>
-      <z-m>-1</z-m>
+      <z-m>0.05</z-m> <!-- a little above the other two spots -->
     </offsets>
   </model>
   <animation>
@@ -778,16 +776,32 @@ the ability to take the properties relative to their root.
       </not>
       <property>sim/multiplay/generic/int[2]</property>
       <property>gear/gear[0]/position-norm</property>
+      <less-than>
+        <property>orientation/pitch-deg</property>
+        <value>10</value>
+      </less-than>
     </condition>
+  </animation>
+  <animation>
+    <type>rotate</type>  <!-- same as the nose gear, see Lockheed1049.xml -->
+    <object-name>Taxi Light Spot</object-name>
+    <condition>gear/gear[0]/wow</condition>
+    <property>fdm/jsbsim/fcs/steer-pos-deg</property>
+    <axis>
+      <x1-m>-14.771</x1-m>
+      <y1-m>0</y1-m>
+      <z1-m>-0.63</z1-m>
+      <x2-m>-15.29</x2-m>
+      <y2-m>0</y2-m>
+      <z2-m>-3.073</z2-m>
+    </axis>
   </animation>
 
   <model>
     <name>Left Landing Light Spot</name>
     <path>Aircraft/Lockheed1049h/Models/light_l.xml</path>
     <offsets>
-      <x-m>-29</x-m>
       <y-m>-8</y-m>
-      <z-m>-1</z-m>
       <heading-deg>-26</heading-deg>
     </offsets>
   </model>
@@ -800,6 +814,10 @@ the ability to take the properties relative to their root.
       </not>
       <property>sim/multiplay/generic/int[3]</property>
       <property>sim/multiplay/generic/int[5]</property>
+      <less-than>
+        <property>orientation/pitch-deg</property>
+        <value>10</value>
+      </less-than>
     </condition>
   </animation>
 
@@ -807,9 +825,7 @@ the ability to take the properties relative to their root.
     <name>Right Landing Light Spot</name>
     <path>Aircraft/Lockheed1049h/Models/light_r.xml</path>
     <offsets>
-      <x-m>-29</x-m>
       <y-m>8</y-m>
-      <z-m>-1</z-m>
       <heading-deg>26</heading-deg>
     </offsets>
   </model>
@@ -822,7 +838,93 @@ the ability to take the properties relative to their root.
       </not>
       <property>sim/multiplay/generic/int[4]</property>
       <property>sim/multiplay/generic/int[6]</property>
+      <less-than>
+        <property>orientation/pitch-deg</property>
+        <value>10</value>
+      </less-than>
     </condition>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <!-- The light spots are always horizontal; an approximation of "parallel to the ground" -->
+    <object-name>Taxi Light Spot</object-name>
+    <object-name>Left Landing Light Spot</object-name>
+    <object-name>Right Landing Light Spot</object-name>
+    <property>orientation/pitch-deg</property>
+    <factor>-1</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>-1</z-m>
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>Taxi Light Spot</object-name>
+    <object-name>Left Landing Light Spot</object-name>
+    <object-name>Right Landing Light Spot</object-name>
+    <property>orientation/roll-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>-1</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <!-- the light spots are always on the ground -->
+  <animation>
+    <type>translate</type>
+    <object-name>Taxi Light Spot</object-name>
+    <object-name>Left Landing Light Spot</object-name>
+    <object-name>Right Landing Light Spot</object-name>
+    <property>position/altitude-agl-ft</property>
+    <factor>-0.3094</factor>
+    <offset-m>2.45</offset-m>
+    <axis>
+      <x>0</x>
+      <y>0</y>
+      <z>1</z>
+    </axis>
+  </animation>
+
+  <!-- the higher we are, the farther the light spots in front of us -->
+  <animation>
+    <type>translate</type>
+    <object-name>Taxi Light Spot</object-name>
+    <object-name>Left Landing Light Spot</object-name>
+    <object-name>Right Landing Light Spot</object-name>
+    <expression>
+      <product>
+        <tan>
+          <deg2rad>
+            <sum>
+              <property>orientation/pitch-deg</property>
+              <value>84</value>
+            </sum>
+          </deg2rad>
+        </tan>
+        <property>position/altitude-agl-ft</property>
+        <value>0.3094</value>
+      </product>
+    </expression>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
   </animation>
 
 </PropertyList>
