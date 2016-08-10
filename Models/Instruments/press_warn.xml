@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+        ORIGINAL FROM Gary R. Neely 'Buckaroo', Dec 2010 
+        revamp since Avril 2011 by 
+		Lake of Constance Hangar :: M.Kraus
+		Lockheed1049h for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+<path>press_warn.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPressFailOn1</object-name>
+  <condition>
+      <less-than-equals>
+        <property>/engines/engine[0]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPressFail1</object-name>
+  <condition>
+    <not>
+      <less-than-equals>
+        <property>/engines/engine[0]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+    </not>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPressFailOn2</object-name>
+  <condition>
+      <less-than-equals>
+        <property>/engines/engine[1]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPressFail2</object-name>
+  <condition>
+    <not>
+      <less-than-equals>
+        <property>/engines/engine[1]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+    </not>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPressFailOn3</object-name>
+  <condition>
+      <less-than-equals>
+        <property>/engines/engine[2]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPressFail3</object-name>
+  <condition>
+    <not>
+      <less-than-equals>
+        <property>/engines/engine[2]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+    </not>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPressFailOn4</object-name>
+  <condition>
+      <less-than-equals>
+        <property>/engines/engine[3]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPressFail4</object-name>
+  <condition>
+    <not>
+      <less-than-equals>
+        <property>/engines/engine[3]/est-oilpress</property>
+        <value>10.0</value>
+      </less-than-equals>
+    </not>
+  </condition>
+</animation>
+
+</PropertyList>

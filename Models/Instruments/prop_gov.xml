@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+        ORIGINAL FROM Gary R. Neely 'Buckaroo', Dec 2010 
+        revamp since Avril 2011 by 
+		Lake of Constance Hangar :: M.Kraus
+		Lockheed1049h for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+<path>prop_gov.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPropGovOn1</object-name>
+  <condition>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[0]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[0]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPropGov1</object-name>
+  <condition>
+    <not>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[0]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[0]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+    </not>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPropGovOn2</object-name>
+  <condition>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[1]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[1]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPropGov2</object-name>
+  <condition>
+    <not>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[1]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[1]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+    </not>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPropGovOn3</object-name>
+  <condition>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[2]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[2]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPropGov3</object-name>
+  <condition>
+    <not>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[2]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[2]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+    </not>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampPropGovOn4</object-name>
+  <condition>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[3]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[3]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>LampPropGov4</object-name>
+  <condition>
+    <not>
+    <or>
+      <greater-than-equals>
+        <property>/engines/engine[3]/rpm</property>
+        <value>2900.0</value>
+      </greater-than-equals>
+      <less-than>
+        <property>/engines/engine[3]/rpm</property>
+        <value>1350.0</value>
+      </less-than>
+    </or>
+    </not>
+  </condition>
+</animation>
+
+</PropertyList>
+

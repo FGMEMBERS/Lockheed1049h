@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- specific ADF -->
+<adf n="0">
+  <mode>adf</mode>
+  <serviceable type="bool">true</serviceable>
+  <frequencies>
+    <selected-khz type="int">490</selected-khz>  <!-- NDB "DVI" (Donaueschingen) -->
+    <standby-khz type="int">401</standby-khz>    <!-- EDTM ancient military airbase -->
+  </frequencies>
+</adf>
+
+<adf n="1">
+  <mode>adf</mode>
+  <serviceable type="bool">true</serviceable>
+  <frequencies>
+    <selected-khz type="int">473</selected-khz>  <!-- EDNY near the lake of constance -->
+    <standby-khz type="int">442</standby-khz>    <!-- EDSN ancient military airbase -->
+  </frequencies>
+</adf>
+
+<terrain-warning>
+  <selector-ft>2000.0</selector-ft>
+</terrain-warning>
+
+<onmi-bearing-selector n="0">
+  <needles-pivot type="bool">false</needles-pivot>
+</onmi-bearing-selector>
+
+<onmi-bearing-selector n="1">
+  <needles-pivot type="bool">false</needles-pivot>
+</onmi-bearing-selector>
+
+<rmi-needle n="0">
+  <mode type="int">0</mode>
+</rmi-needle>
+<rmi-needle n="1">
+  <mode type="int">0</mode>
+</rmi-needle>
+
+<deviation-indicator>
+  <frequency type="int">0</frequency>
+</deviation-indicator>
+
+<marker-beacon>
+  <test type="int">0</test>
+</marker-beacon>
+
+<!-- 
+     Avril 2012, m.kraus
+     It is really not the best, but my next try to make a "real" selection
+     for the NAV frequencies to autopilot. Flightgear only use nav[0] for autopilot
+     but I do not want swap between copilot and pilot nav. Next problem is, that 
+     in the litte Menu-Map we can see only nav[0] and nav[1] radials. 
+     So the instruments show now the nav[2] and nav[3]. The real parameter in flightgear
+     will be set dependent from the NAV Switch in the Cockpit nav[3] to nav[1] and nav[2] to nav[0]
+     or nav[2] to nav[1] and nav[3] to nav[0] in the /Nasal/mk-swap-nav.nas
+-->
+<nav n="0">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">0</selected-mhz-fmt>
+    <selected-mhz type="double">0</selected-mhz>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">0</standby-mhz-fmt>
+    <standby-mhz type="double">0</standby-mhz>
+  </frequencies>
+  <serviceable type="bool">true</serviceable>
+  <radials><selected-deg>0</selected-deg></radials>
+</nav>
+<nav n="1">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">0</selected-mhz-fmt>
+    <selected-mhz type="double">0</selected-mhz>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">0</standby-mhz-fmt>
+    <standby-mhz type="double">0</standby-mhz>
+  </frequencies>
+  <serviceable type="bool">true</serviceable>
+  <radials><selected-deg>0</selected-deg></radials>
+</nav>
+<nav n="2">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">110.05</selected-mhz-fmt>
+    <selected-mhz type="double">110.05</selected-mhz>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">114.30</standby-mhz-fmt>
+    <standby-mhz type="double">114.30</standby-mhz>
+  </frequencies>
+  <serviceable type="bool">true</serviceable>
+  <radials><selected-deg>62</selected-deg></radials>
+</nav>
+<nav n="3">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">109.60</selected-mhz-fmt>
+    <selected-mhz type="double">109.60</selected-mhz>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">111.90</standby-mhz-fmt>
+    <standby-mhz type="double">111.90</standby-mhz>
+  </frequencies>
+  <serviceable type="bool">true</serviceable>
+  <radials><selected-deg>62</selected-deg></radials>
+</nav>
+
+<comm n="0">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">127.32</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">118.10</standby-mhz-fmt>
+</frequencies>
+</comm>
+<comm n="1">
+  <frequencies>
+    <display-sel-khz type="int">0</display-sel-khz>
+    <display-sel-mhz type="int">0</display-sel-mhz>
+    <selected-mhz-fmt type="string">122.75</selected-mhz-fmt>
+    <display-sby-khz type="int">0</display-sby-khz>
+    <display-sby-mhz type="int">0</display-sby-mhz>
+    <standby-mhz-fmt type="string">122.75</standby-mhz-fmt>
+  </frequencies>
+</comm>
+
+<!-- Flightgear Rallye Watch  -->
+<frw>
+  <running type="bool">0</running>
+  <btn-mode type="bool">0</btn-mode>
+  <btn-reset type="bool">0</btn-reset>
+  <btn-start-stop type="bool">0</btn-start-stop>
+  <flight-time>
+    <start-time type="double">0</start-time>
+    <accu type="double">0</accu>
+    <total type="double">0</total>
+    <hours type="int">0</hours>
+    <minutes type="int">0</minutes>
+    <seconds type="int">0</seconds>
+  </flight-time>
+</frw>
+
+</PropertyList>

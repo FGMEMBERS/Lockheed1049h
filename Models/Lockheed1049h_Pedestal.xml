@@ -1,0 +1,1272 @@
+<!-- Lockheed Constellation 1049 cockpit pedestal                     -->
+<!-- Gary R. Neely 'Buckaroo', June 2008                              -->
+
+
+<PropertyList>
+
+<path>mesh_pedestal.ac</path>
+
+<animation>
+  <type>noshadow</type>
+  <object-name>ParkingBrakeTubeL</object-name>
+  <object-name>ParkingBrakeTubeR</object-name>
+  <object-name>ParkingBrakeLeverL</object-name>
+  <object-name>ParkingBrakeLeverR</object-name>
+  <object-name>ParkingBrakeSupportL</object-name>
+  <object-name>ParkingBrakeSupportR</object-name>
+  <object-name>ElevatorBooster</object-name>
+  <object-name>ElBoosterBracket</object-name>
+  <object-name>APKnobPitch</object-name>
+  <object-name>APKnobHdg</object-name>
+  <object-name>ElevatorTab</object-name>
+  <object-name>RudderTab</object-name>
+  <object-name>AileronTab</object-name>
+  <object-name>RudderTabCursor</object-name>
+  <object-name>AileronTabCursor</object-name>
+  <object-name>RudderTabCursorFace</object-name>
+  <object-name>AileronTabCursorFace</object-name>
+  <object-name>RudderTabNeedle</object-name>
+  <object-name>AileronTabNeedle</object-name>
+  <object-name>LandingGearLever</object-name>
+  <object-name>EmerBrakeLever</object-name>
+  <object-name>ServoLeverAileron</object-name>
+  <object-name>ServoLeverRudder</object-name>
+  <object-name>ServoLeverElevator</object-name>
+  <object-name>PedestalShelf</object-name>
+  <object-name>PedestalMain</object-name>
+  <object-name>PedestalDrum</object-name>
+  <object-name>PedestalDrumCyl</object-name>
+  <object-name>FlapLever</object-name>
+  <object-name>PropPitch</object-name>
+  <object-name>ElectricElevatorTab</object-name>
+  <object-name>ReverseLock</object-name>
+  <object-name>AileronBooster</object-name>
+  <object-name>RudderBooster</object-name>
+  <object-name>MainThrottle4</object-name>
+  <object-name>ReverseThrottle4</object-name>
+  <object-name>MainThrottle3</object-name>
+  <object-name>ReverseThrottle3</object-name>
+  <object-name>MainThrottle2</object-name>
+  <object-name>ReverseThrottle2</object-name>
+  <object-name>MainThrottle1</object-name>
+  <object-name>ReverseThrottle1</object-name>
+  <object-name>KnobPedWW</object-name>
+  <object-name>KnobPedFP</object-name>
+  <object-name>PedestalShelfText</object-name>
+</animation>
+
+<!-- see my cockpit in darkness --> 
+<animation>
+  <type>material</type> 
+  <object-name>ParkingBrakeTubeL</object-name>
+  <object-name>ParkingBrakeTubeR</object-name>
+  <object-name>ParkingBrakeLeverL</object-name>
+  <object-name>ParkingBrakeLeverR</object-name>
+  <object-name>ParkingBrakeSupportL</object-name>
+  <object-name>ParkingBrakeSupportR</object-name>
+  <object-name>ElevatorBooster</object-name>
+  <object-name>ElBoosterBracket</object-name>
+  <object-name>APKnobPitch</object-name>
+  <object-name>APKnobHdg</object-name>
+  <object-name>RudderTabCursor</object-name>
+  <object-name>AileronTabCursor</object-name>
+  <object-name>RudderTabCursorFace</object-name>
+  <object-name>AileronTabCursorFace</object-name>
+  <object-name>RudderTabNeedle</object-name>
+  <object-name>AileronTabNeedle</object-name>
+  <object-name>LandingGearLever</object-name>
+  <object-name>EmerBrakeLever</object-name>
+  <object-name>ServoLeverAileron</object-name>
+  <object-name>ServoLeverRudder</object-name>
+  <object-name>ServoLeverElevator</object-name>
+  <object-name>PedestalShelf</object-name>
+  <object-name>PedestalMain</object-name>
+  <object-name>PedestalDrum</object-name>
+  <object-name>PedestalDrumCyl</object-name>
+  <object-name>FlapLever</object-name>
+  <object-name>PropPitch</object-name>
+  <object-name>ElectricElevatorTab</object-name>
+  <object-name>ReverseLock</object-name>
+  <object-name>AileronBooster</object-name>
+  <object-name>RudderBooster</object-name>
+  <object-name>MainThrottle4</object-name>
+  <object-name>ReverseThrottle4</object-name>
+  <object-name>MainThrottle3</object-name>
+  <object-name>ReverseThrottle3</object-name>
+  <object-name>MainThrottle2</object-name>
+  <object-name>ReverseThrottle2</object-name>
+  <object-name>MainThrottle1</object-name>
+  <object-name>ReverseThrottle1</object-name>
+  <object-name>PedestalShelfText</object-name>
+  <object-name>sockle.000</object-name>
+  <object-name>sockle.001</object-name>
+  <object-name>switch.000</object-name>
+  <object-name>switch.001</object-name>
+	<condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+  </condition>
+  <emission>
+    <red>0.2</red>
+    <green>0.2</green>
+    <blue>0.2</blue>
+    <factor-prop>/controls/lighting/chart</factor-prop>
+  </emission>
+</animation>
+
+<!-- Panel Glows -->
+
+<animation>
+  <type>material</type>
+  <object-name>PedestalShelfText</object-name>  
+  <condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+  </condition>
+  <emission>
+    <red>0.7</red>
+    <green>0.2</green>
+    <blue>0.1</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>RudderTabCursorFace</object-name>
+  <object-name>AileronTabCursorFace</object-name>  
+  <condition>
+		<not><property>/sim/rendering/rembrandt/enabled</property></not>
+  </condition>
+  <emission>
+    <red>0.4</red>
+    <green>0.2</green>
+    <blue>0.1</blue>
+    <factor-prop>/controls/lighting/panel-norm</factor-prop>
+  </emission>
+</animation>
+
+
+<animation>
+  <type>translate</type>
+  <object-name>ParkingBrakeLeverL</object-name>
+  <property>/controls/gear/brake-parking</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>-0.07</dep></entry>
+    <entry><ind>1.0</ind><dep>    0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>translate</type>
+  <object-name>ParkingBrakeLeverR</object-name>
+  <property>/controls/gear/brake-parking</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>-0.07</dep></entry>
+    <entry><ind>1.0</ind><dep>    0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ParkingBrakeLeverL</object-name>  
+  <object-name>ParkingBrakeLeverR</object-name>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/brake-parking</property>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>RudderTabNeedle</object-name>
+  <property>/controls/flight/rudder-trim</property>
+  <factor>60</factor>
+  <center>
+    <x-m>-15.263</x-m>
+    <y-m>-0.054</y-m>
+    <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>-1.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>AileronTabNeedle</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>60</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-0.054</y-m>
+    <z-m>0.596</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>RudderTab</object-name>
+  <property>/controls/flight/rudder-trim</property>
+  <factor>-4680</factor>
+  <center>
+    <x-m>-15.228</x-m>
+    <y-m>-0.055</y-m>
+    <z-m>0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>RudderTab</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+     <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.applyTrimWheels(0, 1)</script>
+     </binding>
+  </action>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/rudder-trim</property>
+      <step>0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/rudder-trim</property>
+      <step>-0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>AileronTab</object-name>
+  <property>/controls/flight/aileron-trim</property>
+  <factor>-4680</factor>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>-0.055</y-m>
+    <z-m>0.631</z-m>
+  </center>
+  <axis>
+    <x>1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>AileronTab</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+     <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.applyTrimWheels(0, 2)</script>
+     </binding>
+  </action>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/aileron-trim</property>
+      <step>0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/aileron-trim</property>
+      <step>-0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ElevatorTab</object-name>
+  <property>/autopilot/trim/elevator-trim-turn</property>
+  <factor>-10500</factor>
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ElevatorTab</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+     <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.applyTrimWheels(0, 0)</script>
+     </binding>
+  </action>
+  <action>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/elevator-trim</property>
+      <step>0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/flight/elevator-trim</property>
+      <step>-0.01</step>
+      <min>-1</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>LandingGearLever</object-name>
+  <property>/gear/gear[0]/position-norm</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>-75</dep></entry>
+    <entry><ind>1.0</ind><dep>  0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>-15.25</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.404</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>LandingGearLever</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/gear-down</property>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>EmerBrakeLever</object-name>
+  <property>/controls/gear/brake-parking</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>-75</dep></entry>
+    <entry><ind>1.0</ind><dep>  0</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>-15.25</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.404</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>EmerBrakeLever</object-name>
+  <action>
+    <button>0</button>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/gear/brake-parking</property>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>PropPitch</object-name>
+  <property>/controls/engines/engine[0]/propeller-pitch</property>
+  <factor>-75</factor>
+  <offset-deg>75</offset-deg>   
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>PropPitch</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[0]/propeller-pitch</property>
+      <step>-0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[1]/propeller-pitch</property>
+      <step>-0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[2]/propeller-pitch</property>
+      <step>-0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[3]/propeller-pitch</property>
+      <step>-0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[0]/propeller-pitch</property>
+      <step>0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[1]/propeller-pitch</property>
+      <step>0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[2]/propeller-pitch</property>
+      <step>0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/engines/engine[3]/propeller-pitch</property>
+      <step>0.02</step>
+      <min>0</min>
+      <max>1</max>
+      <wrap>false</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>FlapLever</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <interpolation>
+    <entry><ind>   0</ind><dep> 0</dep></entry>
+    <entry><ind>0.25</ind><dep>65</dep></entry>
+    <entry><ind>0.50</ind><dep>75</dep></entry>
+    <entry><ind>0.75</ind><dep>85</dep></entry>
+    <entry><ind>   1</ind><dep>95</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>FlapLever</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>controls.flapsDown(1)</script>
+    </binding>
+    <mod-up>
+    <binding>
+      <command>nasal</command>
+      <script>controls.flapsDown(0)</script>
+    </binding>
+    </mod-up>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>controls.flapsDown(-1)</script>
+    </binding>
+    <mod-up>
+    <binding>
+      <command>nasal</command>
+      <script>controls.flapsDown(0)</script>
+    </binding>
+    </mod-up>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ReverseLock</object-name>
+  <property>/controls/engines/reverser_allow</property>
+  <factor>90</factor>
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ReverseLock</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_reverse_lockout()</script>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>MainThrottle1</object-name>
+  <object-name>ReverseThrottle1</object-name>
+  <property>/controls/engines/engine[0]/throttle</property>
+  <factor>-50</factor>
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ReverseThrottle1</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_prop_reverse()</script>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>MainThrottle2</object-name>
+  <object-name>ReverseThrottle2</object-name>
+  <property>/controls/engines/engine[1]/throttle</property>
+  <factor>-50</factor>
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ReverseThrottle2</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_prop_reverse()</script>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>MainThrottle3</object-name>
+  <object-name>ReverseThrottle3</object-name>
+  <property>/controls/engines/engine[2]/throttle</property>
+  <factor>-50</factor>
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ReverseThrottle3</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_prop_reverse()</script>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>MainThrottle4</object-name>
+  <object-name>ReverseThrottle4</object-name>
+  <property>/controls/engines/engine[3]/throttle</property>
+  <factor>-50</factor>
+  <center>
+    <x-m>-15.496</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.735</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>ReverseThrottle4</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>Lockheed1049h.toggle_prop_reverse()</script>
+    </binding>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/sound/switch1</property>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ReverseThrottle1</object-name>
+  <property>/controls/engines/engine[0]/reverser</property>
+  <factor>74</factor>
+  <center>
+    <x-m>-15.37</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.85</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ReverseThrottle2</object-name>
+  <property>/controls/engines/engine[1]/reverser</property>
+  <factor>74</factor>
+  <center>
+    <x-m>-15.37</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.85</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ReverseThrottle3</object-name>
+  <property>/controls/engines/engine[2]/reverser</property>
+  <factor>74</factor>
+  <center>
+    <x-m>-15.37</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.85</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>ReverseThrottle4</object-name>
+  <property>/controls/engines/engine[3]/reverser</property>
+  <factor>74</factor>
+  <center>
+    <x-m>-15.37</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.85</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!-- Wiper -->
+<animation>
+  <type>rotate</type>
+  <object-name>KnobPedWW</object-name>
+  <property>/controls/special/wiper-switch</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>   0</dep></entry>
+    <entry><ind>1</ind><dep>  45</dep></entry>
+    <entry><ind>2</ind><dep> 225</dep></entry>
+    <entry><ind>3</ind><dep> 270</dep></entry>
+    <entry><ind>4</ind><dep> 315</dep></entry>
+  </interpolation>
+  <center>
+    <x-m>-15.356</x-m>
+    <y-m> -0.045</y-m>
+    <z-m>  0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>KnobPedWW</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/special/wiper-switch</property>
+      <step>1</step>
+      <min>0</min>
+      <max>5</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/special/wiper-switch</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>5</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+</animation>
+
+<!-- The Autopilot support -->
+
+<!-- Autopilot on off -->
+<animation>
+  <type>rotate</type>
+  <object-name>switch.001</object-name>
+  <property>/autopilot/switches/ap</property>
+  <factor>-50</factor>
+  <center>
+    <x-m>-15.292</x-m>
+    <y-m>  0.055</y-m>
+    <z-m>  0.7</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>switch.001</object-name>
+  <object-name>sockle.001</object-name>
+  <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/autopilot/switches/ap</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch1</property>
+      </binding>
+  </action>
+</animation>
+
+<!-- Autopilot ALT on off -->
+<animation>
+  <type>rotate</type>
+  <object-name>switch.000</object-name>
+  <property>/autopilot/switches/alt</property>
+  <factor>-50</factor>
+  <center>
+    <x-m>-15.292</x-m>
+    <y-m>  0.088</y-m>
+    <z-m>  0.7</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <visible>true</visible>
+  <object-name>switch.000</object-name>
+  <object-name>sockle.000</object-name>
+  <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>/autopilot/switches/alt</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/sim/sound/switch1</property>
+      </binding>
+  </action>
+</animation>
+
+
+<!-- Autopilot Pitch wheels -->
+<animation>
+  <type>rotate</type>
+  <object-name>APKnobPitch</object-name>
+  <property>/autopilot/settings/vertical-speed-fpm</property>
+  <factor>3</factor>
+  <center>
+    <x-m>-15.2501</x-m>
+    <y-m>  0.0</y-m>
+    <z-m>  0.6666</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>APKnobPitch</object-name>
+  <action>
+    <name>small increase (scrollwheel)</name>
+    <button>3</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/vertical-speed-fpm</property>
+      <step>-100</step>
+      <min>-6000</min>
+      <max>6000</max>
+      <wrap>1</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-pitch-deg</property>
+      <step>-0.2</step>
+      <min>-6.8</min>
+      <max> 6.8</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>small decrease (scrollwheel)</name>
+    <button>4</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/vertical-speed-fpm</property>
+      <step>100</step>
+      <min>-6000</min>
+      <max>6000</max>
+      <wrap>1</wrap>
+    </binding>    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-pitch-deg</property>
+      <step>0.2</step>
+      <min>-6.8</min>
+      <max> 6.8</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>increase</name>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/vertical-speed-fpm</property>
+      <step>-1000</step>
+      <min>-6000</min>
+      <max>6000</max>
+      <wrap>1</wrap>
+    </binding>  
+	<binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-pitch-deg</property>
+      <step>1.0</step>
+      <min>-6.8</min>
+      <max> 6.8</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+  <action>
+    <name>decrease</name>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/vertical-speed-fpm</property>
+      <step>1000</step>
+      <min>-6000</min>
+      <max>6000</max>
+      <wrap>1</wrap>
+    </binding>
+    <binding>
+      <command>property-adjust</command>
+      <property>/autopilot/settings/target-pitch-deg</property>
+      <step>-1.0</step>
+      <min>-6.8</min>
+      <max> 6.8</max>
+      <wrap>1</wrap>
+    </binding>
+  </action>
+</animation>
+
+<!-- Autopilot heading control -->
+<animation>
+  <type>rotate</type>
+  <object-name>APKnobHdg</object-name>
+  <property>/autopilot/internal/heading-bug-error-deg</property>
+  <factor>1</factor>   
+  <axis>
+    <x1-m>-15.226</x1-m>
+    <y1-m>0.0727</y1-m>
+    <z1-m>0.7252</z1-m>
+    <x2-m>-15.2641</x2-m>
+    <y2-m>0.0727</y2-m>
+    <z2-m>0.6436</z2-m>
+  </axis>
+</animation>
+
+<animation>
+    <type>pick</type>
+    <object-name>APKnobHdg</object-name>
+    <action>
+        <button>0</button>
+        <repeatable>true</repeatable>
+        <interval-sec>0.2</interval-sec>
+        <binding>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+    </action>
+    <action>
+        <button>1</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+    </action>
+    <action>
+        <button>3</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+    </action>
+    <action>
+        <button>4</button>
+        <repeatable>true</repeatable>
+        <binding>
+            <condition>
+                <not>
+                    <property>devices/status/keyboard/shift</property>
+                </not>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-1</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+        <binding>
+            <condition>
+                <property>devices/status/keyboard/shift</property>
+            </condition>
+            <command>property-adjust</command>
+            <property>/autopilot/settings/heading-bug-deg</property>
+            <step>-10</step>
+            <min>0</min>
+            <max>360</max>
+            <wrap>true</wrap>
+        </binding>
+    </action>
+</animation>
+
+<!-- Autopilot select knob -->
+<animation>
+  <type>rotate</type>
+  <object-name>KnobPedFP</object-name>
+  <property>/controls/special/flightpath-switch</property>
+  <interpolation>
+    <entry><ind>0</ind><dep>   5</dep></entry>  <!-- AP selection off -->
+    <entry><ind>1</ind><dep> 315</dep></entry>  <!-- AP selection on VHF VOR/NDB or ILS -->
+    <entry><ind>2</ind><dep> 260</dep></entry>  <!-- AP selection on ILS and Glidepath -->
+  </interpolation>
+  <center>
+    <x-m>-15.3567</x-m>
+    <y-m>  0.0221</y-m>
+    <z-m>  0.0</z-m>
+  </center>
+  <axis>
+    <x>0.0</x>
+    <y>0.0</y>
+    <z>1.0</z>
+  </axis>
+</animation>
+
+
+<animation>
+  <type>pick</type>
+  <object-name>KnobPedFP</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/special/flightpath-switch</property>
+      <step>1</step>
+      <min>0</min>
+      <max>2</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+  <action>
+    <button>1</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>/controls/special/flightpath-switch</property>
+      <step>-1</step>
+      <min>0</min>
+      <max>2</max>
+      <wrap>0</wrap>
+    </binding>
+  </action>
+</animation>
+		
+</PropertyList>

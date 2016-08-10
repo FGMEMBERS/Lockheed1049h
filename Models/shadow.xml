@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+        ORIGINAL FROM Gary R. Neely 'Buckaroo', Dec 2010 
+        revamp since Avril 2011 by 
+		Lake of Constance Hangar :: M.Kraus
+		Lockheed1049h for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+    <path>shadow.ac</path>
+    
+		<!-- No preview for fgrun-->
+		<animation>
+			<object-name>shadow</object-name>
+			<nopreview/>
+		</animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>shadow</object-name>
+        <property>sim/multiplay/generic/float[6]</property>
+        <factor>-1.0</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>shadow</object-name>
+        <property>sim/multiplay/generic/float[7]</property>
+        <factor>1.0</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>shadow</object-name>
+        <property>sim/multiplay/generic/float[5]</property>
+        <factor>0.3048</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>-1</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>shadow</object-name>
+        <condition>
+         <and>
+          <less-than>
+            <property>sim/multiplay/generic/float[5]</property>
+            <value>200</value>
+          </less-than>
+          <greater-than>
+            <property>sim/multiplay/generic/float[5]</property>
+            <value>0</value>
+          </greater-than>
+         </and>
+        </condition>
+    </animation>
+
+</PropertyList>	

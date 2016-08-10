@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--###################################################################################
+        ORIGINAL FROM Gary R. Neely 'Buckaroo', Dec 2010 
+        revamp since Avril 2011 by 
+		Lake of Constance Hangar :: M.Kraus
+		Lockheed1049h for Flightgear Septemper 2013
+		This file is licenced under the terms of the GNU General Public Licence V2 or later
+		###################################################################################
+-->
+<PropertyList>
+
+<path>parking_brake_cp.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>LampParkingBrakeOn</object-name>
+  <condition>
+    <and>
+      <property>/controls/gear/brake-parking</property>
+      <greater-than>
+          <property>/systems/electrical/bus-dc/volts</property>
+          <value>9</value>
+      </greater-than>
+    </and>
+  </condition>
+</animation>
+
+<animation>
+  <type>select</type>
+  <object-name>LampParkingBrake</object-name>
+  <condition>
+    <or>
+    <not><property>/controls/gear/brake-parking</property></not>
+    <less-than>
+        <property>/systems/electrical/bus-dc/volts</property>
+        <value>9</value>
+    </less-than>
+    </or>
+  </condition>
+</animation>
+
+</PropertyList>
+
