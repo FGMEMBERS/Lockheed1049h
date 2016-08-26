@@ -1,3 +1,8 @@
+###############################################################################################
+#		Lake of Constance Hangar :: M.Kraus
+#		Honda-CBR1000RR for Flightgear September 2014
+#		This file is licenced under the terms of the GNU General Public Licence V2 or later
+############################################################################################### 
 #=======================================================================
 # In copilot mode the value of autopilot kill all pilot - copilot action
 # so pilot settings better be written to switch boolean values

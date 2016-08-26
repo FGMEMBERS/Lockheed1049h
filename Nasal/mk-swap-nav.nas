@@ -1,3 +1,8 @@
+###############################################################################################
+#		Lake of Constance Hangar :: M.Kraus
+#		Honda-CBR1000RR for Flightgear September 2014
+#		This file is licenced under the terms of the GNU General Public Licence V2 or later
+############################################################################################### 
 # changings from the Radio-Panel or Instruments inside the Aircraft
 setlistener("/instrumentation/nav[2]/frequencies/selected-mhz", func{
     actualize_selected_frequency();

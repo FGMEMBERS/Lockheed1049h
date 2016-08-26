@@ -1,3 +1,8 @@
+###############################################################################################
+#		Lake of Constance Hangar :: M.Kraus
+#		Lockheed1049h for Flightgear September 2010
+#		This file is licenced under the terms of the GNU General Public Licence V2 or later
+############################################################################################### 
 #setlistener("/instrumentation/aglradar/power-btn", func (state){
 #  var state = state.getBoolValue() or 0;
 #  if (state) agl_radar_control();

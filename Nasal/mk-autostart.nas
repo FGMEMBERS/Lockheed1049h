@@ -1,3 +1,8 @@
+###############################################################################################
+#		Lake of Constance Hangar :: M.Kraus
+#		Honda-CBR1000RR for Flightgear September 2014
+#		This file is licenced under the terms of the GNU General Public Licence V2 or later
+############################################################################################### 
 # if engine running stop starter
 #setlistener("engines/engine[0]/running", func(run) {
 #    var run = run.getBoolValue();

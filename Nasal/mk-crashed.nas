@@ -1,3 +1,8 @@
+###############################################################################################
+#		Lake of Constance Hangar :: M.Kraus
+#		Honda-CBR1000RR for Flightgear September 2014
+#		This file is licenced under the terms of the GNU General Public Licence V2 or later
+############################################################################################### 
 ### do not forget, in the Lockheed1049h-engines.nas I have also changed the following line ...
 ### engine_controls[engine].getNode("starter").setBoolValue(1);		# Engage engine starter
 
@@ -153,18 +158,18 @@ var fire_on = func (){
 			if(e >= 0.3 and e < 0.6) eng = 2;
 			if(e >= 0.6 and e < 0.8) eng = 3;
 			 
-			var cht  = getprop("/engines/engine["~eng~"]/cht-degf") or 0;
+			var estcht  = getprop("/engines/engine["~eng~"]/est-cht") or 0;
 			var bmep = getprop("/engines/engine["~eng~"]/bmep") or 0;
 			var pit  = getprop("/orientation/pitch-deg") or 0;
 			
 			
-   		#print("Temp is on : ", cht);
+   		#print("Temp is on : ", estcht);
    		#print("BMEP is on : ", bmep);
    		#print("pitch is   : ", pit);
 			 
 			var r = rand();
 			
-			if ((r > 0.8 and cht > 550 and bmep < 150) or pit > 20.0 or pit < -30.0) setprop("/controls/engines/engine["~eng~"]/on-fire", 1);
+			if ((r > 0.8 and estcht > 250 and bmep < 150) or pit > 20.0 or pit < -30.0) setprop("/controls/engines/engine["~eng~"]/on-fire", 1);
    }
    
    settimer( fire_on, 5.5);
