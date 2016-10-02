@@ -87,6 +87,7 @@ var Startup = func{
     settimer(setStart2, 20.0 );
     settimer(setStart1, 22.5 );
     settimer(setStartEnd, 25.0 );
+    settimer(setCowlFlaps, 27.0 );
     settimer(setAlt, 30.0 );
     settimer(setAPAlt, 31.0 );
     settimer(setHdg, 32.0 );
@@ -196,6 +197,14 @@ var Shutdown = func{
   var setStartEnd= func{
     setprop("controls/engines/engine[0]/starter",0);
     setprop("controls/switches/engine-start-select",0);
+    switch2SoundToggle();
+  }
+  
+  var setCowlFlaps= func{
+    setprop("controls/engines/engine[0]/cowl-flaps-norm",1);
+    setprop("controls/engines/engine[1]/cowl-flaps-norm",1);
+    setprop("controls/engines/engine[2]/cowl-flaps-norm",1);
+    setprop("controls/engines/engine[3]/cowl-flaps-norm",1);
     switch2SoundToggle();
   }
 
