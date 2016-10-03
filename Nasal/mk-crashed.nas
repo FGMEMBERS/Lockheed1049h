@@ -177,6 +177,6 @@ var fire_on = func (){
 
 fire_on();
 
-# NOTICE: the fire-warning you found in the /Lockheed1049h-lights.nas
+# NOTICE: the fire-warning you find in the /Lockheed1049h-lights.nas
 
 
