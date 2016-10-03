@@ -169,7 +169,7 @@ var fire_on = func (){
 			 
 			var r = rand();
 			
-			if ((r > 0.8 and estcht > 250 and bmep < 150) and (pit > 20.0 or pit < -30.0)) setprop("/controls/engines/engine["~eng~"]/on-fire", 1);
+			if ((r > 0.8 and estcht > 250 and bmep < 150) or pit > 20.0 or pit < -30.0) setprop("/controls/engines/engine["~eng~"]/on-fire", 1);
    }
    
    settimer( fire_on, 5.5);
