@@ -798,7 +798,7 @@
         <factor>1</factor>
         <min>0</min>
         <max>5</max>
-        <wrap>1</wrap>
+        <wrap>0</wrap>
       </binding>
     </action>
   </animation>

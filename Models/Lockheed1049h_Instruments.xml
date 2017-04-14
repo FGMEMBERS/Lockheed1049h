@@ -1151,4 +1151,19 @@
     </offsets>
   </model>
 
+  <model>
+    <path>Aircraft/Instruments-3d/kt76a/kt76a.xml</path>
+    <overlay>
+      <params>
+        <dimming>controls/lighting/panel-norm</dimming>
+      </params>
+    </overlay>
+    <offsets>
+      <x-m>-15.148</x-m>
+      <y-m>-0.142</y-m>
+      <z-m>1.532</z-m>
+      <pitch-deg>78</pitch-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
