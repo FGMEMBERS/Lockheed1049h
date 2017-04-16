@@ -59,15 +59,15 @@ Index	Tank	Max Capacity (gallons)
     <tank n="10"><level-gal_us>200.0</level-gal_us></tank>
     <tank n="11"><level-gal_us>200.0</level-gal_us></tank>
     <tank n="12"><level-gal_us>0.0</level-gal_us></tank>
-    <tankvalves n="0"><valve>1</valve></tankvalves>
-    <tankvalves n="1"><valve>2</valve></tankvalves>
-    <tankvalves n="2"><valve>2</valve></tankvalves>
-    <tankvalves n="3"><valve>1</valve></tankvalves>
-    <tankvalves n="4"><valve>0</valve></tankvalves>
-    <crossfeedvalves n="0"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="1"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="2"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="3"><valve>0</valve></crossfeedvalves>
+    <tankvalve n="0">1</tankvalve>
+    <tankvalve n="1">2</tankvalve>
+    <tankvalve n="2">2</tankvalve>
+    <tankvalve n="3">1</tankvalve>
+    <tankvalve n="4">0</tankvalve>
+    <crossfeedvalve n="0">0</crossfeedvalve>
+    <crossfeedvalve n="1">0</crossfeedvalve>
+    <crossfeedvalve n="2">0</crossfeedvalve>
+    <crossfeedvalve n="3">0</crossfeedvalve>
   </fuel_preset>
 
   <fuel_preset n="1">
@@ -86,45 +86,45 @@ Index	Tank	Max Capacity (gallons)
     <tank n="10"><level-gal_us>100.0</level-gal_us></tank>
     <tank n="11"><level-gal_us>100.0</level-gal_us></tank>
     <tank n="12"><level-gal_us>0.0</level-gal_us></tank>
-    <tankvalves n="0"><valve>0</valve></tankvalves>
-    <tankvalves n="1"><valve>0</valve></tankvalves>
-    <tankvalves n="2"><valve>0</valve></tankvalves>
-    <tankvalves n="3"><valve>0</valve></tankvalves>
-    <tankvalves n="4"><valve>0</valve></tankvalves>
-    <crossfeedvalves n="0"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="1"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="2"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="3"><valve>0</valve></crossfeedvalves>
+    <tankvalve n="0">0</tankvalve>
+    <tankvalve n="1">0</tankvalve>
+    <tankvalve n="2">0</tankvalve>
+    <tankvalve n="3">0</tankvalve>
+    <tankvalve n="4">0</tankvalve>
+    <crossfeedvalve n="0">0</crossfeedvalve>
+    <crossfeedvalve n="1">0</crossfeedvalve>
+    <crossfeedvalve n="2">0</crossfeedvalve>
+    <crossfeedvalve n="3">0</crossfeedvalve>
   </fuel_preset>
 
   <fuel_preset n="2">
     <!-- Fuel quantities calculated by the refuelling dialog from payload -->
     <preset_name>Max Landing</preset_name>
     <description>Realistic refuelling to max landing weight</description>
-    <tankvalves n="0"><valve>1</valve></tankvalves>
-    <tankvalves n="1"><valve>2</valve></tankvalves>
-    <tankvalves n="2"><valve>2</valve></tankvalves>
-    <tankvalves n="3"><valve>1</valve></tankvalves>
-    <tankvalves n="4"><valve>0</valve></tankvalves>
-    <crossfeedvalves n="0"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="1"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="2"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="3"><valve>0</valve></crossfeedvalves>
+    <tankvalve n="0">1</tankvalve>
+    <tankvalve n="1">2</tankvalve>
+    <tankvalve n="2">2</tankvalve>
+    <tankvalve n="3">1</tankvalve>
+    <tankvalve n="4">0</tankvalve>
+    <crossfeedvalve n="0">0</crossfeedvalve>
+    <crossfeedvalve n="1">0</crossfeedvalve>
+    <crossfeedvalve n="2">0</crossfeedvalve>
+    <crossfeedvalve n="3">0</crossfeedvalve>
   </fuel_preset>
 
   <fuel_preset n="3">
     <!-- Fuel quantities calculated by the refuelling dialog from payload -->
     <preset_name>Max Takeoff</preset_name>
     <description>Realistic refuelling to max takeoff weight</description>
-    <tankvalves n="0"><valve>1</valve></tankvalves>
-    <tankvalves n="1"><valve>2</valve></tankvalves>
-    <tankvalves n="2"><valve>2</valve></tankvalves>
-    <tankvalves n="3"><valve>1</valve></tankvalves>
-    <tankvalves n="4"><valve>0</valve></tankvalves>
-    <crossfeedvalves n="0"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="1"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="2"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="3"><valve>0</valve></crossfeedvalves>
+    <tankvalve n="0">1</tankvalve>
+    <tankvalve n="1">2</tankvalve>
+    <tankvalve n="2">2</tankvalve>
+    <tankvalve n="3">1</tankvalve>
+    <tankvalve n="4">0</tankvalve>
+    <crossfeedvalve n="0">0</crossfeedvalve>
+    <crossfeedvalve n="1">0</crossfeedvalve>
+    <crossfeedvalve n="2">0</crossfeedvalve>
+    <crossfeedvalve n="3">0</crossfeedvalve>
   </fuel_preset>
 
   <fuel_preset n="4">
@@ -144,15 +144,15 @@ Index	Tank	Max Capacity (gallons)
     <tank n="10"><level-gal_us>0.0</level-gal_us></tank>
     <tank n="11"><level-gal_us>0.0</level-gal_us></tank>
     <tank n="12"><level-gal_us>0.0</level-gal_us></tank>
-    <tankvalves n="0"><valve>1</valve></tankvalves>
-    <tankvalves n="1"><valve>2</valve></tankvalves>
-    <tankvalves n="2"><valve>2</valve></tankvalves>
-    <tankvalves n="3"><valve>1</valve></tankvalves>
-    <tankvalves n="4"><valve>0</valve></tankvalves>
-    <crossfeedvalves n="0"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="1"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="2"><valve>0</valve></crossfeedvalves>
-    <crossfeedvalves n="3"><valve>0</valve></crossfeedvalves>
+    <tankvalve n="0">1</tankvalve>
+    <tankvalve n="1">2</tankvalve>
+    <tankvalve n="2">2</tankvalve>
+    <tankvalve n="3">1</tankvalve>
+    <tankvalve n="4">0</tankvalve>
+    <crossfeedvalve n="0">0</crossfeedvalve>
+    <crossfeedvalve n="1">0</crossfeedvalve>
+    <crossfeedvalve n="2">0</crossfeedvalve>
+    <crossfeedvalve n="3">0</crossfeedvalve>
   </fuel_preset>
 
 </PropertyList>

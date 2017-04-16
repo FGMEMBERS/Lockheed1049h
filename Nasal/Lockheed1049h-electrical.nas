@@ -22,10 +22,6 @@
 # to users so I am going with that for the moment. For example, the batteries must be tied to the bus
 # (switched on) before battery volts will display on the voltmeter.
 
-# Note that the DC bus value is mirrored to generic MP prop float[3] to for support of lights over
-# MultiPlayer. (Currently not working for reasons unknown.)
-
-
 var STD_VOLTS	= 24.0;							# Typical volts for a power source
 var MIN_VOLTS	= 23.5;							# Typical minimum voltage level for generic equipment
 var STD_AMPS	= 350;							# Typical amps for a power source
@@ -52,8 +48,6 @@ var gndspd	= props.globals.getNode("velocities/groundspeed-kt",1);
 var cart_lamp	= props.globals.getNode("/systems/electrical/battery-cart-lamp");
 var test_volts	= props.globals.getNode("/systems/electrical/test-volts-dc");
 var bus_dc	= props.globals.getNode("/systems/electrical/bus-dc");
-var bus_dc_MP	= props.globals.getNode("/sim/multiplay/generic/float[3]");
-
 
 #
 # DC Voltmeter selector support
@@ -85,7 +79,7 @@ var sw_volts_sel_dc	= props.globals.getNode("/controls/switches/volts-select-dc"
 									# setting its volts and amps to usable values
 var update_generators = func {
   for(var i=0; i<size(engines); i+=1) {
-    feed_sw[i] = sw_gen[i].getNode("position").getValue();
+    feed_sw[i] = sw_gen[i].getValue();
     if (engines[i].getNode("running").getValue() and
         feed_sw[i]) {
       sources[i].getNode("volts").setValue(STD_VOLTS);
@@ -178,8 +172,6 @@ var update_bus = func {
   update_voltmeter();
   #var mpvolts = bus_dc.getNode("volts").getValue();
   #if (mpvolts > 0) { mpvolts = mpvolts / 100; }
-  #bus_dc_MP.setValue(mpvolts);						# MP var should reflect actual bus
-  bus_dc_MP.setValue(bus_dc.getNode("volts").getValue());		# MP var should reflect actual bus
   settimer(update_bus,1);						# Schedule the next run in 1 secs
 }
 

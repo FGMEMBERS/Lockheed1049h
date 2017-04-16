@@ -787,16 +787,6 @@
     </overlay>
   </model>
 
-  <!--
-      Note: true x positions of manpress and rpm gauges are:
-      Left:  <x-m>-14.317</x-m>
-      Right: <x-m>-14.227</x-m>
-      temp values:
-      <x-m>-14.260</x-m>
-      <x-m>-14.175</x-m>
-      Return these instruments to these positions when temporary engine gauges are replaced.
-  -->
-
   <model>
     <name>bmep_L</name>
     <path>Aircraft/Lockheed1049h/Models/Instruments/bmep_L.xml</path>

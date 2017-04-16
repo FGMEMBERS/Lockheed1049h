@@ -339,41 +339,41 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-          <property>controls/switches/generator[0]/position</property>
+          <property>controls/switches/generator[0]</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>controls/switches/generator[1]/position</property>
+          <property>controls/switches/generator[1]</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>controls/switches/generator[2]/position</property>
+          <property>controls/switches/generator[2]</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>controls/switches/generator[3]/position</property>
+          <property>controls/switches/generator[3]</property>
           <value>0</value>
         </equals>
       </and>
     </condition>
     <binding>
       <command>property-assign</command>
-      <property>controls/switches/generator[0]/position</property>
+      <property>controls/switches/generator[0]</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/switches/generator[1]/position</property>
+      <property>controls/switches/generator[1]</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/switches/generator[2]/position</property>
+      <property>controls/switches/generator[2]</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/switches/generator[3]/position</property>
+      <property>controls/switches/generator[3]</property>
       <value>0</value>
     </binding>
   </item>
@@ -393,41 +393,41 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-          <property>controls/fuel/crossfeedvalves[0]/valve</property>
+          <property>controls/fuel/crossfeedvalve[0]</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>controls/fuel/crossfeedvalves[1]/valve</property>
+          <property>controls/fuel/crossfeedvalve[1]</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>controls/fuel/crossfeedvalves[2]/valve</property>
+          <property>controls/fuel/crossfeedvalve[2]</property>
           <value>0</value>
         </equals>
         <equals>
-          <property>controls/fuel/crossfeedvalves[3]/valve</property>
+          <property>controls/fuel/crossfeedvalve[3]</property>
           <value>0</value>
         </equals>
       </and>
     </condition>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/crossfeedvalves[0]/valve</property>
+      <property>controls/fuel/crossfeedvalve[0]</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/crossfeedvalves[1]/valve</property>
+      <property>controls/fuel/crossfeedvalve[1]</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/crossfeedvalves[2]/valve</property>
+      <property>controls/fuel/crossfeedvalve[2]</property>
       <value>0</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/crossfeedvalves[3]/valve</property>
+      <property>controls/fuel/crossfeedvalve[3]</property>
       <value>0</value>
     </binding>
   </item>
@@ -444,13 +444,13 @@ are indicated in the comments by an asterisk.
     </marker>
     <condition>
       <equals>
-        <property>controls/fuel/tankvalves[4]/valve</property>
+        <property>controls/fuel/tankvalve[4]</property>
         <value>0</value>
       </equals>
     </condition>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/tankvalves[4]/valve</property>
+      <property>controls/fuel/tankvalve[4]</property>
       <value>0</value>
     </binding>
   </item>
@@ -576,41 +576,41 @@ are indicated in the comments by an asterisk.
     <condition>
       <and>
         <equals>
-          <property>controls/fuel/tankvalves[0]/valve</property>
+          <property>controls/fuel/tankvalve[0]</property>
           <value>1</value>
         </equals>
         <equals>
-          <property>controls/fuel/tankvalves[1]/valve</property>
+          <property>controls/fuel/tankvalve[1]</property>
           <value>2</value>
         </equals>
         <equals>
-          <property>controls/fuel/tankvalves[2]/valve</property>
+          <property>controls/fuel/tankvalve[2]</property>
           <value>2</value>
         </equals>
         <equals>
-          <property>controls/fuel/tankvalves[3]/valve</property>
+          <property>controls/fuel/tankvalve[3]</property>
           <value>1</value>
         </equals>
       </and>
     </condition>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/tankvalves[0]/valve</property>
+      <property>controls/fuel/tankvalve[0]</property>
       <value>1</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/tankvalves[1]/valve</property>
+      <property>controls/fuel/tankvalve[1]</property>
       <value>2</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/tankvalves[2]/valve</property>
+      <property>controls/fuel/tankvalve[2]</property>
       <value>2</value>
     </binding>
     <binding>
       <command>property-assign</command>
-      <property>controls/fuel/tankvalves[3]/valve</property>
+      <property>controls/fuel/tankvalve[3]</property>
       <value>1</value>
     </binding>
   </item>

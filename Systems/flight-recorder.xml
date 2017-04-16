@@ -38,86 +38,27 @@ Marc Kraus, June 2013
       <signal>
         <type>bool</type><property type="string">/engines/engine[%i]/reversed</property>
       </signal>
-      <signal>
-        <type>bool</type><property type="string">/controls/engines/engine[%i]/on-fire</property>
-      </signal>
     </signals>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[0]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[1]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[2]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[3]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[4]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[5]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[6]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[7]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[8]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[9]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[10]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[11]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[12]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[13]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[14]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[15]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[16]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[17]</property>
-    </signal>
-    <signal>
-      <type>int</type>
-      <property type="string">/sim/multiplay/generic/int[18]</property>
-    </signal>
+    <signal><type>bool</type><property type="bool">controls/fuel/jettison[0]/spray</property></signal>
+    <signal><type>bool</type><property type="bool">controls/fuel/jettison[1]/spray</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/beacon/enabled</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/beacon/state</property></signal>
+    <signal><type>float</type><property type="string">controls/lighting/cabin</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/landing-extend-left</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/landing-extend-right</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/landing-left</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/landing-right</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/nav</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/tail</property></signal>
+    <signal><type>bool</type><property type="bool">controls/lighting/taxi</property></signal>
+    <signal><type>bool</type><property type="bool">engines/engine[0]/running</property></signal>
+    <signal><type>bool</type><property type="bool">engines/engine[1]/running</property></signal>
+    <signal><type>bool</type><property type="bool">engines/engine[2]/running</property></signal>
+    <signal><type>bool</type><property type="bool">engines/engine[3]/running</property></signal>
+    <signal><type>bool</type><property type="bool">hazards/fire/engine[0]</property></signal>
+    <signal><type>bool</type><property type="bool">hazards/fire/engine[1]</property></signal>
+    <signal><type>bool</type><property type="bool">hazards/fire/engine[2]</property></signal>
+    <signal><type>bool</type><property type="bool">hazards/fire/engine[3]</property></signal>
     <signal>
       <type>float</type>
       <property type="string">/velocities/groundspeed-kt</property>
@@ -127,59 +68,31 @@ Marc Kraus, June 2013
     </signal>
     <signal>
       <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[0]</property>
+      <property type="string">/controls/door-crew/position-norm</property>
     </signal>
     <signal>
       <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[1]</property>
+      <property type="string">/controls/flight/elevator</property>
     </signal>
     <signal>
       <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[2]</property>
+      <property type="string">/controls/flight/aileron</property>
     </signal>
     <signal>
       <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[3]</property>
+      <property type="string">/controls/flight/rudder</property>
     </signal>
     <signal>
       <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[4]</property>
+      <property type="string">/controls/flight/elevator-trim</property>
     </signal>
     <signal>
       <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[5]</property>
+      <property type="string">/controls/flight/aileron-trim</property>
     </signal>
     <signal>
       <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[6]</property>
-    </signal>
-    <signal>
-      <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[7]</property>
-    </signal>
-    <signal>
-      <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[8]</property>
-    </signal>
-    <signal>
-      <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[9]</property>
-    </signal>
-    <signal>
-      <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[12]</property>
-    </signal>
-    <signal>
-      <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[13]</property>
-    </signal>
-    <signal>
-      <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[14]</property>
-    </signal>
-    <signal>
-      <type>float</type>
-      <property type="string">/sim/multiplay/generic/float[15]</property>
+      <property type="string">/controls/flight/rudder-trim</property>
     </signal>
   </signals>
 

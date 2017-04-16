@@ -104,13 +104,13 @@ are indicated in the comments by an asterisk.
     </marker>
     <condition>
       <equals>
-        <property>controls/lighting/beacon</property>
+        <property>controls/lighting/beacon/enabled</property>
         <value>1</value>
       </equals>
     </condition>
     <binding>
       <command>property-assign</command>
-      <property>controls/lighting/beacon</property>
+      <property>controls/lighting/beacon/enabled</property>
       <value>1</value>
     </binding>
   </item>

@@ -9,7 +9,7 @@
   <nasal>
     <open><![CDATA[
       var tanks = props.globals.getNode("/systems/fuel/tanks");
-      var presets	= tanks.getChildren("fuel_preset");
+      var presets = tanks.getChildren("fuel_preset");
       var selected = getprop("systems/fuel/tanks/dialog-preset");
       for (i = 0; i < size(presets); i += 1) {
           var name = presets[i].getChild("preset_name").getValue();
@@ -79,7 +79,7 @@
               <command>nasal</command>
               <script><![CDATA[
                 var tanks = props.globals.getNode("/systems/fuel/tanks");
-                var presets	= tanks.getChildren("fuel_preset");
+                var presets = tanks.getChildren("fuel_preset");
                 var selected = getprop("systems/fuel/tanks/dialog-preset");
                 for (i = 0; i < size(presets); i += 1) {
                     var name = presets[i].getChild("preset_name").getValue();

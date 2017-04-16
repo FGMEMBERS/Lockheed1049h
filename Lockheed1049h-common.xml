@@ -2,7 +2,7 @@
 <!--
 ************************************************************************
 
-Lockheed1049h: parts that are common to the pilot and copilot.
+Lockheed1049h: parts that are common to the pilot and engineer.
 
 Copyright (c) 2015 Ludovic Brenta <ludovic@ludovic-brenta.org>
 
@@ -49,26 +49,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <controls include="Systems/Lockheed1049h-init-controls.xml"/>
 
-  <engines>
-    <!-- create properties needed by nasal code before the nasal starts -->
-    <engine n="0">
-      <bmep type="double">0</bmep>
-      <mp-osi type="double">0</mp-osi>
-    </engine>
-    <engine n="1">
-      <bmep type="double">0</bmep>
-      <mp-osi type="double">0</mp-osi>
-    </engine>
-    <engine n="2">
-      <bmep type="double">0</bmep>
-      <mp-osi type="double">0</mp-osi>
-    </engine>
-    <engine n="3">
-      <bmep type="double">0</bmep>
-      <mp-osi type="double">0</mp-osi>
-    </engine>
-  </engines>
-
   <fdm>
     <jsbsim>
       <systems>
@@ -79,6 +59,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </systems>
     </jsbsim>
   </fdm>
+
+  <hazards>
+    <fire>
+      <engine n="0" type="bool">0</engine>
+      <engine n="1" type="bool">0</engine>
+      <engine n="2" type="bool">0</engine>
+      <engine n="3" type="bool">0</engine>
+    </fire>
+  </hazards>
 
   <instrumentation include="Systems/Lockheed1049h-init-instrumentation.xml"/>
 
@@ -114,6 +103,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   </limits>
 
   <nasal>
+    <dual_control_tools>
+      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+    </dual_control_tools>
+    <aircraft_dual_control>
+      <file>Nasal/L1049h-dual-control.nas</file>
+    </aircraft_dual_control>
+    <autochecklist>
+      <file>Aircraft/Generic/autochecklist.nas</file>
+    </autochecklist>
     <Lockheed1049h>
       <file>Nasal/Lockheed1049h-menu.nas</file>
       <file>Nasal/Lockheed1049h-lights.nas</file>
@@ -131,15 +129,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <file>Nasal/mk-wiper.nas</file>
       <file>Aircraft/Generic/limits.nas</file>
     </Lockheed1049h>
-    <dual_control_tools>
-      <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
-    </dual_control_tools>
-    <aircraft_dual_control>
-      <file>Nasal/L1049h-dual-control.nas</file>
-    </aircraft_dual_control>
-    <autochecklist>
-      <file>Aircraft/Generic/autochecklist.nas</file>
-    </autochecklist>
   </nasal>
 
   <payload>
@@ -265,7 +254,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
 
-    <aircraft-version>3.0</aircraft-version>
+    <aircraft-version>3.0.0pre21</aircraft-version>
+
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
 
@@ -325,8 +315,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <setting>1.0</setting>	<!-- 100% landing -->
     </flaps>
 
-    <flight-recorder include="Systems/flight-recorder.xml"/>
-
     <help include="Help/help.xml"/>
 
     <instrumentation>
@@ -348,51 +336,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <target-speed-fps type="double">0</target-speed-fps>
       </pushback>
     </model>
-
-    <!-- Initialize props for passing lighting and door settings over multiplayer -->
-    <multiplay>
-      <generic>
-        <float n="0" type="double">0.0</float> <!-- cabin light dimmer -->
-        <float n="1" type="double">0.0</float> <!-- beacon switch -->
-        <float n="2" type="double">0.0</float> <!-- beacon blink -->
-        <float n="3" type="double">0.0</float> <!-- volt -->
-        <float n="4" type="double">0.0</float> <!-- orig. ? -->
-        <float n="5" alias="/position/altitude-agl-ft"/>    <!-- for the shadow -->
-        <float n="6" alias="/orientation/pitch-deg"/>       <!-- for the shadow -->
-        <float n="7" alias="/orientation/roll-deg"/>        <!-- for the shadow -->
-        <float n="8" alias="/controls/flight/elevator"/>    <!-- for Copilot animation-->
-        <float n="9" alias="/controls/flight/aileron"/>     <!-- for Copilot animation-->
-        <float n="10" alias="/controls/flight/rudder"/>      <!-- for Copilot animation-->
-        <float n="11" alias="/instrumentation/slip-skid-ball/indicated-slip-skid"/><!-- for Copilot animation-->
-        <float n="12" alias="/instrumentation/turn-indicator/indicated-turn-rate"/><!-- for Copilot animation-->
-        <float n="13" alias="/controls/flight/elevator-trim"/>    <!-- for Copilot animation-->
-        <float n="14" alias="/controls/flight/aileron-trim"/>     <!-- for Copilot animation-->
-        <float n="15" alias="/controls/flight/rudder-trim"/>      <!-- for Copilot animation-->
-        <int n="0" type="int">0</int> <!-- orig. ? -->
-        <int n="1" type="int">0</int> <!-- orig. ? -->
-        <int n="2" type="int">0</int> <!-- orig. ? -->
-        <int n="3" type="int">0</int> <!-- orig. ? -->
-        <int n="4" type="int">0</int> <!-- orig. ? -->
-        <int n="5" type="int">0</int> <!-- orig. ? -->
-        <int n="6" type="int">0</int> <!-- orig. ? -->
-        <int n="7" type="int">0</int>  <!-- Dual Control boolean light switches-->
-        <int n="8" type="int">0</int>	 <!-- ### NOT USED ANY MORE #########  not used since 21.12.2012-->
-        <int n="9" type="int">0</int>	 <!-- jettison fuel/dump-left -->
-        <int n="10" type="int">0</int> <!-- jettison fuel/dump-right -->
-        <int n="11" type="int">0</int> <!-- fire on eng 1 -->
-        <int n="12" type="int">0</int> <!-- fire on eng 2 -->
-        <int n="13" type="int">0</int> <!-- fire on eng 3 -->
-        <int n="14" type="int">0</int> <!-- fire on eng 4 -->
-        <int n="15" alias="/engines/engine[0]/running"/> <!-- eng 1 running -->
-        <int n="16" alias="/engines/engine[1]/running"/> <!-- eng 2 running -->
-        <int n="17" alias="/engines/engine[2]/running"/> <!-- eng 3 running -->
-        <int n="18" alias="/engines/engine[3]/running"/> <!-- eng 4 running -->
-        <string n="0" type="string"></string> <!-- Dual Control analog TDM-mpp1 (magnetos, flaps etc.) -->
-        <string n="1" type="string"></string> <!-- Dual Control analog TDM-mpp2 only pilot to copilot (fuel in tank etc.) -->
-        <string n="2" type="string"></string> <!-- Dual Control analog TDM-mpp3 only pilot to copilot (throttle, mixture ...) -->
-
-      </generic>
-    </multiplay>
 
     <presets>
       <fuel type="int">0</fuel>

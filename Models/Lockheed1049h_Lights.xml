@@ -2,33 +2,6 @@
 
 <!-- Lockheed Constellation 1049h        -->
 <!-- Gary R. Neely 'Buckaroo', Dec 2008  -->
-<!--
-
-Lighting control properties are passed over MP, therefore the animations
-take their cues from the MP properties rather than the source control
-properties. Here are the control to MP prop mappings as defined under
-Lockheed1049-lights.nas:
-
-var 1049H_MPNav		= props.globals.getNode("/sim/multiplay/generic/int[0]");
-var 1049H_MPTail	= props.globals.getNode("/sim/multiplay/generic/int[1]");
-var 1049H_MPTaxi	= props.globals.getNode("/sim/multiplay/generic/int[2]");
-var 1049H_MPLL		= props.globals.getNode("/sim/multiplay/generic/int[3]");
-var 1049H_MPLR		= props.globals.getNode("/sim/multiplay/generic/int[4]");
-var 1049H_MPLXL		= props.globals.getNode("/sim/multiplay/generic/int[5]");
-var 1049H_MPLXR		= props.globals.getNode("/sim/multiplay/generic/int[6]");
-var 1049H_MPCabin	= props.globals.getNode("/sim/multiplay/generic/float[0]");
-var 1049H_MPBeacon	= props.globals.getNode("/sim/multiplay/generic/float[1]");
-var 1049H_MPBeaconState	= props.globals.getNode("/sim/multiplay/generic/float[2]");
-var bus_dc_MP		= props.globals.getNode("/sim/multiplay/generic/float[3]");
-
-Note that animations must take their property cues from the same properties without the
-leading slash. These properties are actually the ones under /ai/multiplayer, not the ones
-under /sim. If you accidentally include the leading slash, you're telling the animation to
-always fetch its value from /your/ plane, not AI/MP instances of the plane. If you want
-these to work over MP, make sure to drop the leading slash, and that will allow AI/MP instances
-the ability to take the properties relative to their root.
--->
-
 
 <PropertyList>
 
@@ -122,8 +95,8 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
 	<property>sim/rendering/rembrandt/enabled</property>
-	<property>sim/multiplay/generic/float[1]</property>
-	<property>sim/multiplay/generic/float[2]</property>
+	<property>controls/lighting/beacon/enabled</property>
+	<property>controls/lighting/beacon/state</property>
       </and>
     </condition>
   </animation>
@@ -135,8 +108,8 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
     	<not><property>sim/rendering/rembrandt/enabled</property></not>
-        <property>sim/multiplay/generic/float[1]</property>
-        <property>sim/multiplay/generic/float[2]</property>
+        <property>controls/lighting/beacon/enabled</property>
+        <property>controls/lighting/beacon/state</property>
       </and>
     </condition>
   </animation>
@@ -146,8 +119,8 @@ the ability to take the properties relative to their root.
     <object-name>BeaconLOn</object-name>
     <object-name>BeaconUOn</object-name>
     <condition>
-      <property>sim/multiplay/generic/float[1]</property>
-      <property>sim/multiplay/generic/float[2]</property>
+      <property>controls/lighting/beacon/enabled</property>
+      <property>controls/lighting/beacon/state</property>
     </condition>
     <emission>
       <red>1.0</red>
@@ -162,8 +135,8 @@ the ability to take the properties relative to their root.
     <object-name>BeaconUOn</object-name>
     <condition>
       <and>
-        <property>sim/multiplay/generic/float[1]</property>
-        <property>sim/multiplay/generic/float[2]</property>
+        <property>controls/lighting/beacon/enabled</property>
+        <property>controls/lighting/beacon/state</property>
       </and>
     </condition>
   </animation>
@@ -175,7 +148,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
 	<property>sim/rendering/rembrandt/enabled</property>
-	<property>sim/multiplay/generic/int[1]</property>
+	<property>controls/lighting/tail</property>
       </and>
     </condition>
   </animation>
@@ -184,7 +157,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>TailLampLOn</object-name>
     <condition>
-      <property>sim/multiplay/generic/int[1]</property>
+      <property>controls/lighting/tail</property>
     </condition>
   </animation>
 
@@ -192,7 +165,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>TailLampL</object-name>
     <condition>
-      <not><property>sim/multiplay/generic/int[1]</property></not>
+      <not><property>controls/lighting/tail</property></not>
     </condition>
   </animation>
 
@@ -204,7 +177,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
 	<property>sim/rendering/rembrandt/enabled</property>
-	<property>sim/multiplay/generic/int[0]</property>
+	<property>controls/lighting/tail</property>
       </and>
     </condition>
   </animation>
@@ -214,7 +187,7 @@ the ability to take the properties relative to their root.
     <object-name>WingtipLampLOn</object-name>
     <object-name>WingtipLampROn</object-name>
     <condition>
-      <property>sim/multiplay/generic/int[0]</property>
+      <property>controls/lighting/tail</property>
     </condition>
   </animation>
 
@@ -223,7 +196,7 @@ the ability to take the properties relative to their root.
     <object-name>WingtipLampL</object-name>
     <object-name>WingtipLampR</object-name>
     <condition>
-      <not><property>sim/multiplay/generic/int[0]</property></not>
+      <not><property>controls/lighting/tail</property></not>
     </condition>
   </animation>
 
@@ -234,7 +207,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>LightNavGlowL</object-name>
     <condition>
-      <property>sim/multiplay/generic/int[0]</property>
+      <property>controls/lighting/tail</property>
     </condition>
   </animation>
 
@@ -265,7 +238,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>LightNavGlowR</object-name>
     <condition>
-      <property>sim/multiplay/generic/int[0]</property>
+      <property>controls/lighting/tail</property>
     </condition>
   </animation>
 
@@ -299,7 +272,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
 	<property>sim/rendering/rembrandt/enabled</property>
-	<property>sim/multiplay/generic/int[1]</property>
+	<property>controls/lighting/tail</property>
       </and>
     </condition>
   </animation>
@@ -308,7 +281,7 @@ the ability to take the properties relative to their root.
     <type>select</type>
     <object-name>LightTailGlow</object-name>
     <condition>
-      <property>sim/multiplay/generic/int[1]</property>
+      <property>controls/lighting/tail</property>
     </condition>
   </animation>
 
@@ -321,7 +294,7 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
 	<property>sim/rendering/rembrandt/enabled</property>
-	<property>sim/multiplay/generic/int[2]</property>
+	<property>controls/lighting/taxi</property>
 	<property>gear/gear[0]/position-norm</property>
       </and>
     </condition>
@@ -332,7 +305,7 @@ the ability to take the properties relative to their root.
     <object-name>LightTaxiGlowH</object-name>
     <condition>
       <and>
-	<property>sim/multiplay/generic/int[2]</property>
+	<property>controls/lighting/taxi</property>
 	<property>gear/gear[0]/position-norm</property>
       </and>
     </condition>
@@ -343,8 +316,8 @@ the ability to take the properties relative to their root.
     <object-name>LightTaxiGlowH.001</object-name>
     <condition>
       <and>
-	<property>sim/multiplay/generic/int[4]</property>
-	<property>sim/multiplay/generic/int[6]</property>
+	<property>controls/lighting/landing-right</property>
+	<property>controls/lighting/landing-extend-right</property>
       </and>
     </condition>
   </animation>
@@ -354,8 +327,8 @@ the ability to take the properties relative to their root.
     <object-name>LightTaxiGlowH.002</object-name>
     <condition>
       <and>
-	<property>sim/multiplay/generic/int[3]</property>
-	<property>sim/multiplay/generic/int[5]</property>
+	<property>controls/lighting/landing-left</property>
+	<property>controls/lighting/landing-extend-left</property>
       </and>
     </condition>
   </animation>
@@ -366,8 +339,8 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
 	<property>sim/rendering/rembrandt/enabled</property>
-	<property>sim/multiplay/generic/int[4]</property>
-	<property>sim/multiplay/generic/int[6]</property>
+	<property>controls/lighting/landing-right</property>
+	<property>controls/lighting/landing-extend-right</property>
       </and>
     </condition>
   </animation>
@@ -378,8 +351,8 @@ the ability to take the properties relative to their root.
     <condition>
       <and>
 	<property>sim/rendering/rembrandt/enabled</property>
-	<property>sim/multiplay/generic/int[3]</property>
-	<property>sim/multiplay/generic/int[5]</property>
+	<property>controls/lighting/landing-left</property>
+	<property>controls/lighting/landing-extend-left</property>
       </and>
     </condition>
   </animation>
@@ -774,7 +747,7 @@ the ability to take the properties relative to their root.
       <not>
         <property>sim/rendering/rembrandt/enabled</property>
       </not>
-      <property>sim/multiplay/generic/int[2]</property>
+      <property>controls/lighting/taxi</property>
       <property>gear/gear[0]/position-norm</property>
       <less-than>
         <property>orientation/pitch-deg</property>
@@ -812,8 +785,8 @@ the ability to take the properties relative to their root.
       <not>
         <property>sim/rendering/rembrandt/enabled</property>
       </not>
-      <property>sim/multiplay/generic/int[3]</property>
-      <property>sim/multiplay/generic/int[5]</property>
+      <property>controls/lighting/landing-left</property>
+      <property>controls/lighting/landing-extend-left</property>
       <less-than>
         <property>orientation/pitch-deg</property>
         <value>10</value>
@@ -836,8 +809,8 @@ the ability to take the properties relative to their root.
       <not>
         <property>sim/rendering/rembrandt/enabled</property>
       </not>
-      <property>sim/multiplay/generic/int[4]</property>
-      <property>sim/multiplay/generic/int[6]</property>
+      <property>controls/lighting/landing-right</property>
+      <property>controls/lighting/landing-extend-right</property>
       <less-than>
         <property>orientation/pitch-deg</property>
         <value>10</value>

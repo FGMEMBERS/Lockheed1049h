@@ -10,12 +10,46 @@
 
   <!-- Start livery machine -->
   <nasal>
-    <load>
+    <load><![CDATA[
+      var remote_player_node = cmdarg();
       var livery_update = aircraft.livery_update.new("Aircraft/Lockheed1049h/Models/Liveries");
-    </load>
-    <unload>
+      remote_player_node.getNode ("controls/lighting/cabin", 1)
+        .alias (remote_player_node.getNode ("sim/multiplay/generic/float[0]"));
+      remote_player_node.getNode ("controls/door-crew/position-norm", 1)
+        .alias (remote_player_node.getNode ("sim/multiplay/generic/float[4]"));
+      remote_player_node.getNode ("position/altitude-agl-ft", 1)
+        .alias (remote_player_node.getNode ("sim/multiplay/generic/float[5]"));
+      # This decoder must be symmetric with the encoder in Nasal/Lockheed1049h.nas.
+      var decoder = dual_control_tools.SwitchDecoder.new (
+        remote_player_node.getNode ("sim/multiplay/generic/int[1]", 1),
+        [
+          func (b) { remote_player_node.getNode ("controls/fuel/jettison[0]/spray").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/fuel/jettison[1]/spray").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/beacon/enabled").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/beacon/state").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/landing-extend-left").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/landing-extend-right").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/landing-left").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/landing-right").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/nav").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/tail").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("controls/lighting/taxi").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("engines/engine[0]/running").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("engines/engine[1]/running").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("engines/engine[2]/running").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("engines/engine[3]/running").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("hazards/fire/engine[0]").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("hazards/fire/engine[1]").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("hazards/fire/engine[2]").setBoolValue (b); },
+          func (b) { remote_player_node.getNode ("hazards/fire/engine[3]").setBoolValue (b); },
+        ]);
+      var decode_loop = maketimer (0.1, func () { decoder.update (); });
+      decode_loop.start ();
+    ]]></load>
+    <unload><![CDATA[
       livery_update.stop();
-    </unload>
+      decode_loop.stop ();
+    ]]></unload>
   </nasal>
 
   <!-- Global offsets: determines the position of the nose -->
@@ -1481,9 +1515,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LightLandingL</object-name>
-    <!-- Uses MP transmitted lighting control: -->
-    <!-- <property>controls/lighting/landing-extend-left</property> -->
-    <property>sim/multiplay/generic/int[5]</property>
+    <property>controls/lighting/landing-extend-left</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1502,9 +1534,7 @@
   <animation>
     <type>rotate</type>
     <object-name>LightLandingR</object-name>
-    <!-- Uses MP transmitted lighting control: -->
-    <!-- <property>controls/lighting/landing-extend-right</property> -->
-    <property>sim/multiplay/generic/int[6]</property>
+    <property>controls/lighting/landing-extend-right</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1531,9 +1561,7 @@
       <red>0.85</red>
       <green>0.85</green>
       <blue>0.85</blue>
-      <!-- Uses MP transmitted lighting control: -->
-      <!-- <factor-prop>/controls/lighting/cabin</factor-prop> -->
-      <factor-prop>sim/multiplay/generic/float[0]</factor-prop>
+      <factor-prop>controls/lighting/cabin</factor-prop>
     </emission>
   </animation>
 
@@ -1547,7 +1575,7 @@
     <object-name>DoorCrewFrame</object-name>
     <object-name>DoorCrewExt</object-name>
     <object-name>DoorCrewInt</object-name>
-    <property>sim/multiplay/generic/float[4]</property>
+    <property>controls/door-crew/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0.0</dep></entry>
       <entry><ind>0.2</ind><dep>0.05</dep></entry>
@@ -1567,7 +1595,7 @@
     <object-name>DoorCrewFrame</object-name>
     <object-name>DoorCrewExt</object-name>
     <object-name>DoorCrewInt</object-name>
-    <property>sim/multiplay/generic/float[4]</property>
+    <property>controls/door-crew/position-norm</property>
     <interpolation>
       <entry><ind>0.0</ind><dep> 0</dep></entry>
       <entry><ind>0.2</ind><dep> 0</dep></entry>
