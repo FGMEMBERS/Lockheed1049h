@@ -254,7 +254,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
 
-    <aircraft-version>3.0.0pre21</aircraft-version>
+    <aircraft-version>3.0</aircraft-version>
 
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
@@ -378,6 +378,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <path>Systems/instrumentation-filters.xml</path>
       </property-rule>
     </systems>
+
+    <tags>
+      <tag>1950s</tag> <!-- first flight in 1957 -->
+      <tag>4-engine</tag>
+      <tag>cargo</tag>
+      <tag>dual-controls</tag>
+      <tag>golden-age</tag>
+      <tag>ifr</tag>
+      <tag>lockheed</tag>
+      <tag>passenger</tag>
+      <tag>piston</tag>
+      <tag>pressurised</tag>
+      <tag>propeller</tag>
+      <tag>radial</tag>
+      <tag>retractable-gear</tag>
+      <tag>turbocharged</tag>  <!-- actually supercharged + turbo-compound -->
+    </tags>
 
   </sim>
 
