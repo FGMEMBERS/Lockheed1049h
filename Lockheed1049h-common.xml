@@ -254,7 +254,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
 
-    <aircraft-version>3.0</aircraft-version>
+    <aircraft-version>3.0.1</aircraft-version>
 
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>

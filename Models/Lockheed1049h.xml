@@ -19,6 +19,7 @@
         .alias (remote_player_node.getNode ("sim/multiplay/generic/float[4]"));
       remote_player_node.getNode ("position/altitude-agl-ft", 1)
         .alias (remote_player_node.getNode ("sim/multiplay/generic/float[5]"));
+      io.load_nasal (getprop ("/sim/fg-root") ~ "/Aircraft/Generic/DualControl/dual-control-tools.nas", "dual_control_tools");
       # This decoder must be symmetric with the encoder in Nasal/Lockheed1049h.nas.
       var decoder = dual_control_tools.SwitchDecoder.new (
         remote_player_node.getNode ("sim/multiplay/generic/int[1]", 1),
