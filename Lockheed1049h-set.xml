@@ -39,6 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <aero>Lockheed1049h</aero>
     <description>Lockheed 1049H Super Constellation</description>
     <flight-model>jsb</flight-model>
+    <flight-recorder include="Systems/flight-recorder.xml"/>
 
     <menubar>
       <default>
@@ -138,6 +139,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </livery>
     </model>
  
+    <!-- Initialize props for passing lighting and door settings over multiplayer -->
+    <multiplay>
+      <generic>
+        <float n="0" alias="/controls/lighting/cabin"/>
+        <float n="4" alias="/controls/door-crew/position-norm"/>
+        <float n="5" alias="/position/altitude-agl-ft"/>    <!-- for the shadow and engine fire -->
+        <int n="1" type="int">0</int> <!-- many booleans packed into this property, sent to everyone -->
+        <!-- more properties are sent only when the engineer is connected, look in L1049h-dual-control.nas -->
+      </generic>
+    </multiplay>
+
     <view n= "0"> <!-- Pilot View: not available in the copilot-set.xml -->
       <name>Pilot view</name>
       <internal type="bool" archive="y">true</internal>

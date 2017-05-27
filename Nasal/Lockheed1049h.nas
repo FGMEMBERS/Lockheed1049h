@@ -59,3 +59,36 @@ L1049hL = setlistener("/sim/signals/fdm-initialized", func {
   removelistener(L1049hL);
   }
 );
+
+# Pack multiple booleans into a single property for transmission over the multiplayer
+# protocol.  The decoder corresponding to this encoder is in the <nasal><load> tag
+# of the model and runs in aircraft that see a remote Lockheed1049h.  For ease of
+# maintenance the properties are in alphabetical order.  All are booleans.
+var encoder = dual_control_tools.SwitchEncoder.new (
+[
+  props.globals.getNode ("/controls/fuel/jettison[0]/spray"),
+  props.globals.getNode ("/controls/fuel/jettison[1]/spray"),
+  props.globals.getNode ("/controls/lighting/beacon/enabled"),
+  props.globals.getNode ("/controls/lighting/beacon/state"),
+  props.globals.getNode ("/controls/lighting/landing-extend-left"),
+  props.globals.getNode ("/controls/lighting/landing-extend-right"),
+  props.globals.getNode ("/controls/lighting/landing-left"),
+  props.globals.getNode ("/controls/lighting/landing-right"),
+  props.globals.getNode ("/controls/lighting/nav"),
+  props.globals.getNode ("/controls/lighting/tail"),
+  props.globals.getNode ("/controls/lighting/taxi"),
+  props.globals.getNode ("/engines/engine[0]/running"),
+  props.globals.getNode ("/engines/engine[1]/running"),
+  props.globals.getNode ("/engines/engine[2]/running"),
+  props.globals.getNode ("/engines/engine[3]/running"),
+  props.globals.getNode ("/hazards/fire/engine[0]"),
+  props.globals.getNode ("/hazards/fire/engine[1]"),
+  props.globals.getNode ("/hazards/fire/engine[2]"),
+  props.globals.getNode ("/hazards/fire/engine[3]"),
+],
+props.globals.getNode ("/sim/multiplay/generic/int[1]", 1));
+
+var multiplayer_send_loop = maketimer (0.1, func () {
+  encoder.update ();
+});
+multiplayer_send_loop.start();

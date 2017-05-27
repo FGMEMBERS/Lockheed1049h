@@ -596,7 +596,7 @@
   <animation>
     <type>knob</type>
     <object-name>SwPPAC</object-name>
-    <property>controls/lighting/beacon</property>
+    <property>controls/lighting/beacon/enabled</property>
     <factor>35</factor>
     <axis>
       <x1-m>-15.229</x1-m>
@@ -609,7 +609,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/lighting/beacon</property>
+        <property>controls/lighting/beacon/enabled</property>
       </binding>
     </action>
   </animation>
@@ -1213,7 +1213,7 @@
   <animation>
     <type>knob</type>
     <object-name>EngFuelSelect1</object-name>
-    <property>controls/fuel/tankvalves[0]/valve</property>
+    <property>controls/fuel/tankvalve[0]</property>
     <factor>80</factor>
     <center>
       <x-m>0</x-m>
@@ -1228,7 +1228,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[0]/valve</property>
+        <property>controls/fuel/tankvalve[0]</property>
         <factor>-1</factor>
         <min>0</min>
         <max>1</max>
@@ -1240,7 +1240,7 @@
   <animation>
     <type>knob</type>
     <object-name>EngFuelSelect2</object-name>
-    <property>controls/fuel/tankvalves[1]/valve</property>
+    <property>controls/fuel/tankvalve[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>58</dep></entry>
@@ -1259,7 +1259,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[1]/valve</property>
+        <property>controls/fuel/tankvalve[1]</property>
         <factor>-1</factor>
         <min>0</min>
         <max>2</max>
@@ -1271,7 +1271,7 @@
   <animation>
     <type>knob</type>
     <object-name>EngFuelSelect3</object-name>
-    <property>controls/fuel/tankvalves[2]/valve</property>
+    <property>controls/fuel/tankvalve[2]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>58</dep></entry>
@@ -1290,7 +1290,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[2]/valve</property>
+        <property>controls/fuel/tankvalve[2]</property>
         <factor>-1</factor>
         <min>0</min>
         <max>2</max>
@@ -1302,7 +1302,7 @@
   <animation>
     <type>knob</type>
     <object-name>EngFuelSelect4</object-name>
-    <property>controls/fuel/tankvalves[3]/valve</property>
+    <property>controls/fuel/tankvalve[3]</property>
     <factor>80</factor>
     <center>
       <x-m>0</x-m>
@@ -1317,7 +1317,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/tankvalves[3]/valve</property>
+        <property>controls/fuel/tankvalve[3]</property>
         <factor>-1</factor>
         <min>0</min>
         <max>1</max>
@@ -1331,7 +1331,7 @@
   <animation>
     <type>knob</type>
     <object-name>LvrTankC</object-name>
-    <property>controls/fuel/tankvalves[4]/valve</property>
+    <property>controls/fuel/tankvalve[4]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1349,7 +1349,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/fuel/tankvalves[4]/valve</property>
+        <property>controls/fuel/tankvalve[4]</property>
       </binding>
     </action>
   </animation>
@@ -1357,7 +1357,7 @@
   <animation>
     <type>knob</type>
     <object-name>LvrCrossFeed1</object-name>
-    <property>controls/fuel/crossfeedvalves[0]/valve</property>
+    <property>controls/fuel/crossfeedvalve[0]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1375,7 +1375,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/fuel/crossfeedvalves[0]/valve</property>
+        <property>controls/fuel/crossfeedvalve[0]</property>
       </binding>
     </action>
   </animation>
@@ -1383,7 +1383,7 @@
   <animation>
     <type>knob</type>
     <object-name>LvrCrossFeed2</object-name>
-    <property>controls/fuel/crossfeedvalves[1]/valve</property>
+    <property>controls/fuel/crossfeedvalve[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1401,7 +1401,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/fuel/crossfeedvalves[1]/valve</property>
+        <property>controls/fuel/crossfeedvalve[1]</property>
       </binding>
     </action>
   </animation>
@@ -1409,7 +1409,7 @@
   <animation>
     <type>knob</type>
     <object-name>LvrCrossFeed3</object-name>
-    <property>controls/fuel/crossfeedvalves[2]/valve</property>
+    <property>controls/fuel/crossfeedvalve[2]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1427,7 +1427,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/fuel/crossfeedvalves[2]/valve</property>
+        <property>controls/fuel/crossfeedvalve[2]</property>
       </binding>
     </action>
   </animation>
@@ -1435,7 +1435,7 @@
   <animation>
     <type>knob</type>
     <object-name>LvrCrossFeed4</object-name>
-    <property>controls/fuel/crossfeedvalves[3]/valve</property>
+    <property>controls/fuel/crossfeedvalve[3]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>90</dep></entry>
@@ -1453,7 +1453,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/fuel/crossfeedvalves[3]/valve</property>
+        <property>controls/fuel/crossfeedvalve[3]</property>
       </binding>
     </action>
   </animation>
@@ -1464,7 +1464,7 @@
   <animation>
     <type>knob</type>
     <object-name>FuelCutoff1</object-name>
-    <property>controls/fuel/enginevalves[0]/valve</property>
+    <property>controls/fuel/enginevalve[0]</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -1484,7 +1484,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[0]/valve</property>
+        <property>controls/fuel/enginevalve[0]</property>
         <min>0</min>
         <max>4</max>
       </binding>
@@ -1494,7 +1494,7 @@
   <animation>
     <type>knob</type>
     <object-name>FuelCutoff2</object-name>
-    <property>controls/fuel/enginevalves[1]/valve</property>
+    <property>controls/fuel/enginevalve[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -1514,7 +1514,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[1]/valve</property>
+        <property>controls/fuel/enginevalve[1]</property>
         <min>0</min>
         <max>4</max>
       </binding>
@@ -1524,7 +1524,7 @@
   <animation>
     <type>knob</type>
     <object-name>FuelCutoff3</object-name>
-    <property>controls/fuel/enginevalves[2]/valve</property>
+    <property>controls/fuel/enginevalve[2]</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -1544,7 +1544,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[2]/valve</property>
+        <property>controls/fuel/enginevalve[2]</property>
         <min>0</min>
         <max>4</max>
       </binding>
@@ -1554,7 +1554,7 @@
   <animation>
     <type>knob</type>
     <object-name>FuelCutoff4</object-name>
-    <property>controls/fuel/enginevalves[3]/valve</property>
+    <property>controls/fuel/enginevalve[3]</property>
     <interpolation>
       <entry><ind>0</ind><dep>  0</dep></entry>
       <entry><ind>1</ind><dep> 40</dep></entry>
@@ -1574,7 +1574,7 @@
     <action>
       <binding>
         <command>property-adjust</command>
-        <property>controls/fuel/enginevalves[3]/valve</property>
+        <property>controls/fuel/enginevalve[3]</property>
         <min>0</min>
         <max>4</max>
       </binding>
@@ -1861,7 +1861,7 @@
   <animation>
     <type>knob</type>
     <object-name>SwGen1</object-name>
-    <property>controls/switches/generator[0]/position</property>
+    <property>controls/switches/generator[0]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -1879,7 +1879,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/switches/generator[0]/position</property>
+        <property>controls/switches/generator[0]</property>
       </binding>
     </action>
   </animation>
@@ -1887,7 +1887,7 @@
   <animation>
     <type>knob</type>
     <object-name>SwGen2</object-name>
-    <property>controls/switches/generator[1]/position</property>
+    <property>controls/switches/generator[1]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -1905,7 +1905,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/switches/generator[1]/position</property>
+        <property>controls/switches/generator[1]</property>
       </binding>
     </action>
   </animation>
@@ -1913,7 +1913,7 @@
   <animation>
     <type>knob</type>
     <object-name>SwGen3</object-name>
-    <property>controls/switches/generator[2]/position</property>
+    <property>controls/switches/generator[2]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -1931,7 +1931,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/switches/generator[2]/position</property>
+        <property>controls/switches/generator[2]</property>
       </binding>
     </action>
   </animation>
@@ -1939,7 +1939,7 @@
   <animation>
     <type>knob</type>
     <object-name>SwGen4</object-name>
-    <property>controls/switches/generator[3]/position</property>
+    <property>controls/switches/generator[3]</property>
     <interpolation>
       <entry><ind>0</ind><dep> 0</dep></entry>
       <entry><ind>1</ind><dep>25</dep></entry>
@@ -1957,7 +1957,7 @@
     <action>
       <binding>
         <command>property-toggle</command>
-        <property>controls/switches/generator[3]/position</property>
+        <property>controls/switches/generator[3]</property>
       </binding>
     </action>
   </animation>

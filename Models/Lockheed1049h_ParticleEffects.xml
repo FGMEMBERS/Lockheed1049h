@@ -203,10 +203,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[11]</property>
+	<property>hazards/fire/engine[0]</property>
       </and>
     </condition>
     <offsets>
@@ -221,10 +221,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[11]</property>
+	<property>hazards/fire/engine[0]</property>
       </and>
     </condition>
     <offsets>
@@ -240,10 +240,10 @@
     <condition>
       <and>
 	<less-than-equals>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</less-than-equals>
-	<property>sim/multiplay/generic/int[11]</property>
+	<property>hazards/fire/engine[0]</property>
       </and>
     </condition>
     <offsets>
@@ -261,10 +261,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[12]</property>
+	<property>hazards/fire/engine[1]</property>
       </and>
     </condition>
     <offsets>
@@ -279,10 +279,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[12]</property>
+	<property>hazards/fire/engine[1]</property>
       </and>
     </condition>
     <offsets>
@@ -298,10 +298,10 @@
     <condition>
       <and>
 	<less-than-equals>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</less-than-equals>
-	<property>sim/multiplay/generic/int[12]</property>
+	<property>hazards/fire/engine[1]</property>
       </and>
     </condition>
     <offsets>
@@ -319,10 +319,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[13]</property>
+	<property>hazards/fire/engine[2]</property>
       </and>
     </condition>
     <offsets>
@@ -337,10 +337,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[13]</property>
+	<property>hazards/fire/engine[2]</property>
       </and>
     </condition>
     <offsets>
@@ -356,10 +356,10 @@
     <condition>
       <and>
 	<less-than-equals>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</less-than-equals>
-	<property>sim/multiplay/generic/int[13]</property>
+	<property>hazards/fire/engine[2]</property>
       </and>
     </condition>
     <offsets>
@@ -376,10 +376,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[14]</property>
+	<property>hazards/fire/engine[3]</property>
       </and>
     </condition>
     <offsets>
@@ -394,10 +394,10 @@
     <condition>
       <and>
 	<greater-than>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</greater-than>
-	<property>sim/multiplay/generic/int[14]</property>
+	<property>hazards/fire/engine[3]</property>
       </and>
     </condition>
     <offsets>
@@ -413,10 +413,10 @@
     <condition>
       <and>
 	<less-than-equals>
-	  <property>sim/multiplay/generic/float[5]</property>
+	  <property>position/altitude-agl-ft</property>
 	  <value>11</value>
 	</less-than-equals>					
-	<property>sim/multiplay/generic/int[14]</property>
+	<property>hazards/fire/engine[3]</property>
       </and>
     </condition>
     <offsets>
@@ -431,7 +431,7 @@
   <model>
     <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
-      <property>sim/multiplay/generic/int[9]</property>
+      <property>controls/fuel/jettison[0]/spray</property>
     </condition>
     <offsets>
       <x-m>-2.25</x-m>
@@ -445,7 +445,7 @@
   <model>
     <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
-      <property>sim/multiplay/generic/int[9]</property>
+      <property>controls/fuel/jettison[0]/spray</property>
     </condition>
     <offsets>
       <x-m>-2.25</x-m>
@@ -459,7 +459,7 @@
   <model>
     <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
-      <property>sim/multiplay/generic/int[10]</property>
+      <property>controls/fuel/jettison[1]/spray</property>
     </condition>
     <offsets>
       <x-m>-2.25</x-m>
@@ -473,7 +473,7 @@
   <model>
     <path>Aircraft/Lockheed1049h/Models/Effects/fuel_dump.xml</path>
     <condition>
-      <property>sim/multiplay/generic/int[10]</property>
+      <property>controls/fuel/jettison[1]/spray</property>
     </condition>
     <offsets>
       <x-m>-2.25</x-m>

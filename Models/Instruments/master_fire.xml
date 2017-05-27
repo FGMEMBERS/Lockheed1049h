@@ -11,10 +11,10 @@
       <and>
         <property>controls/special/fire-warning</property>
         <or>
-          <property>sim/multiplay/generic/int[11]</property>
-          <property>sim/multiplay/generic/int[12]</property>
-          <property>sim/multiplay/generic/int[13]</property>
-          <property>sim/multiplay/generic/int[14]</property>
+          <property>hazards/fire/engine[0]</property>
+          <property>hazards/fire/engine[1]</property>
+          <property>hazards/fire/engine[2]</property>
+          <property>hazards/fire/engine[3]</property>
         </or>
       </and>
     </condition>
