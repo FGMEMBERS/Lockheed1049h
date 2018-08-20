@@ -138,7 +138,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <file type="string">EasternGSF</file>
       </livery>
     </model>
- 
+
     <!-- Initialize props for passing lighting and door settings over multiplayer -->
     <multiplay>
       <generic>
