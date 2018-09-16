@@ -38,6 +38,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <aero>Lockheed1049h</aero>
     <description>Lockheed 1049H Super Constellation</description>
+    <long-description>
+      The pinnacle of piston engine techology and of pure beauty.  The
+      last airliner of the Golden Age, before the jet age and before
+      mass tourism.  Welcome back to the Fifties.
+    </long-description>
     <flight-model>jsb</flight-model>
     <flight-recorder include="Systems/flight-recorder.xml"/>
 

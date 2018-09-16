@@ -97,6 +97,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   <sim include="Systems/Lockheed1049h-views.xml">
 
     <description>Lockheed 1049H Engineer</description>
+    <long-description>
+      This allows you to take the seat of the flight engineer aboard a
+      Lockheed 1049H Super Constellation flown by another pilot over
+      the multiplayer network.  Start in a location near the aircraft
+      then go to the Constellation menu and "Select MP-Pilot" to climb
+      on board.  The pilot must similarly select the engineer.  This
+      allows the engineer to control throttle, mixture, superchargers,
+      fuel, etc.
+    </long-description>
     <flight-model>null</flight-model>
     <variant-of>Lockheed1049h</variant-of>
     <menubar>
