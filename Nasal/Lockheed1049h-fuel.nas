@@ -71,7 +71,8 @@ var engine_valves       = props.globals.getNode("/controls/fuel").getChildren("e
 var fuel_totals         = props.globals.getNode("/consumables/fuel/total-fuel-lbs");
                                                                         # Set up fuel preset lists:
 var fuel_presets        = props.globals.getNode("/systems/fuel/tanks").getChildren("fuel_preset");
-
+var endurance           = props.globals.initNode ("/consumables/fuel/endurance-remaining", 1, "STRING");
+var range               = props.globals.initNode ("/consumables/fuel/range-remaining-nmi", 1, "DOUBLE");
 
 #
 # Main Fuel Cycle
@@ -494,3 +495,20 @@ setlistener("/controls/fuel/jettison[1]/valve", func(v) {
                                 interpolate("/consumables/fuel/tank[11]/level-lbs", tank11, 0);
                 }
 }, 1, 0);
+
+var fuel_flow_timer = maketimer (1.0, func () {
+   var ff_pph = 0;
+   for (var engine=0; engine<4; engine+=1) {
+      ff_pph += getprop ("/engines/engine[" ~ engine ~ "]/fuel-flow_pph");
+   }
+   var endurance_h = fuel_totals.getValue () / ff_pph;
+   endurance.setValue (sprintf ("%d:%02d:%02d",
+                                int (endurance_h),
+                                math.mod (endurance_h * 60, 60),
+                                math.mod (endurance_h * 3600, 60)));
+   range.setValue (endurance_h * getprop ("/velocities/groundspeed-kt"));
+});
+setlistener ("/sim/signals/fdm-initialized", func () {
+   fuel_flow_timer.start ();
+});
+
