@@ -76,8 +76,8 @@ power at altitude.
 
   <minmp unit="INHG"> 7.0 </minmp>
   <maxmp unit="INHG"> 29.92 </maxmp>
-  <displacement unit="IN3"> 3350.00 </displacement>
-  <bsfc>0.272</bsfc>
+  <displacement unit="IN3"> 3347.9 </displacement>
+  <bsfc>0.251</bsfc>
   <volumetric-efficiency> 0.385 </volumetric-efficiency>
   <maxhp>    3250.00 </maxhp>
   <cycles>      4.0 </cycles>
