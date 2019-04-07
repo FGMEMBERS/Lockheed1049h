@@ -328,7 +328,7 @@ setlistener("controls/flight/elevator-trim", func(et) {
     }
 }, startup = 0, runtime = 0);
 
-var trim_loop = func{
+var trim_loop = maketimer (8.2, func{
     var et = getprop("controls/flight/elevator-trim") or 0;
     var ap = getprop("autopilot/switches/ap") or 0;
     var diff = abs(lastTrimValue.getValue() - et);
@@ -342,7 +342,6 @@ var trim_loop = func{
         }
         lastTrimValue.setValue(et);
     }
-    settimer(trim_loop, 8.2);
-}
+});
 
-trim_loop();
+trim_loop.start();

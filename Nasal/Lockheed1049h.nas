@@ -17,12 +17,6 @@ LockheedMain.new = func {
   return obj;
 }
 
-								# Custom autopilot deprecated by CVS changes
-#LockheedMain.sec2cron = func {
-#  autopilotsystem.schedule();
-#  settimer(func{ me.sec2cron(); },autopilotsystem.AUTOPILOTSEC);
-#}
-
 								# Determines values carried between sessions
 LockheedMain.savedata = func {
   aircraft.data.add("/sim/presets/fuel");			# User's default fuel load selection
