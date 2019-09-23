@@ -60,7 +60,7 @@
 # to the given engine.
 
 
-var MAX_LBS                             = 10;   #12 original                    # Fuel line buffer max level in 6.0/gallon pounds
+var MAX_LBS             = 10;   #12 original                            # Fuel line buffer max level in 6.0/gallon pounds
 var GALUSTOLBS          = 6.6;                                          # JSBsim fixed lbs/gallon value
 
                                                                         # Set up tank and valve vars:
@@ -71,13 +71,11 @@ var engine_valves       = props.globals.getNode("/controls/fuel").getChildren("e
 var fuel_totals         = props.globals.getNode("/consumables/fuel/total-fuel-lbs");
                                                                         # Set up fuel preset lists:
 var fuel_presets        = props.globals.getNode("/systems/fuel/tanks").getChildren("fuel_preset");
+var endurance           = props.globals.initNode ("/consumables/fuel/endurance-remaining", 1, "STRING");
+var range               = props.globals.initNode ("/consumables/fuel/range-remaining-nmi", 1, "DOUBLE");
+var range_total         = props.globals.initNode ("/consumables/fuel/range-total-nmi", 1, "DOUBLE");
 
-
-#
-# Main Fuel Cycle
-#
-
-var fuel_update = func {
+var fuel_update = maketimer (2.0, func {
   for (var engine=0; engine<4; engine+=1) {                             # For each engine:
     if (engine_valves[engine].getValue() > 1)                           # Engine fuel valve not open, no eating here today
       { continue; }
@@ -111,58 +109,17 @@ var fuel_update = func {
         { transfer_fuel(engine,engine+9,fuel_used); }
     }
   }
-  settimer(fuel_update,2);                                              # Schedule the next run in 2 secs
-}
+});
 
-
-#
-# Fuel Totalizer Cycle
-#
-
-var fuel_totalizer = func{
+var fuel_totalizer = maketimer (10.0, func{
   var total_lbs = 0;
   for (var tank=4; tank<=12; tank+=1) {                                 # For each true tank (indexes 4-12)
     total_lbs += get_lbs(tank);                                         # Sum tank levels
   }
   fuel_totals.setValue(total_lbs);                                      # Set master fuel totals
-  settimer(fuel_totalizer,10);                                          # Schedule the next run in 10 secs
-}
+});
 
-
-#
-# Initialize fuel system
-# Update fuel every 2 seconds
-# Update fuel totalizer every 10 seconds (after initial run)
-#
-
-var fuel_update_init = func {
-  preset_fetch();                                                       # Load preset fuel configuration
-  settimer(fuel_update,2);                                              # Startup fuel system
-  settimer(fuel_totalizer,2);                                           # Startup fuel totalizer
-}
-
-settimer(fuel_update_init,1);
-
-
-#
 # Helper Functions
-#
-
-#var get_lbs = func(tank_index) {
-#  var lbs = 0;
-#  if (tanks[tank_index].getChild("level-lb") == nil) {                 # Hack to deal with renaming of level-lb
-#    lbs = tanks[tank_index].getChild("level-lbs").getValue();          # to level-lbs in JBSsim
-#  }
-#  else {
-#    lbs = tanks[tank_index].getChild("level-lb").getValue();
-#  }
-#  if (lbs==nil) { lbs = 0; }
-#  return lbs;
-#}
-
-#var get_lbs = func(tank_index) {                                       # FG <= 1.9x version
-#  return tanks[tank_index].getChild("level-lb").getValue();
-#}
 
 var get_lbs = func(tank_index) {                                        # FG > 1.9x version
   return tanks[tank_index].getChild("level-lbs").getValue();
@@ -494,3 +451,38 @@ setlistener("/controls/fuel/jettison[1]/valve", func(v) {
                                 interpolate("/consumables/fuel/tank[11]/level-lbs", tank11, 0);
                 }
 }, 1, 0);
+
+var fuel_flow_timer = maketimer (1.0, func () {
+   var ff_pph = 0;
+   for (var engine=0; engine<4; engine+=1) {
+      ff_pph += getprop ("/engines/engine[" ~ engine ~ "]/fuel-flow_pph");
+   }
+   var endurance_h = 0;
+   if (ff_pph > 0) { endurance_h = fuel_totals.getValue () / ff_pph; }
+   endurance.setValue (sprintf ("%d:%02d:%02d",
+                                int (endurance_h),
+                                math.mod (endurance_h * 60, 60),
+                                math.mod (endurance_h * 3600, 60)));
+   range.setValue (endurance_h * getprop ("/fdm/jsbsim/velocities/vtrue-kts"));
+   range_total.setValue (range.getValue () + getprop ("/instrumentation/gps/odometer"));
+});
+
+# Start the timers after the FDM is initalized:
+L1049_fuel_listener = setlistener ("/sim/signals/fdm-initialized", func () {
+  preset_fetch ();
+  fuel_update.start ();
+  fuel_totalizer.start ();
+  fuel_flow_timer.start ();
+  removelistener (L1049_fuel_listener);
+});
+
+setlistener ("/sim/speed-up", func (speedup) {
+  # At /sim/speed-up = 32, these timers are too slow to keep up with the
+  # fuel flow from the fuel lines, so speed them up too.
+  if (fuel_update.isRunning) {
+    fuel_update.restart (2.0 / speedup.getValue());
+  }
+  if (fuel_totalizer.isRunning) {
+    fuel_totalizer.restart (10.0 / speedup.getValue());
+  }
+});

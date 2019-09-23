@@ -119,7 +119,7 @@ setlistener(comm2sby, func {
 });
 
 							# Set comm support vars to startups
-var update_comms = func {
+var update_comms = maketimer (2.0, func {
   var commstr = "";
   var commtemp = 0;
 
@@ -140,9 +140,9 @@ var update_comms = func {
   commtemp = split(".",commstr);
   comm2sbymhz.setValue(commtemp[0]);
   comm2sbykhz.setValue(commtemp[1]);
-}
+});
 
 
 var InstrumentationInit = func {
-  settimer(update_comms, 2);				# Delay startup a bit to allow things to initialize
+  settimer (func () { update_comms.start(); }, 2.0); # delay the starting up
 }

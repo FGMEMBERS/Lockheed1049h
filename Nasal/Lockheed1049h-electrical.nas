@@ -163,7 +163,7 @@ var update_bus_feeds = func {
 
 
 									# The master bus update system
-var update_bus = func {
+var update_bus = maketimer (1.0, func {
   update_generators();
   update_apu();
   update_battery();
@@ -172,10 +172,7 @@ var update_bus = func {
   update_voltmeter();
   #var mpvolts = bus_dc.getNode("volts").getValue();
   #if (mpvolts > 0) { mpvolts = mpvolts / 100; }
-  settimer(update_bus,1);						# Schedule the next run in 1 secs
-}
-
-
+});
 
 #
 # Initialize electrical system
@@ -184,7 +181,7 @@ var update_bus = func {
 
 var electrical_update_init = func {
 									# Currently no initialization required
-  settimer(update_bus,1);						# Startup electrical system
+  update_bus.start();
 }
 
 settimer(electrical_update_init,2);

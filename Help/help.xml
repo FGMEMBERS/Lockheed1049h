@@ -86,23 +86,27 @@ ________________________Procedures_________________________
 Takeoff :
 Open cowl flaps 100%.
 flaps 60%.
-Full throttle, 2900 RPM.
+56.5 inHg, 2900 RPM.  Note: this is not full throttle!
 120 KIAS (light load) or 130 KIAS (full load): rotate
 165 KIAS: gear up
 184 KIAS: flaps up
 
 Climb :
-48.0 inhg, 2600 RPM.
+48.0 inHg, 2600 RPM.  Note: this is not full throttle!
 Cowl flaps 60%
-2000 fpm until 10000 ft.
-Engage supercharger high speed above 8500 ft.
-1500 fpm until 13000 ft,
-1000 fpm above 13000 ft.
-Gradually lean mixture to keep BMEP as high as possible.
-Watch cylinder head temperature; open cowl flaps if necessary.
+Maintain 190 KIAS.
+Above 3600 ft, lean mixture gradually to keep BMEP as high as possible.
+Open throttle gradually to maintain 48 inHg.
+Watch cylinder head temperature; open cowl flaps as necessary.
+
+When throttle is wide open and manifold pressure drops below 48 inHg
+(approximately 9000 ft), reduce throttle and engage supercharger high speed
+then adjust throttle to keep 48 inHg.
 
 Cruise :
 223 KIAS at 20000 ft, 218 KIAS at 21000 ft
+45 inHg, 2300 RPM.  With throttle wide open, adjust RPM to control speed.
+Reduce RPM further as your ship becomes lighter.
 Close cowl flaps.
 
 Descent :

@@ -42,7 +42,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <elevator-trim-turn type="double">0</elevator-trim-turn>
     </trim>
   </autopilot>
- 
+
   <consumables>
     <fuel include="Systems/Lockheed1049h-init-fuel.xml"/>
   </consumables>
@@ -254,7 +254,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>fdm/jsbsim/inertia/pointmass-weight-lbs[19]</path>
     </aircraft-data>
 
-    <aircraft-version>3.0.1</aircraft-version>
+    <aircraft-version>3.0.6</aircraft-version>
 
     <author>Gary Neely, Marc Kraus, Ludovic Brenta, Richard Senior</author>
     <chase-distance-m type="double" archive="y">-48.0</chase-distance-m>
@@ -269,6 +269,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <checklist include="Checklists/upper-climb.xml"/>
       <checklist include="Checklists/pre-traffic-pattern.xml"/>
       <checklist include="Checklists/traffic-pattern.xml"/>
+      <checklist include="Checklists/approach.xml"/>
       <checklist include="Checklists/after-landing.xml"/>
       <checklist include="Checklists/parking.xml"/>
       <!--
@@ -294,11 +295,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <index n="2">2</index>  <!-- During Warmup -->
         <index n="4">5</index>  <!-- Initial Climb -->
       </in-air-start>
+      <approach>
+        <index n="0">0</index>  <!-- Before Starting Engines -->
+        <index n="1">1</index>  <!-- Start Engines -->
+        <index n="2">7</index>  <!-- Pre Traffic Pattern -->
+        <index n="4">9</index>  <!-- Traffic Pattern -->
+      </approach>
       <after-landing>
-        <index n="0">9</index>  <!-- After Landing -->
+        <index n="0">10</index>  <!-- After Landing -->
       </after-landing>
     </checklists>
- 
+
     <!-- Required for parkpos=AVAILABLE option -->
     <aircraft-class>gate</aircraft-class>
     <aircraft-operator></aircraft-operator>
@@ -357,10 +364,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <path>Sounds/Lockheed1049h-sound.xml</path>
     </sound>
 
-    <startup>
-      <splash-texture>splash.png</splash-texture>
-    </startup>
-
     <systems>
       <autopilot>
         <path>Systems/Lockheed1049h-autopilot.xml</path>
@@ -379,6 +382,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </property-rule>
     </systems>
 
+    <state include="States/approach-overlay.xml" n="0" />
+
     <tags>
       <tag>1950s</tag> <!-- first flight in 1957 -->
       <tag>4-engine</tag>
@@ -396,6 +401,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <tag>turbocharged</tag>  <!-- actually supercharged + turbo-compound -->
     </tags>
 
+    <previews>
+      <preview>
+        <type>panel</type>
+        <splash type="bool">true</splash>
+        <path>Previews/preview.png</path>
+      </preview>
+      <preview>
+        <type>panel</type>
+        <splash type="bool">true</splash>
+        <path>Previews/cockpit.png</path>
+      </preview>
+    </previews>
+
+    <tutorials>
+      <tutorial n="0" include="Tutorials/landing.xml" />
+    </tutorials>
   </sim>
 
   <systems include="Systems/Lockheed1049h-init-systems.xml"/>

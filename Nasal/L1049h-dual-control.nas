@@ -123,7 +123,6 @@ expand_string = func (s) {
     return result;
 }
 
-# At this point the syntax highlignting is broken, restore with '''
 
 expand_vector = func (v, vector_name) {
     var result = [];
@@ -677,9 +676,9 @@ copilot_connect_pilot = func (pilot) {
     var rpm0 = pilot.getNode ("controls/engines/engine[0]/propeller-pitch");
     # propeller-pitch is special: propagate it to all other engines as there is only one command for all 4.
     result ~= [
-        DCT.Translator.new (rpm0, pilot.getNode ("controls/engines/engine[1]/propeller-pitch")),
-        DCT.Translator.new (rpm0, pilot.getNode ("controls/engines/engine[2]/propeller-pitch")),
-        DCT.Translator.new (rpm0, pilot.getNode ("controls/engines/engine[3]/propeller-pitch")) ];
+        DCT.Translator.new (rpm0, pilot.getNode ("controls/engines/engine[1]/propeller-pitch", 1)),
+        DCT.Translator.new (rpm0, pilot.getNode ("controls/engines/engine[2]/propeller-pitch", 1)),
+        DCT.Translator.new (rpm0, pilot.getNode ("controls/engines/engine[3]/propeller-pitch", 1)) ];
     foreach (var prop; packed_2bit_int_properties) {
         var pilot_node = pilot.getNode (prop, "INT", 1);
         var engineer_node = props.globals.getNode (prop, "INT", 1);

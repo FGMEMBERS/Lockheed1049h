@@ -17,12 +17,6 @@ LockheedMain.new = func {
   return obj;
 }
 
-								# Custom autopilot deprecated by CVS changes
-#LockheedMain.sec2cron = func {
-#  autopilotsystem.schedule();
-#  settimer(func{ me.sec2cron(); },autopilotsystem.AUTOPILOTSEC);
-#}
-
 								# Determines values carried between sessions
 LockheedMain.savedata = func {
   aircraft.data.add("/sim/presets/fuel");			# User's default fuel load selection
@@ -92,3 +86,12 @@ var multiplayer_send_loop = maketimer (0.1, func () {
   encoder.update ();
 });
 multiplayer_send_loop.start();
+
+setlistener("/sim/signals/fdm-initialized", func {
+  var initstate = getprop("/sim/aircraft-state");
+  if (initstate == "parking")  autochecklist.complete_checklists("terminal-start", 0);
+  if (initstate == "taxi")  autochecklist.complete_checklists("runway-start", 0);
+  if (initstate == "take-off")  autochecklist.complete_checklists("runway-start", 0);
+  if (initstate == "cruise")  autochecklist.complete_checklists("in-air-start", 0);
+  if (initstate == "approach")  autochecklist.complete_checklists("approach", 0);
+});
